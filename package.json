@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "kuroppe1819",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
