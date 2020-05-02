@@ -13,15 +13,15 @@ module.exports = {
         contentBase: path.resolve(__dirname, 'dist'),
         host: '0.0.0.0',
         port: 8080,
-        open: false,
+        open: true,
         useLocalIp: true,
         historyApiFallback: true,
     },
     module: {
         rules: [
             {
-                test: [/\.ts$/, /\.tsx$/, /\.js$/],
-                use: ['babel-loader', 'ts-loader'],
+                test: /\.(js|ts|tsx)?$/,
+                use: ['babel-loader'],
                 exclude: /node_modules/,
             },
         ],

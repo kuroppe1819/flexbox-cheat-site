@@ -10,5 +10,5 @@
         "@babel/preset-react",
         ["minify", {}]
     ],
-    "plugins": ["babel-plugin-styled-components"]
+    "plugins": ["babel-plugin-styled-components", "macros"]
 }
