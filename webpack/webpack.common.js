@@ -2,7 +2,6 @@ const path = require('path');
 const srcDir = '../src';
 const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, `${srcDir}/Index.tsx`),
@@ -31,7 +30,6 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js'],
     },
     plugins: [
-        new HardSourceWebpackPlugin(),
         new BabelMinifyPlugin(),
         new HtmlWebpackPlugin({
             publicPath: 'dist',
