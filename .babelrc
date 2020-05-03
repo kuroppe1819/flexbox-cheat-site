@@ -6,9 +6,15 @@
                 "useBuiltIns": "usage",
                 "corejs": 3
             }
-        ],
-        "@babel/preset-react",
-        ["minify", {}]
+        ]
     ],
+    "env": {
+        "production": {
+            "presets": ["@babel/preset-react"]
+        },
+        "development": {
+            "presets": [["@babel/preset-react", { "development": true }]]
+        }
+    },
     "plugins": ["babel-plugin-styled-components", "macros"]
 }

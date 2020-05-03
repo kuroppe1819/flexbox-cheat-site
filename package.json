@@ -5,8 +5,8 @@
   "author": "kuroppe1819",
   "license": "GPL-3.0",
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js",
-    "start": "webpack-dev-server --hot --config webpack/webpack.dev.js",
+    "build": "BABEL_ENV=production webpack --config webpack/webpack.prod.js",
+    "start": "BABEL_ENV=development webpack-dev-server --hot --config webpack/webpack.dev.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -39,7 +39,6 @@
     "@types/jest": "^25.2.1",
     "@types/styled-components": "^5.1.0",
     "babel-loader": "^8.1.0",
-    "babel-minify-webpack-plugin": "^0.3.1",
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-styled-components": "^1.10.7",
     "core-js": "^3.6.5",

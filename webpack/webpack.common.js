@@ -1,6 +1,5 @@
 const path = require('path');
 const srcDir = '../src';
-const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -34,7 +33,6 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js'],
     },
     plugins: [
-        new BabelMinifyPlugin(),
         new HtmlWebpackPlugin({
             publicPath: 'dist',
             filename: 'index.html',
