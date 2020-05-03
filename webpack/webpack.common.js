@@ -1,6 +1,7 @@
 const path = require('path');
 const srcDir = '../src';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, `${srcDir}/IndexContainer.tsx`),
@@ -50,5 +51,6 @@ module.exports = {
             filename: 'index.html',
             template: 'static/html/index.html',
         }),
+        new FaviconsWebpackPlugin('static/image/favicon.ico'),
     ],
 };
