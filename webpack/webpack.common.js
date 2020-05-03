@@ -3,7 +3,7 @@ const srcDir = '../src';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, `${srcDir}/Index.tsx`),
+    entry: path.resolve(__dirname, `${srcDir}/IndexContainer.tsx`),
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',
