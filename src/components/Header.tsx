@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import tw from 'tailwind.macro';
 
-export const Header = () => {
+export const Header = (): ReactElement => {
     return (
         <HeaderMain>
             <HeaderTitle>FlexBox Cheat Site</HeaderTitle>
