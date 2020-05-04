@@ -40,5 +40,5 @@ const BehaviorBox = styled.div`
 `;
 
 const PropertyName = styled.p`
-    ${tw`text-lg text-center text-blue-900`}
+    ${tw`text-lg text-center text-blue-900 mt-3 mb-3`}
 `;
