@@ -1,6 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-
+import React, { ReactElement } from 'react';
 import { Header } from '../src/common/components/Header';
 
-storiesOf('Header', module).add('default', () => <Header />);
+export default {
+    title: 'Header',
+    component: Header,
+};
+
+export const Basic = (): ReactElement => <Header />;
