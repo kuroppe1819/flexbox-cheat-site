@@ -19,5 +19,5 @@ const Item = styled.div`
 `;
 
 const ItemText = styled.div`
-    ${tw`inline-block text-blue-100 text-xl`}
+    ${tw`inline-block text-blue-100 text-lg`}
 `;
