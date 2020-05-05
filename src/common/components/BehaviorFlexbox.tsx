@@ -26,19 +26,19 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
                     <ExampleItem numberText="4" />
                 </ExampleItems>
             </BehaviorBox>
-            <PropertyName>{propertyName}</PropertyName>
+            <PropertyValue>{propertyName}</PropertyValue>
         </BehaviorBoxWrapper>
     );
 };
 
 const BehaviorBoxWrapper = styled.div`
-    ${tw`inline-block`}
+    ${tw`inline-block m-3`}
 `;
 
 const BehaviorBox = styled.div`
-    ${tw`inline-block h-56 w-64 border border-solid border-gray-400 mt-3 ml-3`}
+    ${tw`inline-block h-40 w-48 border border-solid border-gray-400`}
 `;
 
-const PropertyName = styled.p`
+const PropertyValue = styled.p`
     ${tw`text-lg text-center text-blue-900 mt-3 mb-3`}
 `;
