@@ -9,9 +9,6 @@ export const Header = (): ReactElement => {
             <HeaderTitle>FlexBox Cheat Site</HeaderTitle>
             <LinkIcons>
                 <ExternalLink>
-                    <FontAwesomeIcon icon={['fas', 'share-alt']} size="2x" />
-                </ExternalLink>
-                <ExternalLink>
                     <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
                 </ExternalLink>
             </LinkIcons>
