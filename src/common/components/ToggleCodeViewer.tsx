@@ -11,18 +11,18 @@ export const ToggleCodeViewer = (props: Props): ReactElement => {
     return (
         <ToggleBackground>
             {props.opened ? (
-                <ToggleIcon icon={['fas', 'chevron-up']} size="xs" />
+                <ToggleIcon icon={['fas', 'angle-double-right']} size="xs" />
             ) : (
-                <ToggleIcon icon={['fas', 'chevron-down']} size="xs" />
+                <ToggleIcon icon={['fas', 'angle-double-left']} size="xs" />
             )}
         </ToggleBackground>
     );
 };
 
 const ToggleBackground = styled.div`
-    ${tw`bg-gray-400 h-4 flex justify-end items-center rounded-b-md`}
+    ${tw`bg-gray-400 w-4 rounded-l-md flex justify-center`}
 `;
 
 const ToggleIcon = styled(FontAwesomeIcon)`
-    ${tw`mx-2`}
+    ${tw`text-blue-900 mt-1`}
 `;
