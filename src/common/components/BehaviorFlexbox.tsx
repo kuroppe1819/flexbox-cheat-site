@@ -1,6 +1,6 @@
 import { ExampleItem } from './ExampleItem';
 import React, { ReactElement } from 'react';
-import styled, { FlattenSimpleInterpolation } from 'styled-components';
+import styled, { FlattenSimpleInterpolation, css } from 'styled-components';
 import tw from 'tailwind.macro';
 
 export type Props = {
@@ -36,7 +36,7 @@ const BehaviorBoxWrapper = styled.div`
 `;
 
 const BehaviorBox = styled.div`
-    ${tw`inline-block h-40 w-48 border border-solid border-gray-400`}
+    ${tw`inline-block h-40 w-48 border border-solid border-gray-400 hover:border-blue-500 cursor-pointer`}
 `;
 
 const PropertyValue = styled.p`
