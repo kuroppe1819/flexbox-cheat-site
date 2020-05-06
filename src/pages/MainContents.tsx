@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
-import { FlexItemContainer } from '../flex/FlexItemContainer';
 import { MainContentsContext } from '../IndexContainer';
+import { FlexItemContainer } from '../flex/FlexItemContainer';
+import { InlineFlexItemContainer } from '../flex/InlineFlexContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle } = useContext(MainContentsContext);
@@ -20,6 +21,7 @@ export const MainContents = (): ReactElement => {
                         </PropertyName>
                         <PropertyItems>
                             <FlexItemContainer setParentStyle={setParentStyle} />
+                            <InlineFlexItemContainer setParentStyle={setParentStyle} />
                         </PropertyItems>
                     </section>
                     <section>
