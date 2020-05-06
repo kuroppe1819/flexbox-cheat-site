@@ -10,9 +10,7 @@ import { InlineFlexItemContainer } from '../flexboxItems/flex/InlineFlexContaine
 import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
 
 export const MainContents = (): ReactElement => {
-    const { opened, setOpened, parentStyle, setParentStyle, copied, setCopiedCallback } = useContext(
-        MainContentsContext
-    );
+    const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
 
     return (
         <Contents>
@@ -133,12 +131,7 @@ export const MainContents = (): ReactElement => {
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
-                <CodeViewer
-                    language="css"
-                    code={parentStyle}
-                    copied={copied}
-                    onClickCopiedHandler={setCopiedCallback}
-                />
+                <CodeViewer language="css" code={parentStyle} copied={copied} onClickCopiedHandler={onCopy} />
             </CodeViewerWrapper>
         </Contents>
     );
