@@ -1,16 +1,18 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export type Props = {
+type Props = {
     opened: boolean;
+    onClickHandler: () => void;
 };
 
 export const ToggleCodeViewer = (props: Props): ReactElement => {
+    const { opened, onClickHandler } = props;
     return (
-        <ToggleBackground>
-            {props.opened ? (
+        <ToggleBackground onClick={onClickHandler}>
+            {opened ? (
                 <ToggleIcon icon={['fas', 'angle-double-right']} size="xs" />
             ) : (
                 <ToggleIcon icon={['fas', 'angle-double-left']} size="xs" />
@@ -20,7 +22,7 @@ export const ToggleCodeViewer = (props: Props): ReactElement => {
 };
 
 const ToggleBackground = styled.div`
-    ${tw`bg-gray-400 w-4 rounded-l-md flex justify-center`}
+    ${tw`bg-gray-400 w-5 h-12 rounded-l-md flex justify-center cursor-pointer`}
 `;
 
 const ToggleIcon = styled(FontAwesomeIcon)`

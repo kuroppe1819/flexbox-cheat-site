@@ -1,12 +1,16 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
 import { FlexItemContainer } from '../flex/FlexItemContainer';
+import { ToggleCodeViewerState } from '../IndexContainer';
 
 export const MainContents = (): ReactElement => {
+    const { opened, setOpened } = useContext(ToggleCodeViewerState);
+    console.log(opened);
+
     return (
         <Contents>
             <PropertySections>
@@ -33,8 +37,8 @@ export const MainContents = (): ReactElement => {
                     </section>
                 </div>
             </PropertySections>
-            <CodeViewerWrapper>
-                <ToggleCodeViewer opened />
+            <CodeViewerWrapper opened={opened}>
+                <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
                 <CodeViewer language="css" code=".parent {}" />
             </CodeViewerWrapper>
         </Contents>
@@ -46,7 +50,7 @@ const Contents = styled.main`
 `;
 
 const PropertySections = styled.div`
-    ${tw`flex justify-center w-full ml-20`}
+    ${tw`flex w-full ml-20`}
 `;
 
 const PropertyName = styled(Link)`
@@ -57,7 +61,11 @@ const PropertyItems = styled.div`
     ${tw`flex flex-wrap`}
 `;
 
-const CodeViewerWrapper = styled.aside`
-    ${tw`flex h-56 sticky`}
+// transform: translateX(24rem);
+const CodeViewerWrapper = styled.div<{ opened: boolean }>`
+    ${tw`flex sticky h-56`}
     top: 0.5rem;
+    transform: ${(props): any => (props.opened ? 'translateX(0)' : 'translateX(24rem)')};
+    margin-left: ${(props): any => (props.opened ? '0' : '-24rem')};
+    transition: all 300ms 0s ease;
 `;
