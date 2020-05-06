@@ -5,11 +5,10 @@ import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
 import { FlexItemContainer } from '../flex/FlexItemContainer';
-import { ToggleCodeViewerState } from '../IndexContainer';
+import { MainContentsContext } from '../IndexContainer';
 
 export const MainContents = (): ReactElement => {
-    const { opened, setOpened } = useContext(ToggleCodeViewerState);
-    console.log(opened);
+    const { opened, setOpened, parentStyle, setParentStyle } = useContext(MainContentsContext);
 
     return (
         <Contents>
@@ -20,26 +19,20 @@ export const MainContents = (): ReactElement => {
                             display
                         </PropertyName>
                         <PropertyItems>
-                            <FlexItemContainer />
-                            <FlexItemContainer />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
                         </PropertyItems>
                     </section>
                     <section>
                         <PropertyName id="flex-direction" smooth to="/#flex-direction">
                             flex-direction
                         </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer />
-                            <FlexItemContainer />
-                            <FlexItemContainer />
-                            <FlexItemContainer />
-                        </PropertyItems>
+                        <PropertyItems></PropertyItems>
                     </section>
                 </div>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
-                <CodeViewer language="css" code=".parent {}" />
+                <CodeViewer language="css" code={parentStyle} />
             </CodeViewerWrapper>
         </Contents>
     );

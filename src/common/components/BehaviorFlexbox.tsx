@@ -4,21 +4,22 @@ import styled, { FlattenSimpleInterpolation, css } from 'styled-components';
 import tw from 'tailwind.macro';
 
 export type Props = {
-    style: FlattenSimpleInterpolation;
+    parentStyle: FlattenSimpleInterpolation;
     propertyName: string;
+    onClickBoxHandler: () => void;
 };
 
 export const BehaviorFlexbox = (props: Props): ReactElement => {
-    const { style, propertyName } = props;
+    const { parentStyle, propertyName, onClickBoxHandler } = props;
 
     const ExampleItems = styled.div`
         ${tw`border border-dashed border-blue-500 m-3`}
-        ${style}
+        ${parentStyle}
     `;
 
     return (
         <BehaviorBoxWrapper>
-            <BehaviorBox>
+            <BehaviorBox onClick={onClickBoxHandler}>
                 <ExampleItems>
                     <ExampleItem numberText="1" />
                     <ExampleItem numberText="2" />

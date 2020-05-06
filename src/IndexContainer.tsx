@@ -10,19 +10,23 @@ import '../static/css/style.css';
 import css from 'react-syntax-highlighter/dist/esm/languages/hljs/css';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-export type ToggleCodeViewerContextProps = {
+export type MainContentsContextProps = {
     opened: boolean;
     setOpened: Dispatch<SetStateAction<boolean>>;
+    parentStyle: string;
+    setParentStyle: Dispatch<SetStateAction<string>>;
 };
 
-export const ToggleCodeViewerState = React.createContext({} as ToggleCodeViewerContextProps);
+export const MainContentsContext = React.createContext({} as MainContentsContextProps);
 
 const IndexContainer = (): ReactElement => {
     const [opened, setOpened] = useState(false);
+    const [parentStyle, setParentStyle] = useState('');
+
     return (
-        <ToggleCodeViewerState.Provider value={{ opened, setOpened }}>
+        <MainContentsContext.Provider value={{ opened, setOpened, parentStyle, setParentStyle }}>
             <Index />;
-        </ToggleCodeViewerState.Provider>
+        </MainContentsContext.Provider>
     );
 };
 
