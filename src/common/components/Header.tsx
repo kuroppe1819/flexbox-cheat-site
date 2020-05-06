@@ -25,9 +25,9 @@ const HeaderTitle = styled.h1`
 `;
 
 const LinkIcons = styled.div`
-    ${tw`absolute right-0 text-blue-900`};
+    ${tw`absolute right-0`};
 `;
 
 const ExternalLink = styled.a`
-    ${tw`inline-block h-8 mr-5`};
+    ${tw`inline-block h-8 mr-5 text-blue-900`};
 `;
