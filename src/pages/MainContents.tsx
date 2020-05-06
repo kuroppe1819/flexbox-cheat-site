@@ -5,8 +5,8 @@ import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
 import { MainContentsContext } from '../IndexContainer';
-import { FlexItemContainer } from '../flex/FlexItemContainer';
-import { InlineFlexItemContainer } from '../flex/InlineFlexContainer';
+import { FlexItemContainer } from '../flexboxItems/flex/FlexItemContainer';
+import { InlineFlexItemContainer } from '../flexboxItems/flex/InlineFlexContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle } = useContext(MainContentsContext);

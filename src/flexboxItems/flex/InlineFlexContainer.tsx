@@ -1,16 +1,16 @@
 import React, { Dispatch, ReactElement, SetStateAction } from 'react';
-import { createCssCodeForParent } from '../common/util/CreateCssCode';
-import { BehaviorFlexbox } from '../common/components/BehaviorFlexbox';
+import { createCssCodeForParent } from '../../common/util/CreateCssCode';
+import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { css } from 'styled-components';
 
 type Props = {
     setParentStyle: Dispatch<SetStateAction<string>>;
 };
 
-const PROPERTY_NAME = 'flex';
-const PARENT_STYLE_CONTENTS = `display: flex`;
+const PROPERTY_NAME = 'inline-flex';
+const PARENT_STYLE_CONTENTS = `display: inline-flex`;
 
-export const FlexItemContainer = (props: Props): ReactElement => {
+export const InlineFlexItemContainer = (props: Props): ReactElement => {
     const parentStyleCssCode = createCssCodeForParent(PARENT_STYLE_CONTENTS);
     const onClickBoxHandler = (): void => props.setParentStyle(parentStyleCssCode);
     const parentStyle = css`
