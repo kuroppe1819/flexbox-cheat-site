@@ -7,12 +7,6 @@ import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
 import { FlexItemContainer } from '../flex/FlexItemContainer';
 
 export const MainContents = (): ReactElement => {
-    const [internalText, setInternalText] = useState<string>('');
-
-    const handleChange = (event: any) => {
-        setInternalText(event.target.value);
-    };
-
     return (
         <Contents>
             <PropertySections>
@@ -39,10 +33,9 @@ export const MainContents = (): ReactElement => {
                     </section>
                 </div>
             </PropertySections>
-            {/* <textarea onChange={handleChange} value={internalText}></textarea> */}
             <CodeViewerWrapper>
                 <ToggleCodeViewer opened />
-                <CodeViewer language="css" code={internalText} />
+                <CodeViewer language="css" code=".parent {}" />
             </CodeViewerWrapper>
         </Contents>
     );

@@ -1,5 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { ReactElement } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
@@ -17,9 +19,9 @@ export const CodeViewer = (props: Props): ReactElement => {
                 <ViewHeaderTitle>{language}</ViewHeaderTitle>
                 <CopyIcon icon={['fas', 'copy']} size="1x" />
             </ViewHeader>
-            <pre>
-                <Code className={`language-${language}`}>{code}</Code>
-            </pre>
+            <CustomSyntaxHighlighter language={language} style={monoBlue}>
+                {code}
+            </CustomSyntaxHighlighter>
         </CodeView>
     );
 };
@@ -42,6 +44,6 @@ const CopyIcon = styled(FontAwesomeIcon)`
     ${tw`mx-3 text-gray-700 cursor-pointer`}
 `;
 
-const Code = styled.code`
-    ${tw`m-3`}
+const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
+    ${tw`m-3 bg-blue-400`}
 `;
