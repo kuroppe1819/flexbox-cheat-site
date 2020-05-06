@@ -19,9 +19,13 @@ export const CodeViewer = (props: Props): ReactElement => {
                 <ViewHeaderTitle>{language}</ViewHeaderTitle>
                 <CopyIcon icon={['fas', 'copy']} size="1x" />
             </ViewHeader>
-            <CustomSyntaxHighlighter language={language} style={monoBlue}>
-                {code}
-            </CustomSyntaxHighlighter>
+            {code === '' ? (
+                <></>
+            ) : (
+                <CustomSyntaxHighlighter language={language} style={monoBlue}>
+                    {code}
+                </CustomSyntaxHighlighter>
+            )}
         </CodeView>
     );
 };
