@@ -4,12 +4,15 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
+import { MainContentsContext } from '../IndexContainer';
 import { FlexItemContainer } from '../flexboxItems/flex/FlexItemContainer';
 import { InlineFlexItemContainer } from '../flexboxItems/flex/InlineFlexContainer';
-import { MainContentsContext } from '../IndexContainer';
+import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
 
 export const MainContents = (): ReactElement => {
-    const { opened, setOpened, parentStyle, setParentStyle } = useContext(MainContentsContext);
+    const { opened, setOpened, parentStyle, setParentStyle, copied, setCopiedCallback } = useContext(
+        MainContentsContext
+    );
 
     return (
         <Contents>
@@ -20,6 +23,12 @@ export const MainContents = (): ReactElement => {
                             others
                         </PropertyName>
                         <PropertyItems>
+                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <FlexItemContainer setParentStyle={setParentStyle} />
                             <FlexItemContainer setParentStyle={setParentStyle} />
                         </PropertyItems>
                     </section>
@@ -37,7 +46,7 @@ export const MainContents = (): ReactElement => {
                             flex-direction
                         </PropertyName>
                         <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
+                            <RowContainer setParentStyle={setParentStyle} />
                         </PropertyItems>
                     </section>
                     <section>
@@ -124,7 +133,12 @@ export const MainContents = (): ReactElement => {
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
-                <CodeViewer language="css" code={parentStyle} />
+                <CodeViewer
+                    language="css"
+                    code={parentStyle}
+                    copied={copied}
+                    onClickCopiedHandler={setCopiedCallback}
+                />
             </CodeViewerWrapper>
         </Contents>
     );
@@ -146,7 +160,6 @@ const PropertyItems = styled.div`
     ${tw`flex flex-wrap`}
 `;
 
-// transform: translateX(24rem);
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
     ${tw`flex sticky h-56`}
     top: 0.5rem;

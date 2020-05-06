@@ -8,16 +8,19 @@ import tw from 'tailwind.macro';
 export type Props = {
     language: string;
     code: string;
+    copied: boolean;
+    onClickCopiedHandler: () => void;
 };
 
 export const CodeViewer = (props: Props): ReactElement => {
-    const { language, code } = props;
+    const { language, code, copied, onClickCopiedHandler } = props;
 
     return (
         <CodeView>
             <ViewHeader>
                 <ViewHeaderTitle>{language}</ViewHeaderTitle>
-                <CopyIcon icon={['fas', 'copy']} size="1x" />
+                <CopyIcon icon={['fas', 'copy']} size="1x" onClick={onClickCopiedHandler} />
+                {copied && <FeedbackCopiedText>Copied!</FeedbackCopiedText>}
             </ViewHeader>
             {code === '' ? (
                 <></>
@@ -46,6 +49,10 @@ const ViewHeaderTitle = styled.h6`
 
 const CopyIcon = styled(FontAwesomeIcon)`
     ${tw`mx-3 text-gray-700 cursor-pointer`}
+`;
+
+const FeedbackCopiedText = styled.div`
+    ${tw`text-sm font-medium -ml-2`}
 `;
 
 const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
