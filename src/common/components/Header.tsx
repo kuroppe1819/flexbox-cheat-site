@@ -8,7 +8,7 @@ export const Header = (): ReactElement => {
         <HeaderMain>
             <HeaderTitle>FlexBox Cheat Site</HeaderTitle>
             <LinkIcons>
-                <ExternalLink>
+                <ExternalLink href="https://github.com/kuroppe1819/flexbox-cheat-site" target="_blank">
                     <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
                 </ExternalLink>
             </LinkIcons>
