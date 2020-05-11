@@ -176,7 +176,7 @@ const PropertyItems = styled.div`
 `;
 
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
-    ${tw`flex items-end fixed h-64`}
+    ${tw`flex items-end fixed`}
     bottom: 0.5rem;
     right: 0;
     transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(20rem)')};
