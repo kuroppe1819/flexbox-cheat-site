@@ -11,6 +11,9 @@ import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
 import { RowReverseContainer } from '../flexboxItems/flexDirection/RowReverseContainer';
 import { ColumnContainer } from '../flexboxItems/flexDirection/ColumnContainer';
 import { ColumnReverseContainer } from '../flexboxItems/flexDirection/ColumnReverseContainer';
+import { NoWrapContainer } from '../flexboxItems/flexWrap/NowrapContainer';
+import { WrapContainer } from '../flexboxItems/flexWrap/WrapContainer';
+import { WrapReverseContainer } from '../flexboxItems/flexWrap/WrapReverseContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
@@ -43,9 +46,9 @@ export const MainContents = (): ReactElement => {
                         flex-wrap
                     </PropertyName>
                     <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <NoWrapContainer setParentStyle={setParentStyle} />
+                        <WrapContainer setParentStyle={setParentStyle} />
+                        <WrapReverseContainer setParentStyle={setParentStyle} />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
