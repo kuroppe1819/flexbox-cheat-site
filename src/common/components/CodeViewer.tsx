@@ -33,8 +33,8 @@ export const CodeViewer = (props: Props): ReactElement => {
 
 // TODO: heightは子要素の高さに合わせる
 const CodeView = styled.div`
-    ${tw`inline-block border border-solid border-gray-400`}
-    width: 24rem;
+    ${tw`inline-block border border-solid border-gray-400 bg-white h-full rounded-tl-md `}
+    width: 20em;
 `;
 
 const ViewHeader = styled.div`

@@ -17,6 +17,7 @@ export const ExampleItem = (props: Props): ReactElement => {
 
 const Item = styled.div<{ overrideStyle: FlattenSimpleInterpolation }>`
     ${tw`m-px bg-blue-400 flex justify-center items-center`}
+    min-width: 1rem;
     ${(props): FlattenSimpleInterpolation => props.overrideStyle}
 `;
 

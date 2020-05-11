@@ -156,15 +156,15 @@ export const MainContents = (): ReactElement => {
 };
 
 const Contents = styled.main`
-    ${tw`flex`}
+    ${tw`flex mx-12`}
 `;
 
 const PropertySections = styled.div`
-    ${tw`flex flex-wrap w-full ml-20`}
+    ${tw`flex flex-wrap justify-center`}
 `;
 
 const PropertySection = styled.section`
-    ${tw`px-6`}
+    ${tw`px-5`}
 `;
 
 const PropertyName = styled(Link)`
@@ -172,13 +172,14 @@ const PropertyName = styled(Link)`
 `;
 
 const PropertyItems = styled.div`
-    ${tw`flex flex-wrap`}
+    ${tw``}
 `;
 
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
-    ${tw`flex sticky h-56`}
-    top: 0.5rem;
-    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(24rem)')};
-    margin-left: ${(props): string => (props.opened ? '0' : '-24rem')};
+    ${tw`flex items-end fixed h-64`}
+    bottom: 0.5rem;
+    right: 0;
+    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(20rem)')};
+    margin-left: ${(props): string => (props.opened ? '0' : '-20rem')};
     transition: all 300ms 0s ease;
 `;

@@ -28,7 +28,7 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
 };
 
 const BehaviorBoxWrapper = styled.div`
-    ${tw`inline-block m-3`}
+    ${tw`m-3`}
 `;
 
 const BehaviorBox = styled.div`
@@ -41,5 +41,5 @@ const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
 `;
 
 const PropertyValue = styled.p`
-    ${tw`text-lg text-center text-blue-900 mt-3 mb-3`}
+    ${tw`text-lg text-center text-gray-500 mt-3 mb-3`}
 `;
