@@ -6,8 +6,11 @@ import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
 import { FlexItemContainer } from '../flexboxItems/flex/FlexItemContainer';
 import { InlineFlexItemContainer } from '../flexboxItems/flex/InlineFlexContainer';
-import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
 import { MainContentsContext } from '../IndexContainer';
+import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
+import { RowReverseContainer } from '../flexboxItems/flexDirection/RowReverseContainer';
+import { ColumnContainer } from '../flexboxItems/flexDirection/ColumnContainer';
+import { ColumnReverseContainer } from '../flexboxItems/flexDirection/ColumnReverseContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
@@ -30,9 +33,9 @@ export const MainContents = (): ReactElement => {
                     </PropertyName>
                     <PropertyItems>
                         <RowContainer setParentStyle={setParentStyle} />
-                        <RowContainer setParentStyle={setParentStyle} />
-                        <RowContainer setParentStyle={setParentStyle} />
-                        <RowContainer setParentStyle={setParentStyle} />
+                        <RowReverseContainer setParentStyle={setParentStyle} />
+                        <ColumnContainer setParentStyle={setParentStyle} />
+                        <ColumnReverseContainer setParentStyle={setParentStyle} />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>

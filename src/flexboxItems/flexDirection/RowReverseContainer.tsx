@@ -7,13 +7,13 @@ type Props = {
     setParentStyle: Dispatch<SetStateAction<string>>;
 };
 
-const PROPERTY_NAME = 'row';
+const PROPERTY_NAME = 'row-reverse';
 
 const PARENT_STYLE_CONTENTS = `display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     height: 100%;`;
 
-export const RowContainer = (props: Props): ReactElement => {
+export const RowReverseContainer = (props: Props): ReactElement => {
     const parentStyleCssCode = createCssCodeForParent(PARENT_STYLE_CONTENTS);
     const onClickBoxHandler = (): void => props.setParentStyle(parentStyleCssCode);
     const parentStyle = css`
