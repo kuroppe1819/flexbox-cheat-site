@@ -1,5 +1,17 @@
-export const createCssCodeForParent = (parentStyleContents: string): string => {
+export const createCssCodeForParent = (styleContents: string): string => {
     return `.parent {
-    ${parentStyleContents}
+    ${styleContents}
+}`;
+};
+
+export const createCssCodeForChild = (styleContents: string): string => {
+    return `.child {
+    ${styleContents}
+}`;
+};
+
+export const createCssCodeForChildFeatured = (styleContents: string): string => {
+    return `.child--featured {
+    ${styleContents}
 }`;
 };
