@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
-import { MainContentsContext } from '../IndexContainer';
 import { FlexItemContainer } from '../flexboxItems/flex/FlexItemContainer';
 import { InlineFlexItemContainer } from '../flexboxItems/flex/InlineFlexContainer';
 import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
+import { MainContentsContext } from '../IndexContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
@@ -160,7 +160,7 @@ const PropertyItems = styled.div`
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
     ${tw`flex sticky h-56`}
     top: 0.5rem;
-    transform: ${(props): any => (props.opened ? 'translateX(0)' : 'translateX(24rem)')};
-    margin-left: ${(props): any => (props.opened ? '0' : '-24rem')};
+    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(24rem)')};
+    margin-left: ${(props): string => (props.opened ? '0' : '-24rem')};
     transition: all 300ms 0s ease;
 `;

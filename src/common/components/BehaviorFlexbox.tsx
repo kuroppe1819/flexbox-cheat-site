@@ -12,10 +12,6 @@ export type Props = {
 export const BehaviorFlexbox = (props: Props): ReactElement => {
     const { parentStyle, propertyName, onClickBoxHandler } = props;
 
-    const ExampleItems = styled.div`
-        ${tw`border border-dashed border-blue-500`}
-        ${parentStyle}
-    `;
 
     return (
         <BehaviorBoxWrapper>
@@ -38,6 +34,11 @@ const BehaviorBoxWrapper = styled.div`
 
 const BehaviorBox = styled.div`
     ${tw`inline-block h-24 w-32 border border-solid border-gray-400 hover:border-blue-500 cursor-pointer p-2`}
+`;
+
+const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
+    ${tw`border border-dashed border-blue-500`}
+    ${(props): FlattenSimpleInterpolation => props.parentStyle}
 `;
 
 const PropertyValue = styled.p`
