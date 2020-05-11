@@ -1,21 +1,23 @@
 import React, { ReactElement } from 'react';
-import styled from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
 
 export type Props = {
     numberText: string;
+    overrideItemStyle?: FlattenSimpleInterpolation;
 };
 
 export const ExampleItem = (props: Props): ReactElement => {
     return (
-        <Item>
+        <Item overrideStyle={props.overrideItemStyle ? props.overrideItemStyle : css``}>
             <ItemText>{props.numberText}</ItemText>
         </Item>
     );
 };
 
-const Item = styled.div`
+const Item = styled.div<{ overrideStyle: FlattenSimpleInterpolation }>`
     ${tw`m-px bg-blue-400 w-6 h-6 flex justify-center items-center`}
+    ${(props): FlattenSimpleInterpolation => props.overrideStyle}
 `;
 
 const ItemText = styled.div`
