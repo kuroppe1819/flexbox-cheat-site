@@ -22,9 +22,7 @@ export const CodeViewer = (props: Props): ReactElement => {
                 <CopyIcon icon={['fas', 'copy']} size="1x" onClick={onClickCopiedHandler} />
                 {copied && <FeedbackCopiedText>Copied!</FeedbackCopiedText>}
             </ViewHeader>
-            {code === '' ? (
-                <></>
-            ) : (
+            {code !== '' && (
                 <CustomSyntaxHighlighter language={language} style={monoBlue}>
                     {code}
                 </CustomSyntaxHighlighter>
