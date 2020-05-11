@@ -14,6 +14,17 @@ import { ColumnReverseContainer } from '../flexboxItems/flexDirection/ColumnReve
 import { NoWrapContainer } from '../flexboxItems/flexWrap/NowrapContainer';
 import { WrapContainer } from '../flexboxItems/flexWrap/WrapContainer';
 import { WrapReverseContainer } from '../flexboxItems/flexWrap/WrapReverseContainer';
+import { JCFlexStartContainer } from '../flexboxItems/justifyContent/JCFlexStartContainer';
+import { JCFlexEndContainer } from '../flexboxItems/justifyContent/JCFlexEndContainer';
+import { JCCenterContainer } from '../flexboxItems/justifyContent/JCCenterContainer';
+import { JCSpaceAroundContainer } from '../flexboxItems/justifyContent/JCSpaceAround';
+import { JCSpaceBetweenContainer } from '../flexboxItems/justifyContent/JCSpaceBetweenContainer';
+import { JCSpaceEvenlyContainer } from '../flexboxItems/justifyContent/JCSpaceEvenlyContainer';
+import { AIFlexStartContainer } from '../flexboxItems/alignItems/AIFlexStartContainer';
+import { AIFlexEndContainer } from '../flexboxItems/alignItems/AIFlexEndContainer';
+import { AICenterContainer } from '../flexboxItems/alignItems/AICenterContainer';
+import { AIBaselineContainer } from '../flexboxItems/alignItems/AIBaselineContainer';
+import { AIStretchContainer } from '../flexboxItems/alignItems/AIStretchContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
@@ -52,32 +63,33 @@ export const MainContents = (): ReactElement => {
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
-                    <PropertyName id="flex-flow" smooth to="/#flex-flow">
-                        flex-flow
-                    </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
-                </PropertySection>
-                <PropertySection>
-                    <PropertyName id="order" smooth to="/#order">
-                        order
-                    </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
-                </PropertySection>
-                <PropertySection>
                     <PropertyName id="justify-content" smooth to="/#justify-content">
                         justify-content
                     </PropertyName>
                     <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <JCFlexStartContainer setParentStyle={setParentStyle} />
+                        <JCFlexEndContainer setParentStyle={setParentStyle} />
+                        <JCCenterContainer setParentStyle={setParentStyle} />
+                        <JCSpaceBetweenContainer setParentStyle={setParentStyle} />
+                        <JCSpaceAroundContainer setParentStyle={setParentStyle} />
+                        <JCSpaceEvenlyContainer setParentStyle={setParentStyle} />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-items" smooth to="/#align-items">
                         align-items
+                    </PropertyName>
+                    <PropertyItems>
+                        <AIFlexStartContainer setParentStyle={setParentStyle} />
+                        <AIFlexEndContainer setParentStyle={setParentStyle} />
+                        <AICenterContainer setParentStyle={setParentStyle} />
+                        <AIBaselineContainer setParentStyle={setParentStyle} />
+                        <AIStretchContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="order" smooth to="/#order">
+                        order
                     </PropertyName>
                     <PropertyItems>
                         <FlexItemContainer setParentStyle={setParentStyle} />
