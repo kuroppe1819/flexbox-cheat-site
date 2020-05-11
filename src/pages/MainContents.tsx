@@ -15,119 +15,119 @@ export const MainContents = (): ReactElement => {
     return (
         <Contents>
             <PropertySections>
-                <div>
-                    <section>
-                        <PropertyName id="others" smooth to="/#others">
-                            others
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="display" smooth to="/#display">
-                            display
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                            <InlineFlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-direction" smooth to="/#flex-direction">
-                            flex-direction
-                        </PropertyName>
-                        <PropertyItems>
-                            <RowContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-wrap" smooth to="/#flex-wrap">
-                            flex-wrap
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-flow" smooth to="/#flex-flow">
-                            flex-flow
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="order" smooth to="/#order">
-                            order
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="justify-content" smooth to="/#justify-content">
-                            justify-content
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="align-items" smooth to="/#align-items">
-                            align-items
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="align-self" smooth to="/#align-self">
-                            align-self
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="align-content" smooth to="/#align-content">
-                            align-content
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-grow" smooth to="/#flex-grow">
-                            flex-grow
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-shrink" smooth to="/#flex-shrink">
-                            flex-shrink
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                    <section>
-                        <PropertyName id="flex-basis" smooth to="/#flex-basis">
-                            flex-basis
-                        </PropertyName>
-                        <PropertyItems>
-                            <FlexItemContainer setParentStyle={setParentStyle} />
-                        </PropertyItems>
-                    </section>
-                </div>
+                <PropertySection>
+                    <PropertyName id="display" smooth to="/#display">
+                        display
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <InlineFlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="flex-direction" smooth to="/#flex-direction">
+                        flex-direction
+                    </PropertyName>
+                    <PropertyItems>
+                        <RowContainer setParentStyle={setParentStyle} />
+                        <RowContainer setParentStyle={setParentStyle} />
+                        <RowContainer setParentStyle={setParentStyle} />
+                        <RowContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="flex-wrap" smooth to="/#flex-wrap">
+                        flex-wrap
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="flex-flow" smooth to="/#flex-flow">
+                        flex-flow
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="order" smooth to="/#order">
+                        order
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="justify-content" smooth to="/#justify-content">
+                        justify-content
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="align-items" smooth to="/#align-items">
+                        align-items
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="align-self" smooth to="/#align-self">
+                        align-self
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="align-content" smooth to="/#align-content">
+                        align-content
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="flex-grow" smooth to="/#flex-grow">
+                        flex-grow
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="flex-shrink" smooth to="/#flex-shrink">
+                        flex-shrink
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <section>
+                    <PropertyName id="flex-basis" smooth to="/#flex-basis">
+                        flex-basis
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </section>
+                <section>
+                    <PropertyName id="others" smooth to="/#others">
+                        others
+                    </PropertyName>
+                    <PropertyItems>
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                        <FlexItemContainer setParentStyle={setParentStyle} />
+                    </PropertyItems>
+                </section>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
@@ -142,11 +142,15 @@ const Contents = styled.main`
 `;
 
 const PropertySections = styled.div`
-    ${tw`flex w-full ml-20`}
+    ${tw`flex flex-wrap w-full ml-20`}
+`;
+
+const PropertySection = styled.section`
+    ${tw`px-6`}
 `;
 
 const PropertyName = styled(Link)`
-    ${tw`inline-block no-underline text-2xl text-blue-900 leading-loose mt-6`}
+    ${tw`inline-block no-underline text-2xl text-blue-900 leading-loose mt-6 ml-3`}
 `;
 
 const PropertyItems = styled.div`

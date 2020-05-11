@@ -1,7 +1,7 @@
-import { ExampleItem } from './ExampleItem';
 import React, { ReactElement } from 'react';
-import styled, { FlattenSimpleInterpolation, css } from 'styled-components';
+import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
+import { ExampleItem } from './ExampleItem';
 
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;
@@ -13,7 +13,7 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
     const { parentStyle, propertyName, onClickBoxHandler } = props;
 
     const ExampleItems = styled.div`
-        ${tw`border border-dashed border-blue-500 m-3`}
+        ${tw`border border-dashed border-blue-500`}
         ${parentStyle}
     `;
 
@@ -37,7 +37,7 @@ const BehaviorBoxWrapper = styled.div`
 `;
 
 const BehaviorBox = styled.div`
-    ${tw`inline-block h-40 w-48 border border-solid border-gray-400 hover:border-blue-500 cursor-pointer`}
+    ${tw`inline-block h-24 w-32 border border-solid border-gray-400 hover:border-blue-500 cursor-pointer p-2`}
 `;
 
 const PropertyValue = styled.p`

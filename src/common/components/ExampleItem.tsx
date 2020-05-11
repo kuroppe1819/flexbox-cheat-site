@@ -15,9 +15,9 @@ export const ExampleItem = (props: Props): ReactElement => {
 };
 
 const Item = styled.div`
-    ${tw`m-px bg-blue-400 w-8 h-8 flex justify-center items-center`}
+    ${tw`m-px bg-blue-400 w-6 h-6 flex justify-center items-center`}
 `;
 
 const ItemText = styled.div`
-    ${tw`inline-block text-blue-100 text-lg`}
+    ${tw`inline-block text-blue-100 text-base`}
 `;
