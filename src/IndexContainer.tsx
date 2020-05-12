@@ -14,8 +14,8 @@ import { useClipboard } from './common/util/useClipboard';
 export type MainContentsContextProps = {
     opened: boolean;
     setOpened: Dispatch<SetStateAction<boolean>>;
-    parentStyle: string;
-    setParentStyle: Dispatch<SetStateAction<string>>;
+    flexboxItemsStyle: string;
+    setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
     copied: boolean;
     onCopy: () => void;
 };
@@ -24,11 +24,13 @@ export const MainContentsContext = React.createContext({} as MainContentsContext
 
 const IndexContainer = (): ReactElement => {
     const [opened, setOpened] = useState(false);
-    const [parentStyle, setParentStyle] = useState('');
-    const [copied, onCopy] = useClipboard(parentStyle);
+    const [flexboxItemsStyle, setFlexboxItemsStyle] = useState('');
+    const [copied, onCopy] = useClipboard(flexboxItemsStyle);
 
     return (
-        <MainContentsContext.Provider value={{ opened, setOpened, parentStyle, setParentStyle, copied, onCopy }}>
+        <MainContentsContext.Provider
+            value={{ opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy }}
+        >
             <Index />;
         </MainContentsContext.Provider>
     );
