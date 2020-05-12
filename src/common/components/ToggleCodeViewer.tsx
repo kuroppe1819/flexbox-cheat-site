@@ -15,14 +15,14 @@ export const ToggleCodeViewer = (props: Props): ReactElement => {
             {opened ? (
                 <ToggleIcon icon={['fas', 'angle-double-right']} size="1x" />
             ) : (
-                <ToggleIcon icon={['fas', 'angle-double-left']} size="sm" />
+                <ToggleIcon icon={['fas', 'angle-double-left']} size="1x" />
             )}
         </ToggleBackground>
     );
 };
 
 const ToggleBackground = styled.div`
-    ${tw`bg-gray-400 w-12 h-12 rounded-l-md flex justify-center items-center cursor-pointer`}
+    ${tw`bg-gray-400 w-12 h-12 rounded-l-md flex justify-center items-center cursor-pointer shadow-md`}
 `;
 
 const ToggleIcon = styled(FontAwesomeIcon)`
