@@ -6,12 +6,12 @@ import { ExampleItem } from './ExampleItem';
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;
     childStyle?: FlattenSimpleInterpolation;
-    propertyName: string;
+    propertyValue: string;
     onClickBoxHandler: () => void;
 };
 
 export const BehaviorFlexbox = (props: Props): ReactElement => {
-    const { parentStyle, childStyle, propertyName, onClickBoxHandler } = props;
+    const { parentStyle, childStyle, propertyValue, onClickBoxHandler } = props;
     return (
         <BehaviorBoxWrapper>
             <BehaviorBox onClick={onClickBoxHandler}>
@@ -22,7 +22,7 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
                     <ExampleItem overrideItemStyle={childStyle} numberText="4" />
                 </ExampleItems>
             </BehaviorBox>
-            <PropertyValue>{propertyName}</PropertyValue>
+            <PropertyValue>{propertyValue}</PropertyValue>
         </BehaviorBoxWrapper>
     );
 };
