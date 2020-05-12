@@ -18,8 +18,7 @@ import { FlexShrinkContainer } from '../flexboxItems/FlexShrinkContainer';
 import { FlexBasisContainer } from '../flexboxItems/FlexBasisContainer';
 import { FirstChildToCornerContainer } from '../flexboxItems/others/FirstChildToCornerContainer';
 import { LastChildToCornerContainer } from '../flexboxItems/others/LastChildToCornerContainer';
-import { FirstChildToCornerCenterContainer } from '../flexboxItems/others/FirstChildToCornerCenterContainer';
-import { LastChildToCornerCenterContainer } from '../flexboxItems/others/LastChildToCornerCenterContainer';
+import { ChildToCornerCenterContainer } from '../flexboxItems/others/ChildCornerCenterContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -182,8 +181,7 @@ export const MainContents = (): ReactElement => {
                     <PropertyItems>
                         <FirstChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
                         <LastChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
-                        <FirstChildToCornerCenterContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
-                        <LastChildToCornerCenterContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <ChildToCornerCenterContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
                     </PropertyItems>
                 </PropertySection>
             </PropertySections>

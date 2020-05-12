@@ -2,24 +2,37 @@ import React, { ReactElement } from 'react';
 import { FlexboxItemsForOthersProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
-import { createCssCodeForParent, createCssCodeForLastChild } from '../../common/util/CreateCssCode';
+import {
+    createCssCodeForParent,
+    createCssCodeForFirstChild,
+    createCssCodeForLastChild,
+} from '../../common/util/CreateCssCode';
 
-export const LastChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
+export const ChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
     const { setFlexboxItemsStyle } = props;
 
     const parentStyleContents = `display: flex;
-    justify-content: center;
-    height: 100%`;
+    justify-content: center;`;
+
+    const firstChildStyleContens = `position: relative;
+    right: 16px;
+    background-color: #2b6cb0;`;
 
     const lastChildStyleContens = `position: relative;
     left: 16px;
     background-color: #2b6cb0;`;
 
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const firstChildStyleCode = createCssCodeForFirstChild(firstChildStyleContens);
     const lastChildStyleCode = createCssCodeForLastChild(lastChildStyleContens);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCode}\n\n${lastChildStyleCode}`);
+
+    const onClickBoxHandler = (): void =>
+        setFlexboxItemsStyle(`${parentStyleCode}\n\n${firstChildStyleCode}\n\n${lastChildStyleCode}`);
     const parentStyle = css`
         ${parentStyleContents}
+    `;
+    const firstChildStyle = css`
+        ${firstChildStyleContens}
     `;
     const lastChildStyle = css`
         ${lastChildStyleContens}
@@ -27,8 +40,9 @@ export const LastChildToCornerCenterContainer = (props: FlexboxItemsForOthersPro
     return (
         <BehaviorFlexbox
             parentStyle={parentStyle}
+            firstChildStyle={firstChildStyle}
             lastChildStyle={lastChildStyle}
-            propertyValue=".last-child"
+            propertyValue={`.first&last-child`}
             onClickBoxHandler={onClickBoxHandler}
         />
     );
