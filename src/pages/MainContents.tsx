@@ -15,6 +15,7 @@ import { OrderContainer } from '../flexboxItems/OrderContainer';
 import { AlignSelfContainer } from '../flexboxItems/alignSelfContainer';
 import { FlexGrowContainer } from '../flexboxItems/FlexGrowContainer';
 import { FlexShrinkContainer } from '../flexboxItems/FlexShrinkContainer';
+import { FlexBasisContainer } from '../flexboxItems/FlexBasisContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -160,18 +161,22 @@ export const MainContents = (): ReactElement => {
                         <FlexShrinkContainer propertyValue="1" setFlexboxItemsStyle={setFlexboxItemsStyle} />
                     </PropertyItems>
                 </PropertySection>
-                <section>
+                <PropertySection>
                     <PropertyName id="flex-basis" smooth to="/#flex-basis">
                         flex-basis
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
-                </section>
-                <section>
+                    <PropertyItems>
+                        <FlexBasisContainer propertyValue="30%" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexBasisContainer propertyValue="50%" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexBasisContainer propertyValue="content" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
                     <PropertyName id="others" smooth to="/#others">
                         others
                     </PropertyName>
                     <PropertyItems></PropertyItems>
-                </section>
+                </PropertySection>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
