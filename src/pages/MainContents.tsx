@@ -195,11 +195,12 @@ const PropertySections = styled.div`
 `;
 
 const PropertySection = styled.section`
-    ${tw`px-4`}
+    ${tw`px-3`}
 `;
 
 const PropertyName = styled(Link)`
-    ${tw`inline-block no-underline text-2xl text-blue-900 leading-loose mt-6 ml-3`}
+    ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white`}
+    box-shadow: 0px 3px 3px -3px #cbd5e0;
 `;
 
 const PropertyItems = styled.div`
