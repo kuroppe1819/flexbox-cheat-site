@@ -60,13 +60,61 @@ export const MainContents = (): ReactElement => {
                     <PropertyName id="justify-content" smooth to="/#justify-content">
                         justify-content
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <JustifyContentContainer
+                            propertyValue="flex-start"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <JustifyContentContainer propertyValue="flex-end" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <JustifyContentContainer propertyValue="center" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <JustifyContentContainer
+                            propertyValue="space-between"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <JustifyContentContainer
+                            propertyValue="space-around"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <JustifyContentContainer
+                            propertyValue="space-evenly"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                    </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-items" smooth to="/#align-items">
                         align-items
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <AlignItemsContainer propertyValue="flex-start" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignItemsContainer propertyValue="flex-end" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignItemsContainer propertyValue="center" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignItemsContainer propertyValue="baseline" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignItemsContainer propertyValue="stretch" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
+                </PropertySection>
+                <PropertySection>
+                    <PropertyName id="align-content" smooth to="/#align-content">
+                        align-content
+                    </PropertyName>
+                    <PropertyItems>
+                        <AlignContentContainer propertyValue="flex-start" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignContentContainer propertyValue="flex-end" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignContentContainer propertyValue="center" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignContentContainer
+                            propertyValue="space-between"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <AlignContentContainer
+                            propertyValue="space-around"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <AlignContentContainer
+                            propertyValue="space-evenly"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <AlignContentContainer propertyValue="stretch" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="order" smooth to="/#order">
@@ -77,12 +125,6 @@ export const MainContents = (): ReactElement => {
                 <PropertySection>
                     <PropertyName id="align-self" smooth to="/#align-self">
                         align-self
-                    </PropertyName>
-                    <PropertyItems></PropertyItems>
-                </PropertySection>
-                <PropertySection>
-                    <PropertyName id="align-content" smooth to="/#align-content">
-                        align-content
                     </PropertyName>
                     <PropertyItems></PropertyItems>
                 </PropertySection>
