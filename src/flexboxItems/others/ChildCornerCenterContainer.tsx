@@ -9,7 +9,7 @@ import {
 } from '../../common/util/CreateCssCode';
 
 export const ChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
-    const { setFlexboxItemsStyle } = props;
+    const { setFlexboxItemsStyle, setOpened } = props;
 
     const parentStyleContents = `display: flex;
     justify-content: center;`;
@@ -26,8 +26,11 @@ export const ChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps):
     const firstChildStyleCode = createCssCodeForFirstChild(firstChildStyleContens);
     const lastChildStyleCode = createCssCodeForLastChild(lastChildStyleContens);
 
-    const onClickBoxHandler = (): void =>
+    const onClickBoxHandler = (): void => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${firstChildStyleCode}\n\n${lastChildStyleCode}`);
+        setOpened(true);
+    };
+
     const parentStyle = css`
         ${parentStyleContents}
     `;
@@ -37,6 +40,7 @@ export const ChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps):
     const lastChildStyle = css`
         ${lastChildStyleContens}
     `;
+
     return (
         <BehaviorFlexbox
             parentStyle={parentStyle}

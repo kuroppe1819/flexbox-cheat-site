@@ -5,7 +5,7 @@ import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForParent, createCssCodeForLastChild } from '../../common/util/CreateCssCode';
 
 export const LastChildToCornerContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
-    const { setFlexboxItemsStyle } = props;
+    const { setFlexboxItemsStyle, setOpened } = props;
 
     const parentStyleContents = `display: flex;
     height: 100%`;
@@ -15,13 +15,19 @@ export const LastChildToCornerContainer = (props: FlexboxItemsForOthersProps): R
 
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const lastChildStyleCode = createCssCodeForLastChild(lastChildStyleContens);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCode}\n\n${lastChildStyleCode}`);
+
+    const onClickBoxHandler = (): void => {
+        setFlexboxItemsStyle(`${parentStyleCode}\n\n${lastChildStyleCode}`);
+        setOpened(true);
+    };
+
     const parentStyle = css`
         ${parentStyleContents}
     `;
     const lastChildStyle = css`
         ${lastChildStyleContens}
     `;
+
     return (
         <BehaviorFlexbox
             parentStyle={parentStyle}

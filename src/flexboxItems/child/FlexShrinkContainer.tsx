@@ -9,7 +9,7 @@ import {
 } from '../../common/util/CreateCssCode';
 
 export const FlexShrinkContainer = (props: FlexboxItemsProps): ReactElement => {
-    const { propertyValue, setFlexboxItemsStyle } = props;
+    const { propertyValue, setFlexboxItemsStyle, setOpened } = props;
 
     const parentStyleContents = `display: flex;
     align-items: flex-start;`;
@@ -22,8 +22,11 @@ export const FlexShrinkContainer = (props: FlexboxItemsProps): ReactElement => {
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const childStyleCode = createCssCodeForChild(childStyleContents);
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
-    const onClickBoxHandler = (): void =>
+
+    const onClickBoxHandler = (): void => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${childStyleCode}\n\n${childFeaturedCode}`);
+        setOpened(true);
+    };
 
     const parentStyle = css`
         ${parentStyleContents}
@@ -34,6 +37,7 @@ export const FlexShrinkContainer = (props: FlexboxItemsProps): ReactElement => {
     const childFeaturedStyle = css`
         ${childFeaturedStyleContents}
     `;
+
     return (
         <BehaviorFlexbox
             parentStyle={parentStyle}
