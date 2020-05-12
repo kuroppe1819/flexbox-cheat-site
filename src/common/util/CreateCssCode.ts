@@ -10,8 +10,20 @@ export const createCssCodeForChild = (styleContents: string): string => {
 }`;
 };
 
+export const createCssCodeForFirstChild = (styleContents: string): string => {
+    return `.first-child {
+    ${styleContents}
+}`;
+};
+
 export const createCssCodeForChildFeatured = (styleContents: string): string => {
     return `.child--featured {
+    ${styleContents}
+}`;
+};
+
+export const createCssCodeForLastChild = (styleContents: string): string => {
+    return `.last-child {
     ${styleContents}
 }`;
 };

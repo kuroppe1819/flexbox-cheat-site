@@ -6,21 +6,32 @@ import { ExampleItem } from './ExampleItem';
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;
     childStyle?: FlattenSimpleInterpolation;
+    firstChildStyle?: FlattenSimpleInterpolation;
     childFeaturedStyle?: FlattenSimpleInterpolation;
+    lastChildStyle?: FlattenSimpleInterpolation;
     propertyValue: string;
     onClickBoxHandler: () => void;
 };
 
 export const BehaviorFlexbox = (props: Props): ReactElement => {
-    const { parentStyle, childStyle, childFeaturedStyle, propertyValue, onClickBoxHandler } = props;
+    const {
+        parentStyle,
+        childStyle,
+        firstChildStyle,
+        childFeaturedStyle,
+        lastChildStyle,
+        propertyValue,
+        onClickBoxHandler,
+    } = props;
+
     return (
         <BehaviorBoxWrapper>
             <BehaviorBox onClick={onClickBoxHandler}>
                 <ExampleItems parentStyle={parentStyle}>
-                    <ExampleItem overrideItemStyle={childStyle} numberText="1" />
+                    <ExampleItem overrideItemStyle={[childStyle, firstChildStyle]} numberText="1" />
                     <ExampleItem overrideItemStyle={childStyle} numberText="2" />
                     <ExampleItem overrideItemStyle={[childStyle, childFeaturedStyle]} numberText="3" />
-                    <ExampleItem overrideItemStyle={childStyle} numberText="4" />
+                    <ExampleItem overrideItemStyle={[childStyle, lastChildStyle]} numberText="4" />
                 </ExampleItems>
             </BehaviorBox>
             <PropertyValue>{propertyValue}</PropertyValue>
