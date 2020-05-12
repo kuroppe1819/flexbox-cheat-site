@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../common/components/BehaviorFlexbox';
-import { createCssCodeForParent } from '../common/util/CreateCssCode';
+import { createCssCodeForParent, createCssCodeForChild } from '../common/util/CreateCssCode';
 
 export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle } = props;
@@ -15,7 +15,8 @@ export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement =>
     const childStyleContents = `width: 30%;`;
 
     const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCssCode);
+    const childStyleCssCode = createCssCodeForChild(childStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCssCode}\n\n${childStyleCssCode}`);
     const parentStyle = css`
         ${parentStyleContents}
     `;
