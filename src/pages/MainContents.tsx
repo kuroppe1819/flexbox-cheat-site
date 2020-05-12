@@ -11,6 +11,7 @@ import { FlexWrapContainer } from '../flexboxItems/FlexWrapContainer';
 import { JustifyContentContainer } from '../flexboxItems/JustifyContentContainer';
 import { AlignItemsContainer } from '../flexboxItems/AlignItemsContainer';
 import { AlignContentContainer } from '../flexboxItems/AlignContentContainer';
+import { OrderContainer } from '../flexboxItems/OrderContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -120,7 +121,11 @@ export const MainContents = (): ReactElement => {
                     <PropertyName id="order" smooth to="/#order">
                         order
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <OrderContainer propertyValue="-1" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <OrderContainer propertyValue="0" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <OrderContainer propertyValue="1" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-self" smooth to="/#align-self">
