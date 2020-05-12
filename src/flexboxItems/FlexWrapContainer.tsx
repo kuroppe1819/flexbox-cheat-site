@@ -1,4 +1,4 @@
-import { FlexboxItemsProps } from '@types/flexboxItems';
+import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import React, { ReactElement } from 'react';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../common/components/BehaviorFlexbox';
