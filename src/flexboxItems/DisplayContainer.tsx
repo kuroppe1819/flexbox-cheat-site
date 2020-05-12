@@ -9,8 +9,8 @@ export const DisplayContainer = (props: FlexboxItemsProps): ReactElement => {
 
     const parentStyleContents = `display: ${propertyValue};`;
 
-    const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCssCode);
+    const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCode);
     const parentStyle = css`
         ${parentStyleContents}
     `;

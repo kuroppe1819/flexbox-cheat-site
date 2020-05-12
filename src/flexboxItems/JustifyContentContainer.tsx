@@ -10,8 +10,8 @@ export const JustifyContentContainer = (props: FlexboxItemsProps): ReactElement 
     const parentStyleContents = `display: flex;
     justify-content: ${propertyValue};`;
 
-    const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCssCode);
+    const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCode);
     const parentStyle = css`
         ${parentStyleContents}
     `;

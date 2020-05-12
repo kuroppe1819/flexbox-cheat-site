@@ -15,9 +15,9 @@ export const FlexGrowContainer = (props: FlexboxItemsProps): ReactElement => {
     background-color: #2b6cb0;
     `;
 
-    const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const childFeaturedCssCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCssCode}\n\n${childFeaturedCssCode}`);
+    const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCode}\n\n${childFeaturedCode}`);
     const parentStyle = css`
         ${parentStyleContents}
     `;

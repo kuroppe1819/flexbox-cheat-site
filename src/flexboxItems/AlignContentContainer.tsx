@@ -14,9 +14,9 @@ export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement =>
 
     const childStyleContents = `width: 30%;`;
 
-    const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const childStyleCssCode = createCssCodeForChild(childStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCssCode}\n\n${childStyleCssCode}`);
+    const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const childStyleCode = createCssCodeForChild(childStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(`${parentStyleCode}\n\n${childStyleCode}`);
     const parentStyle = css`
         ${parentStyleContents}
     `;

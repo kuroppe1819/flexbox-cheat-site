@@ -11,8 +11,8 @@ export const AlignItemsContainer = (props: FlexboxItemsProps): ReactElement => {
     align-items: ${propertyValue};
     height: 100%;`;
 
-    const parentStyleCssCode = createCssCodeForParent(parentStyleContents);
-    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCssCode);
+    const parentStyleCode = createCssCodeForParent(parentStyleContents);
+    const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCode);
     const parentStyle = css`
         ${parentStyleContents}
     `;
