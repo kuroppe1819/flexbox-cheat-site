@@ -12,6 +12,7 @@ import { JustifyContentContainer } from '../flexboxItems/JustifyContentContainer
 import { AlignItemsContainer } from '../flexboxItems/AlignItemsContainer';
 import { AlignContentContainer } from '../flexboxItems/AlignContentContainer';
 import { OrderContainer } from '../flexboxItems/OrderContainer';
+import { AlignSelfContainer } from '../flexboxItems/alignSelfContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -131,7 +132,13 @@ export const MainContents = (): ReactElement => {
                     <PropertyName id="align-self" smooth to="/#align-self">
                         align-self
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <AlignSelfContainer propertyValue="flex-start" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignSelfContainer propertyValue="flex-end" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignSelfContainer propertyValue="center" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignSelfContainer propertyValue="baseline" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <AlignSelfContainer propertyValue="stretch" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="flex-grow" smooth to="/#flex-grow">
