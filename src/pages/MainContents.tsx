@@ -14,6 +14,7 @@ import { AlignContentContainer } from '../flexboxItems/AlignContentContainer';
 import { OrderContainer } from '../flexboxItems/OrderContainer';
 import { AlignSelfContainer } from '../flexboxItems/alignSelfContainer';
 import { FlexGrowContainer } from '../flexboxItems/FlexGrowContainer';
+import { FlexShrinkContainer } from '../flexboxItems/FlexShrinkContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -154,7 +155,10 @@ export const MainContents = (): ReactElement => {
                     <PropertyName id="flex-shrink" smooth to="/#flex-shrink">
                         flex-shrink
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <FlexShrinkContainer propertyValue="0" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexShrinkContainer propertyValue="1" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
                 </PropertySection>
                 <section>
                     <PropertyName id="flex-basis" smooth to="/#flex-basis">
