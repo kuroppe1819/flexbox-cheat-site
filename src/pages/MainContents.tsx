@@ -4,30 +4,18 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
-import { FlexItemContainer } from '../flexboxItems/display/FlexItemContainer';
-import { InlineFlexItemContainer } from '../flexboxItems/display/InlineFlexContainer';
 import { MainContentsContext } from '../IndexContainer';
-import { RowContainer } from '../flexboxItems/flexDirection/RowContainer';
-import { RowReverseContainer } from '../flexboxItems/flexDirection/RowReverseContainer';
-import { ColumnContainer } from '../flexboxItems/flexDirection/ColumnContainer';
-import { ColumnReverseContainer } from '../flexboxItems/flexDirection/ColumnReverseContainer';
-import { NoWrapContainer } from '../flexboxItems/flexWrap/NowrapContainer';
-import { WrapContainer } from '../flexboxItems/flexWrap/WrapContainer';
-import { WrapReverseContainer } from '../flexboxItems/flexWrap/WrapReverseContainer';
-import { JCFlexStartContainer } from '../flexboxItems/justifyContent/JCFlexStartContainer';
-import { JCFlexEndContainer } from '../flexboxItems/justifyContent/JCFlexEndContainer';
-import { JCCenterContainer } from '../flexboxItems/justifyContent/JCCenterContainer';
-import { JCSpaceAroundContainer } from '../flexboxItems/justifyContent/JCSpaceAround';
-import { JCSpaceBetweenContainer } from '../flexboxItems/justifyContent/JCSpaceBetweenContainer';
-import { JCSpaceEvenlyContainer } from '../flexboxItems/justifyContent/JCSpaceEvenlyContainer';
-import { AIFlexStartContainer } from '../flexboxItems/alignItems/AIFlexStartContainer';
-import { AIFlexEndContainer } from '../flexboxItems/alignItems/AIFlexEndContainer';
-import { AICenterContainer } from '../flexboxItems/alignItems/AICenterContainer';
-import { AIBaselineContainer } from '../flexboxItems/alignItems/AIBaselineContainer';
-import { AIStretchContainer } from '../flexboxItems/alignItems/AIStretchContainer';
+import { DisplayContainer } from '../flexboxItems/DisplayContainer';
+import { FlexDirectionContainer } from '../flexboxItems/FlexDirectionContainer';
+import { FlexWrapContainer } from '../flexboxItems/FlexWrapContainer';
+import { JustifyContentContainer } from '../flexboxItems/JustifyContentContainer';
+import { AlignItemsContainer } from '../flexboxItems/AlignItemsContainer';
+import { AlignContentContainer } from '../flexboxItems/AlignContentContainer';
 
 export const MainContents = (): ReactElement => {
-    const { opened, setOpened, parentStyle, setParentStyle, copied, onCopy } = useContext(MainContentsContext);
+    const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
+        MainContentsContext
+    );
 
     return (
         <Contents>
@@ -37,8 +25,8 @@ export const MainContents = (): ReactElement => {
                         display
                     </PropertyName>
                     <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <InlineFlexItemContainer setParentStyle={setParentStyle} />
+                        <DisplayContainer propertyValue="flex" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <DisplayContainer propertyValue="inline-flex" setFlexboxItemsStyle={setFlexboxItemsStyle} />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
@@ -46,10 +34,16 @@ export const MainContents = (): ReactElement => {
                         flex-direction
                     </PropertyName>
                     <PropertyItems>
-                        <RowContainer setParentStyle={setParentStyle} />
-                        <RowReverseContainer setParentStyle={setParentStyle} />
-                        <ColumnContainer setParentStyle={setParentStyle} />
-                        <ColumnReverseContainer setParentStyle={setParentStyle} />
+                        <FlexDirectionContainer propertyValue="row" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexDirectionContainer
+                            propertyValue="row-reverse"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
+                        <FlexDirectionContainer propertyValue="column" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexDirectionContainer
+                            propertyValue="column-reverse"
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                        />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
@@ -57,99 +51,69 @@ export const MainContents = (): ReactElement => {
                         flex-wrap
                     </PropertyName>
                     <PropertyItems>
-                        <NoWrapContainer setParentStyle={setParentStyle} />
-                        <WrapContainer setParentStyle={setParentStyle} />
-                        <WrapReverseContainer setParentStyle={setParentStyle} />
+                        <FlexWrapContainer propertyValue="nowrap" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexWrapContainer propertyValue="wrap" setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <FlexWrapContainer propertyValue="wrap-reverse" setFlexboxItemsStyle={setFlexboxItemsStyle} />
                     </PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="justify-content" smooth to="/#justify-content">
                         justify-content
                     </PropertyName>
-                    <PropertyItems>
-                        <JCFlexStartContainer setParentStyle={setParentStyle} />
-                        <JCFlexEndContainer setParentStyle={setParentStyle} />
-                        <JCCenterContainer setParentStyle={setParentStyle} />
-                        <JCSpaceBetweenContainer setParentStyle={setParentStyle} />
-                        <JCSpaceAroundContainer setParentStyle={setParentStyle} />
-                        <JCSpaceEvenlyContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-items" smooth to="/#align-items">
                         align-items
                     </PropertyName>
-                    <PropertyItems>
-                        <AIFlexStartContainer setParentStyle={setParentStyle} />
-                        <AIFlexEndContainer setParentStyle={setParentStyle} />
-                        <AICenterContainer setParentStyle={setParentStyle} />
-                        <AIBaselineContainer setParentStyle={setParentStyle} />
-                        <AIStretchContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="order" smooth to="/#order">
                         order
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-self" smooth to="/#align-self">
                         align-self
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="align-content" smooth to="/#align-content">
                         align-content
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="flex-grow" smooth to="/#flex-grow">
                         flex-grow
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <PropertySection>
                     <PropertyName id="flex-shrink" smooth to="/#flex-shrink">
                         flex-shrink
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </PropertySection>
                 <section>
                     <PropertyName id="flex-basis" smooth to="/#flex-basis">
                         flex-basis
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </section>
                 <section>
                     <PropertyName id="others" smooth to="/#others">
                         others
                     </PropertyName>
-                    <PropertyItems>
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                        <FlexItemContainer setParentStyle={setParentStyle} />
-                    </PropertyItems>
+                    <PropertyItems></PropertyItems>
                 </section>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
-                <CodeViewer language="css" code={parentStyle} copied={copied} onClickCopiedHandler={onCopy} />
+                <CodeViewer language="css" code={flexboxItemsStyle} copied={copied} onClickCopiedHandler={onCopy} />
             </CodeViewerWrapper>
         </Contents>
     );
