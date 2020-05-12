@@ -39,7 +39,7 @@ export const CodeViewer = (props: Props): ReactElement => {
 
 const CodeView = styled.div`
     ${tw`inline-block border border-solid border-gray-400 bg-white h-full rounded-tl-md shadow-md`}
-    width: 20rem;
+    width: 24rem;
     min-height: 7.5rem;
 `;
 

@@ -365,7 +365,7 @@ const CodeViewerWrapper = styled.div<{ opened: boolean }>`
     ${tw`flex items-end fixed`}
     bottom: 0.5rem;
     right: 0;
-    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(20rem)')};
-    margin-left: ${(props): string => (props.opened ? '0' : '-20rem')};
+    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(24rem + 1px))')};
+    margin-left: ${(props): string => (props.opened ? '0' : '-24rem')};
     transition: all 300ms 0s ease;
 `;
