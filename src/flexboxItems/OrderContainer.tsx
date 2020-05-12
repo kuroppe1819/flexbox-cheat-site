@@ -8,12 +8,10 @@ export const OrderContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle } = props;
 
     const parentStyleContents = `display: flex;
-    align-items: flex-start;
-    height: 100%;`;
+    align-items: flex-start;`;
 
     const childFeaturedStyleContents = `order: ${propertyValue};
-    background-color: #2b6cb0;
-    `;
+    background-color: #2b6cb0;`;
 
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
