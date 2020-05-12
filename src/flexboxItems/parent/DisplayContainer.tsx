@@ -1,14 +1,13 @@
 import React, { ReactElement } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
-import { BehaviorFlexbox } from '../common/components/BehaviorFlexbox';
-import { createCssCodeForParent } from '../common/util/CreateCssCode';
+import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
+import { createCssCodeForParent } from '../../common/util/CreateCssCode';
 
-export const JustifyContentContainer = (props: FlexboxItemsProps): ReactElement => {
+export const DisplayContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle } = props;
 
-    const parentStyleContents = `display: flex;
-    justify-content: ${propertyValue};`;
+    const parentStyleContents = `display: ${propertyValue};`;
 
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const onClickBoxHandler = (): void => setFlexboxItemsStyle(parentStyleCode);

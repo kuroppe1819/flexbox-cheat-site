@@ -1,18 +1,18 @@
 import React, { ReactElement } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
-import { BehaviorFlexbox } from '../common/components/BehaviorFlexbox';
-import { createCssCodeForParent, createCssCodeForChild } from '../common/util/CreateCssCode';
+import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
+import { createCssCodeForParent, createCssCodeForChild } from '../../common/util/CreateCssCode';
 
-export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement => {
+export const FlexWrapContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle } = props;
 
     const parentStyleContents = `display: flex;
-    flex-wrap: wrap;
-    align-content: ${propertyValue};
+    align-items: flex-start;
+    flex-wrap: ${propertyValue};
     height: 100%;`;
 
-    const childStyleContents = `width: 30%;`;
+    const childStyleContents = `width: 40%;`;
 
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const childStyleCode = createCssCodeForChild(childStyleContents);
