@@ -4,3 +4,7 @@ export type FlexboxItemsProps = {
     propertyValue: string;
     setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
 };
+
+export type FlexboxItemsForOthersProps = {
+    setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
+};

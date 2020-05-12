@@ -12,10 +12,12 @@ import { JustifyContentContainer } from '../flexboxItems/JustifyContentContainer
 import { AlignItemsContainer } from '../flexboxItems/AlignItemsContainer';
 import { AlignContentContainer } from '../flexboxItems/AlignContentContainer';
 import { OrderContainer } from '../flexboxItems/OrderContainer';
-import { AlignSelfContainer } from '../flexboxItems/alignSelfContainer';
+import { AlignSelfContainer } from '../flexboxItems/AlignSelfContainer';
 import { FlexGrowContainer } from '../flexboxItems/FlexGrowContainer';
 import { FlexShrinkContainer } from '../flexboxItems/FlexShrinkContainer';
 import { FlexBasisContainer } from '../flexboxItems/FlexBasisContainer';
+import { FirstChildToCornerContainer } from '../flexboxItems/others/FirstChildToCornerContainer';
+import { LastChildToCornerContainer } from '../flexboxItems/others/LastChildToCornerContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -175,7 +177,10 @@ export const MainContents = (): ReactElement => {
                     <PropertyName id="others" smooth to="/#others">
                         others
                     </PropertyName>
-                    <PropertyItems></PropertyItems>
+                    <PropertyItems>
+                        <FirstChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                        <LastChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} />
+                    </PropertyItems>
                 </PropertySection>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
