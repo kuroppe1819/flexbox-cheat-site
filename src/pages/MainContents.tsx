@@ -164,7 +164,7 @@ const PropertySections = styled.div`
 `;
 
 const PropertySection = styled.section`
-    ${tw`px-5`}
+    ${tw`px-4`}
 `;
 
 const PropertyName = styled(Link)`
