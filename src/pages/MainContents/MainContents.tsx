@@ -382,11 +382,17 @@ export const MainContents = (props: Props): ReactElement => {
                         <FirstChildToCornerContainer
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
-                        <LastChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} setOpened={setOpened} />
+                        <LastChildToCornerContainer
+                            setFlexboxItemsStyle={setFlexboxItemsStyle}
+                            setOpened={setOpened}
+                            setReference={setReference}
+                        />
                         <FirstChildToCornerCenterContainer
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>

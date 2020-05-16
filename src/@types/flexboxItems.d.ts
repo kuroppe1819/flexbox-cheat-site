@@ -10,4 +10,5 @@ export type FlexboxItemsProps = {
 export type FlexboxItemsForOthersProps = {
     setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
     setOpened: Dispatch<SetStateAction<boolean>>;
+    setReference: Dispatch<SetStateAction<string>>;
 };

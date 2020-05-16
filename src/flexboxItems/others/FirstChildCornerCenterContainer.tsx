@@ -24,13 +24,16 @@ const firstChildStyle = css`
     ${firstChildStyleContens}
 `;
 
+const reference = '';
+
 export const FirstChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
-    const { setFlexboxItemsStyle, setOpened } = props;
+    const { setFlexboxItemsStyle, setOpened, setReference } = props;
 
     const onClickBoxHandler = useCallback(() => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${firstChildStyleCode}`);
         setOpened(true);
-    }, [setFlexboxItemsStyle, setOpened]);
+        setReference(reference);
+    }, [setFlexboxItemsStyle, setOpened, setReference]);
 
     return (
         <BehaviorFlexbox
