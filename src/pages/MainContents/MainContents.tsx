@@ -1,29 +1,35 @@
-import React, { ReactElement, useContext } from 'react';
+import React, { Dispatch, ReactElement, SetStateAction } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { CodeViewer } from '../common/components/CodeViewer';
-import { ToggleCodeViewer } from '../common/components/ToggleCodeViewer';
-import { MainContentsContext } from '../IndexContainer';
-import { DisplayContainer } from '../flexboxItems/parent/DisplayContainer';
-import { FlexDirectionContainer } from '../flexboxItems/parent/FlexDirectionContainer';
-import { FlexWrapContainer } from '../flexboxItems/parent/FlexWrapContainer';
-import { JustifyContentContainer } from '../flexboxItems/parent/JustifyContentContainer';
-import { AlignItemsContainer } from '../flexboxItems/parent/AlignItemsContainer';
-import { AlignContentContainer } from '../flexboxItems/parent/AlignContentContainer';
-import { OrderContainer } from '../flexboxItems/child/OrderContainer';
-import { AlignSelfContainer } from '../flexboxItems/child/AlignSelfContainer';
-import { FlexGrowContainer } from '../flexboxItems/child/FlexGrowContainer';
-import { FlexShrinkContainer } from '../flexboxItems/child/FlexShrinkContainer';
-import { FlexBasisContainer } from '../flexboxItems/child/FlexBasisContainer';
-import { FirstChildToCornerContainer } from '../flexboxItems/others/FirstChildToCornerContainer';
-import { LastChildToCornerContainer } from '../flexboxItems/others/LastChildToCornerContainer';
-import { FirstChildToCornerCenterContainer } from '../flexboxItems/others/FirstChildCornerCenterContainer';
+import { CodeViewer } from '../../common/components/CodeViewer';
+import { ToggleCodeViewer } from '../../common/components/ToggleCodeViewer';
+import { AlignSelfContainer } from '../../flexboxItems/child/AlignSelfContainer';
+import { FlexBasisContainer } from '../../flexboxItems/child/FlexBasisContainer';
+import { FlexGrowContainer } from '../../flexboxItems/child/FlexGrowContainer';
+import { FlexShrinkContainer } from '../../flexboxItems/child/FlexShrinkContainer';
+import { OrderContainer } from '../../flexboxItems/child/OrderContainer';
+import { FirstChildToCornerCenterContainer } from '../../flexboxItems/others/FirstChildCornerCenterContainer';
+import { FirstChildToCornerContainer } from '../../flexboxItems/others/FirstChildToCornerContainer';
+import { LastChildToCornerContainer } from '../../flexboxItems/others/LastChildToCornerContainer';
+import { AlignContentContainer } from '../../flexboxItems/parent/AlignContentContainer';
+import { AlignItemsContainer } from '../../flexboxItems/parent/AlignItemsContainer';
+import { DisplayContainer } from '../../flexboxItems/parent/DisplayContainer';
+import { FlexDirectionContainer } from '../../flexboxItems/parent/FlexDirectionContainer';
+import { FlexWrapContainer } from '../../flexboxItems/parent/FlexWrapContainer';
+import { JustifyContentContainer } from '../../flexboxItems/parent/JustifyContentContainer';
 
-export const MainContents = (): ReactElement => {
-    const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
-        MainContentsContext
-    );
+type Props = {
+    opened: boolean;
+    setOpened: Dispatch<SetStateAction<boolean>>;
+    flexboxItemsStyle: string;
+    setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
+    copied: boolean;
+    onCopy: () => void;
+};
+
+export const MainContents = (props: Props): ReactElement => {
+    const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = props;
 
     return (
         <Contents>
@@ -333,7 +339,7 @@ export const MainContents = (): ReactElement => {
                 </PropertySection>
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
-                <ToggleCodeViewer opened={opened} onClickHandler={(): void => setOpened(!opened)} />
+                <ToggleCodeViewer opened={opened} setOpened={setOpened} />
                 <CodeViewer language="css" code={flexboxItemsStyle} copied={copied} onClickCopiedHandler={onCopy} />
             </CodeViewerWrapper>
         </Contents>

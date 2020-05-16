@@ -1,17 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 type Props = {
     opened: boolean;
-    onClickHandler: () => void;
+    setOpened: Dispatch<SetStateAction<boolean>>;
 };
 
 export const ToggleCodeViewer = (props: Props): ReactElement => {
-    const { opened, onClickHandler } = props;
+    const { opened, setOpened } = props;
+
     return (
-        <ToggleBackground onClick={onClickHandler}>
+        <ToggleBackground
+            onClick={(): void => {
+                setOpened(!opened);
+            }}
+        >
             {opened ? (
                 <ToggleIcon icon={['fas', 'angle-double-right']} size="1x" />
             ) : (

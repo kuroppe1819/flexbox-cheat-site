@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, `${srcDir}/IndexContainer.tsx`),
+    entry: path.resolve(__dirname, `${srcDir}/Index.tsx`),
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',

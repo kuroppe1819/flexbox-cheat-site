@@ -9,16 +9,16 @@ export type Props = {
 
 export const ExampleItem = (props: Props): ReactElement => {
     return (
-        <Item overrideStyle={props.overrideItemStyle ? props.overrideItemStyle : css``}>
+        <Item overrideStyle={props.overrideItemStyle}>
             <ItemText>{props.numberText}</ItemText>
         </Item>
     );
 };
 
-const Item = styled.div<{ overrideStyle: FlattenSimpleInterpolation }>`
+const Item = styled.div<{ overrideStyle?: FlattenSimpleInterpolation }>`
     ${tw`m-px bg-blue-400 flex justify-center items-center`}
     min-width: 1rem;
-    ${(props): FlattenSimpleInterpolation => props.overrideStyle}
+    ${(props): FlattenSimpleInterpolation => (props.overrideStyle ? props.overrideStyle : css``)}
 `;
 
 const ItemText = styled.div`
