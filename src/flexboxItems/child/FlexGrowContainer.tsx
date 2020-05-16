@@ -1,29 +1,34 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
-import { createCssCodeForParent, createCssCodeForChildFeatured } from '../../common/util/CreateCssCode';
+import { createCssCodeForChildFeatured, createCssCodeForParent } from '../../common/util/CreateCssCode';
+
+const parentStyleContents = `display: flex;
+    align-items: flex-start;`;
+
+const parentStyleCode = createCssCodeForParent(parentStyleContents);
+
+const parentStyle = css`
+    ${parentStyleContents}
+`;
+
+const reference = 'https://developer.mozilla.org/ja/docs/Web/CSS/flex-grow';
 
 export const FlexGrowContainer = (props: FlexboxItemsProps): ReactElement => {
-    const { propertyValue, setFlexboxItemsStyle, setOpened } = props;
-
-    const parentStyleContents = `display: flex;
-    align-items: flex-start;`;
+    const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
 
     const childFeaturedStyleContents = `flex-grow: ${propertyValue};
     background-color: #2b6cb0;`;
 
-    const parentStyleCode = createCssCodeForParent(parentStyleContents);
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
 
-    const onClickBoxHandler = (): void => {
+    const onClickBoxHandler = useCallback(() => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${childFeaturedCode}`);
         setOpened(true);
-    };
+        setReference(reference);
+    }, [childFeaturedCode, setFlexboxItemsStyle, setOpened, setReference]);
 
-    const parentStyle = css`
-        ${parentStyleContents}
-    `;
     const childFeaturedStyle = css`
         ${childFeaturedStyleContents}
     `;
