@@ -18,7 +18,7 @@ import { FlexShrinkContainer } from '../flexboxItems/child/FlexShrinkContainer';
 import { FlexBasisContainer } from '../flexboxItems/child/FlexBasisContainer';
 import { FirstChildToCornerContainer } from '../flexboxItems/others/FirstChildToCornerContainer';
 import { LastChildToCornerContainer } from '../flexboxItems/others/LastChildToCornerContainer';
-import { ChildToCornerCenterContainer } from '../flexboxItems/others/ChildCornerCenterContainer';
+import { FirstChildToCornerCenterContainer } from '../flexboxItems/others/FirstChildCornerCenterContainer';
 
 export const MainContents = (): ReactElement => {
     const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = useContext(
@@ -325,7 +325,7 @@ export const MainContents = (): ReactElement => {
                             setOpened={setOpened}
                         />
                         <LastChildToCornerContainer setFlexboxItemsStyle={setFlexboxItemsStyle} setOpened={setOpened} />
-                        <ChildToCornerCenterContainer
+                        <FirstChildToCornerCenterContainer
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
                         />
@@ -358,7 +358,7 @@ const PropertyName = styled(Link)`
 `;
 
 const PropertyItems = styled.div`
-    ${tw``}
+    ${tw`m-auto`}
 `;
 
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
