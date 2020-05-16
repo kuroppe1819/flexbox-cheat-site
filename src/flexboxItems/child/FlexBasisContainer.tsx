@@ -1,8 +1,9 @@
-import React, { ReactElement, useCallback } from 'react';
+import React, { ReactElement, useState, useCallback } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForChildFeatured, createCssCodeForParent } from '../../common/util/CreateCssCode';
+import { ThemeColor } from '../../common/util/ThemeColor';
 
 const parentStyleContents = `display: flex;
     flex-wrap: wrap;`;
@@ -18,8 +19,10 @@ const reference = 'https://developer.mozilla.org/ja/docs/Web/CSS/flex-basis';
 export const FlexBasisContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
 
+    const [isMouseEnter, setMouseEnter] = useState(false);
+
     const childFeaturedStyleContents = `flex-basis: ${propertyValue};
-    background-color: #2b6cb0;`;
+    background-color: ${ThemeColor.backgroundFeaturedItem};`;
 
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
 
@@ -35,6 +38,8 @@ export const FlexBasisContainer = (props: FlexboxItemsProps): ReactElement => {
 
     return (
         <BehaviorFlexbox
+            isMouseEnter={isMouseEnter}
+            setMouseEnter={setMouseEnter}
             parentStyle={parentStyle}
             childFeaturedStyle={childFeaturedStyle}
             propertyValue={propertyValue}

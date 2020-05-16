@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback } from 'react';
+import React, { ReactElement, useState, useCallback } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
@@ -16,6 +16,8 @@ const reference = 'https://developer.mozilla.org/ja/docs/Web/CSS/align-content';
 
 export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
+
+    const [isMouseEnter, setMouseEnter] = useState(false);
 
     const parentStyleContents = `display: flex;
     flex-wrap: wrap;
@@ -36,6 +38,8 @@ export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement =>
 
     return (
         <BehaviorFlexbox
+            isMouseEnter={isMouseEnter}
+            setMouseEnter={setMouseEnter}
             parentStyle={parentStyle}
             childStyle={childStyle}
             propertyValue={propertyValue}

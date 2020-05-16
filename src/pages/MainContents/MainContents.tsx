@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../../common/components/ToggleCodeViewer';
+import { ThemeColor } from '../../common/util/ThemeColor';
 import { AlignSelfContainer } from '../../flexboxItems/child/AlignSelfContainer';
 import { FlexBasisContainer } from '../../flexboxItems/child/FlexBasisContainer';
 import { FlexGrowContainer } from '../../flexboxItems/child/FlexGrowContainer';
@@ -412,7 +413,7 @@ export const MainContents = (props: Props): ReactElement => {
 };
 
 const Contents = styled.main`
-    ${tw`flex mx-12`}
+    ${tw`flex mx-12 mb-12`}
 `;
 
 const PropertySections = styled.div`
@@ -425,7 +426,7 @@ const PropertySection = styled.section`
 
 const PropertyName = styled(Link)`
     ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white`}
-    box-shadow: 0px 3px 3px -3px #cbd5e0;
+    box-shadow: 0px 3px 3px -3px ${ThemeColor.shadow};
 `;
 
 const PropertyItems = styled.div`

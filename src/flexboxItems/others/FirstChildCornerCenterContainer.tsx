@@ -1,8 +1,9 @@
-import React, { ReactElement, useCallback } from 'react';
+import React, { ReactElement, useState, useCallback } from 'react';
 import { FlexboxItemsForOthersProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForFirstChild, createCssCodeForParent } from '../../common/util/CreateCssCode';
+import { ThemeColor } from '../../common/util/ThemeColor';
 
 const parentStyleContents = `display: flex;
     justify-content: center;
@@ -11,7 +12,7 @@ const parentStyleContents = `display: flex;
 const firstChildStyleContens = `position: absolute;
     top: 0;
     left: 0;
-    background-color: #2b6cb0;`;
+    background-color: ${ThemeColor.backgroundFeaturedItem};`;
 
 const parentStyleCode = createCssCodeForParent(parentStyleContents);
 const firstChildStyleCode = createCssCodeForFirstChild(firstChildStyleContens);
@@ -29,6 +30,8 @@ const reference = '';
 export const FirstChildToCornerCenterContainer = (props: FlexboxItemsForOthersProps): ReactElement => {
     const { setFlexboxItemsStyle, setOpened, setReference } = props;
 
+    const [isMouseEnter, setMouseEnter] = useState(false);
+
     const onClickBoxHandler = useCallback(() => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${firstChildStyleCode}`);
         setOpened(true);
@@ -37,6 +40,8 @@ export const FirstChildToCornerCenterContainer = (props: FlexboxItemsForOthersPr
 
     return (
         <BehaviorFlexbox
+            isMouseEnter={isMouseEnter}
+            setMouseEnter={setMouseEnter}
             parentStyle={parentStyle}
             firstChildStyle={firstChildStyle}
             propertyValue={`center & leftmost`}
