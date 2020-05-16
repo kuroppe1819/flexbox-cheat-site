@@ -56,11 +56,11 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
 };
 
 const BehaviorBoxWrapper = styled.div`
-    ${tw`mx-3 mt-3 mb-5`}
+    ${tw`mx-3 mt-3 mb-5 text-center`}
 `;
 
 const BehaviorBox = styled.div<{ isMouseEnter: boolean }>`
-    ${tw`inline-block h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2`}
+    ${tw`h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2 text-center`}
     border-color: ${(props): string => (props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray)}
 `;
 
@@ -70,6 +70,6 @@ const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
 `;
 
 const PropertyValue = styled.p<{ isMouseEnter: boolean }>`
-    ${tw`text-lg text-center text-gray-500 mt-2 mb-3 cursor-pointer`}
+    ${tw`inline-block text-lg text-center text-gray-500 mt-2 mb-3 cursor-pointer`}
     color: ${(props): string => (props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray)}
 `;
