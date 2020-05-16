@@ -35,7 +35,7 @@ export const LastChildToCornerContainer = (props: FlexboxItemsForOthersProps): R
         <BehaviorFlexbox
             parentStyle={parentStyle}
             lastChildStyle={lastChildStyle}
-            propertyValue=".last-child"
+            propertyValue="rightmost"
             onClickBoxHandler={onClickBoxHandler}
         />
     );

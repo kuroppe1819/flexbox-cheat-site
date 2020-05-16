@@ -34,7 +34,7 @@ export const FirstChildToCornerContainer = (props: FlexboxItemsForOthersProps): 
         <BehaviorFlexbox
             parentStyle={parentStyle}
             firstChildStyle={firstChildStyle}
-            propertyValue=".first-child"
+            propertyValue="leftmost"
             onClickBoxHandler={onClickBoxHandler}
         />
     );
