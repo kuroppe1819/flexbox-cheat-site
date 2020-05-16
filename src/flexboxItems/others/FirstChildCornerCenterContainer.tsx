@@ -30,7 +30,7 @@ export const FirstChildToCornerCenterContainer = (props: FlexboxItemsForOthersPr
     const onClickBoxHandler = useCallback(() => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${firstChildStyleCode}`);
         setOpened(true);
-    }, []);
+    }, [setFlexboxItemsStyle, setOpened]);
 
     return (
         <BehaviorFlexbox
