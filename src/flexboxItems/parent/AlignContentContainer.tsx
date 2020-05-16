@@ -1,32 +1,37 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { FlexboxItemsProps } from 'src/@types/flexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForParent, createCssCodeForChild } from '../../common/util/CreateCssCode';
 
+const childStyleContents = `width: 30%;`;
+
+const childStyleCode = createCssCodeForChild(childStyleContents);
+
+const childStyle = css`
+    ${childStyleContents}
+`;
+
+const reference = 'https://developer.mozilla.org/ja/docs/Web/CSS/align-content';
+
 export const AlignContentContainer = (props: FlexboxItemsProps): ReactElement => {
-    const { propertyValue, setFlexboxItemsStyle, setOpened } = props;
+    const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
 
     const parentStyleContents = `display: flex;
     flex-wrap: wrap;
     align-content: ${propertyValue};
     height: 100%;`;
 
-    const childStyleContents = `width: 30%;`;
-
     const parentStyleCode = createCssCodeForParent(parentStyleContents);
-    const childStyleCode = createCssCodeForChild(childStyleContents);
 
-    const onClickBoxHandler = (): void => {
+    const onClickBoxHandler = useCallback(() => {
         setFlexboxItemsStyle(`${parentStyleCode}\n\n${childStyleCode}`);
         setOpened(true);
-    };
+        setReference(reference);
+    }, [parentStyleCode, setFlexboxItemsStyle, setOpened, setReference]);
 
     const parentStyle = css`
         ${parentStyleContents}
-    `;
-    const childStyle = css`
-        ${childStyleContents}
     `;
 
     return (

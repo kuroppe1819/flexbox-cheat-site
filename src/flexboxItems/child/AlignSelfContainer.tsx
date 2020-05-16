@@ -19,8 +19,7 @@ export const AlignSelfContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
 
     const childFeaturedStyleContents = `align-self: ${propertyValue};
-    background-color: #2b6cb0;
-    `;
+    background-color: #2b6cb0;`;
 
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
 
