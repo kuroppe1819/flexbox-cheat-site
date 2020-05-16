@@ -26,10 +26,21 @@ type Props = {
     setFlexboxItemsStyle: Dispatch<SetStateAction<string>>;
     copied: boolean;
     onCopy: () => void;
+    reference: string;
+    setReference: Dispatch<SetStateAction<string>>;
 };
 
 export const MainContents = (props: Props): ReactElement => {
-    const { opened, setOpened, flexboxItemsStyle, setFlexboxItemsStyle, copied, onCopy } = props;
+    const {
+        opened,
+        setOpened,
+        flexboxItemsStyle,
+        setFlexboxItemsStyle,
+        copied,
+        onCopy,
+        reference,
+        setReference,
+    } = props;
 
     return (
         <Contents>
@@ -43,11 +54,13 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="flex"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <DisplayContainer
                             propertyValue="inline-flex"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -60,21 +73,25 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="row"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexDirectionContainer
                             propertyValue="row-reverse"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexDirectionContainer
                             propertyValue="column"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexDirectionContainer
                             propertyValue="column-reverse"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -87,16 +104,19 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="nowrap"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexWrapContainer
                             propertyValue="wrap"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexWrapContainer
                             propertyValue="wrap-reverse"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -109,31 +129,37 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="flex-start"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <JustifyContentContainer
                             propertyValue="flex-end"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <JustifyContentContainer
                             propertyValue="center"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <JustifyContentContainer
                             propertyValue="space-between"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <JustifyContentContainer
                             propertyValue="space-around"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <JustifyContentContainer
                             propertyValue="space-evenly"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -146,26 +172,31 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="flex-start"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignItemsContainer
                             propertyValue="flex-end"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignItemsContainer
                             propertyValue="center"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignItemsContainer
                             propertyValue="baseline"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignItemsContainer
                             propertyValue="stretch"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -178,36 +209,43 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="flex-start"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="flex-end"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="center"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="space-between"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="space-around"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="space-evenly"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignContentContainer
                             propertyValue="stretch"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -220,16 +258,19 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="-1"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <OrderContainer
                             propertyValue="0"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <OrderContainer
                             propertyValue="1"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -242,26 +283,31 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="flex-start"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignSelfContainer
                             propertyValue="flex-end"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignSelfContainer
                             propertyValue="center"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignSelfContainer
                             propertyValue="baseline"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <AlignSelfContainer
                             propertyValue="stretch"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -274,11 +320,13 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="0"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexGrowContainer
                             propertyValue="1"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -291,11 +339,13 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="0"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexShrinkContainer
                             propertyValue="1"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -308,16 +358,19 @@ export const MainContents = (props: Props): ReactElement => {
                             propertyValue="30%"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexBasisContainer
                             propertyValue="50%"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                         <FlexBasisContainer
                             propertyValue="content"
                             setFlexboxItemsStyle={setFlexboxItemsStyle}
                             setOpened={setOpened}
+                            setReference={setReference}
                         />
                     </PropertyItems>
                 </PropertySection>
@@ -340,7 +393,13 @@ export const MainContents = (props: Props): ReactElement => {
             </PropertySections>
             <CodeViewerWrapper opened={opened}>
                 <ToggleCodeViewer opened={opened} setOpened={setOpened} />
-                <CodeViewer language="css" code={flexboxItemsStyle} copied={copied} onClickCopiedHandler={onCopy} />
+                <CodeViewer
+                    language="css"
+                    reference={reference}
+                    code={flexboxItemsStyle}
+                    copied={copied}
+                    onClickCopiedHandler={onCopy}
+                />
             </CodeViewerWrapper>
         </Contents>
     );

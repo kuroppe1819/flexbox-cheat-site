@@ -8,20 +8,20 @@ import tw from 'tailwind.macro';
 export type Props = {
     language: string;
     code: string;
-    href?: string;
+    reference: string;
     copied: boolean;
     onClickCopiedHandler: () => void;
 };
 
 export const CodeViewer = (props: Props): ReactElement => {
-    const { language, code, href, copied, onClickCopiedHandler } = props;
+    const { language, code, reference, copied, onClickCopiedHandler } = props;
 
     return (
         <CodeView>
             <ViewHeader>
                 <ViewHeaderTitle>{language}</ViewHeaderTitle>
-                {href && (
-                    <ExternalLink href={href} target="_blank">
+                {reference !== '' && (
+                    <ExternalLink href={reference} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={['far', 'window-restore']} size="1x" />
                     </ExternalLink>
                 )}
