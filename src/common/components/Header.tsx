@@ -32,5 +32,5 @@ const LinkIcons = styled.div`
 `;
 
 const ExternalLink = styled.a`
-    ${tw`inline-block h-8 mr-5 text-blue-900`};
+    ${tw`inline-block h-8 mr-5 text-blue-900 hover:text-blue-400`};
 `;

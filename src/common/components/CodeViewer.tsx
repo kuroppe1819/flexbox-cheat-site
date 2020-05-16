@@ -52,15 +52,15 @@ const ViewHeaderTitle = styled.h6`
 `;
 
 const ExternalLink = styled.a`
-    ${tw`inline-block ml-3 text-gray-700`};
+    ${tw`inline-block ml-3 text-gray-700 hover:text-blue-400`};
 `;
 
 const CopyIcon = styled(FontAwesomeIcon)`
-    ${tw`ml-3 text-gray-700 cursor-pointer`}
+    ${tw`ml-3 text-gray-700 cursor-pointer hover:text-blue-400`}
 `;
 
 const FeedbackCopiedText = styled.div`
-    ${tw`text-sm font-medium ml-1`}
+    ${tw`text-sm font-bold ml-1`}
 `;
 
 const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
