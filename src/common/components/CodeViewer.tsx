@@ -57,11 +57,11 @@ const ViewHeaderTitle = styled.h6`
 `;
 
 const ExternalLink = styled.a`
-    ${tw`inline-block ml-3 text-gray-700 hover:text-blue-400`};
+    ${tw`inline-block ml-2 text-gray-700 hover:text-blue-400 p-1`};
 `;
 
 const CopyIcon = styled(FontAwesomeIcon)`
-    ${tw`ml-3 text-gray-700 cursor-pointer hover:text-blue-400`}
+    ${tw`ml-1 p-1 text-gray-700 cursor-pointer hover:text-blue-400`}
 `;
 
 const FeedbackCopiedText = styled.div`
