@@ -425,7 +425,7 @@ const PropertySection = styled.section`
 `;
 
 const PropertyName = styled(Link)`
-    ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white`}
+    ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white outline-none`}
     box-shadow: 0px 3px 3px -3px ${ThemeColor.shadow};
 `;
 
