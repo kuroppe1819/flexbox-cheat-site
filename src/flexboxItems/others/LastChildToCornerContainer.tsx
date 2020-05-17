@@ -1,9 +1,9 @@
 import React, { ReactElement, useState, useCallback } from 'react';
-import { FlexboxItemsForOthersProps } from 'src/@types/flexboxItems';
+import { FlexboxItemsForOthersProps } from 'src/@types/FlexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForParent, createCssCodeForLastChild } from '../../common/util/CreateCssCode';
-import { ThemeColor } from '../../common/util/ThemeColor';
+import { ThemeColor } from '../../common/util/DefineProperty';
 
 const parentStyleContents = `display: flex;
     height: 100%`;

@@ -1,5 +1,5 @@
 import React, { ReactElement, useState, useCallback } from 'react';
-import { FlexboxItemsProps } from 'src/@types/flexboxItems';
+import { FlexboxItemsProps } from 'src/@types/FlexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import { createCssCodeForParent, createCssCodeForChild } from '../../common/util/CreateCssCode';

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { CodeViewer } from '../../common/components/CodeViewer';
 import { ToggleCodeViewer } from '../../common/components/ToggleCodeViewer';
-import { ThemeColor } from '../../common/util/ThemeColor';
+import { ThemeColor } from '../../common/util/DefineProperty';
 import { AlignSelfContainer } from '../../flexboxItems/child/AlignSelfContainer';
 import { FlexBasisContainer } from '../../flexboxItems/child/FlexBasisContainer';
 import { FlexGrowContainer } from '../../flexboxItems/child/FlexGrowContainer';

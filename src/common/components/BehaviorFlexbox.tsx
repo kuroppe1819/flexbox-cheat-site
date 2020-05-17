@@ -2,7 +2,7 @@ import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
 import { ExampleItem } from './ExampleItem';
-import { ThemeColor } from '../util/ThemeColor';
+import { ThemeColor } from '../util/DefineProperty';
 
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;

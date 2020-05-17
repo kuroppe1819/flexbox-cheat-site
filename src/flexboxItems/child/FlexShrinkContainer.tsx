@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useState } from 'react';
-import { FlexboxItemsProps } from 'src/@types/flexboxItems';
+import { FlexboxItemsProps } from 'src/@types/FlexboxItems';
 import { css } from 'styled-components';
 import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import {
@@ -7,7 +7,7 @@ import {
     createCssCodeForChildFeatured,
     createCssCodeForParent,
 } from '../../common/util/CreateCssCode';
-import { ThemeColor } from '../../common/util/ThemeColor';
+import { ThemeColor } from '../../common/util/DefineProperty';
 
 const parentStyleContents = `display: flex;
     align-items: flex-start;`;
