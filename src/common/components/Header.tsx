@@ -2,18 +2,19 @@ import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import tw from 'tailwind.macro';
+import { deviceMaxWidth } from '../util/DefineProperty';
 
 export const Header = (): ReactElement => {
     return (
         <HeaderMain>
             <HeaderTitle>Flexbox Cheat Site</HeaderTitle>
             <LinkIcons>
-                <ExternalLink href="https://twitter.com/mys_x101" target="_blank">
+                <TwitterLink href="https://twitter.com/mys_x101" target="_blank">
                     <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
-                </ExternalLink>
-                <ExternalLink href="https://github.com/kuroppe1819/flexbox-cheat-site" target="_blank">
+                </TwitterLink>
+                <GitHubLink href="https://github.com/kuroppe1819/flexbox-cheat-site" target="_blank">
                     <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
-                </ExternalLink>
+                </GitHubLink>
             </LinkIcons>
         </HeaderMain>
     );
@@ -24,13 +25,29 @@ const HeaderMain = styled.header`
 `;
 
 const HeaderTitle = styled.h1`
-    ${tw`m-0 text-blue-900`};
+    ${tw`m-0 text-blue-900 text-2xl`};
 `;
 
 const LinkIcons = styled.div`
     ${tw`absolute right-0`};
 `;
 
-const ExternalLink = styled.a`
+const TwitterLink = styled.a`
     ${tw`inline-block h-8 mr-5 text-blue-900 hover:text-blue-400`};
+
+    @media ${deviceMaxWidth.mobileL} {
+        ${tw`mr-3`}
+    }
+
+    @media ${deviceMaxWidth.mobileM} {
+        ${tw`hidden`}
+    }
+`;
+
+const GitHubLink = styled.a`
+    ${tw`inline-block h-8 mr-5 text-blue-900 hover:text-blue-400`};
+
+    @media ${deviceMaxWidth.mobileL} {
+        ${tw`mr-3`}
+    }
 `;
