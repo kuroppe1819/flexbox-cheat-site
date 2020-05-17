@@ -446,6 +446,9 @@ const CodeViewerWrapper = styled.div<{ opened: boolean }>`
     bottom: 0.5rem;
     right: 0;
     transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(24rem + 1px))')};
-    margin-left: ${(props): string => (props.opened ? '0' : '-24rem')};
     transition: all 300ms 0s ease;
+
+    @media ${deviceMaxWidth.mobileL} {
+        transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(100vw - 3rem + 1px))')};
+    }
 `;

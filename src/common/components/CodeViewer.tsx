@@ -4,6 +4,7 @@ import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
+import { deviceMaxWidth } from '../util/DefineProperty';
 
 export type Props = {
     language: string;
@@ -41,6 +42,10 @@ const CodeView = styled.div`
     ${tw`inline-block border border-solid border-gray-400 bg-white h-full rounded-tl-md shadow-md`}
     width: 24rem;
     min-height: 7.5rem;
+
+    @media ${deviceMaxWidth.mobileL} {
+        width: calc(100vw - 3rem);
+    }
 `;
 
 const ViewHeader = styled.div`
