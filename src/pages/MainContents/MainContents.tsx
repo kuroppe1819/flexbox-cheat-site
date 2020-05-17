@@ -418,6 +418,10 @@ const Contents = styled.main`
     @media ${deviceMaxWidth.mobileL} {
         ${tw`mx-0`}
     }
+
+    @media ${deviceMaxWidth.laptop} {
+        ${tw`mb-56`}
+    }
 `;
 
 const PropertySections = styled.div`
