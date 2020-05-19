@@ -413,12 +413,13 @@ export const MainContents = (props: Props): ReactElement => {
 };
 
 const Contents = styled.main`
-    ${tw`flex mb-12`}
+    ${tw`flex mb-12 relative`}
     width: 880px;
     margin: 0 auto 3rem auto;
+    right: 200px;
 
     @media ${deviceMaxWidth.laptop} {
-        ${tw`mb-56`}
+        ${tw`mb-56 right-auto`}
     }
 
     @media ${deviceMaxWidth.tablet} {
@@ -426,7 +427,7 @@ const Contents = styled.main`
     }
 
     @media ${deviceMaxWidth.mobileL} {
-        ${tw`mx-0`}
+        ${tw`mx-0 mb-32`}
     }
 `;
 
@@ -435,11 +436,7 @@ const PropertySections = styled.div`
 `;
 
 const PropertySection = styled.section`
-    ${tw`px-5`}
-
-    @media ${deviceMaxWidth.tablet} {
-        ${tw`px-3`}
-    }
+    ${tw`px-3`}
 
     @media ${deviceMaxWidth.mobileL} {
         ${tw`px-1`}
@@ -456,11 +453,17 @@ const PropertyItems = styled.div`
 `;
 
 const CodeViewerWrapper = styled.div<{ opened: boolean }>`
-    ${tw`flex items-end fixed`}
-    bottom: 0.5rem;
-    right: 0;
-    transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(24rem + 1px))')};
-    transition: all 300ms 0s ease;
+    ${tw`fixed`}
+    left: calc(50% + 216px);
+    top: 9rem;
+
+    @media ${deviceMaxWidth.laptop} {
+        ${tw`flex items-end right-0 left-auto`}
+        top: auto;
+        bottom: 0.5rem;
+        transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(24rem + 1px))')};
+        transition: all 300ms 0s ease;
+    }
 
     @media ${deviceMaxWidth.mobileL} {
         transform: ${(props): string => (props.opened ? 'translateX(0)' : 'translateX(calc(100vw - 3rem + 1px))')};

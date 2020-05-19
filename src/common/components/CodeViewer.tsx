@@ -26,14 +26,12 @@ export const CodeViewer = (props: Props): ReactElement => {
                         <FontAwesomeIcon icon={['far', 'window-restore']} size="1x" />
                     </ExternalLink>
                 )}
-                <CopyIcon icon={['fas', 'copy']} size="1x" onClick={onClickCopiedHandler} />
+                {code !== '' && <CopyIcon icon={['fas', 'copy']} size="1x" onClick={onClickCopiedHandler} />}
                 {copied && <FeedbackCopiedText>Copied!</FeedbackCopiedText>}
             </ViewHeader>
-            {code !== '' && (
-                <CustomSyntaxHighlighter language={language} style={monoBlue}>
-                    {code}
-                </CustomSyntaxHighlighter>
-            )}
+            <CustomSyntaxHighlighter language={language} style={monoBlue}>
+                {code}
+            </CustomSyntaxHighlighter>
         </CodeView>
     );
 };
@@ -70,4 +68,13 @@ const FeedbackCopiedText = styled.div`
 
 const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
     ${tw`m-3 bg-blue-400`}
+    height: 15rem;
+
+    @media ${deviceMaxWidth.laptop} {
+        ${tw`h-auto`}
+    }
+
+    @media ${deviceMaxWidth.mobileL} {
+        ${tw`h-32`}
+    }
 `;
