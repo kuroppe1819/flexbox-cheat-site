@@ -12,8 +12,8 @@ const deviceSize = {
     mobileS: '320px',
     mobileM: '410px',
     mobileL: '520px',
-    tablet: '768px',
-    laptop: '1160px',
+    tablet: '880px',
+    laptop: '1280px',
     laptopL: '1440px',
     desktop: '2560px',
 };

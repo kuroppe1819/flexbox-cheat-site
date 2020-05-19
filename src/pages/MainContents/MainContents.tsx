@@ -413,14 +413,20 @@ export const MainContents = (props: Props): ReactElement => {
 };
 
 const Contents = styled.main`
-    ${tw`flex mx-12 mb-12`}
-    
-    @media ${deviceMaxWidth.mobileL} {
-        ${tw`mx-0`}
-    }
+    ${tw`flex mb-12`}
+    width: 880px;
+    margin: 0 auto 3rem auto;
 
     @media ${deviceMaxWidth.laptop} {
         ${tw`mb-56`}
+    }
+
+    @media ${deviceMaxWidth.tablet} {
+        ${tw`w-auto mx-12`}
+    }
+
+    @media ${deviceMaxWidth.mobileL} {
+        ${tw`mx-0`}
     }
 `;
 
@@ -429,7 +435,15 @@ const PropertySections = styled.div`
 `;
 
 const PropertySection = styled.section`
-    ${tw`px-1`}
+    ${tw`px-5`}
+
+    @media ${deviceMaxWidth.tablet} {
+        ${tw`px-3`}
+    }
+
+    @media ${deviceMaxWidth.mobileL} {
+        ${tw`px-1`}
+    }
 `;
 
 const PropertyName = styled(Link)`
