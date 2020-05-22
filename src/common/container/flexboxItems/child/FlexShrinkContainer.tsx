@@ -1,13 +1,13 @@
-import React, { ReactElement, useCallback, useState } from 'react';
+import React, { ReactElement } from 'react';
 import { FlexboxItemsProps } from 'src/@types/FlexboxItems';
+import { BehaviorFlexboxContainer } from '../../common/BehaviorFlexboxContainer';
 import { css } from 'styled-components';
-import { BehaviorFlexbox } from '../../common/components/BehaviorFlexbox';
 import {
     createCssCodeForChild,
     createCssCodeForChildFeatured,
     createCssCodeForParent,
-} from '../../common/util/CreateCssCode';
-import { ThemeColor } from '../../common/util/DefineProperty';
+} from '../../../util/CreateCssCode';
+import { ThemeColor } from '../../../util/DefineProperty';
 
 const parentStyleContents = `display: flex;
     align-items: flex-start;`;
@@ -27,34 +27,26 @@ const childStyle = css`
 const reference = 'https://developer.mozilla.org/ja/docs/Web/CSS/flex-shrink';
 
 export const FlexShrinkContainer = (props: FlexboxItemsProps): ReactElement => {
-    const { propertyValue, setFlexboxItemsStyle, setOpened, setReference } = props;
-
-    const [isMouseEnter, setMouseEnter] = useState(false);
+    const { propertyValue } = props;
 
     const childFeaturedStyleContents = `flex-shrink: ${propertyValue};
     background-color: ${ThemeColor.backgroundFeaturedItem};`;
 
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
-
-    const onClickBoxHandler = useCallback(() => {
-        setFlexboxItemsStyle(`${parentStyleCode}\n\n${childStyleCode}\n\n${childFeaturedCode}`);
-        setOpened(true);
-        setReference(reference);
-    }, [childFeaturedCode, setFlexboxItemsStyle, setOpened, setReference]);
+    const mergeStyleCode = `${parentStyleCode}\n\n${childStyleCode}\n\n${childFeaturedCode}`;
 
     const childFeaturedStyle = css`
         ${childFeaturedStyleContents}
     `;
 
     return (
-        <BehaviorFlexbox
-            isMouseEnter={isMouseEnter}
-            setMouseEnter={setMouseEnter}
+        <BehaviorFlexboxContainer
             parentStyle={parentStyle}
             childStyle={childStyle}
             childFeaturedStyle={childFeaturedStyle}
             propertyValue={propertyValue}
-            onClickBoxHandler={onClickBoxHandler}
+            uniqueCode={mergeStyleCode}
+            uniqueReference={reference}
         />
     );
 };

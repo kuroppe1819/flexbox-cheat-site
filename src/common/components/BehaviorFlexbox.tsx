@@ -1,8 +1,9 @@
-import React, { ReactElement, Dispatch, SetStateAction } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction, useContext } from 'react';
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
 import { ExampleItem } from './ExampleItem';
 import { ThemeColor } from '../util/DefineProperty';
+import { MainContentsContext } from '../../pages/MainContents/MainContentsContainer';
 
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;
@@ -10,10 +11,13 @@ export type Props = {
     firstChildStyle?: FlattenSimpleInterpolation;
     childFeaturedStyle?: FlattenSimpleInterpolation;
     lastChildStyle?: FlattenSimpleInterpolation;
+    uniqueCode: string;
+    uniqueReference: string;
     propertyValue: string;
+    isKeepedHighlight: boolean;
+    setKeepedHighlight: Dispatch<SetStateAction<boolean>>;
     isMouseEnter: boolean;
     setMouseEnter: Dispatch<SetStateAction<boolean>>;
-    onClickBoxHandler: () => void;
 };
 
 export const BehaviorFlexbox = (props: Props): ReactElement => {
@@ -24,16 +28,29 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
         childFeaturedStyle,
         lastChildStyle,
         propertyValue,
+        uniqueCode,
+        uniqueReference,
+        isKeepedHighlight,
         isMouseEnter,
+        setKeepedHighlight,
         setMouseEnter,
-        onClickBoxHandler,
     } = props;
+
+    const { setOpenedCodeViewer, setShowCode, setShowReference } = useContext(MainContentsContext);
+
+    const onClickBehaviorBoxHandler = (): void => {
+        setShowCode(uniqueCode);
+        setKeepedHighlight(true);
+        setOpenedCodeViewer(true);
+        setShowReference(uniqueReference);
+    };
 
     return (
         <BehaviorBoxWrapper>
             <BehaviorBox
+                isKeepedHighlight={isKeepedHighlight}
                 isMouseEnter={isMouseEnter}
-                onClick={onClickBoxHandler}
+                onClick={onClickBehaviorBoxHandler}
                 onMouseEnter={(): void => setMouseEnter(true)}
                 onMouseLeave={(): void => setMouseEnter(false)}
             >
@@ -45,6 +62,7 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
                 </ExampleItems>
             </BehaviorBox>
             <PropertyValue
+                isKeepedHighlight={isKeepedHighlight}
                 isMouseEnter={isMouseEnter}
                 onMouseEnter={(): void => setMouseEnter(true)}
                 onMouseLeave={(): void => setMouseEnter(false)}
@@ -59,9 +77,10 @@ const BehaviorBoxWrapper = styled.div`
     ${tw`mx-3 mt-3 mb-5 text-center`}
 `;
 
-const BehaviorBox = styled.div<{ isMouseEnter: boolean }>`
+const BehaviorBox = styled.div<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
     ${tw`h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2 text-center`}
-    border-color: ${(props): string => (props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray)}
+    border-color: ${(props): string =>
+        props.isKeepedHighlight || props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray}
 `;
 
 const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
@@ -69,7 +88,8 @@ const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
     ${(props): FlattenSimpleInterpolation => props.parentStyle}
 `;
 
-const PropertyValue = styled.p<{ isMouseEnter: boolean }>`
+const PropertyValue = styled.p<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
     ${tw`inline-block text-lg text-center text-gray-500 mt-2 mb-3 cursor-pointer`}
-    color: ${(props): string => (props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray)}
+    color: ${(props): string =>
+        props.isKeepedHighlight || props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray}
 `;
