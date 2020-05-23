@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import { FlexboxItemsProps } from 'src/@types/FlexboxItems';
 import { BehaviorFlexboxContainer } from '../../common/BehaviorFlexboxContainer';
 import { css } from 'styled-components';
-import { createCssCodeForChild, createCssCodeForParent } from '../../../util/CreateCssCode';
+import { createCssCodeForChild, createCssCodeForParent } from '../../../createCode/CreateCssCode';
 
 const childStyleContents = `width: 40%;`;
 

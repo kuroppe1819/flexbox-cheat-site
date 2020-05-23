@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { BehaviorFlexboxContainer } from '../../common/BehaviorFlexboxContainer';
 import { css } from 'styled-components';
-import { createCssCodeForFirstChild, createCssCodeForParent } from '../../../util/CreateCssCode';
+import { createCssCodeForFirstChild, createCssCodeForParent } from '../../../createCode/CreateCssCode';
 import { ThemeColor } from '../../../util/DefineProperty';
 
 const parentStyleContents = `display: flex;`;

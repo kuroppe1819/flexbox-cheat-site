@@ -2,10 +2,11 @@ import React, { ReactElement, useContext, useEffect, useState } from 'react';
 import { MainContentsContext } from '../../../pages/MainContents/MainContentsContainer';
 import { CodeViewer } from '../../components/CodeViewer';
 import { useClipboard } from '../../util/useClipboard';
+import { createHtmlCode } from '../../createCode/CreateHtmlCode';
 
 export const Language = {
     CSS: 'css',
-    HTML: 'HTML',
+    HTML: 'html',
 } as const;
 
 export type Language = typeof Language[keyof typeof Language];
@@ -23,7 +24,7 @@ export const CodeViewerContainer = (): ReactElement => {
 
     useEffect(() => {
         if (selectedLanguage === Language.HTML) {
-            setShowCode('HTMLを表示するよ');
+            setShowCode(createHtmlCode);
         } else {
             setShowCode(selectedCssCode);
         }
