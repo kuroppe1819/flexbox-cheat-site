@@ -1,27 +1,29 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { deviceMaxWidth } from '../util/DefineProperty';
+import { Language } from '../container/common/CodeViewerContainer';
 
 export type Props = {
-    language: string;
+    language: Language;
     code: string;
     reference: string;
     copied: boolean;
+    setSelectedLanguage: Dispatch<SetStateAction<Language>>;
     onClickCopiedHandler: () => void;
 };
 
 export const CodeViewer = (props: Props): ReactElement => {
-    const { language, code, reference, copied, onClickCopiedHandler } = props;
+    const { language, code, reference, copied, setSelectedLanguage, onClickCopiedHandler } = props;
 
     return (
         <CodeView>
             <ViewHeader>
-                <CSSViewButton>CSS</CSSViewButton>
-                <HTMLViewButton>HTML</HTMLViewButton>
+                <CSSViewButton onClick={(): void => setSelectedLanguage(Language.CSS)}>CSS</CSSViewButton>
+                <HTMLViewButton onClick={(): void => setSelectedLanguage(Language.HTML)}>HTML</HTMLViewButton>
                 {reference !== '' && (
                     <ExternalLink href={reference} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={['far', 'window-restore']} size="lg" />
@@ -60,7 +62,7 @@ const HTMLViewButton = styled.button`
 `;
 
 const ExternalLink = styled.a`
-    ${tw`inline-block ml-2 text-gray-700 hover:text-blue-400 p-1`};
+    ${tw`inline-block ml-3 text-gray-700 hover:text-blue-400 p-1`};
 `;
 
 const CopyIcon = styled(FontAwesomeIcon)`

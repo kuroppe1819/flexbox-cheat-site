@@ -36,10 +36,10 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
         setMouseEnter,
     } = props;
 
-    const { setOpenedCodeViewer, setShowCode, setShowReference } = useContext(MainContentsContext);
+    const { setOpenedCodeViewer, setSelectedCssCode, setShowReference } = useContext(MainContentsContext);
 
     const onClickBehaviorBoxHandler = (): void => {
-        setShowCode(uniqueCode);
+        setSelectedCssCode(uniqueCode);
         setKeepedHighlight(true);
         setOpenedCodeViewer(true);
         setShowReference(uniqueReference);

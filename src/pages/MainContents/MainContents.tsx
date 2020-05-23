@@ -2,9 +2,8 @@ import React, { Dispatch, ReactElement, SetStateAction } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { CodeViewer } from '../../common/components/CodeViewer';
+import { CodeViewerContainer } from '../../common/container/common/CodeViewerContainer';
 import { ToggleCodeViewer } from '../../common/components/ToggleCodeViewer';
-import { deviceMaxWidth, ThemeColor } from '../../common/util/DefineProperty';
 import { AlignSelfContainer } from '../../common/container/flexboxItems/child/AlignSelfContainer';
 import { FlexBasisContainer } from '../../common/container/flexboxItems/child/FlexBasisContainer';
 import { FlexGrowContainer } from '../../common/container/flexboxItems/child/FlexGrowContainer';
@@ -19,19 +18,15 @@ import { DisplayContainer } from '../../common/container/flexboxItems/parent/Dis
 import { FlexDirectionContainer } from '../../common/container/flexboxItems/parent/FlexDirectionContainer';
 import { FlexWrapContainer } from '../../common/container/flexboxItems/parent/FlexWrapContainer';
 import { JustifyContentContainer } from '../../common/container/flexboxItems/parent/JustifyContentContainer';
+import { deviceMaxWidth, ThemeColor } from '../../common/util/DefineProperty';
 
 type Props = {
     isOpenedCodeViewer: boolean;
     setOpenedCodeViewer: Dispatch<SetStateAction<boolean>>;
-    showCode: string;
-    setShowCode: Dispatch<SetStateAction<string>>;
-    copied: boolean;
-    onCopy: () => void;
-    showReference: string;
 };
 
 export const MainContents = (props: Props): ReactElement => {
-    const { isOpenedCodeViewer, setOpenedCodeViewer, showCode, copied, onCopy, showReference } = props;
+    const { isOpenedCodeViewer, setOpenedCodeViewer } = props;
 
     return (
         <Contents>
@@ -168,13 +163,7 @@ export const MainContents = (props: Props): ReactElement => {
             </PropertySections>
             <CodeViewerWrapper isOpenedCodeViewer={isOpenedCodeViewer}>
                 <ToggleCodeViewer opened={isOpenedCodeViewer} setOpened={setOpenedCodeViewer} />
-                <CodeViewer
-                    language="css"
-                    reference={showReference}
-                    code={showCode}
-                    copied={copied}
-                    onClickCopiedHandler={onCopy}
-                />
+                <CodeViewerContainer />
             </CodeViewerWrapper>
         </Contents>
     );

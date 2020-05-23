@@ -5,9 +5,10 @@ import '../../../static/css/style.css';
 import { MainContents } from './MainContents';
 
 export type MainContentsContextProps = {
-    showCode: string;
+    selectedCssCode: string;
+    showReference: string;
     setOpenedCodeViewer: Dispatch<SetStateAction<boolean>>;
-    setShowCode: Dispatch<SetStateAction<string>>;
+    setSelectedCssCode: Dispatch<SetStateAction<string>>;
     setShowReference: Dispatch<SetStateAction<string>>;
 };
 
@@ -15,28 +16,20 @@ export const MainContentsContext = React.createContext({} as MainContentsContext
 
 export const MainContentsContainer = (): ReactElement => {
     const [isOpenedCodeViewer, setOpenedCodeViewer] = useState(false);
-    const [showCode, setShowCode] = useState('');
+    const [selectedCssCode, setSelectedCssCode] = useState('');
     const [showReference, setShowReference] = useState('');
-    const [copied, onCopy] = useClipboard(showCode);
 
     return (
         <MainContentsContext.Provider
             value={{
-                showCode,
+                selectedCssCode,
+                showReference,
                 setOpenedCodeViewer,
-                setShowCode,
+                setSelectedCssCode,
                 setShowReference,
             }}
         >
-            <MainContents
-                isOpenedCodeViewer={isOpenedCodeViewer}
-                setOpenedCodeViewer={setOpenedCodeViewer}
-                showCode={showCode}
-                setShowCode={setShowCode}
-                copied={copied}
-                onCopy={onCopy}
-                showReference={showReference}
-            />
+            <MainContents isOpenedCodeViewer={isOpenedCodeViewer} setOpenedCodeViewer={setOpenedCodeViewer} />
         </MainContentsContext.Provider>
     );
 };

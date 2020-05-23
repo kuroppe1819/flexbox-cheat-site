@@ -17,17 +17,17 @@ type Props = {
 
 export const BehaviorFlexboxContainer = (props: Props): ReactElement => {
     const { uniqueCode } = props;
-    const { showCode } = useContext(MainContentsContext);
+    const { selectedCssCode } = useContext(MainContentsContext);
 
     const [isKeepedHighlight, setKeepedHighlight] = useState(false);
     const [isMouseEnter, setMouseEnter] = useState(false);
     const uniqueCodeRef = useRef(uniqueCode);
 
     useEffect(() => {
-        if (uniqueCodeRef.current !== showCode && isKeepedHighlight) {
+        if (uniqueCodeRef.current !== selectedCssCode && isKeepedHighlight) {
             setKeepedHighlight(false);
         }
-    }, [showCode, isKeepedHighlight]);
+    }, [selectedCssCode, isKeepedHighlight]);
 
     return (
         <BehaviorFlexbox
