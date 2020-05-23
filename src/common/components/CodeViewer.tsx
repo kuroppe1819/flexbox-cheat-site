@@ -55,8 +55,8 @@ const CodeView = styled.div`
     width: 24rem;
     min-height: 7.5rem;
 
-    @media ${deviceMaxWidth.tablet} {
-        box-shadow: 0 0 12px ${Color.gray400};
+    @media ${deviceMaxWidth.laptop} {
+        box-shadow: 0 0 8px ${Color.gray400};
     }
 
     @media ${deviceMaxWidth.mobileL} {
