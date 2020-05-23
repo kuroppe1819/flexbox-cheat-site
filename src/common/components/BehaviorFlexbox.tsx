@@ -1,9 +1,8 @@
-import React, { ReactElement, Dispatch, SetStateAction, useContext } from 'react';
+import React, { Dispatch, ReactElement, SetStateAction } from 'react';
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
-import { ExampleItem } from './ExampleItem';
 import { Color } from '../util/DefineProperty';
-import { MainContentsContext } from '../../pages/MainContents/MainContentsContainer';
+import { ExampleItem } from './ExampleItem';
 
 export type Props = {
     parentStyle: FlattenSimpleInterpolation;
@@ -15,8 +14,11 @@ export type Props = {
     uniqueReference: string;
     propertyValue: string;
     isKeepedHighlight: boolean;
-    setKeepedHighlight: Dispatch<SetStateAction<boolean>>;
     isMouseEnter: boolean;
+    setSelectedCssCode: Dispatch<SetStateAction<string>>;
+    setShowReference: Dispatch<SetStateAction<string>>;
+    setOpenedCodeViewer: Dispatch<SetStateAction<boolean>>;
+    setKeepedHighlight: Dispatch<SetStateAction<boolean>>;
     setMouseEnter: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -32,11 +34,12 @@ export const BehaviorFlexbox = (props: Props): ReactElement => {
         uniqueReference,
         isKeepedHighlight,
         isMouseEnter,
+        setSelectedCssCode,
+        setShowReference,
+        setOpenedCodeViewer,
         setKeepedHighlight,
         setMouseEnter,
     } = props;
-
-    const { setOpenedCodeViewer, setSelectedCssCode, setShowReference } = useContext(MainContentsContext);
 
     const onClickBehaviorBoxHandler = (): void => {
         setSelectedCssCode(uniqueCode);
