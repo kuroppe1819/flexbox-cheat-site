@@ -2,9 +2,9 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 300;
-    src: local('Raleway Light'), local('Raleway-Light'), url('../fonts/Raleway-Light.ttf') format('truetype');
+    src: local('Raleway-Light'), url('../fonts/Raleway-Light.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Raleway', '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic';
 }
