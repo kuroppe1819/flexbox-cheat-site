@@ -8,6 +8,7 @@ export const Color = {
     blue700: '#2b6cb0',
     blue900: '#2a4365',
     gray400: '#cbd5e0',
+    gray500: '#a0aec0',
 } as const;
 
 const deviceSize = {

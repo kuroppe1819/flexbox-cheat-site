@@ -91,6 +91,6 @@ const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
 `;
 
 const PropertyValue = styled.p<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
-    ${tw`inline-block text-lg text-center text-gray-500 mt-2 mb-3 cursor-pointer`}
-    color: ${(props): string => (props.isKeepedHighlight || props.isMouseEnter ? Color.blue500 : Color.gray400)}
+    ${tw`inline-block text-lg text-center mt-2 mb-3 cursor-pointer`}
+    color: ${(props): string => (props.isKeepedHighlight || props.isMouseEnter ? Color.blue500 : Color.gray500)}
 `;
