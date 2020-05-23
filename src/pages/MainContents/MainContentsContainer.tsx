@@ -1,6 +1,5 @@
 import 'normalize.css';
-import React, { ReactElement, useState, Dispatch, SetStateAction } from 'react';
-import { useClipboard } from '../../common/util/useClipboard';
+import React, { Dispatch, ReactElement, SetStateAction, useState } from 'react';
 import '../../../static/css/style.css';
 import { MainContents } from './MainContents';
 

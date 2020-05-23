@@ -2,12 +2,12 @@ import React, { ReactElement } from 'react';
 import { BehaviorFlexboxContainer } from '../../common/BehaviorFlexboxContainer';
 import { css } from 'styled-components';
 import { createCssCodeForFirstChild, createCssCodeForParent } from '../../../createCode/CreateCssCode';
-import { ThemeColor } from '../../../util/DefineProperty';
+import { Color } from '../../../util/DefineProperty';
 
 const parentStyleContents = `display: flex;`;
 
 const firstChildStyleContens = `margin-right: auto;
-    background-color: ${ThemeColor.backgroundFeaturedItem};`;
+    background-color: ${Color.blue700};`;
 
 const parentStyleCode = createCssCodeForParent(parentStyleContents);
 const firstChildStyleCode = createCssCodeForFirstChild(firstChildStyleContens);

@@ -2,7 +2,7 @@ import React, { ReactElement, Dispatch, SetStateAction, useContext } from 'react
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
 import { ExampleItem } from './ExampleItem';
-import { ThemeColor } from '../util/DefineProperty';
+import { Color } from '../util/DefineProperty';
 import { MainContentsContext } from '../../pages/MainContents/MainContentsContainer';
 
 export type Props = {
@@ -79,8 +79,7 @@ const BehaviorBoxWrapper = styled.div`
 
 const BehaviorBox = styled.div<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
     ${tw`h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2 text-center`}
-    border-color: ${(props): string =>
-        props.isKeepedHighlight || props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray}
+    border-color: ${(props): string => (props.isKeepedHighlight || props.isMouseEnter ? Color.blue500 : Color.gray400)}
 `;
 
 const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
@@ -90,6 +89,5 @@ const ExampleItems = styled.div<{ parentStyle: FlattenSimpleInterpolation }>`
 
 const PropertyValue = styled.p<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
     ${tw`inline-block text-lg text-center text-gray-500 mt-2 mb-3 cursor-pointer`}
-    color: ${(props): string =>
-        props.isKeepedHighlight || props.isMouseEnter ? ThemeColor.borderBlue : ThemeColor.borderGray}
+    color: ${(props): string => (props.isKeepedHighlight || props.isMouseEnter ? Color.blue500 : Color.gray400)}
 `;

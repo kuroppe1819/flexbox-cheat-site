@@ -1,6 +1,6 @@
-import { ThemeColor } from '../common/util/DefineProperty';
+import { Color } from '../common/util/DefineProperty';
 
-export type ThemeColor = typeof ThemeColor[keyof typeof ThemeColor];
+export type Color = typeof Color[keyof typeof Color];
 
 export type DeviceMaxWidth = {
     mobileS: string;

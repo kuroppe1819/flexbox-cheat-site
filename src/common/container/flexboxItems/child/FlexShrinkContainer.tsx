@@ -7,7 +7,7 @@ import {
     createCssCodeForChildFeatured,
     createCssCodeForParent,
 } from '../../../createCode/CreateCssCode';
-import { ThemeColor } from '../../../util/DefineProperty';
+import { Color } from '../../../util/DefineProperty';
 
 const parentStyleContents = `display: flex;
     align-items: flex-start;`;
@@ -30,7 +30,7 @@ export const FlexShrinkContainer = (props: FlexboxItemsProps): ReactElement => {
     const { propertyValue } = props;
 
     const childFeaturedStyleContents = `flex-shrink: ${propertyValue};
-    background-color: ${ThemeColor.backgroundFeaturedItem};`;
+    background-color: ${Color.blue700};`;
 
     const childFeaturedCode = createCssCodeForChildFeatured(childFeaturedStyleContents);
     const mergeStyleCode = `${parentStyleCode}\n\n${childStyleCode}\n\n${childFeaturedCode}`;

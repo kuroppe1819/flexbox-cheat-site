@@ -53,7 +53,7 @@ const ViewHeader = styled.div`
     ${tw`flex justify-start items-center m-3`}
 `;
 
-const CSSViewButton = styled.button`
+const CSSViewButton = styled.button<{ selectedLanguage: Language }>`
     ${tw`pt-1 text-blue-100 bg-blue-400 text-base rounded-l-md leading-snug border-solid border-blue-400 outline-none cursor-pointer`}
 `;
 
@@ -74,7 +74,7 @@ const FeedbackCopiedText = styled.div`
 `;
 
 const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
-    ${tw`m-3 bg-blue-400`}
+    ${tw`mx-2 my-3 bg-blue-400`}
     min-height: 3rem;
     height: 15rem;
 

@@ -1,12 +1,11 @@
 import { DeviceMaxWidth } from 'src/@types/DefineProperty';
 
-// TODO: blue900 のような名前に変更するか、material-ui-colorから引っ張ってくる
-export const ThemeColor = {
-    primary: '#63b3ed',
-    backgroundFeaturedItem: '#2b6cb0',
-    shadow: '#cbd5e0',
-    borderGray: '#cbd5e0',
-    borderBlue: '#4299e1',
+export const Color = {
+    blue400: '#63b3ed',
+    blue500: '#4299e1',
+    blue700: '#2b6cb0',
+    blue900: '#2a4365',
+    gray400: '#cbd5e0',
 } as const;
 
 const deviceSize = {

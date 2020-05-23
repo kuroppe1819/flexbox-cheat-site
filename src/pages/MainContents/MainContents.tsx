@@ -18,7 +18,7 @@ import { DisplayContainer } from '../../common/container/flexboxItems/parent/Dis
 import { FlexDirectionContainer } from '../../common/container/flexboxItems/parent/FlexDirectionContainer';
 import { FlexWrapContainer } from '../../common/container/flexboxItems/parent/FlexWrapContainer';
 import { JustifyContentContainer } from '../../common/container/flexboxItems/parent/JustifyContentContainer';
-import { deviceMaxWidth, ThemeColor } from '../../common/util/DefineProperty';
+import { deviceMaxWidth, Color } from '../../common/util/DefineProperty';
 
 type Props = {
     isOpenedCodeViewer: boolean;
@@ -202,7 +202,7 @@ const PropertySection = styled.section`
 
 const PropertyName = styled(Link)`
     ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white outline-none`}
-    box-shadow: 0px 3px 3px -3px ${ThemeColor.shadow};
+    box-shadow: 0px 3px 3px -3px ${Color.gray400};
 `;
 
 const PropertyItems = styled.div`
