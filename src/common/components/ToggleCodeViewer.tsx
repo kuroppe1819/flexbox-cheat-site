@@ -3,6 +3,7 @@ import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { deviceMaxWidth } from '../util/DefineProperty';
+import { Color } from '../../common/util/DefineProperty';
 
 type Props = {
     opened: boolean;
@@ -31,7 +32,8 @@ const ToggleBackground = styled.div`
     ${tw`hidden`}
 
     @media ${deviceMaxWidth.laptop} {
-        ${tw`inline-block bg-gray-400 w-12 h-12 rounded-l-md flex justify-center items-center cursor-pointer shadow-md`}
+        ${tw`inline-block bg-gray-400 w-12 h-12 rounded-l-md flex justify-center items-center cursor-pointer`};
+        box-shadow: 0 0 4px ${Color.gray400};
     }
 `;
 

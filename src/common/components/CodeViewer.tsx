@@ -55,6 +55,10 @@ const CodeView = styled.div`
     width: 24rem;
     min-height: 7.5rem;
 
+    @media ${deviceMaxWidth.tablet} {
+        box-shadow: 0 0 12px ${Color.gray400};
+    }
+
     @media ${deviceMaxWidth.mobileL} {
         width: calc(100vw - 3rem);
     }
@@ -65,14 +69,14 @@ const ViewHeader = styled.div`
 `;
 
 const CSSViewButton = styled.button<{ isSelected: boolean }>`
-    ${tw`pt-1 text-base rounded-l-md leading-snug border-solid outline-none cursor-pointer`}
+    ${tw`pt-1 text-base rounded-l-md leading-snug border border-solid outline-none cursor-pointer`}
     color: ${(props): string => (props.isSelected ? Color.blue100 : Color.blue900)};
     background-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.white)};
     border-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.gray400)};
 `;
 
 const HTMLViewButton = styled.button<{ isSelected: boolean }>`
-    ${tw`pt-1 text-base rounded-r-md leading-snug border-solid outline-none cursor-pointer`}
+    ${tw`pt-1 text-base rounded-r-md leading-snug border border-solid outline-none cursor-pointer`}
     color: ${(props): string => (props.isSelected ? Color.blue100 : Color.blue900)};
     background-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.white)};
     border-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.gray400)};
@@ -83,7 +87,7 @@ const ExternalLink = styled.a`
 `;
 
 const CopyIcon = styled(FontAwesomeIcon)`
-    ${tw`ml-1 p-1 text-gray-700 cursor-pointer hover:text-blue-400`}
+    ${tw`ml-2 p-1 text-gray-700 cursor-pointer hover:text-blue-400`}
 `;
 
 const FeedbackCopiedText = styled.div`
