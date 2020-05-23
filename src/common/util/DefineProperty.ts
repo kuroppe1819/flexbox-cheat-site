@@ -1,6 +1,8 @@
 import { DeviceMaxWidth } from 'src/@types/DefineProperty';
 
 export const Color = {
+    white: '#ffffff',
+    blue100: '#ebf8ff',
     blue400: '#63b3ed',
     blue500: '#4299e1',
     blue700: '#2b6cb0',

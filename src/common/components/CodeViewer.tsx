@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { deviceMaxWidth } from '../util/DefineProperty';
 import { Language } from '../container/common/CodeViewerContainer';
+import { Color } from '../../common/util/DefineProperty';
 
 export type Props = {
     language: Language;
@@ -22,8 +23,18 @@ export const CodeViewer = (props: Props): ReactElement => {
     return (
         <CodeView>
             <ViewHeader>
-                <CSSViewButton onClick={(): void => setSelectedLanguage(Language.CSS)}>CSS</CSSViewButton>
-                <HTMLViewButton onClick={(): void => setSelectedLanguage(Language.HTML)}>HTML</HTMLViewButton>
+                <CSSViewButton
+                    isSelected={language === Language.CSS}
+                    onClick={(): void => setSelectedLanguage(Language.CSS)}
+                >
+                    CSS
+                </CSSViewButton>
+                <HTMLViewButton
+                    isSelected={language === Language.HTML}
+                    onClick={(): void => setSelectedLanguage(Language.HTML)}
+                >
+                    HTML
+                </HTMLViewButton>
                 {reference !== '' && (
                     <ExternalLink href={reference} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={['far', 'window-restore']} size="lg" />
@@ -53,12 +64,18 @@ const ViewHeader = styled.div`
     ${tw`flex justify-start items-center m-3`}
 `;
 
-const CSSViewButton = styled.button<{ selectedLanguage: Language }>`
-    ${tw`pt-1 text-blue-100 bg-blue-400 text-base rounded-l-md leading-snug border-solid border-blue-400 outline-none cursor-pointer`}
+const CSSViewButton = styled.button<{ isSelected: boolean }>`
+    ${tw`pt-1 text-base rounded-l-md leading-snug border-solid outline-none cursor-pointer`}
+    color: ${(props): string => (props.isSelected ? Color.blue100 : Color.blue900)};
+    background-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.white)};
+    border-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.gray400)};
 `;
 
-const HTMLViewButton = styled.button`
-    ${tw`pt-1 text-blue-900 bg-white text-base rounded-r-md leading-snug border-solid border-gray-400 outline-none cursor-pointer`}
+const HTMLViewButton = styled.button<{ isSelected: boolean }>`
+    ${tw`pt-1 text-base rounded-r-md leading-snug border-solid outline-none cursor-pointer`}
+    color: ${(props): string => (props.isSelected ? Color.blue100 : Color.blue900)};
+    background-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.white)};
+    border-color: ${(props): string => (props.isSelected ? Color.blue400 : Color.gray400)};
 `;
 
 const ExternalLink = styled.a`
