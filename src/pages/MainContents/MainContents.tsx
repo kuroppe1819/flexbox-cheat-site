@@ -176,7 +176,7 @@ const Contents = styled.main`
     right: 200px;
 
     @media ${deviceMaxWidth.laptop} {
-        ${tw`mb-56 right-auto`}
+        ${tw`mb-48 right-auto`}
     }
 
     @media ${deviceMaxWidth.tablet} {

@@ -96,7 +96,7 @@ const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
     height: 15rem;
 
     @media ${deviceMaxWidth.laptop} {
-        ${tw`h-auto`}
+        ${tw`h-40`}
     }
 
     @media ${deviceMaxWidth.mobileL} {
