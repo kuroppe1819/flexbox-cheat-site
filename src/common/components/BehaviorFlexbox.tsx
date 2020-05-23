@@ -81,7 +81,7 @@ const BehaviorBoxWrapper = styled.div`
 `;
 
 const BehaviorBox = styled.div<{ isKeepedHighlight: boolean; isMouseEnter: boolean }>`
-    ${tw`h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2 text-center`}
+    ${tw`h-24 w-32 border border-solid border-gray-400 cursor-pointer p-2 text-center mx-auto`}
     border-color: ${(props): string => (props.isKeepedHighlight || props.isMouseEnter ? Color.blue500 : Color.gray400)}
 `;
 

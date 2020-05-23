@@ -32,18 +32,21 @@ export const MainContents = (props: Props): ReactElement => {
         <Contents>
             <PropertySections>
                 <PropertySection>
-                    <PropertyName id="display" smooth to="/#display">
-                        display
-                    </PropertyName>
+                    <PropertyTitle id="display" smooth to="/#display">
+                        <PropertyName>display</PropertyName>
+                        <PropertyDescription>要素の表示形式</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <DisplayContainer propertyValue="flex" />
                         <DisplayContainer propertyValue="inline-flex" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="flex-direction" smooth to="/#flex-direction">
-                        flex-direction
-                    </PropertyName>
+                    <PropertyTitle id="flex-direction" smooth to="/#flex-direction">
+                        <PropertyName>flex-direction</PropertyName>
+                        <PropertyDescription>子要素の並ぶ向き</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FlexDirectionContainer propertyValue="row" />
                         <FlexDirectionContainer propertyValue="row-reverse" />
@@ -51,20 +54,24 @@ export const MainContents = (props: Props): ReactElement => {
                         <FlexDirectionContainer propertyValue="column-reverse" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="flex-wrap" smooth to="/#flex-wrap">
-                        flex-wrap
-                    </PropertyName>
+                    <PropertyTitle id="flex-wrap" smooth to="/#flex-wrap">
+                        <PropertyName>flex-wrap</PropertyName>
+                        <PropertyDescription>子要素の折り返し</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FlexWrapContainer propertyValue="nowrap" />
                         <FlexWrapContainer propertyValue="wrap" />
                         <FlexWrapContainer propertyValue="wrap-reverse" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="justify-content" smooth to="/#justify-content">
-                        justify-content
-                    </PropertyName>
+                    <PropertyTitle id="justify-content" smooth to="/#justify-content">
+                        <PropertyName>justify-content</PropertyName>
+                        <PropertyDescription>水平方向の揃え方</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <JustifyContentContainer propertyValue="flex-start" />
                         <JustifyContentContainer propertyValue="flex-end" />
@@ -74,10 +81,12 @@ export const MainContents = (props: Props): ReactElement => {
                         <JustifyContentContainer propertyValue="space-evenly" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="align-items" smooth to="/#align-items">
-                        align-items
-                    </PropertyName>
+                    <PropertyTitle id="align-items" smooth to="/#align-items">
+                        <PropertyName>align-items</PropertyName>
+                        <PropertyDescription>垂直方向の揃え方</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <AlignItemsContainer propertyValue="flex-start" />
                         <AlignItemsContainer propertyValue="flex-end" />
@@ -86,10 +95,12 @@ export const MainContents = (props: Props): ReactElement => {
                         <AlignItemsContainer propertyValue="stretch" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="align-content" smooth to="/#align-content">
-                        align-content
-                    </PropertyName>
+                    <PropertyTitle id="align-content" smooth to="/#align-content">
+                        <PropertyName>align-content</PropertyName>
+                        <PropertyDescription>複数行のときの揃え方</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <AlignContentContainer propertyValue="flex-start" />
                         <AlignContentContainer propertyValue="flex-end" />
@@ -100,20 +111,24 @@ export const MainContents = (props: Props): ReactElement => {
                         <AlignContentContainer propertyValue="stretch" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="order" smooth to="/#order">
-                        order
-                    </PropertyName>
+                    <PropertyTitle id="order" smooth to="/#order">
+                        <PropertyName>order</PropertyName>
+                        <PropertyDescription>順序の指定</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <OrderContainer propertyValue="-1" />
                         <OrderContainer propertyValue="0" />
                         <OrderContainer propertyValue="1" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="align-self" smooth to="/#align-self">
-                        align-self
-                    </PropertyName>
+                    <PropertyTitle id="align-self" smooth to="/#align-self">
+                        <PropertyName>align-self</PropertyName>
+                        <PropertyDescription>子要素の垂直方向の揃え方</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <AlignSelfContainer propertyValue="flex-start" />
                         <AlignSelfContainer propertyValue="flex-end" />
@@ -122,38 +137,46 @@ export const MainContents = (props: Props): ReactElement => {
                         <AlignSelfContainer propertyValue="stretch" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="flex-grow" smooth to="/#flex-grow">
-                        flex-grow
-                    </PropertyName>
+                    <PropertyTitle id="flex-grow" smooth to="/#flex-grow">
+                        <PropertyName>flex-grow</PropertyName>
+                        <PropertyDescription>子要素の伸びる比率</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FlexGrowContainer propertyValue="0" />
                         <FlexGrowContainer propertyValue="1" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="flex-shrink" smooth to="/#flex-shrink">
-                        flex-shrink
-                    </PropertyName>
+                    <PropertyTitle id="flex-shrink" smooth to="/#flex-shrink">
+                        <PropertyName>flex-shrink</PropertyName>
+                        <PropertyDescription>子要素の縮む比率</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FlexShrinkContainer propertyValue="0" />
                         <FlexShrinkContainer propertyValue="1" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="flex-basis" smooth to="/#flex-basis">
-                        flex-basis
-                    </PropertyName>
+                    <PropertyTitle id="flex-basis" smooth to="/#flex-basis">
+                        <PropertyName>flex-basis</PropertyName>
+                        <PropertyDescription>子要素の基本幅の指定</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FlexBasisContainer propertyValue="30%" />
                         <FlexBasisContainer propertyValue="50%" />
                         <FlexBasisContainer propertyValue="content" />
                     </PropertyItems>
                 </PropertySection>
+
                 <PropertySection>
-                    <PropertyName id="others" smooth to="/#others">
-                        others
-                    </PropertyName>
+                    <PropertyTitle id="others" smooth to="/#others">
+                        <PropertyName>others</PropertyName>
+                        <PropertyDescription>その他レイアウト</PropertyDescription>
+                    </PropertyTitle>
                     <PropertyItems>
                         <FirstChildToCornerContainer />
                         <LastChildToCornerContainer />
@@ -200,9 +223,17 @@ const PropertySection = styled.section`
     }
 `;
 
-const PropertyName = styled(Link)`
-    ${tw`block no-underline text-2xl text-blue-900 leading-loose pt-2 mt-4 text-center sticky top-0 bg-white outline-none`}
+const PropertyTitle = styled(Link)`
+    ${tw`block no-underline sticky top-0 bg-white outline-none mt-4 pt-3`}
     box-shadow: 0px 3px 3px -3px ${Color.gray400};
+`;
+
+const PropertyName = styled.h2`
+    ${tw`block text-2xl text-blue-900 text-center m-0 font-normal`}
+`;
+
+const PropertyDescription = styled.h3`
+    ${tw`block text-sm text-blue-900 leading-loose text-center m-0 pt-1 font-normal`}
 `;
 
 const PropertyItems = styled.div`
@@ -212,7 +243,7 @@ const PropertyItems = styled.div`
 const CodeViewerWrapper = styled.div<{ isOpenedCodeViewer: boolean }>`
     ${tw`fixed`}
     left: calc(50% + 216px);
-    top: 9rem;
+    top: 10rem;
 
     @media ${deviceMaxWidth.laptop} {
         ${tw`flex items-end right-0 left-auto`}
