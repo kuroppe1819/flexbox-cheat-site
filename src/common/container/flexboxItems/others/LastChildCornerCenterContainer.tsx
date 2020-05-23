@@ -1,39 +1,39 @@
 import React, { ReactElement } from 'react';
 import { BehaviorFlexboxContainer } from '../../common/BehaviorFlexboxContainer';
 import { css } from 'styled-components';
-import { createCssCodeForFirstChild, createCssCodeForParent } from '../../../createCode/CreateCssCode';
+import { createCssCodeForLastChild, createCssCodeForParent } from '../../../createCode/CreateCssCode';
 import { Color } from '../../../util/DefineProperty';
 
 const parentStyleContents = `display: flex;
     justify-content: center;
     position: relative`;
 
-const firstChildStyleContens = `position: absolute;
+const lastChildStyleContens = `position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: ${Color.blue700};`;
 
 const parentStyleCode = createCssCodeForParent(parentStyleContents);
-const firstChildStyleCode = createCssCodeForFirstChild(firstChildStyleContens);
+const lastChildStyleCode = createCssCodeForLastChild(lastChildStyleContens);
 
 const parentStyle = css`
     ${parentStyleContents}
 `;
 
-const firstChildStyle = css`
-    ${firstChildStyleContens}
+const lastChildStyle = css`
+    ${lastChildStyleContens}
 `;
 
 const reference = '';
 
-export const FirstChildToCornerCenterContainer = (): ReactElement => {
-    const mergeStyleCode = `${parentStyleCode}\n\n${firstChildStyleCode}`;
+export const LastChildToCornerCenterContainer = (): ReactElement => {
+    const mergeStyleCode = `${parentStyleCode}\n\n${lastChildStyleCode}`;
 
     return (
         <BehaviorFlexboxContainer
             parentStyle={parentStyle}
-            firstChildStyle={firstChildStyle}
-            propertyValue={`center & leftmost`}
+            lastChildStyle={lastChildStyle}
+            propertyValue={`center & rightmost`}
             uniqueCode={mergeStyleCode}
             uniqueReference={reference}
         />

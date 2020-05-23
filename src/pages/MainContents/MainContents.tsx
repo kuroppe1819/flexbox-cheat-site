@@ -9,9 +9,9 @@ import { FlexBasisContainer } from '../../common/container/flexboxItems/child/Fl
 import { FlexGrowContainer } from '../../common/container/flexboxItems/child/FlexGrowContainer';
 import { FlexShrinkContainer } from '../../common/container/flexboxItems/child/FlexShrinkContainer';
 import { OrderContainer } from '../../common/container/flexboxItems/child/OrderContainer';
-import { FirstChildToCornerCenterContainer } from '../../common/container/flexboxItems/others/FirstChildCornerCenterContainer';
+import { LastChildToCornerCenterContainer } from '../../common/container/flexboxItems/others/LastChildCornerCenterContainer';
 import { FirstChildToCornerContainer } from '../../common/container/flexboxItems/others/FirstChildToCornerContainer';
-import { LastChildToCornerContainer } from '../../common/container/flexboxItems/others/LastChildToCornerContainer';
+import { SpaceCenterContainer } from '../../common/container/flexboxItems/others/SpaceCenterContainer';
 import { AlignContentContainer } from '../../common/container/flexboxItems/parent/AlignContentContainer';
 import { AlignItemsContainer } from '../../common/container/flexboxItems/parent/AlignItemsContainer';
 import { DisplayContainer } from '../../common/container/flexboxItems/parent/DisplayContainer';
@@ -179,8 +179,8 @@ export const MainContents = (props: Props): ReactElement => {
                     </PropertyTitle>
                     <PropertyItems>
                         <FirstChildToCornerContainer />
-                        <LastChildToCornerContainer />
-                        <FirstChildToCornerCenterContainer />
+                        <SpaceCenterContainer />
+                        <LastChildToCornerCenterContainer />
                     </PropertyItems>
                 </PropertySection>
             </PropertySections>
