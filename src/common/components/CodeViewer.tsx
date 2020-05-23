@@ -20,13 +20,14 @@ export const CodeViewer = (props: Props): ReactElement => {
     return (
         <CodeView>
             <ViewHeader>
-                <ViewHeaderTitle>{language}</ViewHeaderTitle>
+                <CSSViewButton>CSS</CSSViewButton>
+                <HTMLViewButton>HTML</HTMLViewButton>
                 {reference !== '' && (
                     <ExternalLink href={reference} target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={['far', 'window-restore']} size="1x" />
+                        <FontAwesomeIcon icon={['far', 'window-restore']} size="lg" />
                     </ExternalLink>
                 )}
-                {code !== '' && <CopyIcon icon={['fas', 'copy']} size="1x" onClick={onClickCopiedHandler} />}
+                {code !== '' && <CopyIcon icon={['fas', 'copy']} size="lg" onClick={onClickCopiedHandler} />}
                 {copied && <FeedbackCopiedText>Copied!</FeedbackCopiedText>}
             </ViewHeader>
             <CustomSyntaxHighlighter language={language} style={monoBlue}>
@@ -47,11 +48,15 @@ const CodeView = styled.div`
 `;
 
 const ViewHeader = styled.div`
-    ${tw`flex justify-start items-center`}
+    ${tw`flex justify-start items-center m-3`}
 `;
 
-const ViewHeaderTitle = styled.h6`
-    ${tw`my-0 ml-2 px-2 text-blue-100 bg-blue-400 text-lg rounded-b-md leading-snug`}
+const CSSViewButton = styled.button`
+    ${tw`pt-1 text-blue-100 bg-blue-400 text-base rounded-l-md leading-snug border-solid border-blue-400 outline-none cursor-pointer`}
+`;
+
+const HTMLViewButton = styled.button`
+    ${tw`pt-1 text-blue-900 bg-white text-base rounded-r-md leading-snug border-solid border-gray-400 outline-none cursor-pointer`}
 `;
 
 const ExternalLink = styled.a`
@@ -63,11 +68,12 @@ const CopyIcon = styled(FontAwesomeIcon)`
 `;
 
 const FeedbackCopiedText = styled.div`
-    ${tw`text-sm font-bold ml-1`}
+    ${tw`text-base ml-1`}
 `;
 
 const CustomSyntaxHighlighter = styled(SyntaxHighlighter)`
     ${tw`m-3 bg-blue-400`}
+    min-height: 3rem;
     height: 15rem;
 
     @media ${deviceMaxWidth.laptop} {
