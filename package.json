@@ -16,6 +16,9 @@
       "pre-commit": "yarn run lint"
     }
   },
+  "engines": {
+    "npm": "Please use yarn instead of npm"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
