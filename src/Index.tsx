@@ -19,7 +19,7 @@ import { ScrollToTop } from './common/util/ScrollToTop';
 
 export const Index = (): ReactElement => {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Header />
             <ScrollToTop />
             <Switch>
