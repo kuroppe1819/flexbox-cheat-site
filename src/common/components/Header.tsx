@@ -25,7 +25,7 @@ const HeaderMain = styled.header`
 `;
 
 const HeaderTitle = styled.h1`
-    ${tw`m-0 text-blue-900 text-2xl`};
+    ${tw`m-0 text-blue-900 text-2xl font-bold`};
 `;
 
 const LinkIcons = styled.div`
