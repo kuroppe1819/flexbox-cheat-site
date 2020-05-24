@@ -43,6 +43,7 @@ export const PrivacyPolicy = (): ReactElement => {
 const Main = styled.main`
     ${tw`mx-auto my-16 px-10`};
     max-width: 600px;
+    font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic';
 `;
 
 const TopPageButtonWrapper = styled.div`

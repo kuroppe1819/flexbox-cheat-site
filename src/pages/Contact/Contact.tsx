@@ -9,7 +9,7 @@ export const Contact = (): ReactElement => {
             <h2>お問い合わせ</h2>
             <p>
                 お問い合わせは{' '}
-                <a href="https://twitter.com/mys_x101" rel="noopener noreferrer">
+                <a href="https://twitter.com/mys_x101" target="_blank" rel="noopener noreferrer">
                     Twitter
                 </a>{' '}
                 の DM にて承っております。
@@ -26,6 +26,7 @@ export const Contact = (): ReactElement => {
 const Main = styled.main`
     ${tw`mx-auto my-16 px-10`};
     max-width: 600px;
+    font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic';
 `;
 
 const TopPageButtonWrapper = styled.div`
