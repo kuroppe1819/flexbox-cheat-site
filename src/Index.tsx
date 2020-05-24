@@ -14,6 +14,7 @@ import { Header } from './common/components/Header';
 import { MainContentsContainer } from './pages/MainContents/MainContentsContainer';
 import { Terms } from './pages/Terms/Terms';
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
+import { Contact } from './pages/Contact/Contact';
 
 export const Index = (): ReactElement => {
     return (
@@ -28,6 +29,9 @@ export const Index = (): ReactElement => {
                 </Route>
                 <Route path="/privacy">
                     <PrivacyPolicy />
+                </Route>
+                <Route path="/contact">
+                    <Contact />
                 </Route>
             </Switch>
             <Footer />
