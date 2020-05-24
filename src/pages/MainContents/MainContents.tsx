@@ -224,7 +224,7 @@ const PropertySection = styled.section`
 `;
 
 const PropertyTitle = styled(Link)`
-    ${tw`block no-underline sticky top-0 bg-white outline-none mt-4 pt-3`}
+    ${tw`block no-underline sticky top-0 bg-white outline-none mt-4 pt-3 z-10`}
     box-shadow: 0px 3px 3px -3px ${Color.gray400};
 `;
 
@@ -241,7 +241,7 @@ const PropertyItems = styled.div`
 `;
 
 const CodeViewerWrapper = styled.div<{ isOpenedCodeViewer: boolean }>`
-    ${tw`fixed`}
+    ${tw`fixed z-20`}
     left: calc(50% + 216px);
     top: 10rem;
 
