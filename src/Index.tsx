@@ -11,7 +11,7 @@ import css from 'react-syntax-highlighter/dist/esm/languages/hljs/css';
 import '../static/css/style.css';
 import { Footer } from './common/components/Footer';
 import { Header } from './common/components/Header';
-import { MainContentsContainer } from './pages/MainContents/MainContentsContainer';
+import { TopContainer } from './pages/Top/TopContainer';
 import { Terms } from './pages/Terms/Terms';
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
 import { Contact } from './pages/Contact/Contact';
@@ -24,7 +24,7 @@ export const Index = (): ReactElement => {
             <ScrollToTop />
             <Switch>
                 <Route exact path="/">
-                    <MainContentsContainer />
+                    <TopContainer />
                 </Route>
                 <Route path="/terms">
                     <Terms />

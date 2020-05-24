@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext, useEffect, useState } from 'react';
-import { MainContentsContext } from '../../../pages/MainContents/MainContentsContainer';
+import { TopContext } from '../../../pages/Top/TopContainer';
 import { CodeViewer } from '../../components/CodeViewer';
 import { useClipboard } from '../../util/useClipboard';
 import { createHtmlCode } from '../../createCode/CreateHtmlCode';
@@ -12,7 +12,7 @@ export const Language = {
 export type Language = typeof Language[keyof typeof Language];
 
 export const CodeViewerContainer = (): ReactElement => {
-    const { selectedCssCode, showReference } = useContext(MainContentsContext);
+    const { selectedCssCode, showReference } = useContext(TopContext);
 
     const [selectedLanguage, setSelectedLanguage] = useState<Language>(Language.CSS);
     const [showCode, setShowCode] = useState('');

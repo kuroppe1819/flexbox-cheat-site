@@ -1,9 +1,9 @@
 import 'normalize.css';
 import React, { Dispatch, ReactElement, SetStateAction, useState } from 'react';
 import '../../../static/css/style.css';
-import { MainContents } from './MainContents';
+import { Top } from './Top';
 
-export type MainContentsContextProps = {
+export type TopContextProps = {
     selectedCssCode: string;
     showReference: string;
     setOpenedCodeViewer: Dispatch<SetStateAction<boolean>>;
@@ -11,15 +11,15 @@ export type MainContentsContextProps = {
     setShowReference: Dispatch<SetStateAction<string>>;
 };
 
-export const MainContentsContext = React.createContext({} as MainContentsContextProps);
+export const TopContext = React.createContext({} as TopContextProps);
 
-export const MainContentsContainer = (): ReactElement => {
+export const TopContainer = (): ReactElement => {
     const [isOpenedCodeViewer, setOpenedCodeViewer] = useState(false);
     const [selectedCssCode, setSelectedCssCode] = useState('');
     const [showReference, setShowReference] = useState('');
 
     return (
-        <MainContentsContext.Provider
+        <TopContext.Provider
             value={{
                 selectedCssCode,
                 showReference,
@@ -28,7 +28,7 @@ export const MainContentsContainer = (): ReactElement => {
                 setShowReference,
             }}
         >
-            <MainContents isOpenedCodeViewer={isOpenedCodeViewer} setOpenedCodeViewer={setOpenedCodeViewer} />
-        </MainContentsContext.Provider>
+            <Top isOpenedCodeViewer={isOpenedCodeViewer} setOpenedCodeViewer={setOpenedCodeViewer} />
+        </TopContext.Provider>
     );
 };

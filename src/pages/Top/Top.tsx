@@ -25,7 +25,7 @@ type Props = {
     setOpenedCodeViewer: Dispatch<SetStateAction<boolean>>;
 };
 
-export const MainContents = (props: Props): ReactElement => {
+export const Top = (props: Props): ReactElement => {
     const { isOpenedCodeViewer, setOpenedCodeViewer } = props;
 
     return (

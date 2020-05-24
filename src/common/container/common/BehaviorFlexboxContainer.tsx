@@ -2,7 +2,7 @@ import { FlattenSimpleInterpolation } from 'styled-components';
 import { useRef, useEffect, useState, ReactElement, useContext } from 'react';
 import { BehaviorFlexbox } from '../../components/BehaviorFlexbox';
 import React from 'react';
-import { MainContentsContext } from '../../../pages/MainContents/MainContentsContainer';
+import { TopContext } from '../../../pages/Top/TopContainer';
 
 type Props = {
     parentStyle: FlattenSimpleInterpolation;
@@ -17,7 +17,7 @@ type Props = {
 
 export const BehaviorFlexboxContainer = (props: Props): ReactElement => {
     const { uniqueCode } = props;
-    const context = useContext(MainContentsContext);
+    const context = useContext(TopContext);
 
     const [isKeepedHighlight, setKeepedHighlight] = useState(false);
     const [isMouseEnter, setMouseEnter] = useState(false);
