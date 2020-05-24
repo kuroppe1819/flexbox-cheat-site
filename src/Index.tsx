@@ -15,11 +15,13 @@ import { MainContentsContainer } from './pages/MainContents/MainContentsContaine
 import { Terms } from './pages/Terms/Terms';
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
 import { Contact } from './pages/Contact/Contact';
+import { ScrollToTop } from './common/util/ScrollToTop';
 
 export const Index = (): ReactElement => {
     return (
         <Router>
             <Header />
+            <ScrollToTop />
             <Switch>
                 <Route exact path="/">
                     <MainContentsContainer />
