@@ -1,10 +1,9 @@
 const path = require('path');
-const srcDir = '../src';
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, `${srcDir}/Index.tsx`),
+    entry: path.resolve(__dirname, `../src/Index.tsx`),
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js',
@@ -51,6 +50,6 @@ module.exports = {
             filename: 'index.html',
             template: 'static/html/index.html',
         }),
-        new FaviconsWebpackPlugin('static/image/favicon.ico'),
+        new FaviconsWebpackPlugin(path.resolve(__dirname, '../static/image/favicon.png')),
     ],
 };
