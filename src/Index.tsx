@@ -12,14 +12,22 @@ import '../static/css/style.css';
 import { Footer } from './common/components/Footer';
 import { Header } from './common/components/Header';
 import { MainContentsContainer } from './pages/MainContents/MainContentsContainer';
+import { Terms } from './pages/Terms/Terms';
+import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
 
 export const Index = (): ReactElement => {
     return (
         <Router>
             <Header />
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <MainContentsContainer />
+                </Route>
+                <Route path="/terms">
+                    <Terms />
+                </Route>
+                <Route path="/privacy">
+                    <PrivacyPolicy />
                 </Route>
             </Switch>
             <Footer />
