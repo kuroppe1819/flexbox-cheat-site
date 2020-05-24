@@ -23,7 +23,7 @@ const Navigation = styled.nav`
 `;
 
 const InternalLink = styled(Link)`
-    ${tw`text-blue-900 hover:text-blue-400 text-sm mx-4 no-underline`}
+    ${tw`text-blue-900 hover:text-blue-400 text-xs mx-4 no-underline`}
 `;
 
 const Copyright = styled.p`
