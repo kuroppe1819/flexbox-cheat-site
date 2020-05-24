@@ -56,6 +56,6 @@ module.exports = {
             filename: 'index.html',
             template: 'static/html/index.html',
         }),
-        new FaviconsWebpackPlugin(path.resolve(__dirname, '../static/image/favicon.png')),
+        new FaviconsWebpackPlugin(path.resolve(__dirname, '../static/image/flexbox-cheat-site-icon.png')),
     ],
 };
