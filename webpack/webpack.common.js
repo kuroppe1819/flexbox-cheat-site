@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, `../src/Index.tsx`),
@@ -56,6 +55,5 @@ module.exports = {
             filename: 'index.html',
             template: 'static/html/index.html',
         }),
-        new FaviconsWebpackPlugin(path.resolve(__dirname, '../static/image/flexbox-cheat-site-icon.png')),
     ],
 };
