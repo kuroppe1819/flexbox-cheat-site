@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/17245737/82776462-0b437d00-9e86-11ea-8675-2a651cf3e3db.png" alt="SecretIconeのアイコン" width="600px" height="315px">
-</div>
-
 # flexbox-cheat-site
 
 https://kuroppe1819.github.io/flexbox-cheat-site/
