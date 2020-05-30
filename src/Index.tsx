@@ -44,9 +44,9 @@ export const Index = (): ReactElement => {
 library.add(fab, fas, far);
 SyntaxHighlighter.registerLanguage('css', css);
 ReactDOM.render(
-    <React.Fragment>
+    <>
         <Normalize />
         <Index />
-    </React.Fragment>,
+    </>,
     document.getElementById('root')
 );
