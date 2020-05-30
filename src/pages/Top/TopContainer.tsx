@@ -1,4 +1,3 @@
-import 'normalize.css';
 import React, { Dispatch, ReactElement, SetStateAction, useState } from 'react';
 import '../../../static/css/style.css';
 import { Top } from './Top';

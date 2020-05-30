@@ -2,7 +2,6 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-import 'normalize.css';
 import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -16,6 +15,7 @@ import { Terms } from './pages/Terms/Terms';
 import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
 import { Contact } from './pages/Contact/Contact';
 import { ScrollToTop } from './common/util/ScrollToTop';
+import { Normalize } from 'styled-normalize';
 
 export const Index = (): ReactElement => {
     return (
@@ -43,4 +43,10 @@ export const Index = (): ReactElement => {
 
 library.add(fab, fas, far);
 SyntaxHighlighter.registerLanguage('css', css);
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(
+    <>
+        <Normalize />
+        <Index />
+    </>,
+    document.getElementById('root')
+);
