@@ -14,8 +14,8 @@
             "presets": ["@babel/preset-react"]
         },
         "development": {
-            "presets": [["@babel/preset-react", { "development": true }]]
+            "presets": [["@babel/preset-react", { "development": true }]],
+            "plugins": ["babel-plugin-styled-components"]
         }
-    },
-    "plugins": ["babel-plugin-styled-components", "macros"]
+    }
 }
