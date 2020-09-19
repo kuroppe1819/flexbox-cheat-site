@@ -9,7 +9,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     return <div className={props.className}>Hello World</div>;
 };
 
-const StyledComponent = styled(Component)`
+const StyledComponent: React.FC = styled(Component)`
     color: red;
     background-color: blue;
 `;
