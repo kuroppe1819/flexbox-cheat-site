@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: path.resolve(__dirname, `../src/index.tsx`),
+        privacy: path.resolve(__dirname, `../src/privacy.tsx`),
         terms: path.resolve(__dirname, `../src/terms.tsx`),
     },
     output: {

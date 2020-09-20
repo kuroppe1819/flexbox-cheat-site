@@ -11,7 +11,9 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 <a className={`${className}__terms`} href="./terms.html">
                     利用規約
                 </a>
-                <a className={`${className}__privacy`}>プライバシーポリシー</a>
+                <a className={`${className}__privacy`} href="./privacy.html">
+                    プライバシーポリシー
+                </a>
                 <a className={`${className}__contact`}>お問い合わせ</a>
             </nav>
             <p className={`${className}__copyright`}>
