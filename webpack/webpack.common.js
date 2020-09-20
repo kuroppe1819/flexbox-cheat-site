@@ -2,10 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, `../src/index.tsx`),
+    entry: {
+        index: path.resolve(__dirname, `../src/index.tsx`),
+    },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'bundle.js',
+        filename: '[name].js',
     },
     optimization: {
         splitChunks: {
@@ -53,8 +55,31 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             publicPath: 'dist',
+            filename: 'contact.html',
+            template: 'static/html/contact.html',
+            chunks: ['contact'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
             filename: 'index.html',
             template: 'static/html/index.html',
+            chunks: ['index'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
+            filename: 'privacy.html',
+            template: 'static/html/privacy.html',
+            chunks: ['privacy'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
+            filename: 'terms.html',
+            template: 'static/html/terms.html',
+            chunks: ['terms'],
+            scriptLoading: true,
         }),
     ],
 };
