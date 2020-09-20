@@ -14,7 +14,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+const StyledComponent: React.FC<Props & AssignClassNameProps> = styled(Component)`
     width: 1rem;
     display: flex;
     justify-content: center;
