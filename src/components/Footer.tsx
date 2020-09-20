@@ -8,7 +8,9 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
         <footer className={`${className}`}>
             <nav className={`${className}__navigation`}>
                 {/* TODO 英語文言に切り替えられるような仕組みを入れる */}
-                <a className={`${className}__terms`}>利用規約</a>
+                <a className={`${className}__terms`} href="./terms.html">
+                    利用規約
+                </a>
                 <a className={`${className}__privacy`}>プライバシーポリシー</a>
                 <a className={`${className}__contact`}>お問い合わせ</a>
             </nav>
@@ -32,6 +34,7 @@ const StyledComponent: React.FC = styled(Component)`
         font-size: 0.75rem;
         text-decoration: none;
         color: ${({ theme }) => theme.color.blue900};
+        cursor: pointer;
 
         &:hover {
             color: ${({ theme }) => theme.color.blue400};
