@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Normalize } from 'styled-normalize';
+import { GlobalStyle } from '../src/components/GlobalStyle';
 import { theme } from '../src/fixtures/theme';
 
 export const parameters = {
@@ -8,8 +10,12 @@ export const parameters = {
 
 export const decorators = [
     (Story) => (
-        <ThemeProvider theme={theme}>
-            <Story />
-        </ThemeProvider>
+        <>
+            <Normalize />
+            <GlobalStyle />
+            <ThemeProvider theme={theme}>
+                <Story />
+            </ThemeProvider>
+        </>
     ),
 ];
