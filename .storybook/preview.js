@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
-import { GlobalStyle } from '../src/components/GlobalStyle';
+import { GlobalStyle } from '../src/components/root/GlobalStyle';
 import { theme } from '../src/fixtures/theme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';

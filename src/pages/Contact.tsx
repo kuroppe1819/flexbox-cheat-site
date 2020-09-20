@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FillEffectLink } from '../components/FillEffectLink';
-import { PageRoot } from '../components/PageRoot';
+import { PageRoot } from '../components/root/PageRoot';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {
     const { className } = props;
@@ -19,7 +19,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 <p>サービスの改善についてのご意見、ご要望をお聞かせください！</p>
                 <p>応援コメントもお待ちしております！</p>
                 <div className={`${className}__fillEffectButton`}>
-                    <FillEffectLink text="トップへ戻る" href="./index.html"></FillEffectLink>
+                    <FillEffectLink text="トップへ戻る" href="/"></FillEffectLink>
                 </div>
             </main>
         </PageRoot>

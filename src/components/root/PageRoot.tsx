@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
-import { theme } from '../fixtures/theme';
+import { theme } from '../../fixtures/theme';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
