@@ -5,6 +5,6 @@ export default {
     title: 'components/FlexboxListItem',
 };
 
-export const Normal = () => <FlexboxListItem id={'display-flex'} propertyValue={'flex'} isHighlight={false} />;
+export const Normal = () => <FlexboxListItem id={'display_flex'} propertyValue={'flex'} isHighlight={false} />;
 
 export const Highlight = () => <FlexboxListItem id={'hoge'} propertyValue={'flex'} isHighlight />;
