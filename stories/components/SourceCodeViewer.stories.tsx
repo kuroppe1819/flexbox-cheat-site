@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SourceCodeViewer } from '../../src/components/SourceCodeViewer';
+import { SourceCodeType, SourceCodeViewer } from '../../src/components/SourceCodeViewer';
 
 export default {
     title: 'components/SourceCodeViewer',
@@ -7,5 +7,12 @@ export default {
 
 export const Normal = () => {
     const [open, setOpen] = useState(false);
-    return <SourceCodeViewer open={open} onClickToggleViewerButton={() => setOpen(!open)} />;
+    return (
+        <SourceCodeViewer
+            open={open}
+            sourceCode="flex: 1"
+            sourceCodeType={SourceCodeType.CSS}
+            onClickToggleViewerButton={() => setOpen(!open)}
+        />
+    );
 };

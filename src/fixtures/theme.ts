@@ -1,4 +1,5 @@
 export const theme = {
+    // reference https://tailwindcss.com/docs/background-color
     color: {
         blue100: '#ebf8ff',
         blue400: '#63b3ed',
@@ -6,6 +7,7 @@ export const theme = {
         blue900: '#2a4365',
         gray400: '#cbd5e0',
         gray500: '#a0aec0',
+        gray700: '#4a5568',
         white: '#fff',
     },
     shadow: {
