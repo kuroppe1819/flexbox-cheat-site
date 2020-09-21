@@ -17,12 +17,27 @@ type Props = {
     open: boolean;
     sourceCode: string;
     sourceCodeType: SourceCodeType;
+    reference: string;
+    copySuccess: boolean;
     onClickToggleViewerButton: React.MouseEventHandler<HTMLButtonElement>;
-    // onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
+    onClickCssViewButton: React.MouseEventHandler<HTMLButtonElement>;
+    onClickHtmlViewButton: React.MouseEventHandler<HTMLButtonElement>;
+    onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, open, sourceCode, sourceCodeType, onClickToggleViewerButton } = props;
+    const {
+        className,
+        open,
+        sourceCode,
+        reference,
+        copySuccess,
+        onClickToggleViewerButton,
+        onClickCssViewButton,
+        onClickHtmlViewButton,
+        onClickCopyButton,
+    } = props;
+
     return (
         <div className={`${className}`}>
             <button className={`${className}__toggleViewerButton`} onClick={onClickToggleViewerButton}>
@@ -34,15 +49,24 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
             </button>
             <div className={`${className}__sourceCodeView`}>
                 <div className={`${className}__header`} role="header">
-                    <button className={`${className}__cssViewButton`}>CSS</button>
-                    <button className={`${className}__htmlViewButton`}>HTML</button>
-                    <a className={`${className}__externalLink`} target="_blank" rel="noopener noreferrer">
+                    <button className={`${className}__cssViewButton`} onClick={onClickCssViewButton}>
+                        CSS
+                    </button>
+                    <button className={`${className}__htmlViewButton`} onClick={onClickHtmlViewButton}>
+                        HTML
+                    </button>
+                    <a
+                        className={`${className}__externalLink`}
+                        href={reference}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <FontAwesomeIcon icon={faWindowRestore} size="lg" />
                     </a>
-                    <button className={`${className}__clipboardCopyButton`}>
+                    <button className={`${className}__clipboardCopyButton`} onClick={onClickCopyButton}>
                         <FontAwesomeIcon icon={faCopy} size="lg" />
                     </button>
-                    <span className={`${className}__feedbackCopiedText`}>Copied!</span>
+                    {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                 </div>
                 <SyntaxHighlighter className={`${className}__content`}>{sourceCode}</SyntaxHighlighter>
             </div>

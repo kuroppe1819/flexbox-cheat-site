@@ -6,5 +6,5 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Index } from './pages/Index';
 
-library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faWindowRestore);
+library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faWindowRestore, faCopy);
 ReactDOM.render(<Index />, document.getElementById('root'));
