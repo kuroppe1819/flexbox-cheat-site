@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
-import { deviceMaxWidth } from '../fixtures/device';
+import { deviceMaxWidth } from '../fixtures/screen';
 
 type Props = {
     open: boolean;
