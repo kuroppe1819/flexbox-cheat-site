@@ -3,5 +3,5 @@ type StyledProps = {
 };
 
 type AssignClassNameProps = {
-    className?: string;
+    assignClassName?: string; // TODO: 一時的にオプショナルにする
 };

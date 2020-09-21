@@ -8,10 +8,12 @@ type Props = {
     isHighlight: boolean;
 };
 
-const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, propertyValue } = props;
+const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
+    props: Props & StyledProps & AssignClassNameProps
+) => {
+    const { className, assignClassName, propertyValue } = props;
     return (
-        <li className={`${className}`}>
+        <li className={`${className} ${assignClassName}`}>
             <div className={`${className}__numberBlockField`}>
                 <div className={`${className}__numberBlockFrame`}>
                     <NumberBlock index={1} />
@@ -25,9 +27,8 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+const StyledComponent: React.FC<Props & AssignClassNameProps> = styled(Component)`
     display: inline-block;
-    /* margin: 0.75rem 0.75rem 1.25rem 0.75rem; TODO: 親が指定する */
     text-align: center;
 
     &__numberBlockField {
