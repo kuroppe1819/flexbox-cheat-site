@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 16px;
     }
 
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
     li {
         list-style: none;
     }
