@@ -1,20 +1,23 @@
 import { theme } from './../fixtures/theme';
-export type FlexboxGroupData = {
-    name: string;
-    values: {
-        value: string;
-        parentStyle: { [key: string]: string } | null;
-        childStyle: { [key: string]: string } | null;
-        childFeaturedStyle: { [key: string]: string } | null;
-        firstChildStyle: { [key: string]: string } | null;
-        lastChildStyle: { [key: string]: string } | null;
-    }[];
+
+export type FlexboxPropertyInfo = {
+    value: string;
+    parentStyle: { [key: string]: string } | null;
+    childStyle: { [key: string]: string } | null;
+    childFeaturedStyle: { [key: string]: string } | null;
+    firstChildStyle: { [key: string]: string } | null;
+    lastChildStyle: { [key: string]: string } | null;
 };
 
-export const flexboxGroupData: FlexboxGroupData[] = [
+export type FlexboxProperty = {
+    name: string;
+    infoList: FlexboxPropertyInfo[];
+};
+
+export const flexboxProperties: FlexboxProperty[] = [
     {
         name: 'display',
-        values: [
+        infoList: [
             {
                 value: 'flex',
                 parentStyle: { display: 'flex' },
@@ -35,7 +38,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'flex-direction',
-        values: [
+        infoList: [
             {
                 value: 'row',
                 parentStyle: { display: 'flex', 'flex-direction': 'row', height: '100%' },
@@ -72,7 +75,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'flex-wrap',
-        values: [
+        infoList: [
             {
                 value: 'nowrap',
                 parentStyle: { display: 'flex', 'align-items': 'flex-start', 'flex-wrap': 'nowrap', height: '100%' },
@@ -106,7 +109,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'justify-content',
-        values: [
+        infoList: [
             {
                 value: 'flex-start',
                 parentStyle: { display: 'flex', 'justify-content': 'flex-start' },
@@ -159,7 +162,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'align-items',
-        values: [
+        infoList: [
             {
                 value: 'flex-start',
                 parentStyle: { display: 'flex', 'align-items': 'flex-start', height: '100%' },
@@ -204,7 +207,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'align-content',
-        values: [
+        infoList: [
             {
                 value: 'flex-start',
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'flex-start', height: '100%' },
@@ -265,7 +268,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'order',
-        values: [
+        infoList: [
             {
                 value: '-1',
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
@@ -294,7 +297,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'align-self',
-        values: [
+        infoList: [
             {
                 value: 'flex-start',
                 parentStyle: { display: 'flex', height: '100%' },
@@ -339,7 +342,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'flex-grow',
-        values: [
+        infoList: [
             {
                 value: '0',
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
@@ -360,7 +363,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'flex-shrink',
-        values: [
+        infoList: [
             {
                 value: '0',
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
@@ -381,7 +384,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'flex-basis',
-        values: [
+        infoList: [
             {
                 value: '30%',
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap' },
@@ -410,7 +413,7 @@ export const flexboxGroupData: FlexboxGroupData[] = [
     },
     {
         name: 'headers',
-        values: [
+        infoList: [
             {
                 value: 'header1',
                 parentStyle: { display: 'flex' },

@@ -1,27 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FlexboxPropertyInfo } from '../data/flexboxProperty';
+import { createFlexboxPropertyId } from '../fixtures/functions/managementId';
 import { FlexboxListItem } from './FlexboxListItem';
 
 type Props = {
-    id: string;
+    propertyName: string;
+    propertyInfoList: FlexboxPropertyInfo[];
 };
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className } = props;
+    const { className, propertyName, propertyInfoList } = props;
     return (
         <ul className={`${className}`}>
-            <FlexboxListItem
-                assignClassName={`${className}__FlexboxListItem`}
-                id="display_flex"
-                propertyValue="flex"
-                isHighlight={false}
-            />
-            <FlexboxListItem
-                assignClassName={`${className}__FlexboxListItem`}
-                id="display_inline-flex"
-                propertyValue="inline-flex"
-                isHighlight={true}
-            />
+            {propertyInfoList.map((info) => {
+                const id = createFlexboxPropertyId(propertyName, info.value);
+                return (
+                    <FlexboxListItem
+                        key={id}
+                        assignClassName={`${className}__FlexboxListItem`}
+                        id={id}
+                        propertyValue={info.value}
+                        isHighlight={true}
+                    />
+                );
+            })}
         </ul>
     );
 };

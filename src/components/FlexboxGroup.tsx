@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FlexboxPropertyInfo } from '../data/flexboxProperty';
 import { FlexboxList } from './FlexboxList';
 
 type Props = {
-    id: string;
+    propertyName: string;
+    propertyInfoList: FlexboxPropertyInfo[];
 } & AssignClassNameProps;
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, assignClassName } = props;
+    const { className, assignClassName, propertyName, propertyInfoList } = props;
     return (
         <div className={`${className} ${assignClassName}__flexboxGroup`} role="group">
             <div className={`${className}__title`}>
-                <h2 className={`${className}__propertyName`}>flex</h2>
+                <h2 className={`${className}__propertyName`}>{propertyName}</h2>
                 <h3 className={`${className}__propertyDescription`}>要素の表示形式</h3>
             </div>
-            <FlexboxList id="display_flex" />
+            <FlexboxList propertyName={propertyName} propertyInfoList={propertyInfoList} />
         </div>
     );
 };
@@ -29,7 +31,8 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         position: sticky;
         top: 0;
         background-color: ${({ theme }) => theme.color.white};
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        padding-top: 0.75rem;
         z-index: 10;
         box-shadow: 0px 3px 3px -3px #cbd5e0;
     }

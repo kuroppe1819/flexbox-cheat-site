@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
-import { SourceCodeViewer } from '../components/SourceCodeViewer';
-import { FlexboxGroupData, flexboxGroupData } from '../data/flexboxGroupData';
+import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperty';
 import { deviceMaxWidth } from '../fixtures/screen';
 
 type Props = {};
@@ -14,9 +13,14 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         <PageRoot>
             <main className={`${className}`}>
                 <div className={`${className}__flexboxGroupWrapper`}>
-                    {flexboxGroupData.map((data: FlexboxGroupData) => {
-                        return <FlexboxGroup key={data.name} assignClassName={className} id={data.name} />;
-                    })}
+                    {flexboxProperties.map((property: FlexboxProperty) => (
+                        <FlexboxGroup
+                            key={property.name}
+                            assignClassName={className}
+                            propertyName={property.name}
+                            propertyInfoList={property.infoList}
+                        />
+                    ))}
                 </div>
                 <div className={`${className}__sourceCodeViewerWrapper`}>{/* <SourceCodeViewer /> */}</div>
             </main>
@@ -30,21 +34,19 @@ const StyledConponent: React.FC<Props> = styled(Component)`
     width: 880px;
     right: 200px;
     margin: 1rem auto 3rem auto;
+    padding-bottom: 6rem;
 
     @media ${deviceMaxWidth.laptop} {
         right: auto;
-        margin-bottom: 8rem;
     }
 
     @media ${deviceMaxWidth.tablet} {
         width: auto;
-        margin-bottom: 3rem;
     }
 
     @media ${deviceMaxWidth.mobileL} {
         margin-right: 0;
         margin-left: 0;
-        margin-bottom: 8rem;
     }
 
     &__flexboxGroupWrapper {
@@ -55,6 +57,7 @@ const StyledConponent: React.FC<Props> = styled(Component)`
 
     &__flexboxGroup {
         padding: 0 0.75rem;
+        justify-content: flex-start;
 
         @media ${deviceMaxWidth.mobileL} {
             padding: 0 0.25rem;
