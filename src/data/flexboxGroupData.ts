@@ -9,9 +9,9 @@ export type FlexboxGroupData = {
         firstChildStyle: { [key: string]: string } | null;
         lastChildStyle: { [key: string]: string } | null;
     }[];
-}[];
+};
 
-export const flexboxGroupData: FlexboxGroupData = [
+export const flexboxGroupData: FlexboxGroupData[] = [
     {
         name: 'display',
         values: [

@@ -4,12 +4,12 @@ import { FlexboxList } from './FlexboxList';
 
 type Props = {
     id: string;
-};
+} & AssignClassNameProps;
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className } = props;
+    const { className, assignClassName } = props;
     return (
-        <div className={`${className}`} role="group">
+        <div className={`${className} ${assignClassName}__flexboxGroup`} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>flex</h2>
                 <h3 className={`${className}__propertyDescription`}>要素の表示形式</h3>
@@ -53,4 +53,4 @@ const StyledComponent: React.FC<Props> = styled(Component)`
     }
 `;
 
-export const FlexboxGroup: React.FC<Props> = StyledComponent;
+export const FlexboxGroup = StyledComponent;
