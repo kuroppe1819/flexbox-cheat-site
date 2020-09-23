@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { FlexboxPropertyInfo } from '../data/flexboxProperty';
 import { FlexboxList } from './FlexboxList';
@@ -14,7 +15,9 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         <div className={`${className} ${assignClassName}__flexboxGroup`} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>{propertyName}</h2>
-                <h3 className={`${className}__propertyDescription`}>要素の表示形式</h3>
+                <h3 className={`${className}__propertyDescription`}>
+                    <FormattedMessage id={`flexbox.property.description.${propertyName}`} />
+                </h3>
             </div>
             <FlexboxList propertyName={propertyName} propertyInfoList={propertyInfoList} />
         </div>

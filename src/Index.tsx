@@ -5,6 +5,13 @@ import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Index } from './pages/Index';
+import { IntlProvider } from 'react-intl';
+import { messages } from './data/messages';
 
 library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faWindowRestore, faCopy);
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(
+    <IntlProvider locale={'ja'} messages={messages['ja']}>
+        <Index />
+    </IntlProvider>,
+    document.getElementById('root')
+);
