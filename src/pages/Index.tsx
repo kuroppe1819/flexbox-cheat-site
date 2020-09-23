@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
 import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperty';
 import { deviceMaxWidth } from '../fixtures/screen';
 
-type Props = {};
-
-const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
+const Component: React.FC<StyledProps> = (props: StyledProps) => {
     const { className } = props;
     return (
         <PageRoot>
@@ -28,7 +26,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const StyledConponent: React.FC<Props> = styled(Component)`
+const StyledComponent: React.FC = styled(Component)`
     display: flex;
     position: relative;
     width: 880px;
@@ -64,8 +62,31 @@ const StyledConponent: React.FC<Props> = styled(Component)`
     }
 `;
 
-const Container: React.FC<Props> = () => {
-    return <StyledConponent />;
+export type IndexContextProps = {
+    selectedFlexboxPropertyId: string | null;
+    mouseOverFlexboxListItemId: string | null;
+    setFlexboxPropertyId: Dispatch<SetStateAction<string | null>>;
+    setMouseOverFlexboxListItemId: Dispatch<SetStateAction<string | null>>;
+};
+
+export const IndexContext = React.createContext({} as IndexContextProps);
+
+const Container: React.FC = () => {
+    const [selectedFlexboxPropertyId, setFlexboxPropertyId] = useState<string | null>(null);
+    const [mouseOverFlexboxListItemId, setMouseOverFlexboxListItemId] = useState<string | null>(null);
+
+    return (
+        <IndexContext.Provider
+            value={{
+                selectedFlexboxPropertyId,
+                mouseOverFlexboxListItemId,
+                setFlexboxPropertyId,
+                setMouseOverFlexboxListItemId,
+            }}
+        >
+            <StyledComponent />
+        </IndexContext.Provider>
+    );
 };
 
 export const Index = Container;

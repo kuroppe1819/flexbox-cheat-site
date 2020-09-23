@@ -524,7 +524,7 @@ export const flexboxProperties: FlexboxProperty[] = [
                 style: {
                     parent: { display: 'flex', 'flex-wrap': 'wrap' },
                     child: null,
-                    childFeatured: { 'flex-basis': '30%', 'background-color': theme.color.blue700 },
+                    childFeatured: { 'flex-basis': '50%', 'background-color': theme.color.blue700 },
                     firstChild: null,
                     lastChild: null,
                 },

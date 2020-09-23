@@ -15,15 +15,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         <ul className={`${className}`}>
             {propertyInfoList.map((info) => {
                 const id = createFlexboxPropertyId(propertyName, info.value);
-                return (
-                    <FlexboxListItem
-                        key={id}
-                        assignClassName={className}
-                        id={id}
-                        propertyInfo={info}
-                        isHighlight={true}
-                    />
-                );
+                return <FlexboxListItem key={id} assignClassName={className} id={id} propertyInfo={info} />;
             })}
         </ul>
     );
