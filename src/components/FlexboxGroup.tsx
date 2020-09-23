@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
@@ -12,7 +13,7 @@ type Props = {
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const { className, assignClassName, propertyName, propertyInfoList } = props;
     return (
-        <div className={`${className} ${assignClassName}__flexboxGroup`} role="group">
+        <div className={clsx(className, assignClassName && `${assignClassName}__flexboxGroup`)} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>{propertyName}</h2>
                 <h3 className={`${className}__propertyDescription`}>

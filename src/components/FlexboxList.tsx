@@ -18,7 +18,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                 return (
                     <FlexboxListItem
                         key={id}
-                        assignClassName={`${className}__FlexboxListItem`}
+                        assignClassName={className}
                         id={id}
                         propertyInfo={info}
                         isHighlight={true}
@@ -34,7 +34,7 @@ const StyledComponent: React.FC<Props> = styled(Component)`
     flex-direction: column;
     justify-content: center;
 
-    &__FlexboxListItem {
+    &__flexboxListItem {
         margin: 0rem 0.75rem 1rem 0.75rem;
 
         &:first-of-type {

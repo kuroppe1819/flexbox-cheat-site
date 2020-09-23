@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import clsx from 'clsx';
 import { FlexboxPropertyInfo } from '../data/flexboxProperty';
 import { convertObjectToCssNotation } from '../fixtures/functions/constractSourceCode';
 import { NumberBlock } from './NumberBlock';
@@ -14,14 +15,12 @@ type Props = {
     id: string;
     propertyInfo: FlexboxPropertyInfo;
     isHighlight: boolean;
-};
+} & AssignClassNameProps;
 
-const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
-    props: Props & StyledProps & AssignClassNameProps
-) => {
+const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const { className, assignClassName, propertyInfo } = props;
     return (
-        <li className={`${className} ${assignClassName}`}>
+        <li className={clsx(className, assignClassName && `${assignClassName}__flexboxListItem`)}>
             <div className={`${className}__numberBlockField`}>
                 <div className={`${className}__numberBlockFrame`}>
                     {Array(propertyInfo.numberOfNumberBlock)
@@ -31,7 +30,7 @@ const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
                                 return (
                                     <NumberBlock
                                         key={index}
-                                        assignClassName={`${className}__NumberBlock ${className}__NumberBlock-first`}
+                                        assignClassName={`${className}__numberBlock ${className}__NumberBlock-first`}
                                         number={index + 1}
                                     />
                                 );
@@ -43,7 +42,7 @@ const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
                                 return (
                                     <NumberBlock
                                         key={index}
-                                        assignClassName={`${className}__NumberBlock ${className}__NumberBlock-featured`}
+                                        assignClassName={`${className}__numberBlock ${className}__NumberBlock-featured`}
                                         number={index + 1}
                                     />
                                 );
@@ -51,7 +50,7 @@ const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
                                 return (
                                     <NumberBlock
                                         key={index}
-                                        assignClassName={`${className}__NumberBlock ${className}__NumberBlock-last`}
+                                        assignClassName={`${className}__numberBlock ${className}__NumberBlock-last`}
                                         number={index + 1}
                                     />
                                 );
@@ -59,7 +58,7 @@ const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
                                 return (
                                     <NumberBlock
                                         key={index}
-                                        assignClassName={`${className}__NumberBlock`}
+                                        assignClassName={`${className}__numberBlock`}
                                         number={index + 1}
                                     />
                                 );
@@ -72,7 +71,7 @@ const Component: React.FC<Props & StyledProps & AssignClassNameProps> = (
     );
 };
 
-const StyledComponent: React.FC<Props & AssignClassNameProps> = styled(Component)`
+const StyledComponent: React.FC<Props> = styled(Component)`
     display: inline-block;
     text-align: center;
 
@@ -102,22 +101,22 @@ const StyledComponent: React.FC<Props & AssignClassNameProps> = styled(Component
         cursor: pointer;
     }
 
-    &__NumberBlock {
+    &__numberBlock {
         margin: 1px;
         ${({ propertyInfo }) => propertyInfo.style.child && convertObjectToCssNotation(propertyInfo.style.child)}
     }
 
-    &__NumberBlock-first {
+    &__numberBlock-first {
         ${({ propertyInfo }) =>
             propertyInfo.style.firstChild && convertObjectToCssNotation(propertyInfo.style.firstChild)}
     }
 
-    &__NumberBlock-featured {
+    &__numberBlock-featured {
         ${({ propertyInfo }) =>
             propertyInfo.style.childFeatured && convertObjectToCssNotation(propertyInfo.style.childFeatured)}
     }
 
-    &__NumberBlock-last {
+    &__numberBlock-last {
         ${({ propertyInfo }) =>
             propertyInfo.style.lastChild && convertObjectToCssNotation(propertyInfo.style.lastChild)}
     }

@@ -34,7 +34,6 @@ const StyledConponent: React.FC<Props> = styled(Component)`
     width: 880px;
     right: 200px;
     margin: 1rem auto 3rem auto;
-    padding-bottom: 6rem;
 
     @media ${deviceMaxWidth.laptop} {
         right: auto;
