@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
-import { FlexboxPropertyInfo } from '../data/flexboxProperty';
+import { FlexboxPropertyInfo } from '../data/flexboxProperties';
 import { FlexboxList } from './FlexboxList';
 
 type Props = {

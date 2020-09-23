@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction, useState } from 'react';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
-import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperty';
+import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperties';
 import { deviceMaxWidth } from '../fixtures/screen';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {

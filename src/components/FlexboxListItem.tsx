@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
-import { FlexboxPropertyInfo } from '../data/flexboxProperty';
+import { FlexboxPropertyInfo } from '../data/flexboxProperties';
 import { convertObjectToCssNotation } from '../fixtures/functions/constractSourceCode';
 import { NumberBlock } from './NumberBlock';
 import { IndexContext } from '../pages/Index';
