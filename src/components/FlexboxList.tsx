@@ -20,7 +20,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                         key={id}
                         assignClassName={`${className}__FlexboxListItem`}
                         id={id}
-                        propertyValue={info.value}
+                        propertyInfo={info}
                         isHighlight={true}
                     />
                 );

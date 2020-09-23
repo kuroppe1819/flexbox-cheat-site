@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 type Props = {
-    index: number;
+    number: number;
 };
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, index } = props;
+    const { className, number } = props;
     return (
         <div className={className}>
-            <span className={`${className}__number`}>{index}</span>
+            <span className={`${className}__number`}>{number}</span>
         </div>
     );
 };

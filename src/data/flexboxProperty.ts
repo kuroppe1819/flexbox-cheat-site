@@ -2,6 +2,7 @@ import { theme } from './../fixtures/theme';
 
 export type FlexboxPropertyInfo = {
     value: string;
+    numberOfNumberBlock: number;
     parentStyle: { [key: string]: string } | null;
     childStyle: { [key: string]: string } | null;
     childFeaturedStyle: { [key: string]: string } | null;
@@ -20,6 +21,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'flex',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -28,6 +30,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'inline-flex',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -41,6 +44,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'row',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-direction': 'row', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -49,6 +53,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'row-reverse',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-direction': 'row-reverse', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -57,6 +62,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'column',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-direction': 'column', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -65,6 +71,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'column-reverse',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-direction': 'column-reverse', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -78,6 +85,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'nowrap',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start', 'flex-wrap': 'nowrap', height: '100%' },
                 childStyle: { width: '40%' },
                 childFeaturedStyle: null,
@@ -86,6 +94,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'wrap',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start', 'flex-wrap': 'wrap', height: '100%' },
                 childStyle: { width: '40%' },
                 childFeaturedStyle: null,
@@ -94,6 +103,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'wrap-reverse',
+                numberOfNumberBlock: 4,
                 parentStyle: {
                     display: 'flex',
                     'align-items': 'flex-start',
@@ -112,6 +122,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'flex-start',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -120,6 +131,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'flex-end',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'flex-end' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -128,6 +140,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'center',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'center' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -136,6 +149,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-between',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'space-between' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -144,6 +158,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-around',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'space-around' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -152,6 +167,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-evenly',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'space-evenly' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -165,6 +181,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'flex-start',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -173,6 +190,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'flex-end',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-end', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -181,6 +199,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'center',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'center', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -189,6 +208,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'baseline',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'baseline', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -197,6 +217,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'stretch',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'stretch', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: null,
@@ -210,6 +231,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'flex-start',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'flex-start', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -218,6 +240,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'flex-end',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'flex-end', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -226,6 +249,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'center',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'center', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -234,6 +258,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-between',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'space-between', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -242,6 +267,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-around',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'space-around', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -250,6 +276,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'space-evenly',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'space-evenly', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -258,6 +285,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'stretch',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap', 'align-content': 'stretch', height: '100%' },
                 childStyle: { width: '30%' },
                 childFeaturedStyle: null,
@@ -271,6 +299,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: '-1',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: { order: '-1', 'background-color': theme.color.blue700 },
@@ -279,6 +308,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: '0',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: { order: '0', 'background-color': theme.color.blue700 },
@@ -287,6 +317,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: '1',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: { order: '1', 'background-color': theme.color.blue700 },
@@ -300,6 +331,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'flex-start',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: { 'align-self': 'flex-start', 'background-color': theme.color.blue700 },
@@ -308,6 +340,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'flex-end',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: { 'align-self': 'flex-end', 'background-color': theme.color.blue700 },
@@ -316,6 +349,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'center',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: { 'align-self': 'center', 'background-color': theme.color.blue700 },
@@ -324,6 +358,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'baseline',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: { 'align-self': 'baseline', 'background-color': theme.color.blue700 },
@@ -332,6 +367,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'stretch',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', height: '100%' },
                 childStyle: null,
                 childFeaturedStyle: { 'align-self': 'stretch', 'background-color': theme.color.blue700 },
@@ -345,6 +381,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: '0',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-grow': '0', 'background-color': theme.color.blue700 },
@@ -353,6 +390,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: '1',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-grow': '1', 'background-color': theme.color.blue700 },
@@ -366,6 +404,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: '0',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: { width: '40%' },
                 childFeaturedStyle: { 'flex-shrink': '0', 'background-color': theme.color.blue700 },
@@ -374,6 +413,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: '1',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'align-items': 'flex-start' },
                 childStyle: { width: '40%' },
                 childFeaturedStyle: { 'flex-shrink': '1', 'background-color': theme.color.blue700 },
@@ -387,6 +427,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: '30%',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-basis': '30%', 'background-color': theme.color.blue700 },
@@ -395,6 +436,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: '50%',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-basis': '30%', 'background-color': theme.color.blue700 },
@@ -403,6 +445,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'content',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'flex-wrap': 'wrap' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-basis': 'content', 'background-color': theme.color.blue700 },
@@ -416,6 +459,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         infoList: [
             {
                 value: 'header1',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex' },
                 childStyle: null,
                 childFeaturedStyle: { 'flex-basis': 'content', 'background-color': theme.color.blue700 },
@@ -424,6 +468,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'header2',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex' },
                 childStyle: null,
                 childFeaturedStyle: { 'margin-left': 'auto', 'background-color': theme.color.blue700 },
@@ -432,6 +477,7 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
             {
                 value: 'header3',
+                numberOfNumberBlock: 4,
                 parentStyle: { display: 'flex', 'justify-content': 'center', position: 'relative' },
                 childStyle: null,
                 childFeaturedStyle: null,
