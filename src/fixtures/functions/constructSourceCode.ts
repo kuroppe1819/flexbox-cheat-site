@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { FlexboxPropertyStyle } from '../../data/flexboxProperties';
 import { ChildElementType } from './../../components/FlexboxListItem';
 
-const classNames = {
+const ClassName = {
     PARENT: 'parent',
     CHILD: 'child',
     CHILD_FEATURED: 'child-featured',
@@ -24,16 +24,16 @@ const constructCssBySelector = (selector: string, styleObj: { [key: string]: str
 export const constructCss = (style: FlexboxPropertyStyle) => {
     const { parent, child, childFeatured, firstChild, lastChild } = style;
     let css = '';
-    css += parent ? constructCssBySelector(`.${classNames.PARENT}`, parent) : '';
-    css += child ? `\n\n${constructCssBySelector(`.${classNames.CHILD}`, child)}` : '';
-    css += childFeatured ? `\n\n${constructCssBySelector(`.${classNames.CHILD_FEATURED}`, childFeatured)}` : '';
-    css += firstChild ? `\n\n${constructCssBySelector(`.${classNames.FIRST_CHILD}`, firstChild)}` : '';
-    css += lastChild ? `\n\n${constructCssBySelector(`.${classNames.LAST_CHILD}`, lastChild)}` : '';
+    css += parent ? constructCssBySelector(`.${ClassName.PARENT}`, parent) : '';
+    css += child ? `\n\n${constructCssBySelector(`.${ClassName.CHILD}`, child)}` : '';
+    css += childFeatured ? `\n\n${constructCssBySelector(`.${ClassName.CHILD_FEATURED}`, childFeatured)}` : '';
+    css += firstChild ? `\n\n${constructCssBySelector(`.${ClassName.FIRST_CHILD}`, firstChild)}` : '';
+    css += lastChild ? `\n\n${constructCssBySelector(`.${ClassName.LAST_CHILD}`, lastChild)}` : '';
     return css;
 };
 
-const constructChildElement = (classNames: string, number: number, prefix = '') =>
-    `${prefix}<div class="${classNames}">${number}</div>\n`;
+const constructChildElement = (ClassName: string, number: number, prefix = '') =>
+    `${prefix}<div class="${ClassName}">${number}</div>\n`;
 
 const constructChildElements = (numberOfElement: number, style: FlexboxPropertyStyle) => {
     const { childFeatured, firstChild, lastChild } = style;
@@ -43,10 +43,10 @@ const constructChildElements = (numberOfElement: number, style: FlexboxPropertyS
     for (let i = 0; i < numberOfElement; i++) {
         html += constructChildElement(
             clsx(
-                classNames.CHILD,
-                childElementType.isChildFeatured(i) && childFeatured && classNames.CHILD_FEATURED,
-                childElementType.isFirstChild(i) && firstChild && classNames.FIRST_CHILD,
-                childElementType.isLastChild(i) && lastChild && classNames.LAST_CHILD
+                ClassName.CHILD,
+                childElementType.isChildFeatured(i) && childFeatured && ClassName.CHILD_FEATURED,
+                childElementType.isFirstChild(i) && firstChild && ClassName.FIRST_CHILD,
+                childElementType.isLastChild(i) && lastChild && ClassName.LAST_CHILD
             ),
             i + 1,
             '  '
@@ -56,4 +56,4 @@ const constructChildElements = (numberOfElement: number, style: FlexboxPropertyS
 };
 
 export const constructHtml = (numberOfElement: number, style: FlexboxPropertyStyle) =>
-    `<div class="${classNames.PARENT}">\n${constructChildElements(numberOfElement, style)}</div>`;
+    `<div class="${ClassName.PARENT}">\n${constructChildElements(numberOfElement, style)}</div>`;
