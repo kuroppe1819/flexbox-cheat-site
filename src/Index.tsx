@@ -5,6 +5,11 @@ import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Index } from './pages/Index';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import css from 'react-syntax-highlighter/dist/esm/languages/hljs/css';
+import markdown from 'react-syntax-highlighter/dist/esm/languages/hljs/markdown';
 
 library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faWindowRestore, faCopy);
+SyntaxHighlighter.registerLanguage('css', css);
+SyntaxHighlighter.registerLanguage('markdown', markdown);
 ReactDOM.render(<Index />, document.getElementById('root'));

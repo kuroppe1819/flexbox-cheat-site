@@ -3,6 +3,7 @@ import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
 import { constructCss, constructHtml } from '../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../fixtures/functions/dataProvider';
@@ -12,12 +13,12 @@ import { useClipboard } from '../fixtures/hooks/useClipboard';
 import { deviceMaxWidth } from '../fixtures/screen';
 import { IndexContext } from '../pages/Index';
 
-export const FilenameExtension = {
+const FilenameExtension = {
     CSS: 'css',
-    HTML: 'html',
+    MARKDOWN: 'markdown',
 } as const;
 
-export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
+type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 
 type Props = {
     id: string | null;
@@ -41,7 +42,7 @@ const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenameExtens
     const info = getFlexboxPropertyInfoById(flexboxPropertyId);
     if (filenameExtension === FilenameExtension.CSS) {
         return constructCss(info.style);
-    } else if (filenameExtension === FilenameExtension.HTML) {
+    } else if (filenameExtension === FilenameExtension.MARKDOWN) {
         return constructHtml(info.numberOfNumberBlock, info.style);
     } else {
         throw new Error('You specified filename extension is not supported');
@@ -96,7 +97,15 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     </button>
                     {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                 </div>
-                <SyntaxHighlighter className={`${className}__content`}>{sourceCode}</SyntaxHighlighter>
+                <div className={`${className}__syntaxHighlighterWrapper`}>
+                    <SyntaxHighlighter
+                        className={`${className}__content`}
+                        language={filenameExtension}
+                        style={monoBlue}
+                    >
+                        {sourceCode}
+                    </SyntaxHighlighter>
+                </div>
             </div>
         </div>
     );
@@ -177,12 +186,16 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         border-top-right-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
         color: ${(props) =>
-            props.filenameExtension === FilenameExtension.HTML ? props.theme.color.blue100 : props.theme.color.blue900};
+            props.filenameExtension === FilenameExtension.MARKDOWN
+                ? props.theme.color.blue100
+                : props.theme.color.blue900};
         background-color: ${(props) =>
-            props.filenameExtension === FilenameExtension.HTML ? props.theme.color.blue400 : props.theme.color.white};
+            props.filenameExtension === FilenameExtension.MARKDOWN
+                ? props.theme.color.blue400
+                : props.theme.color.white};
         border: 1px solid
             ${(props) =>
-                props.filenameExtension === FilenameExtension.HTML
+                props.filenameExtension === FilenameExtension.MARKDOWN
                     ? props.theme.color.blue400
                     : props.theme.color.gray400};
     }
@@ -230,18 +243,23 @@ const StyledComponent: React.FC<Props> = styled(Component)`
             height: 8rem;
         }
     }
+
+    &__syntaxHighlighterWrapper {
+        font-size: 1.2rem;
+    }
 `;
 
 const Container: React.FC = () => {
-    const { language, selectedFlexboxPropertyId } = useContext(IndexContext);
-    const [open, setOpen] = useState(false);
+    const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
+        IndexContext
+    );
     const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
     const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, filenameExtension);
     const [copied, setCopy] = useClipboard(sourceCode);
-    const handleClickToggleViewerButton = () => setOpen(!open);
+    const handleClickToggleViewerButton = () => setOpenSourceCodeViewer((open) => !open);
     const handleClickCssViewButton = () => setFilenameExtension(FilenameExtension.CSS);
-    const handleClickHtmlViewButton = () => setFilenameExtension(FilenameExtension.HTML);
+    const handleClickHtmlViewButton = () => setFilenameExtension(FilenameExtension.MARKDOWN);
     const handleClickCopyButton = () => setCopy();
 
     return (
@@ -249,7 +267,7 @@ const Container: React.FC = () => {
             id={selectedFlexboxPropertyId}
             language={language}
             reference={reference}
-            open={open}
+            open={isOpenSourceCodeViewer}
             filenameExtension={filenameExtension}
             sourceCode={sourceCode}
             copySuccess={copied}
