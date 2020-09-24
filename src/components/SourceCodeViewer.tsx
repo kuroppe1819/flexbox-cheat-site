@@ -5,9 +5,8 @@ import React, { useContext, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import styled from 'styled-components';
 import { constructCss, constructHtml } from '../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfo } from '../fixtures/functions/dataProvider';
+import { getFlexboxPropertyInfoById } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
-import { parseFlexboxPropertyId } from '../fixtures/functions/managementId';
 import { createReferenceUrl } from '../fixtures/functions/reference';
 import { useClipboard } from '../fixtures/hooks/useClipboard';
 import { deviceMaxWidth } from '../fixtures/screen';
@@ -39,8 +38,7 @@ const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, sourceCodeType
         return '';
     }
 
-    const { propertyName, propertyValue } = parseFlexboxPropertyId(flexboxPropertyId);
-    const info = getFlexboxPropertyInfo(propertyName, propertyValue);
+    const info = getFlexboxPropertyInfoById(flexboxPropertyId);
     if (sourceCodeType === SourceCodeType.CSS) {
         return constructCss(info.style);
     } else if (sourceCodeType === SourceCodeType.HTML) {
