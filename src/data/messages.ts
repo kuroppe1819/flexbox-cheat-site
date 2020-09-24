@@ -13,4 +13,5 @@ export const messages = {
         'flexbox.property.description.flex-basis': '子要素の基本幅の指定',
         'flexbox.property.description.headers': 'ヘッダーの例',
     },
+    en: {},
 };

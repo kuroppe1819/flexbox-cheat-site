@@ -16,12 +16,14 @@ export type FlexboxPropertyInfo = {
 
 export type FlexboxProperty = {
     name: string;
+    hasReference: boolean;
     infoList: FlexboxPropertyInfo[];
 };
 
 export const flexboxProperties: FlexboxProperty[] = [
     {
         name: 'display',
+        hasReference: true,
         infoList: [
             {
                 value: 'flex',
@@ -49,6 +51,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'flex-direction',
+        hasReference: true,
         infoList: [
             {
                 value: 'row',
@@ -98,6 +101,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'flex-wrap',
+        hasReference: true,
         infoList: [
             {
                 value: 'nowrap',
@@ -141,6 +145,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'justify-content',
+        hasReference: true,
         infoList: [
             {
                 value: 'flex-start',
@@ -212,6 +217,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'align-items',
+        hasReference: true,
         infoList: [
             {
                 value: 'flex-start',
@@ -272,6 +278,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'align-content',
+        hasReference: true,
         infoList: [
             {
                 value: 'flex-start',
@@ -354,6 +361,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'order',
+        hasReference: true,
         infoList: [
             {
                 value: '-1',
@@ -392,6 +400,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'align-self',
+        hasReference: true,
         infoList: [
             {
                 value: 'flex-start',
@@ -452,6 +461,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'flex-grow',
+        hasReference: true,
         infoList: [
             {
                 value: '0',
@@ -479,6 +489,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'flex-shrink',
+        hasReference: true,
         infoList: [
             {
                 value: '0',
@@ -506,6 +517,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'flex-basis',
+        hasReference: true,
         infoList: [
             {
                 value: '30%',
@@ -544,6 +556,7 @@ export const flexboxProperties: FlexboxProperty[] = [
     },
     {
         name: 'headers',
+        hasReference: false,
         infoList: [
             {
                 value: 'header1',
