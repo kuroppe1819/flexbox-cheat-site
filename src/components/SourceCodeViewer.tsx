@@ -1,7 +1,7 @@
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
@@ -10,15 +10,9 @@ import { getFlexboxPropertyInfoById } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
 import { createReferenceUrl } from '../fixtures/functions/reference';
 import { useClipboard } from '../fixtures/hooks/useClipboard';
+import { FilenameExtension } from '../fixtures/hooks/useFilenameExtension';
 import { deviceMaxWidth } from '../fixtures/screen';
 import { IndexContext } from '../pages/Index';
-
-const FilenameExtension = {
-    CSS: 'css',
-    MARKDOWN: 'markdown',
-} as const;
-
-type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 
 type Props = {
     id: string | null;
@@ -45,15 +39,13 @@ const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenameExtens
     } else if (filenameExtension === FilenameExtension.MARKDOWN) {
         return constructHtml(info.numberOfNumberBlock, info.style);
     } else {
-        throw new Error('You specified filename extension is not supported');
+        throw new Error('You specified filename extension is not supported.');
     }
 };
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const {
         className,
-        id,
-        language,
         reference,
         open,
         filenameExtension,
@@ -245,15 +237,19 @@ const StyledComponent: React.FC<Props> = styled(Component)`
     }
 
     &__syntaxHighlighterWrapper {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 `;
 
 const Container: React.FC = () => {
-    const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
-        IndexContext
-    );
-    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
+    const {
+        language,
+        isOpenSourceCodeViewer,
+        filenameExtension,
+        selectedFlexboxPropertyId,
+        setOpenSourceCodeViewer,
+        setFilenameExtension,
+    } = useContext(IndexContext);
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
     const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, filenameExtension);
     const [copied, setCopy] = useClipboard(sourceCode);

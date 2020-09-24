@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FlexboxPropertyInfo } from '../data/flexboxProperties';
 import { convertObjectToCssNotation } from '../fixtures/functions/constructSourceCode';
+import { FilenameExtension } from '../fixtures/hooks/useFilenameExtension';
 import { IndexContext } from '../pages/Index';
 import { NumberBlock } from './NumberBlock';
 
@@ -100,7 +101,6 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         height: 6rem;
         margin: 0 auto;
         padding: 0.5rem;
-        /* border: 1px solid ${({ theme }) => theme.color.gray400}; */
         border-width: 1px;
         border-style: solid;
         border-color: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
@@ -156,6 +156,7 @@ type OuterProps = {
 } & AssignClassNameProps;
 
 const Container: React.FC<OuterProps> = (props: OuterProps) => {
+    const { setFilenameExtension, setOpenSourceCodeViewer } = useContext(IndexContext);
     const { id } = props;
     const {
         selectedFlexboxPropertyId,
@@ -164,7 +165,11 @@ const Container: React.FC<OuterProps> = (props: OuterProps) => {
         setMouseOverFlexboxListItemId,
     } = useContext(IndexContext);
 
-    const handleClickItem = () => setFlexboxPropertyId(id);
+    const handleClickItem = () => {
+        setFlexboxPropertyId(id);
+        setOpenSourceCodeViewer(true);
+        setFilenameExtension(FilenameExtension.CSS);
+    };
     const handleMouseEnter = () => setMouseOverFlexboxListItemId(id);
     const handleMouseLeave = () => setMouseOverFlexboxListItemId(null);
 
