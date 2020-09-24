@@ -12,19 +12,19 @@ import { useClipboard } from '../fixtures/hooks/useClipboard';
 import { deviceMaxWidth } from '../fixtures/screen';
 import { IndexContext } from '../pages/Index';
 
-export const SourceCodeType = {
+export const FilenameExtension = {
     CSS: 'css',
     HTML: 'html',
 } as const;
 
-export type SourceCodeType = typeof SourceCodeType[keyof typeof SourceCodeType];
+export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 
 type Props = {
     id: string | null;
     language: Language;
     reference: string | null;
     open: boolean;
-    sourceCodeType: SourceCodeType;
+    filenameExtension: FilenameExtension;
     sourceCode: string;
     copySuccess: boolean;
     onClickToggleViewerButton: React.MouseEventHandler<HTMLButtonElement>;
@@ -33,19 +33,18 @@ type Props = {
     onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, sourceCodeType: SourceCodeType) => {
+const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenameExtension: FilenameExtension) => {
     if (flexboxPropertyId === null) {
         return '';
     }
 
     const info = getFlexboxPropertyInfoById(flexboxPropertyId);
-    if (sourceCodeType === SourceCodeType.CSS) {
+    if (filenameExtension === FilenameExtension.CSS) {
         return constructCss(info.style);
-    } else if (sourceCodeType === SourceCodeType.HTML) {
+    } else if (filenameExtension === FilenameExtension.HTML) {
         return constructHtml(info.numberOfNumberBlock, info.style);
     } else {
-        // TODO: SourceCodeType -> filenameExtension
-        throw new Error('You specified SourceCodeType is not support');
+        throw new Error('You specified filename extension is not supported');
     }
 };
 
@@ -56,7 +55,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         language,
         reference,
         open,
-        sourceCodeType,
+        filenameExtension,
         sourceCode,
         copySuccess,
         onClickToggleViewerButton,
@@ -164,24 +163,28 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         border-top-left-radius: 0.375rem;
         border-bottom-left-radius: 0.375rem;
         color: ${(props) =>
-            props.sourceCodeType === SourceCodeType.CSS ? props.theme.color.blue100 : props.theme.color.blue900};
+            props.filenameExtension === FilenameExtension.CSS ? props.theme.color.blue100 : props.theme.color.blue900};
         background-color: ${(props) =>
-            props.sourceCodeType === SourceCodeType.CSS ? props.theme.color.blue400 : props.theme.color.white};
+            props.filenameExtension === FilenameExtension.CSS ? props.theme.color.blue400 : props.theme.color.white};
         border: 1px solid
             ${(props) =>
-                props.sourceCodeType === SourceCodeType.CSS ? props.theme.color.blue400 : props.theme.color.gray400};
+                props.filenameExtension === FilenameExtension.CSS
+                    ? props.theme.color.blue400
+                    : props.theme.color.gray400};
     }
 
     &__htmlViewButton {
         border-top-right-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
         color: ${(props) =>
-            props.sourceCodeType === SourceCodeType.HTML ? props.theme.color.blue100 : props.theme.color.blue900};
+            props.filenameExtension === FilenameExtension.HTML ? props.theme.color.blue100 : props.theme.color.blue900};
         background-color: ${(props) =>
-            props.sourceCodeType === SourceCodeType.HTML ? props.theme.color.blue400 : props.theme.color.white};
+            props.filenameExtension === FilenameExtension.HTML ? props.theme.color.blue400 : props.theme.color.white};
         border: 1px solid
             ${(props) =>
-                props.sourceCodeType === SourceCodeType.HTML ? props.theme.color.blue400 : props.theme.color.gray400};
+                props.filenameExtension === FilenameExtension.HTML
+                    ? props.theme.color.blue400
+                    : props.theme.color.gray400};
     }
 
     &__externalLink {
@@ -232,13 +235,13 @@ const StyledComponent: React.FC<Props> = styled(Component)`
 const Container: React.FC = () => {
     const { language, selectedFlexboxPropertyId } = useContext(IndexContext);
     const [open, setOpen] = useState(false);
-    const [sourceCodeType, setSourceCodeType] = useState<SourceCodeType>(SourceCodeType.CSS);
+    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
-    const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, sourceCodeType);
+    const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, filenameExtension);
     const [copied, setCopy] = useClipboard(sourceCode);
     const handleClickToggleViewerButton = () => setOpen(!open);
-    const handleClickCssViewButton = () => setSourceCodeType(SourceCodeType.CSS);
-    const handleClickHtmlViewButton = () => setSourceCodeType(SourceCodeType.HTML);
+    const handleClickCssViewButton = () => setFilenameExtension(FilenameExtension.CSS);
+    const handleClickHtmlViewButton = () => setFilenameExtension(FilenameExtension.HTML);
     const handleClickCopyButton = () => setCopy();
 
     return (
@@ -247,7 +250,7 @@ const Container: React.FC = () => {
             language={language}
             reference={reference}
             open={open}
-            sourceCodeType={sourceCodeType}
+            filenameExtension={filenameExtension}
             sourceCode={sourceCode}
             copySuccess={copied}
             onClickToggleViewerButton={handleClickToggleViewerButton}
