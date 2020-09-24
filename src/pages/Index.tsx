@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
 import { SourceCodeViewer } from '../components/SourceCodeViewer';
-import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperties';
+import { FlexboxProperty } from '../data/flexboxProperties';
 import { messages } from '../data/messages';
+import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
 import { deviceMaxWidth } from '../fixtures/screen';
 
@@ -19,7 +20,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         <PageRoot>
             <main className={`${className}`}>
                 <div className={`${className}__flexboxGroupWrapper`}>
-                    {flexboxProperties.map((property: FlexboxProperty) => (
+                    {getFlexboxProperties().map((property: FlexboxProperty) => (
                         <FlexboxGroup
                             key={property.name}
                             assignClassName={className}
