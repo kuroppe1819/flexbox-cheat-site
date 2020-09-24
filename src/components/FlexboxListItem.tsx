@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import clsx from 'clsx';
 import { FlexboxPropertyInfo } from '../data/flexboxProperties';
 import { convertObjectToCssNotation } from '../fixtures/functions/constractSourceCode';
-import { NumberBlock } from './NumberBlock';
 import { IndexContext } from '../pages/Index';
+import { NumberBlock } from './NumberBlock';
 
 const isFirstChild = (index: number): boolean => index === 0;
 const isChildFeatured = (propertyInfo: FlexboxPropertyInfo, index: number) =>
@@ -47,7 +47,6 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                                 isChildFeatured(propertyInfo, index) &&
                                 propertyInfo.style.childFeatured !== null
                             ) {
-                                console.log(isChildFeatured(propertyInfo, index));
                                 return (
                                     <NumberBlock
                                         key={index}
