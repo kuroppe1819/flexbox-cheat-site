@@ -1,14 +1,14 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
+import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
-import styled from 'styled-components';
-import { deviceMaxWidth } from '../fixtures/screen';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { IndexContext } from '../pages/Index';
+import styled from 'styled-components';
 import { Language } from '../fixtures/functions/language';
-import { useReferenceCreator } from '../fixtures/hooks/useReferenceCreator';
+import { createReferenceUrl } from '../fixtures/functions/reference';
 import { useClipboard } from '../fixtures/hooks/useClipboard';
+import { deviceMaxWidth } from '../fixtures/screen';
+import { IndexContext } from '../pages/Index';
 
 export const SourceCodeType = {
     CSS: 'css',
@@ -215,9 +215,10 @@ const Container: React.FC = () => {
     const { language, selectedFlexboxPropertyId } = useContext(IndexContext);
     const [open, setOpen] = useState(false);
     const [sourceCodeType, setSourceCodeType] = useState<SourceCodeType>(SourceCodeType.CSS);
-    const [reference] = useReferenceCreator(language, selectedFlexboxPropertyId);
     // TODO: コピーするソースコードを組み立てて渡す
     const [copied, setCopy] = useClipboard('copy');
+
+    const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
 
     const handleClickToggleViewerButton = () => setOpen(!open);
     const handleClickCssViewButton = () => setSourceCodeType(SourceCodeType.CSS);
