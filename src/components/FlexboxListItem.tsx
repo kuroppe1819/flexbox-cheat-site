@@ -6,12 +6,6 @@ import { convertObjectToCssNotation } from '../fixtures/functions/constructSourc
 import { IndexContext } from '../pages/Index';
 import { NumberBlock } from './NumberBlock';
 
-const isFirstChild = (index: number): boolean => index === 0;
-const isChildFeatured = (propertyInfo: FlexboxPropertyInfo, index: number) =>
-    propertyInfo.numberOfNumberBlock - 2 === index;
-const isLastChild = (propertyInfo: FlexboxPropertyInfo, index: number) =>
-    propertyInfo.numberOfNumberBlock - 1 === index;
-
 type Props = {
     selectedFlexboxPropertyId: string | null;
     mouseOverFlexboxListItemId: string | null;
@@ -19,6 +13,65 @@ type Props = {
     onMouseEnter: React.MouseEventHandler<HTMLDivElement>;
     onMouseLeave: React.MouseEventHandler<HTMLDivElement>;
 } & OuterProps;
+
+export class ChildElementType {
+    private numberOfElement: number;
+    private startIndex: number;
+
+    constructor(numberOfElement: number, startIndex = 0) {
+        this.numberOfElement = numberOfElement;
+        this.startIndex = startIndex;
+    }
+
+    isFirstChild(currentIndex: number) {
+        return this.startIndex === currentIndex;
+    }
+
+    isChildFeatured(currentIndex: number) {
+        return this.numberOfElement + this.startIndex - 2 === currentIndex;
+    }
+
+    isLastChild(currentIndex: number) {
+        return this.numberOfElement + this.startIndex - 1 === currentIndex;
+    }
+}
+
+const NumberBlocks = (className: string, propertyInfo: FlexboxPropertyInfo) => {
+    const numberOfNumberBlock = propertyInfo.numberOfNumberBlock;
+    const childElementType = new ChildElementType(numberOfNumberBlock);
+    return Array(propertyInfo.numberOfNumberBlock)
+        .fill(0)
+        .map((value, index) => {
+            const { firstChild, childFeatured, lastChild } = propertyInfo.style;
+            if (childElementType.isChildFeatured(index) && childFeatured !== null) {
+                return (
+                    <NumberBlock
+                        key={index}
+                        assignClassName={`${className}__numberBlock ${className}__numberBlock-featured`}
+                        number={index + 1}
+                    />
+                );
+            } else if (childElementType.isFirstChild(index) && firstChild !== null) {
+                return (
+                    <NumberBlock
+                        key={index}
+                        assignClassName={`${className}__numberBlock ${className}__numberBlock-first`}
+                        number={index + 1}
+                    />
+                );
+            } else if (childElementType.isLastChild(index) && lastChild !== null) {
+                return (
+                    <NumberBlock
+                        key={index}
+                        assignClassName={`${className}__numberBlock ${className}__numberBlock-last`}
+                        number={index + 1}
+                    />
+                );
+            } else {
+                return <NumberBlock key={index} assignClassName={`${className}__numberBlock`} number={index + 1} />;
+            }
+        });
+};
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const { className, assignClassName, propertyInfo, onClickItem, onMouseEnter, onMouseLeave } = props;
@@ -31,48 +84,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
-                <div className={`${className}__numberBlockFrame`}>
-                    {Array(propertyInfo.numberOfNumberBlock)
-                        .fill(0)
-                        .map((value, index) => {
-                            if (isFirstChild(index) && propertyInfo.style.firstChild !== null) {
-                                return (
-                                    <NumberBlock
-                                        key={index}
-                                        assignClassName={`${className}__numberBlock ${className}__numberBlock-first`}
-                                        number={index + 1}
-                                    />
-                                );
-                            } else if (
-                                isChildFeatured(propertyInfo, index) &&
-                                propertyInfo.style.childFeatured !== null
-                            ) {
-                                return (
-                                    <NumberBlock
-                                        key={index}
-                                        assignClassName={`${className}__numberBlock ${className}__numberBlock-featured`}
-                                        number={index + 1}
-                                    />
-                                );
-                            } else if (isLastChild(propertyInfo, index) && propertyInfo.style.lastChild !== null) {
-                                return (
-                                    <NumberBlock
-                                        key={index}
-                                        assignClassName={`${className}__numberBlock ${className}__numberBlock-last`}
-                                        number={index + 1}
-                                    />
-                                );
-                            } else {
-                                return (
-                                    <NumberBlock
-                                        key={index}
-                                        assignClassName={`${className}__numberBlock`}
-                                        number={index + 1}
-                                    />
-                                );
-                            }
-                        })}
-                </div>
+                <div className={`${className}__numberBlockFrame`}>{NumberBlocks(className, propertyInfo)}</div>
             </div>
             <p className={`${className}__propertyValue`}>{propertyInfo.value}</p>
         </li>
