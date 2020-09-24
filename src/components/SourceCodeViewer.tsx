@@ -1,10 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../fixtures/screen';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import { IndexContext } from '../pages/Index';
+import { Language } from '../fixtures/functions/language';
+import { useReferenceCreator } from '../fixtures/hooks/useReferenceCreator';
+import { useClipboard } from '../fixtures/hooks/useClipboard';
 
 export const SourceCodeType = {
     CSS: 'css',
@@ -14,10 +18,12 @@ export const SourceCodeType = {
 export type SourceCodeType = typeof SourceCodeType[keyof typeof SourceCodeType];
 
 type Props = {
+    id: string | null;
+    language: Language;
+    reference: string | null;
     open: boolean;
-    sourceCode: string;
     sourceCodeType: SourceCodeType;
-    reference: string;
+    sourceCode: string;
     copySuccess: boolean;
     onClickToggleViewerButton: React.MouseEventHandler<HTMLButtonElement>;
     onClickCssViewButton: React.MouseEventHandler<HTMLButtonElement>;
@@ -28,9 +34,12 @@ type Props = {
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const {
         className,
-        open,
-        sourceCode,
+        id,
+        language,
         reference,
+        open,
+        sourceCodeType,
+        sourceCode,
         copySuccess,
         onClickToggleViewerButton,
         onClickCssViewButton,
@@ -55,14 +64,16 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     <button className={`${className}__htmlViewButton`} onClick={onClickHtmlViewButton}>
                         HTML
                     </button>
-                    <a
-                        className={`${className}__externalLink`}
-                        href={reference}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FontAwesomeIcon icon={faWindowRestore} size="lg" />
-                    </a>
+                    {reference && (
+                        <a
+                            className={`${className}__externalLink`}
+                            href={reference}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FontAwesomeIcon icon={faWindowRestore} size="lg" />
+                        </a>
+                    )}
                     <button className={`${className}__clipboardCopyButton`} onClick={onClickCopyButton}>
                         <FontAwesomeIcon icon={faCopy} size="lg" />
                     </button>
@@ -200,4 +211,34 @@ const StyledComponent: React.FC<Props> = styled(Component)`
     }
 `;
 
-export const SourceCodeViewer = StyledComponent;
+const Container: React.FC = () => {
+    const { language, selectedFlexboxPropertyId } = useContext(IndexContext);
+    const [open, setOpen] = useState(false);
+    const [sourceCodeType, setSourceCodeType] = useState<SourceCodeType>(SourceCodeType.CSS);
+    const [reference] = useReferenceCreator(language, selectedFlexboxPropertyId);
+    // TODO: コピーするソースコードを組み立てて渡す
+    const [copied, setCopy] = useClipboard('copy');
+
+    const handleClickToggleViewerButton = () => setOpen(!open);
+    const handleClickCssViewButton = () => setSourceCodeType(SourceCodeType.CSS);
+    const handleClickHtmlViewButton = () => setSourceCodeType(SourceCodeType.HTML);
+    const handleClickCopyButton = () => setCopy();
+
+    return (
+        <StyledComponent
+            id={selectedFlexboxPropertyId}
+            language={language}
+            reference={reference}
+            open={open}
+            sourceCodeType={sourceCodeType}
+            sourceCode={'copy'}
+            copySuccess={copied}
+            onClickToggleViewerButton={handleClickToggleViewerButton}
+            onClickCssViewButton={handleClickCssViewButton}
+            onClickHtmlViewButton={handleClickHtmlViewButton}
+            onClickCopyButton={handleClickCopyButton}
+        />
+    );
+};
+
+export const SourceCodeViewer = Container;

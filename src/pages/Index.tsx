@@ -1,8 +1,12 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
+import { IntlProvider } from 'react-intl';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
+import { SourceCodeViewer } from '../components/SourceCodeViewer';
 import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperties';
+import { messages } from '../data/messages';
+import { Language } from '../fixtures/functions/language';
 import { deviceMaxWidth } from '../fixtures/screen';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {
@@ -20,7 +24,9 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                         />
                     ))}
                 </div>
-                <div className={`${className}__sourceCodeViewerWrapper`}>{/* <SourceCodeViewer /> */}</div>
+                <div className={`${className}__sourceCodeViewerWrapper`}>
+                    <SourceCodeViewer />
+                </div>
             </main>
         </PageRoot>
     );
@@ -63,8 +69,10 @@ const StyledComponent: React.FC = styled(Component)`
 `;
 
 export type IndexContextProps = {
+    language: Language;
     selectedFlexboxPropertyId: string | null;
     mouseOverFlexboxListItemId: string | null;
+    setLanguage: Dispatch<SetStateAction<Language>>;
     setFlexboxPropertyId: Dispatch<SetStateAction<string | null>>;
     setMouseOverFlexboxListItemId: Dispatch<SetStateAction<string | null>>;
 };
@@ -72,20 +80,25 @@ export type IndexContextProps = {
 export const IndexContext = React.createContext({} as IndexContextProps);
 
 const Container: React.FC = () => {
+    const [language, setLanguage] = useState<Language>('ja');
     const [selectedFlexboxPropertyId, setFlexboxPropertyId] = useState<string | null>(null);
     const [mouseOverFlexboxListItemId, setMouseOverFlexboxListItemId] = useState<string | null>(null);
 
     return (
-        <IndexContext.Provider
-            value={{
-                selectedFlexboxPropertyId,
-                mouseOverFlexboxListItemId,
-                setFlexboxPropertyId,
-                setMouseOverFlexboxListItemId,
-            }}
-        >
-            <StyledComponent />
-        </IndexContext.Provider>
+        <IntlProvider locale={language} messages={messages[language]}>
+            <IndexContext.Provider
+                value={{
+                    language,
+                    selectedFlexboxPropertyId,
+                    mouseOverFlexboxListItemId,
+                    setLanguage,
+                    setFlexboxPropertyId,
+                    setMouseOverFlexboxListItemId,
+                }}
+            >
+                <StyledComponent />
+            </IndexContext.Provider>
+        </IntlProvider>
     );
 };
 
