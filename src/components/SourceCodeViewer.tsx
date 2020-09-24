@@ -4,7 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import styled from 'styled-components';
+import { constructCss } from '../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfo } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
+import { parseFlexboxPropertyId } from '../fixtures/functions/managementId';
 import { createReferenceUrl } from '../fixtures/functions/reference';
 import { useClipboard } from '../fixtures/hooks/useClipboard';
 import { deviceMaxWidth } from '../fixtures/screen';
@@ -23,12 +26,27 @@ type Props = {
     reference: string | null;
     open: boolean;
     sourceCodeType: SourceCodeType;
-    sourceCode: string;
     copySuccess: boolean;
     onClickToggleViewerButton: React.MouseEventHandler<HTMLButtonElement>;
     onClickCssViewButton: React.MouseEventHandler<HTMLButtonElement>;
     onClickHtmlViewButton: React.MouseEventHandler<HTMLButtonElement>;
     onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, sourceCodeType: SourceCodeType) => {
+    if (flexboxPropertyId === null) {
+        return '';
+    }
+
+    if (sourceCodeType === SourceCodeType.CSS) {
+        const { propertyName, propertyValue } = parseFlexboxPropertyId(flexboxPropertyId);
+        return constructCss(getFlexboxPropertyInfo(propertyName, propertyValue).style);
+    } else if (sourceCodeType === SourceCodeType.HTML) {
+        // TODO: HTMLのソースコードを生成する
+    } else {
+        // TODO: SourceCodeType -> filenameExtension
+        throw new Error('You specified SourceCodeType is not support');
+    }
 };
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
@@ -39,7 +57,6 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         reference,
         open,
         sourceCodeType,
-        sourceCode,
         copySuccess,
         onClickToggleViewerButton,
         onClickCssViewButton,
@@ -79,7 +96,9 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     </button>
                     {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                 </div>
-                <SyntaxHighlighter className={`${className}__content`}>{sourceCode}</SyntaxHighlighter>
+                <SyntaxHighlighter className={`${className}__content`}>
+                    {getSourceCodeOfDisplay(id, sourceCodeType)}
+                </SyntaxHighlighter>
             </div>
         </div>
     );
@@ -232,7 +251,6 @@ const Container: React.FC = () => {
             reference={reference}
             open={open}
             sourceCodeType={sourceCodeType}
-            sourceCode={'copy'}
             copySuccess={copied}
             onClickToggleViewerButton={handleClickToggleViewerButton}
             onClickCssViewButton={handleClickCssViewButton}
