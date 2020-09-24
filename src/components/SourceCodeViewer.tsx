@@ -1,7 +1,7 @@
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
 import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monoBlue } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import styled from 'styled-components';
@@ -10,9 +10,15 @@ import { getFlexboxPropertyInfoById } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
 import { createReferenceUrl } from '../fixtures/functions/reference';
 import { useClipboard } from '../fixtures/hooks/useClipboard';
-import { FilenameExtension } from '../fixtures/hooks/useFilenameExtension';
 import { deviceMaxWidth } from '../fixtures/screen';
 import { IndexContext } from '../pages/Index';
+
+type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
+
+const FilenameExtension = {
+    CSS: 'css',
+    MARKDOWN: 'markdown',
+} as const;
 
 type Props = {
     id: string | null;
@@ -242,14 +248,10 @@ const StyledComponent: React.FC<Props> = styled(Component)`
 `;
 
 const Container: React.FC = () => {
-    const {
-        language,
-        isOpenSourceCodeViewer,
-        filenameExtension,
-        selectedFlexboxPropertyId,
-        setOpenSourceCodeViewer,
-        setFilenameExtension,
-    } = useContext(IndexContext);
+    const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
+        IndexContext
+    );
+    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
     const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, filenameExtension);
     const [copied, setCopy] = useClipboard(sourceCode);

@@ -7,7 +7,6 @@ import { SourceCodeViewer } from '../components/SourceCodeViewer';
 import { flexboxProperties, FlexboxProperty } from '../data/flexboxProperties';
 import { messages } from '../data/messages';
 import { Language } from '../fixtures/functions/language';
-import { useFilenameExtension } from '../fixtures/hooks/useFilenameExtension';
 import { deviceMaxWidth } from '../fixtures/screen';
 
 type Props = {
@@ -100,12 +99,10 @@ const StyledComponent: React.FC<Props> = styled(Component)`
 export type IndexContextProps = {
     language: Language;
     isOpenSourceCodeViewer: boolean;
-    filenameExtension: FilenameExtension;
     selectedFlexboxPropertyId: string | null;
     mouseOverFlexboxListItemId: string | null;
     setLanguage: Dispatch<SetStateAction<Language>>;
     setOpenSourceCodeViewer: Dispatch<SetStateAction<boolean>>;
-    setFilenameExtension: Dispatch<SetStateAction<FilenameExtension>>;
     setFlexboxPropertyId: Dispatch<SetStateAction<string | null>>;
     setMouseOverFlexboxListItemId: Dispatch<SetStateAction<string | null>>;
 };
@@ -115,7 +112,6 @@ export const IndexContext = React.createContext({} as IndexContextProps);
 const Container: React.FC = () => {
     const [language, setLanguage] = useState<Language>('ja');
     const [isOpenSourceCodeViewer, setOpenSourceCodeViewer] = useState(false);
-    const [filenameExtension, setFilenameExtension] = useFilenameExtension();
     const [selectedFlexboxPropertyId, setFlexboxPropertyId] = useState<string | null>(null);
     const [mouseOverFlexboxListItemId, setMouseOverFlexboxListItemId] = useState<string | null>(null);
 
@@ -125,12 +121,10 @@ const Container: React.FC = () => {
                 value={{
                     language,
                     isOpenSourceCodeViewer,
-                    filenameExtension,
                     selectedFlexboxPropertyId,
                     mouseOverFlexboxListItemId,
                     setLanguage,
                     setOpenSourceCodeViewer,
-                    setFilenameExtension,
                     setFlexboxPropertyId,
                     setMouseOverFlexboxListItemId,
                 }}
