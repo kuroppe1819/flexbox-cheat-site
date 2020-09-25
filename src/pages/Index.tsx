@@ -5,7 +5,7 @@ import { FlexboxGroup } from '../components/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
 import { SourceCodeViewer } from '../components/SourceCodeViewer';
 import { FlexboxProperty } from '../data/flexboxProperties';
-import { messages } from '../data/messages';
+import { messages } from '../fixtures/messages';
 import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
 import { deviceMaxWidth } from '../fixtures/screen';
