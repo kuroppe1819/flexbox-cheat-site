@@ -19,7 +19,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 <p>サービスの改善についてのご意見、ご要望をお聞かせください！</p>
                 <p>応援コメントもお待ちしております！</p>
                 <div className={`${className}__fillEffectButton`}>
-                    <FillEffectLink text="トップへ戻る" href="/"></FillEffectLink>
+                    <FillEffectLink text="トップへ戻る" href={process.env.ROOT_PATH}></FillEffectLink>
                 </div>
             </main>
         </PageRoot>
