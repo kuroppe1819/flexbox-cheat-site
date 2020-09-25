@@ -782,7 +782,7 @@
         "affectsGlobalScope": false
       },
       "../src/fixtures/functions/reference.ts": {
-        "version": "09c40ce5501a79c7d81fa820e40939d71e70537a502f92317e775321fce0791a",
+        "version": "862ad644e7c1fe7863828992fd0e5c754b04b3cf891e74074ada1d4e742c02f5",
         "signature": "d7ae1892e06641c34cee10d663fd73451bba86a16abc8e1dbfd441cd3316d168",
         "affectsGlobalScope": false
       },
