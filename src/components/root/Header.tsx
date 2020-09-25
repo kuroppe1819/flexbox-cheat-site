@@ -39,7 +39,7 @@ const StyledComponent: React.FC = styled(Component)`
     align-items: center;
     height: 4rem;
     box-shadow: ${({ theme }) => theme.shadow.md};
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 
     &__title {
         margin: 0;
@@ -53,13 +53,11 @@ const StyledComponent: React.FC = styled(Component)`
         right: 0;
         display: flex;
         align-items: center;
-        height: 4rem;
     }
 
     &__twitterLink,
     &__githubLink {
         display: inline-block;
-        height: 2rem;
         margin-right: 1.25rem;
         color: ${({ theme }) => theme.color.blue900};
 
