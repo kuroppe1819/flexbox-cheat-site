@@ -2,14 +2,21 @@ import { flexboxProperties, FlexboxProperty } from '../../data/flexboxProperties
 import { Language } from './language';
 import { parseFlexboxPropertyId } from './managementId';
 
+const createUrlForMDN = (language: string, propertyName: string) =>
+    `https://developer.mozilla.org/${language}/docs/Web/CSS/${propertyName}`;
+
 export const createReferenceUrl = (flexboxPropertyId: string, language: Language) => {
     const { propertyName } = parseFlexboxPropertyId(flexboxPropertyId);
     const property = flexboxProperties.filter((property: FlexboxProperty) => property.name === propertyName)[0];
 
     if (property.hasReference) {
-        let languageForDocsPath = language === 'ja' ? 'ja' : '';
-        languageForDocsPath = language === 'en' ? 'en-US' : '';
-        return `https://developer.mozilla.org/${languageForDocsPath}/docs/Web/CSS/${propertyName}`;
+        if (language === 'ja') {
+            return createUrlForMDN('ja', propertyName);
+        } else if (language === 'en') {
+            return createUrlForMDN('en-US', propertyName);
+        } else {
+            throw new Error('You specified language is not supported.');
+        }
     } else {
         return null;
     }
