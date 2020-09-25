@@ -5,6 +5,6 @@ export default {
     title: 'components/NumberBlock',
 };
 
-export const Number1 = () => <NumberBlock index={1} />;
+export const Number1 = () => <NumberBlock number={1} />;
 
-export const Number2 = () => <NumberBlock index={2} />;
+export const Number2 = () => <NumberBlock number={2} />;

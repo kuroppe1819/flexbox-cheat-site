@@ -13,7 +13,7 @@ import { useClipboard } from '../fixtures/hooks/useClipboard';
 import { deviceMaxWidth } from '../fixtures/screen';
 import { IndexContext } from '../pages/Index';
 
-type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
+export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 
 const FilenameExtension = {
     CSS: 'css',
@@ -109,7 +109,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
     align-items: flex-end;
 
@@ -278,3 +278,8 @@ const Container: React.FC = () => {
 };
 
 export const SourceCodeViewer = Container;
+
+export const VisibleForTesting = {
+    FilenameExtension,
+    getSourceCodeOfDisplay,
+};

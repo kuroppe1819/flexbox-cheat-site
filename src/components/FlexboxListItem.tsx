@@ -91,7 +91,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+export const StyledComponent: React.FC<Props> = styled(Component)`
     display: inline-block;
     text-align: center;
 
