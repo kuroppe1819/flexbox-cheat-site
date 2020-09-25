@@ -1,0 +1,2890 @@
+{
+  "program": {
+    "fileInfos": {
+      "../node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "c9a1f03d6ba0fe3c871eb0dd81622e78fbb61ade70878b34d48a341a690c59e9",
+        "signature": "c9a1f03d6ba0fe3c871eb0dd81622e78fbb61ade70878b34d48a341a690c59e9",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "dc47c4fa66b9b9890cf076304de2a9c5201e94b740cffdf09f87296d877d71f6",
+        "signature": "dc47c4fa66b9b9890cf076304de2a9c5201e94b740cffdf09f87296d877d71f6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "7a387c58583dfca701b6c85e0adaf43fb17d590fb16d5b2dc0a2fbd89f35c467",
+        "signature": "7a387c58583dfca701b6c85e0adaf43fb17d590fb16d5b2dc0a2fbd89f35c467",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "8a12173c586e95f4433e0c6dc446bc88346be73ffe9ca6eec7aa63c8f3dca7f9",
+        "signature": "8a12173c586e95f4433e0c6dc446bc88346be73ffe9ca6eec7aa63c8f3dca7f9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
+        "signature": "5f4e733ced4e129482ae2186aae29fde948ab7182844c3a5a51dd346182c7b06",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.es2019.d.ts": {
+        "version": "e6b724280c694a9f588847f754198fb96c43d805f065c3a5b28bbc9594541c84",
+        "signature": "e6b724280c694a9f588847f754198fb96c43d805f065c3a5b28bbc9594541c84",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.es2020.d.ts": {
+        "version": "666172ccd045546f9b6d099744da9b822357e393c9fe67c34d3f44eabdf15723",
+        "signature": "666172ccd045546f9b6d099744da9b822357e393c9fe67c34d3f44eabdf15723",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "38130cdd16bd2318b9362f9d60dd9670f7e38708bb6131cf11fc78a41b2c34a0",
+        "signature": "38130cdd16bd2318b9362f9d60dd9670f7e38708bb6131cf11fc78a41b2c34a0",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "46ee15e9fefa913333b61eaf6b18885900b139867d89832a515059b62cf16a17",
+        "signature": "46ee15e9fefa913333b61eaf6b18885900b139867d89832a515059b62cf16a17",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "43fb1d932e4966a39a41b464a12a81899d9ae5f2c829063f5571b6b87e6d2f9c",
+        "signature": "43fb1d932e4966a39a41b464a12a81899d9ae5f2c829063f5571b6b87e6d2f9c",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "cdccba9a388c2ee3fd6ad4018c640a471a6c060e96f1232062223063b0a5ac6a",
+        "signature": "cdccba9a388c2ee3fd6ad4018c640a471a6c060e96f1232062223063b0a5ac6a",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "42f5e41e5893da663dbf0394268f54f1da4b43dc0ddd2ea4bf471fe5361d6faf",
+        "signature": "42f5e41e5893da663dbf0394268f54f1da4b43dc0ddd2ea4bf471fe5361d6faf",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "0b7a905675e6cb4211c128f0a3aa47d414b275180a299a9aad5d3ec298abbfc4",
+        "signature": "0b7a905675e6cb4211c128f0a3aa47d414b275180a299a9aad5d3ec298abbfc4",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "dfff68b3c34338f6b307a25d4566de15eed7973b0dc5d69f9fde2bcac1c25315",
+        "signature": "dfff68b3c34338f6b307a25d4566de15eed7973b0dc5d69f9fde2bcac1c25315",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
+        "signature": "cb609802a8698aa28b9c56331d4b53f590ca3c1c3a255350304ae3d06017779d",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "3013574108c36fd3aaca79764002b3717da09725a36a6fc02eac386593110f93",
+        "signature": "3013574108c36fd3aaca79764002b3717da09725a36a6fc02eac386593110f93",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "4670208dd7da9d6c774ab1b75c1527a810388c7989c4905de6aaea8561cb9dce",
+        "signature": "4670208dd7da9d6c774ab1b75c1527a810388c7989c4905de6aaea8561cb9dce",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3be5a1453daa63e031d266bf342f3943603873d890ab8b9ada95e22389389006",
+        "signature": "3be5a1453daa63e031d266bf342f3943603873d890ab8b9ada95e22389389006",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "17bb1fc99591b00515502d264fa55dc8370c45c5298f4a5c2083557dccba5a2a",
+        "signature": "17bb1fc99591b00515502d264fa55dc8370c45c5298f4a5c2083557dccba5a2a",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b5e4c2d67aa844ed503b29cd4ca2ede1a229ac7fe874613b2c996fa9c581a25f",
+        "signature": "b5e4c2d67aa844ed503b29cd4ca2ede1a229ac7fe874613b2c996fa9c581a25f",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "6a6b173e739a6a99629a8594bfb294cc7329bfb7b227f12e1f7c11bc163b8577",
+        "signature": "6a6b173e739a6a99629a8594bfb294cc7329bfb7b227f12e1f7c11bc163b8577",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "12a310447c5d23c7d0d5ca2af606e3bd08afda69100166730ab92c62999ebb9d",
+        "signature": "12a310447c5d23c7d0d5ca2af606e3bd08afda69100166730ab92c62999ebb9d",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
+        "signature": "b0124885ef82641903d232172577f2ceb5d3e60aed4da1153bab4221e1f6dd4e",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts": {
+        "version": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
+        "signature": "0eb85d6c590b0d577919a79e0084fa1744c1beba6fd0d4e951432fa1ede5510a",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
+        "signature": "a40c4d82bf13fcded295ac29f354eb7d40249613c15e07b53f2fc75e45e16359",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
+        "signature": "df9c8a72ca8b0ed62f5470b41208a0587f0f73f0a7db28e5a1272cf92537518e",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
+        "signature": "bb2d3fb05a1d2ffbca947cc7cbc95d23e1d053d6595391bd325deb265a18d36c",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
+        "signature": "c80df75850fea5caa2afe43b9949338ce4e2de086f91713e9af1a06f973872b8",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts": {
+        "version": "9d57b2b5d15838ed094aa9ff1299eecef40b190722eb619bac4616657a05f951",
+        "signature": "9d57b2b5d15838ed094aa9ff1299eecef40b190722eb619bac4616657a05f951",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts": {
+        "version": "6c51b5dd26a2c31dbf37f00cfc32b2aa6a92e19c995aefb5b97a3a64f1ac99de",
+        "signature": "6c51b5dd26a2c31dbf37f00cfc32b2aa6a92e19c995aefb5b97a3a64f1ac99de",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts": {
+        "version": "93544ca2f26a48716c1b6c5091842cad63129daac422dfa4bc52460465f22bb1",
+        "signature": "93544ca2f26a48716c1b6c5091842cad63129daac422dfa4bc52460465f22bb1",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts": {
+        "version": "2ad234885a4240522efccd77de6c7d99eecf9b4de0914adb9a35c0c22433f993",
+        "signature": "2ad234885a4240522efccd77de6c7d99eecf9b4de0914adb9a35c0c22433f993",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2020.bigint.d.ts": {
+        "version": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
+        "signature": "7b5a10e3c897fabece5a51aa85b4111727d7adb53c2734b5d37230ff96802a09",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2020.promise.d.ts": {
+        "version": "7435b75fdf3509622e79622dbe5091cf4b09688410ee2034e4fc17d0c99d0862",
+        "signature": "7435b75fdf3509622e79622dbe5091cf4b09688410ee2034e4fc17d0c99d0862",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2020.string.d.ts": {
+        "version": "faf0221ae0465363c842ce6aa8a0cbda5d9296940a8e26c86e04cc4081eea21e",
+        "signature": "faf0221ae0465363c842ce6aa8a0cbda5d9296940a8e26c86e04cc4081eea21e",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts": {
+        "version": "936d7d2e8851af9ccfa5333b15e877a824417d352b1d7fd06388639dc69ef80a",
+        "signature": "936d7d2e8851af9ccfa5333b15e877a824417d352b1d7fd06388639dc69ef80a",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/typescript/lib/lib.es2020.intl.d.ts": {
+        "version": "905b020308ed3bd9cd2457f5a4def1844620d48020cec405cafb4e86b3194af1",
+        "signature": "905b020308ed3bd9cd2457f5a4def1844620d48020cec405cafb4e86b3194af1",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts": {
+        "version": "5b9f301739476429c0295b3301aab7e725c405ff0e0ef709da8a75ab48189240",
+        "signature": "5b9f301739476429c0295b3301aab7e725c405ff0e0ef709da8a75ab48189240",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": {
+        "version": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
+        "signature": "a822e999d9c1814859735e919c2bd2a11f7d3c8633ab6656215dc386684e07bc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts": {
+        "version": "a78431ae90675b10e4d5f8b1841626f82348f8993642ededc34711957ada7534",
+        "signature": "a78431ae90675b10e4d5f8b1841626f82348f8993642ededc34711957ada7534",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts": {
+        "version": "e8b8bee63834a880305e9084dc32bf2057754f3d8f4d6d59b84526273b282bfc",
+        "signature": "e8b8bee63834a880305e9084dc32bf2057754f3d8f4d6d59b84526273b282bfc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts": {
+        "version": "d6ca1f7d226df1e4c5873388277285e3fcea66177f61549fd29b327d9bbab21c",
+        "signature": "d6ca1f7d226df1e4c5873388277285e3fcea66177f61549fd29b327d9bbab21c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react/global.d.ts": {
+        "version": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "signature": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/csstype/index.d.ts": {
+        "version": "b3a4ee9791cdd4f5029b3ffe60b9cae1ac308a4238b0444f40a5222e4ecc5cc1",
+        "signature": "b3a4ee9791cdd4f5029b3ffe60b9cae1ac308a4238b0444f40a5222e4ecc5cc1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/prop-types/index.d.ts": {
+        "version": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "signature": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react/index.d.ts": {
+        "version": "0290ce481d9430774f1d41e757d087e9324b497e1ee0a9e908cf57a9f8bc6e0d",
+        "signature": "0290ce481d9430774f1d41e757d087e9324b497e1ee0a9e908cf57a9f8bc6e0d",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/@types/react-dom/index.d.ts": {
+        "version": "8483a29c17f7feb768a1f4333cf12ccf1e7341bd89dadcf407e012d5315228d0",
+        "signature": "8483a29c17f7feb768a1f4333cf12ccf1e7341bd89dadcf407e012d5315228d0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat-parser/src/types.d.ts": {
+        "version": "78713ec75c933523a91bca1208764e0979478a3df27cfdeffbd5a83d3ed297fa",
+        "signature": "78713ec75c933523a91bca1208764e0979478a3df27cfdeffbd5a83d3ed297fa",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat-parser/src/parser.d.ts": {
+        "version": "8d403f8c539e3bb60d83c78174f83b70d34b4297f0ba777d563c354a8b8fcecc",
+        "signature": "8d403f8c539e3bb60d83c78174f83b70d34b4297f0ba777d563c354a8b8fcecc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat-parser/index.d.ts": {
+        "version": "b6849fd85bf933f54f4ac0555e77ca6c29d36fcdfc2f4b6dd7bd451b7671e8e3",
+        "signature": "b6849fd85bf933f54f4ac0555e77ca6c29d36fcdfc2f4b6dd7bd451b7671e8e3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat/src/formatters.d.ts": {
+        "version": "73b231d6eafa0de9b3fef47ee67fba1680af6e476cb56d3b174e48b5b3324324",
+        "signature": "73b231d6eafa0de9b3fef47ee67fba1680af6e476cb56d3b174e48b5b3324324",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat/src/core.d.ts": {
+        "version": "9cd1f7ea0b4e21d984b3c3ee89f0802afd585d85b5f03b808ae43d9bc7eea64f",
+        "signature": "9cd1f7ea0b4e21d984b3c3ee89f0802afd585d85b5f03b808ae43d9bc7eea64f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat/src/error.d.ts": {
+        "version": "cb5a8991866f8a77e9e1cea7c7ed382e68cbec21807216659ca3e6ac636f31f8",
+        "signature": "cb5a8991866f8a77e9e1cea7c7ed382e68cbec21807216659ca3e6ac636f31f8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/intl-messageformat/index.d.ts": {
+        "version": "4e799b631914398921cd8edda132320100399522cc3c8809d7c4dad89a697c5b",
+        "signature": "4e799b631914398921cd8edda132320100399522cc3c8809d7c4dad89a697c5b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts": {
+        "version": "e8512070bd4457ced5e3a447eb5d3e9a280f719e74181c747013aee2d5789815",
+        "signature": "e8512070bd4457ced5e3a447eb5d3e9a280f719e74181c747013aee2d5789815",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts": {
+        "version": "9f9e732efb45d9a551c8471d3f494929c95460393a681b766ebec0ebb349409a",
+        "signature": "9f9e732efb45d9a551c8471d3f494929c95460393a681b766ebec0ebb349409a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/canonicalizelocalelist.d.ts": {
+        "version": "0425f69d9e391719b285cad7e89299340b07dcaadbcb4fecdaebdd9e0e9745cd",
+        "signature": "0425f69d9e391719b285cad7e89299340b07dcaadbcb4fecdaebdd9e0e9745cd",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/canonicalizetimezonename.d.ts": {
+        "version": "1ee5885d5027d5193ecacf31e8ed6b6f03a3a6de2e4fb37a3280b71e65915af1",
+        "signature": "1ee5885d5027d5193ecacf31e8ed6b6f03a3a6de2e4fb37a3280b71e65915af1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts": {
+        "version": "1a00321a0e33c21fb18d4ccc0ba02766d7285e36da78a6906be5419620595d40",
+        "signature": "1a00321a0e33c21fb18d4ccc0ba02766d7285e36da78a6906be5419620595d40",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts": {
+        "version": "2988293b7c68fa8491bd1013ece93aa0c9f4451510c0058f60d662aaf94420a7",
+        "signature": "2988293b7c68fa8491bd1013ece93aa0c9f4451510c0058f60d662aaf94420a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts": {
+        "version": "4d2d15cdb91619cf1bb94ebae5290917afbabeadfd04d86e19239ab8e2ab48cf",
+        "signature": "4d2d15cdb91619cf1bb94ebae5290917afbabeadfd04d86e19239ab8e2ab48cf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts": {
+        "version": "57acd399c3e11ded7100e0278e7afe96f32257e0e77f469127a99effc24b9a49",
+        "signature": "57acd399c3e11ded7100e0278e7afe96f32257e0e77f469127a99effc24b9a49",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts": {
+        "version": "8774a070c003132f9e45eadf5ac7a94a19f3896a916e21e979bdd031c7ffb56e",
+        "signature": "8774a070c003132f9e45eadf5ac7a94a19f3896a916e21e979bdd031c7ffb56e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts": {
+        "version": "1947ddd982404898a8779b64c48ec5dc71055e38bad86e5766af168cec23eba6",
+        "signature": "1947ddd982404898a8779b64c48ec5dc71055e38bad86e5766af168cec23eba6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts": {
+        "version": "b2dcd5a7516b873e393219d11a845d132e7dfa6811c28c89c8f5acd6da823812",
+        "signature": "b2dcd5a7516b873e393219d11a845d132e7dfa6811c28c89c8f5acd6da823812",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/displaynames/canonicalcodefordisplaynames.d.ts": {
+        "version": "bad5810af55b368d47344ff4488ce84cf5e6f472b03550bb2649ffda6d5ba606",
+        "signature": "bad5810af55b368d47344ff4488ce84cf5e6f472b03550bb2649ffda6d5ba606",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/getnumberoption.d.ts": {
+        "version": "0edc48b402f3efa10343c59746b269ec3cab88ea08be63d73014c78d372e94ab",
+        "signature": "0edc48b402f3efa10343c59746b269ec3cab88ea08be63d73014c78d372e94ab",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/getoption.d.ts": {
+        "version": "ba9f6d4253a5b902ddb60345aead6f691b89292f9387068bf99d9928e839a9af",
+        "signature": "ba9f6d4253a5b902ddb60345aead6f691b89292f9387068bf99d9928e839a9af",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/issanctionedsimpleunitidentifier.d.ts": {
+        "version": "257369022582c2220790c87a487fda57b264e1dcb16bb9ce34172345e7f933f3",
+        "signature": "257369022582c2220790c87a487fda57b264e1dcb16bb9ce34172345e7f933f3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/isvalidtimezonename.d.ts": {
+        "version": "cccf59bfef7ee460a4aa841fd80fc0b36741aeb7501448d57c3d6c72e44e5fd0",
+        "signature": "cccf59bfef7ee460a4aa841fd80fc0b36741aeb7501448d57c3d6c72e44e5fd0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/iswellformedcurrencycode.d.ts": {
+        "version": "abbf59b2100d962d82f9c842c4a20cb5db35aee74175e5c942b361138870d8eb",
+        "signature": "abbf59b2100d962d82f9c842c4a20cb5db35aee74175e5c942b361138870d8eb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/iswellformedunitidentifier.d.ts": {
+        "version": "f408d89ab81d183abcdaaf9961ebe9ef1a892064c5790b4b87af0b7d05a43240",
+        "signature": "f408d89ab81d183abcdaaf9961ebe9ef1a892064c5790b4b87af0b7d05a43240",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts": {
+        "version": "0d1f25804aa84f5e9929dd1961560f8a20b5b90cf4b99adf0155f20b0e5ff8c6",
+        "signature": "0d1f25804aa84f5e9929dd1961560f8a20b5b90cf4b99adf0155f20b0e5ff8c6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts": {
+        "version": "20f33c814aaef326c0e3f2e37f627f8e3b22d85b0859a1b47c1013f1eaa0b628",
+        "signature": "20f33c814aaef326c0e3f2e37f627f8e3b22d85b0859a1b47c1013f1eaa0b628",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts": {
+        "version": "8105c32b75be544cf48eabb59c6db9f869da0607e2206e427fdc4c685979a6a7",
+        "signature": "8105c32b75be544cf48eabb59c6db9f869da0607e2206e427fdc4c685979a6a7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts": {
+        "version": "09c7cfaa920ee7150beeb1523f4e702f60bf346fd648ca0961cb176d788f28a0",
+        "signature": "09c7cfaa920ee7150beeb1523f4e702f60bf346fd648ca0961cb176d788f28a0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts": {
+        "version": "26d0fe0d11bb07a8ffc587653dccb41347e6c35892dbe6118f64379babbc0447",
+        "signature": "26d0fe0d11bb07a8ffc587653dccb41347e6c35892dbe6118f64379babbc0447",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/currencydigits.d.ts": {
+        "version": "4475d3f490464dd09f29d5a590392ebc9f3026a79f2f0ba247f7b3f2acc01655",
+        "signature": "4475d3f490464dd09f29d5a590392ebc9f3026a79f2f0ba247f7b3f2acc01655",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts": {
+        "version": "6904aa517d2a855a80abe2ca30b7953138712e52311318c472546ab3f05f2923",
+        "signature": "6904aa517d2a855a80abe2ca30b7953138712e52311318c472546ab3f05f2923",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts": {
+        "version": "7f6b19f9ade0b738f0d43e7eb834d644ff6f14da272f1a02efce0c481e5815a3",
+        "signature": "7f6b19f9ade0b738f0d43e7eb834d644ff6f14da272f1a02efce0c481e5815a3",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts": {
+        "version": "c932456d9cb7fd91e5f6b68cd48a87070bae9d072940170b4df5eddd90549bea",
+        "signature": "c932456d9cb7fd91e5f6b68cd48a87070bae9d072940170b4df5eddd90549bea",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts": {
+        "version": "414f67b50242cd1ef2b49696f128b63b01f8b38c3d250430cee5da281b68043b",
+        "signature": "414f67b50242cd1ef2b49696f128b63b01f8b38c3d250430cee5da281b68043b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts": {
+        "version": "4a9c1b08cd755e873e2b678e1e1f92440c5ecce2eab94901c2e38b6d0febf6f5",
+        "signature": "4a9c1b08cd755e873e2b678e1e1f92440c5ecce2eab94901c2e38b6d0febf6f5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts": {
+        "version": "86f986f21c0c53e4d60bd6b80b99e155db5babade46726a8dd9c9b6c11412dc6",
+        "signature": "86f986f21c0c53e4d60bd6b80b99e155db5babade46726a8dd9c9b6c11412dc6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts": {
+        "version": "205c964335b5e8e06aac7b96406bc1f309884706c07e1dc677cfd5090ce0d6c9",
+        "signature": "205c964335b5e8e06aac7b96406bc1f309884706c07e1dc677cfd5090ce0d6c9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts": {
+        "version": "1f3c0a0dcca3269a6fff052a92948bff788568ad779618be6e36255a7f61e0d8",
+        "signature": "1f3c0a0dcca3269a6fff052a92948bff788568ad779618be6e36255a7f61e0d8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/partitionpattern.d.ts": {
+        "version": "907337409201d4838aa98ae053fd355bc7a6e69e44735e95263da1977d415582",
+        "signature": "907337409201d4838aa98ae053fd355bc7a6e69e44735e95263da1977d415582",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts": {
+        "version": "bddf71a2b37dccb9e943d305d42b3a7b149de5b2075c034ad6577f3dd07d8379",
+        "signature": "bddf71a2b37dccb9e943d305d42b3a7b149de5b2075c034ad6577f3dd07d8379",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts": {
+        "version": "a11744b0d176d1d3e84a4f039de149e8e6757498e936f1d58cbb001693021684",
+        "signature": "a11744b0d176d1d3e84a4f039de149e8e6757498e936f1d58cbb001693021684",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts": {
+        "version": "2e886b09295049505610464b91c6898853c5831b145a90067027fa953e65555e",
+        "signature": "2e886b09295049505610464b91c6898853c5831b145a90067027fa953e65555e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts": {
+        "version": "84747db6b80b4e5567c21a82cbaeda7a9810307ba4023ff5ffcd90e1f7713172",
+        "signature": "84747db6b80b4e5567c21a82cbaeda7a9810307ba4023ff5ffcd90e1f7713172",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts": {
+        "version": "955d9dbc320abdbde2fc344d2b29d6ec602fe09e032efedefa3bf0cd9cf005bb",
+        "signature": "955d9dbc320abdbde2fc344d2b29d6ec602fe09e032efedefa3bf0cd9cf005bb",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts": {
+        "version": "0a0970e0cf86fe9ae5d827d0fdfdd85f44d9187cb5bec60851ed6d1a0bbdcab5",
+        "signature": "0a0970e0cf86fe9ae5d827d0fdfdd85f44d9187cb5bec60851ed6d1a0bbdcab5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts": {
+        "version": "938dce4696bcf2ba963e0f5c20c6c897d7e3d4e457e84cd4e91307715c4b0d74",
+        "signature": "938dce4696bcf2ba963e0f5c20c6c897d7e3d4e457e84cd4e91307715c4b0d74",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts": {
+        "version": "3f29e2d72cd0dbbbcf97177e6ec6612d262b05a14ac00e1ab6818f5483c73643",
+        "signature": "3f29e2d72cd0dbbbcf97177e6ec6612d262b05a14ac00e1ab6818f5483c73643",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts": {
+        "version": "08d4d8a49c5662f78f807a30f382add305d6be0f56be01506ea9b65871f06075",
+        "signature": "08d4d8a49c5662f78f807a30f382add305d6be0f56be01506ea9b65871f06075",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts": {
+        "version": "062ea6cf8b1c09fc4308dbf1d0a1631d5402da0f0054e59660f6cf34a9830862",
+        "signature": "062ea6cf8b1c09fc4308dbf1d0a1631d5402da0f0054e59660f6cf34a9830862",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts": {
+        "version": "bcedf3aa19afe27def8caa119593546f22bbf437aa004fc6c30a2a43dd27baa7",
+        "signature": "bcedf3aa19afe27def8caa119593546f22bbf437aa004fc6c30a2a43dd27baa7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/resolvelocale.d.ts": {
+        "version": "7f0d6e30a4bae46a64c2bcfadbe6a8531cff2ce615d4b0680f3a4987c7ff525e",
+        "signature": "7f0d6e30a4bae46a64c2bcfadbe6a8531cff2ce615d4b0680f3a4987c7ff525e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/supportedlocales.d.ts": {
+        "version": "625d615176b1df0716b5d6a0b86b12b7898d98fd40a9e985f05442ea0791507a",
+        "signature": "625d615176b1df0716b5d6a0b86b12b7898d98fd40a9e985f05442ea0791507a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts": {
+        "version": "4c9df7799854bca547b5e564b929a346992253b814ab38ade42cd1e5e807e6a2",
+        "signature": "4c9df7799854bca547b5e564b929a346992253b814ab38ade42cd1e5e807e6a2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts": {
+        "version": "eb0c7a6428ff5e09af57a1d688e9f155ff7cb6d4d597d8c074200f411608b90b",
+        "signature": "eb0c7a6428ff5e09af57a1d688e9f155ff7cb6d4d597d8c074200f411608b90b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts": {
+        "version": "c927231a304b8d521e43dc329a6ff9e7a949b65049b3b4d2155f3656cf981d27",
+        "signature": "c927231a304b8d521e43dc329a6ff9e7a949b65049b3b4d2155f3656cf981d27",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts": {
+        "version": "4d2fef89cb82f40d091e6a8e46b6452be458ebad78d1488fecd6f57d9201247f",
+        "signature": "4d2fef89cb82f40d091e6a8e46b6452be458ebad78d1488fecd6f57d9201247f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts": {
+        "version": "4480de0ded16219521ccf012892091e5ec44863039c965ff1664f7f4799f4126",
+        "signature": "4480de0ded16219521ccf012892091e5ec44863039c965ff1664f7f4799f4126",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts": {
+        "version": "eeaf71356de97a805f3dfb0dd93a16196da7d2480955063a79216a8fd4f1414b",
+        "signature": "eeaf71356de97a805f3dfb0dd93a16196da7d2480955063a79216a8fd4f1414b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/262.d.ts": {
+        "version": "5adf5521a71598c739c51a7378515d96527cb651efd33229c69c12d85572eb0c",
+        "signature": "5adf5521a71598c739c51a7378515d96527cb651efd33229c69c12d85572eb0c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/ecma402-abstract/index.d.ts": {
+        "version": "9bc18d2512c5a1c36b791786737a91490c0671a977fb33301780404f1b17848c",
+        "signature": "9bc18d2512c5a1c36b791786737a91490c0671a977fb33301780404f1b17848c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts": {
+        "version": "d58b1c7319c7d0526d91364809c6c3faccfa395ff16c8e47d57a45e39e28af86",
+        "signature": "d58b1c7319c7d0526d91364809c6c3faccfa395ff16c8e47d57a45e39e28af86",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl-listformat/index.d.ts": {
+        "version": "cc546c0dad811c6f28b4f684c7c11f5ed8c733c9f2a608d0258c10a61382ac89",
+        "signature": "cc546c0dad811c6f28b4f684c7c11f5ed8c733c9f2a608d0258c10a61382ac89",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl-displaynames/index.d.ts": {
+        "version": "2165b08cb43e66b9d4df7b9464123caaf5383987bf3397b2c36e906032466e27",
+        "signature": "2165b08cb43e66b9d4df7b9464123caaf5383987bf3397b2c36e906032466e27",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/error.d.ts": {
+        "version": "24f95b02d817842d1f4dcdd15a735e54755c7465760eb924122b6b7ba3ec12da",
+        "signature": "24f95b02d817842d1f4dcdd15a735e54755c7465760eb924122b6b7ba3ec12da",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/utils.d.ts": {
+        "version": "f6f9ffe4f19fbf0e149beb27558f6e06a1dcbbdff24747566dd27d4153afcad6",
+        "signature": "f6f9ffe4f19fbf0e149beb27558f6e06a1dcbbdff24747566dd27d4153afcad6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/types.d.ts": {
+        "version": "012a518f47accc734c30d7d0546c9fe74300fc5e8a9310a892fb359c63690bf0",
+        "signature": "012a518f47accc734c30d7d0546c9fe74300fc5e8a9310a892fb359c63690bf0",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/message.d.ts": {
+        "version": "36021471689b50124a8eeb71e673c78d14f400e7cf3a9de4307ecee3c36f8617",
+        "signature": "36021471689b50124a8eeb71e673c78d14f400e7cf3a9de4307ecee3c36f8617",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/datetime.d.ts": {
+        "version": "7ed2e50f607328c8c1a64a4d5770c90d26636d048b75ee71703a79b1994e2b4f",
+        "signature": "7ed2e50f607328c8c1a64a4d5770c90d26636d048b75ee71703a79b1994e2b4f",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/displayname.d.ts": {
+        "version": "33076a79792c4eb785364eaf2ef832bfd5bdde5b1f39022af3de577ce06f213e",
+        "signature": "33076a79792c4eb785364eaf2ef832bfd5bdde5b1f39022af3de577ce06f213e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/list.d.ts": {
+        "version": "369314e99217ac00b64de141f929ac9206aad0baa2df448c273e41ecba71c69e",
+        "signature": "369314e99217ac00b64de141f929ac9206aad0baa2df448c273e41ecba71c69e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/plural.d.ts": {
+        "version": "465cc5c7e96c60fb0bbd3e1d6aee28f9eb286480a3b1a91d27dc3933fceeb722",
+        "signature": "465cc5c7e96c60fb0bbd3e1d6aee28f9eb286480a3b1a91d27dc3933fceeb722",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/relativetime.d.ts": {
+        "version": "c5142d610c6b422c39912b14200a9919410e98deb2553c420086fc43635d761c",
+        "signature": "c5142d610c6b422c39912b14200a9919410e98deb2553c420086fc43635d761c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/number.d.ts": {
+        "version": "9badb3e1a92ed9644a5ef6f372d56316fc0e52ca3fed4c957c26b6714a76f9f4",
+        "signature": "9badb3e1a92ed9644a5ef6f372d56316fc0e52ca3fed4c957c26b6714a76f9f4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/src/create-intl.d.ts": {
+        "version": "07b6ca35b84a98617d996d1df0031f4f881be6013a5cef22de6782d7b3306330",
+        "signature": "07b6ca35b84a98617d996d1df0031f4f881be6013a5cef22de6782d7b3306330",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@formatjs/intl/index.d.ts": {
+        "version": "ae13a1c33e7806eb8978542d556da6f634f0a9d1236c9a98c9844e80bbe573df",
+        "signature": "ae13a1c33e7806eb8978542d556da6f634f0a9d1236c9a98c9844e80bbe573df",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/types.d.ts": {
+        "version": "5b951a71a86eaca987cbd30bfdc0339f870c3c4c22846c7fe35f51de655f72c4",
+        "signature": "5b951a71a86eaca987cbd30bfdc0339f870c3c4c22846c7fe35f51de655f72c4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/injectintl.d.ts": {
+        "version": "3e4ef6a498457322df6a2b212c740f3a8e909237ce159e56e3b2364ad949f58b",
+        "signature": "3e4ef6a498457322df6a2b212c740f3a8e909237ce159e56e3b2364ad949f58b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/useintl.d.ts": {
+        "version": "df5c276a5ae10d32421d2b3924035a71e074031e0a8d4649881782f926dd55a1",
+        "signature": "df5c276a5ae10d32421d2b3924035a71e074031e0a8d4649881782f926dd55a1",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/utils.d.ts": {
+        "version": "620ad49b4f195ab49c5eb8fd1be86ce99f78dd2ebdc02c8810362b06b043f533",
+        "signature": "620ad49b4f195ab49c5eb8fd1be86ce99f78dd2ebdc02c8810362b06b043f533",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/provider.d.ts": {
+        "version": "48d153c23cef81ddfcbf550b28268de1e31eeb5f2ccc6b849cb746cda3996633",
+        "signature": "48d153c23cef81ddfcbf550b28268de1e31eeb5f2ccc6b849cb746cda3996633",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/createformattedcomponent.d.ts": {
+        "version": "3447864b14ddce824ceac8f72968e74dc0db3a28f227f8928ae2a954ab6cea55",
+        "signature": "3447864b14ddce824ceac8f72968e74dc0db3a28f227f8928ae2a954ab6cea55",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/relative.d.ts": {
+        "version": "974c0d40e28b09e475675da746cbd54d5ebaeb7ab3b3db933311fc3363025467",
+        "signature": "974c0d40e28b09e475675da746cbd54d5ebaeb7ab3b3db933311fc3363025467",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/plural.d.ts": {
+        "version": "63e7897da95b363c469695c6655e1ab9b484b584bbccd26699a9cad2cbac015b",
+        "signature": "63e7897da95b363c469695c6655e1ab9b484b584bbccd26699a9cad2cbac015b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/src/components/message.d.ts": {
+        "version": "748f76b9dd7b0e53f79c914517cd061a0ca101243036f51aff48b04b9a74768a",
+        "signature": "748f76b9dd7b0e53f79c914517cd061a0ca101243036f51aff48b04b9a74768a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/react-intl/index.d.ts": {
+        "version": "416bd5e6274e5e761aa298d56c46bb464ffb380386357982bc651698f0054ead",
+        "signature": "416bd5e6274e5e761aa298d56c46bb464ffb380386357982bc651698f0054ead",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/hoist-non-react-statics/index.d.ts": {
+        "version": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
+        "signature": "bfe1b52cf71aea9bf8815810cc5d9490fa9617313e3d3c2ee3809a28b80d0bb4",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/styled-components/index.d.ts": {
+        "version": "7f6371dceeb8658c9657a903b5e2c6a24eae211ab8c1465ceb8b61d8d0e4792b",
+        "signature": "7f6371dceeb8658c9657a903b5e2c6a24eae211ab8c1465ceb8b61d8d0e4792b",
+        "affectsGlobalScope": true
+      },
+      "../node_modules/clsx/clsx.d.ts": {
+        "version": "1552a249535ba9306d1ce112428864d06af27f6c50f24fb75b46fcc562927b0a",
+        "signature": "1552a249535ba9306d1ce112428864d06af27f6c50f24fb75b46fcc562927b0a",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/theme.ts": {
+        "version": "252251d047f66754432f7fcbb00b699d7f9708721dfef99167b0a678218a6f64",
+        "signature": "793bf7c6324b5e26eead9010ec9c7e63d3c8f0c6a1423835f54d9eda72775640",
+        "affectsGlobalScope": false
+      },
+      "../src/data/flexboxproperties.ts": {
+        "version": "ff996e82161e06fb28081293b17b158d3eae1c716a938f9f59042593ef8a06fd",
+        "signature": "826c79fb2f5b8103641b6b19a976c0b6d248a595be95221ee9c0db143c569e37",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/functions/managementid.ts": {
+        "version": "85e85d3541ac7cab31833e12ae500c909081e9dcb4d3ac12f777740ae15c9348",
+        "signature": "4c0a86e0793b06a7103105a5869c360bcd6cd7e57938af1fb54e120c4acb0c65",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/functions/constructsourcecode.ts": {
+        "version": "a8fd6f96aa0dd58aaf34267a0f5efbdddd58ac2c0aac37a91dd7f5c956a79c69",
+        "signature": "b11ff225abe2e161008d09e006e283c6851acb9543ff9b638890ccb4f593964e",
+        "affectsGlobalScope": false
+      },
+      "../src/components/numberblock.tsx": {
+        "version": "d90a6fee4400abff5df50c02a682dfab87ec04c0607f4dd0d543a4dc9789f67d",
+        "signature": "fd085ab921c73d8c2d739e90c31b4e37dcfe00d7a69c3c06db74fe4306f51d84",
+        "affectsGlobalScope": false
+      },
+      "../src/components/flexboxlistitem.tsx": {
+        "version": "ff37c83016caf6b9ed1ffc7bce9738b8ffe775caf6d15a7234ce1df4c0a0e274",
+        "signature": "3cad055d185af0f0f135466c0338229e208b1470a8310360b5b6ff2d6188a68e",
+        "affectsGlobalScope": false
+      },
+      "../src/components/flexboxlist.tsx": {
+        "version": "939c74c9c549d0e0ef5d4e8aa9620017ecc27cf99a25ce002fe72b14bc3c8b2e",
+        "signature": "dfc3016f2b822c56f27ea28fc378b3b3c00dc0d7ae7c4ad690f87254b04662a1",
+        "affectsGlobalScope": false
+      },
+      "../src/components/flexboxgroup.tsx": {
+        "version": "b6129de6562adbb05884eabc2c84e16c33c9395340d3b5f33623b8006abf3b0b",
+        "signature": "d76cf721d19117bfb96e368d742aced393550b737864ebc61eface1fbbc8c121",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/styled-normalize/index.d.ts": {
+        "version": "f69bf329b04d23b29d37c502219604035591747dae0d141607add86d6b1571a9",
+        "signature": "f69bf329b04d23b29d37c502219604035591747dae0d141607add86d6b1571a9",
+        "affectsGlobalScope": false
+      },
+      "../src/components/root/globalstyle.tsx": {
+        "version": "6deb156b672b3fa7137b1db441a6b03f3bbacd89e88df34fab4ae96058c55a2f",
+        "signature": "ce72a854a85ae0b4db793ce8a9b4eb2c040b30984c43bd3f339e5ec5c40ef29e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@fortawesome/react-fontawesome/index.d.ts": {
+        "version": "73d9303d43d3d8a272ece4f3e59927a85150d2d69b139d2007257e0eb12f52d1",
+        "signature": "73d9303d43d3d8a272ece4f3e59927a85150d2d69b139d2007257e0eb12f52d1",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/screen.ts": {
+        "version": "70dcaa769c5f56e2fd55d6b2fda5892544d2d2cdc21daa1644eafba3d117b344",
+        "signature": "e7cdeda3754a4ea92821b3aebd8a1566204431609d08aa19bfaf12362b1ce5b5",
+        "affectsGlobalScope": false
+      },
+      "../src/components/root/header.tsx": {
+        "version": "b81fa66ec6d3aba177ba22c622d2019eacc54a8cdf08a981b6b94bdd35004b92",
+        "signature": "93d4d3c492d053f43b42c8eb0ba7340b9584ff97c259907a0c2bd716eea10baf",
+        "affectsGlobalScope": false
+      },
+      "../src/components/root/footer.tsx": {
+        "version": "993177d8451cf705abf672dc22a00f25dae24287be46d7493cf798d2867cacff",
+        "signature": "1ac7ae77b5c769c7aeb213fbe0dd2a3376037616a8c4e8bc71d8608a544695de",
+        "affectsGlobalScope": false
+      },
+      "../src/components/root/pageroot.tsx": {
+        "version": "8a56505be6510f5120658dbfd8d17a400708a1db05629afc7b0a18751d611a42",
+        "signature": "a099af679cc7c7d750ec69ec84026e90eeb06db17d80360cc085b29902a5abb9",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/react-syntax-highlighter/index.d.ts": {
+        "version": "83800fe6ed3ecb114e0ddb6f82f9ac621e2847fa6f77f9f04a56c0c51d13a162",
+        "signature": "83800fe6ed3ecb114e0ddb6f82f9ac621e2847fa6f77f9f04a56c0c51d13a162",
+        "affectsGlobalScope": true
+      },
+      "../src/fixtures/functions/dataprovider.ts": {
+        "version": "296589f150a183f01f3e02204922725413dcdb57c615d3f817c5ec7882837730",
+        "signature": "6310446285de842cb00363a9232189da1383784f4b471edbccf4c02ddb379172",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/messages.ts": {
+        "version": "47aeca4150599748364cd1348fdc3b381b8326beb2e00f6c5a83064b498bd83e",
+        "signature": "71495f531b7e1b7946d51ed1c806db0a57702142401cbc939aae0a92846a2e9c",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/functions/language.ts": {
+        "version": "e1267889cbaad29b1fb0081af8fcc17fb2e8a7a8286b4ac544f7303cea951298",
+        "signature": "dda6081f1c9b522d70fe64ce2d8ee5281dae8e7f3b108767cc6df820f7161e21",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/functions/reference.ts": {
+        "version": "09c40ce5501a79c7d81fa820e40939d71e70537a502f92317e775321fce0791a",
+        "signature": "d7ae1892e06641c34cee10d663fd73451bba86a16abc8e1dbfd441cd3316d168",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/copy-to-clipboard/index.d.ts": {
+        "version": "2c8381a3a5a1663aa1723b31f3718dda9a359ad8eef9342b79f553de106b7ead",
+        "signature": "2c8381a3a5a1663aa1723b31f3718dda9a359ad8eef9342b79f553de106b7ead",
+        "affectsGlobalScope": false
+      },
+      "../src/fixtures/hooks/useclipboard.ts": {
+        "version": "ec38ac3414b25b7ebed225656e3da51e06bb96d70ac3d5e0b51f362a0aee7800",
+        "signature": "8ff852492c1a3a8184c90c6e46d7ff19a1b6e592b0fc2e36c0394a209b53b998",
+        "affectsGlobalScope": false
+      },
+      "../src/components/sourcecodeviewer.tsx": {
+        "version": "9a6b012bef398a1cfd69613021881015adb1a1639bd2224441dca7db7f0c8834",
+        "signature": "a2fdc6a4efe8e144c4c23732987eba95b2bf0237d5d442035a80009981e15c78",
+        "affectsGlobalScope": false
+      },
+      "../src/pages/index.tsx": {
+        "version": "5daf89ad821a4f9a73a0498ef633e0f0cbf4aa5d93b3811625fd0c91f66590f8",
+        "signature": "1c86c7b629e6f304d2b870f1600a07094c31bb31133ad1e54e3dca6e3b18d134",
+        "affectsGlobalScope": false
+      },
+      "../src/index.tsx": {
+        "version": "22bcc8330bd45c36496ef445cf6958dafa00d0d5b838f0403410861a4dda7305",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/components/filleffectlink.tsx": {
+        "version": "bf2d5ea232ab371a1b0a265ded97a2409362a935e466c11ff484039ea3f9b7df",
+        "signature": "ff5fad43a77e044bd5f5da5a0b6a81ef7cb8214e2309492c0ffc9c7cf8968959",
+        "affectsGlobalScope": false
+      },
+      "../src/pages/contact.tsx": {
+        "version": "1874af894756dd6fe4b327f7ce29c45e2ef57746f411a6f4ac2d52fcf391b7ee",
+        "signature": "5981aa1046db8bf8989c5108fb4dac281da9c69b6a08164849fde1506ca88fda",
+        "affectsGlobalScope": false
+      },
+      "../src/contact.tsx": {
+        "version": "771cb06906c4ef056a36699a03bdd8a3187cc560d30257cba3249204d5679fd4",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/pages/privacy.tsx": {
+        "version": "2a0125bcb118de2e6aa63cdd01485b3458fd47a9f256c62db27e1d8b1945b9a3",
+        "signature": "e4e4791e1f47336d45e6db730898847f8d2f7f9fdb0a459b865bac0763b72c91",
+        "affectsGlobalScope": false
+      },
+      "../src/privacy.tsx": {
+        "version": "2972e144ed4794eb889a27451979675c40277bb8e645776929199d08cd36c134",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/pages/terms.tsx": {
+        "version": "7081f0f7e1352099f665996165b166b36c5f7032134a85ee5d539358dc30e42a",
+        "signature": "2cf1a7a854da40187f5386597e95c2cf530cdb9b53580e9a2626aca7c39a25f5",
+        "affectsGlobalScope": false
+      },
+      "../src/terms.tsx": {
+        "version": "11c15d4fe309680df19f1b10b73ac7b5bf75698d86de8d662710800ba38ed2fe",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/filleffectlink.stories.tsx": {
+        "version": "723bce51d1098dd7860319bac12739967d29113a1ac5ff5231efadde3817619f",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/flexboxgroup.stories.tsx": {
+        "version": "35dfc27b04a35f2acfa25a625cf8099602c32a49f611d0f0bca15f6f53f13493",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/flexboxlist.stories.tsx": {
+        "version": "3feda84e34bae6155fb3d57b456ca6c265e5e8e32ca45218fd099bc9777b3eb4",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/constants.d.ts": {
+        "version": "5742898e84253be8baf7ca3bbf6a0683153eef2a7e9f76ee13c06a0e7c27a425",
+        "signature": "5742898e84253be8baf7ca3bbf6a0683153eef2a7e9f76ee13c06a0e7c27a425",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts": {
+        "version": "ba6aea54601edcfe38ef85f5d22197398beb275fb7bb71e4bbd0b817cf63ffc2",
+        "signature": "ba6aea54601edcfe38ef85f5d22197398beb275fb7bb71e4bbd0b817cf63ffc2",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts": {
+        "version": "07721917d2ffe7c5d779f7cc04332ec3a16c7ac098f0a5643675184ba70f017b",
+        "signature": "07721917d2ffe7c5d779f7cc04332ec3a16c7ac098f0a5643675184ba70f017b",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts": {
+        "version": "95c4f3f372a845331e8b609cffbfdb023ce39d85a322d384cd7869221a39bfa5",
+        "signature": "95c4f3f372a845331e8b609cffbfdb023ce39d85a322d384cd7869221a39bfa5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts": {
+        "version": "8dd9fb1325ac0e6b39eb2190e0baf6199cba98b079cba505f94dbdfecadf5d1c",
+        "signature": "8dd9fb1325ac0e6b39eb2190e0baf6199cba98b079cba505f94dbdfecadf5d1c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts": {
+        "version": "9eb3aa86edf6c552668c965caee398609035b1d4caf4d3093368dbe4251ac16a",
+        "signature": "9eb3aa86edf6c552668c965caee398609035b1d4caf4d3093368dbe4251ac16a",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/decoratorfunction.d.ts": {
+        "version": "308a652344b4d64a3974f1392e66f816f39e78c28418a27487f5bcd62807b4ce",
+        "signature": "308a652344b4d64a3974f1392e66f816f39e78c28418a27487f5bcd62807b4ce",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/models/index.d.ts": {
+        "version": "6b30c23754b6ea51f43d3533b0744e9cb72cb8104f6897b2eac05f4647001bf7",
+        "signature": "6b30c23754b6ea51f43d3533b0744e9cb72cb8104f6897b2eac05f4647001bf7",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts": {
+        "version": "7ed9c49c0763fa297d07eb2aa741610b2b418848ff71ec27e02bfef7ea9953e6",
+        "signature": "7ed9c49c0763fa297d07eb2aa741610b2b418848ff71ec27e02bfef7ea9953e6",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts": {
+        "version": "d9e5c12bab81be7525ea4d3baf2ac015ce464606b8ce166d3205e6ddb88ee381",
+        "signature": "d9e5c12bab81be7525ea4d3baf2ac015ce464606b8ce166d3205e6ddb88ee381",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts": {
+        "version": "cb6f0f40d51b51da33c503eaba191d407a50846abcbcd2889e2047998143e2b5",
+        "signature": "cb6f0f40d51b51da33c503eaba191d407a50846abcbcd2889e2047998143e2b5",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts": {
+        "version": "03c2da579d36b44b79c1d8db736e8f20cb3a73d7b352399ef4d43857b8a97d4d",
+        "signature": "03c2da579d36b44b79c1d8db736e8f20cb3a73d7b352399ef4d43857b8a97d4d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/withactions.d.ts": {
+        "version": "449814d0ff9febae3370014571a6a8cc3fc6b7f462cb80be2d0b00cf8c4d89dc",
+        "signature": "449814d0ff9febae3370014571a6a8cc3fc6b7f462cb80be2d0b00cf8c4d89dc",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts": {
+        "version": "7438f5c14b8738bdb37f616b7ee99421193a2f35d6474d6b3f43154d9f596f3e",
+        "signature": "7438f5c14b8738bdb37f616b7ee99421193a2f35d6474d6b3f43154d9f596f3e",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@storybook/addon-actions/dist/index.d.ts": {
+        "version": "a3ab74a180ca920f500dbf90275039e27200710d0ca3eed4763d8e162ddb2bee",
+        "signature": "a3ab74a180ca920f500dbf90275039e27200710d0ca3eed4763d8e162ddb2bee",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/flexboxlistitem.stories.tsx": {
+        "version": "4b0e304a6d0247ab90b795d0a8b7536aea86eb4d92a78c40b3cbb75fdb6ea500",
+        "signature": "c59f2e2ee7742348ca0ebe8bca1105e92aa60b87e39b076d18a2722307a0dc00",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/numberblock.stories.tsx": {
+        "version": "9286faff3ab1a560581d1013bf227c5b107fb495c46ceb8607fd9f4c8b3b4fc3",
+        "signature": "19abb37233fd8bc9a05ed1634337bb938396201f16648c2316559112a1102743",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/sourcecodeviewer.stories.tsx": {
+        "version": "63d60e80eac0b78d73115be0a4c801c38ae7bfb901964fcb4d09f86846693590",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/root/footer.stories.tsx": {
+        "version": "23f2de5e7ca681db7462ae82a4dce9c85b2de391187dc5f2311b5cf0ea7e8b82",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../stories/components/root/header.stories.tsx": {
+        "version": "f0317d0b1eb3619fa36d900a95d96897eb34653ae1bc44634e35f78a360d0e8c",
+        "signature": "163f07e29be389724d63831db234a899e2ba2058107e5d497b665702d6877fde",
+        "affectsGlobalScope": false
+      },
+      "../types/styled-components.d.ts": {
+        "version": "70daf0c459cc9e77837117349ce04e500e7002cfbdd6f5d292e2ff8963362b3f",
+        "signature": "70daf0c459cc9e77837117349ce04e500e7002cfbdd6f5d292e2ff8963362b3f",
+        "affectsGlobalScope": false
+      },
+      "../types/styled.d.ts": {
+        "version": "94dc0e862f15b55e08970d99842553d7cad345b7a568dd74e3b21c562adf6302",
+        "signature": "94dc0e862f15b55e08970d99842553d7cad345b7a568dd74e3b21c562adf6302",
+        "affectsGlobalScope": true
+      }
+    },
+    "options": {
+      "target": 1,
+      "module": 99,
+      "lib": [
+        "lib.es2020.d.ts",
+        "lib.dom.d.ts"
+      ],
+      "allowJs": false,
+      "jsx": 2,
+      "declaration": false,
+      "sourceMap": true,
+      "outDir": "./",
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noImplicitReturns": false,
+      "moduleResolution": 2,
+      "typeRoots": [
+        "../node_modules/@types, types"
+      ],
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true,
+      "noEmit": true,
+      "incremental": true,
+      "configFilePath": "../tsconfig.json"
+    },
+    "referencedMap": {
+      "../node_modules/@formatjs/ecma402-abstract/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/262.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizelocalelist.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizetimezonename.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/displaynames/canonicalcodefordisplaynames.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/getnumberoption.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/getoption.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/issanctionedsimpleunitidentifier.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/isvalidtimezonename.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedcurrencycode.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedunitidentifier.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/currencydigits.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/partitionpattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/resolvelocale.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/supportedlocales.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-displaynames/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-listformat/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/index.d.ts": [
+        "../node_modules/@formatjs/intl/src/create-intl.d.ts",
+        "../node_modules/@formatjs/intl/src/datetime.d.ts",
+        "../node_modules/@formatjs/intl/src/displayname.d.ts",
+        "../node_modules/@formatjs/intl/src/error.d.ts",
+        "../node_modules/@formatjs/intl/src/list.d.ts",
+        "../node_modules/@formatjs/intl/src/message.d.ts",
+        "../node_modules/@formatjs/intl/src/number.d.ts",
+        "../node_modules/@formatjs/intl/src/plural.d.ts",
+        "../node_modules/@formatjs/intl/src/relativetime.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts",
+        "../node_modules/@formatjs/intl/src/utils.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/create-intl.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/datetime.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/displayname.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/error.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/list.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/message.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts",
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/number.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/plural.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/relativetime.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/types.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+        "../node_modules/@formatjs/intl-listformat/index.d.ts",
+        "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts",
+        "../node_modules/@formatjs/intl/src/error.d.ts",
+        "../node_modules/@formatjs/intl/src/utils.d.ts",
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/utils.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/react-fontawesome/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/constants.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/decoratorfunction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/withactions.d.ts"
+      ],
+      "../node_modules/@types/hoist-non-react-statics/index.d.ts": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-dom/index.d.ts": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-syntax-highlighter/index.d.ts": [
+        "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/@types/styled-components/index.d.ts": [
+        "../node_modules/@types/hoist-non-react-statics/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/intl-messageformat-parser/index.d.ts": [
+        "../node_modules/intl-messageformat-parser/src/parser.d.ts",
+        "../node_modules/intl-messageformat-parser/src/types.d.ts"
+      ],
+      "../node_modules/intl-messageformat-parser/src/parser.d.ts": [
+        "../node_modules/intl-messageformat-parser/src/types.d.ts"
+      ],
+      "../node_modules/intl-messageformat/index.d.ts": [
+        "../node_modules/intl-messageformat/src/core.d.ts",
+        "../node_modules/intl-messageformat/src/error.d.ts",
+        "../node_modules/intl-messageformat/src/formatters.d.ts"
+      ],
+      "../node_modules/intl-messageformat/src/core.d.ts": [
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/src/formatters.d.ts"
+      ],
+      "../node_modules/intl-messageformat/src/formatters.d.ts": [
+        "../node_modules/intl-messageformat-parser/index.d.ts"
+      ],
+      "../node_modules/react-intl/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+        "../node_modules/@formatjs/intl-listformat/index.d.ts",
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/components/createformattedcomponent.d.ts",
+        "../node_modules/react-intl/src/components/injectintl.d.ts",
+        "../node_modules/react-intl/src/components/message.d.ts",
+        "../node_modules/react-intl/src/components/plural.d.ts",
+        "../node_modules/react-intl/src/components/provider.d.ts",
+        "../node_modules/react-intl/src/components/relative.d.ts",
+        "../node_modules/react-intl/src/components/useintl.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/createformattedcomponent.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/injectintl.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/message.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/plural.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/components/injectintl.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/provider.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts",
+        "../node_modules/react-intl/src/utils.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/relative.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/useintl.d.ts": [
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/types.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/utils.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/styled-normalize/index.d.ts": [
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/filleffectlink.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/flexboxgroup.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../node_modules/clsx/clsx.d.ts",
+        "../node_modules/react-intl/index.d.ts",
+        "../src/components/flexboxlist.tsx",
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/components/flexboxlist.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/components/flexboxlistitem.tsx",
+        "../src/data/flexboxproperties.ts",
+        "../src/fixtures/functions/managementid.ts"
+      ],
+      "../src/components/flexboxlistitem.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../node_modules/clsx/clsx.d.ts",
+        "../src/components/numberblock.tsx",
+        "../src/data/flexboxproperties.ts",
+        "../src/fixtures/functions/constructsourcecode.ts",
+        "../src/pages/index.tsx"
+      ],
+      "../src/components/numberblock.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../node_modules/clsx/clsx.d.ts"
+      ],
+      "../src/components/root/footer.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/root/globalstyle.tsx": [
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/root/header.tsx": [
+        "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts",
+        "../node_modules/@fortawesome/react-fontawesome/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/fixtures/screen.ts"
+      ],
+      "../src/components/root/pageroot.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../node_modules/styled-normalize/index.d.ts",
+        "../src/components/root/footer.tsx",
+        "../src/components/root/globalstyle.tsx",
+        "../src/components/root/header.tsx",
+        "../src/fixtures/theme.ts"
+      ],
+      "../src/components/sourcecodeviewer.tsx": [
+        "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts",
+        "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
+        "../node_modules/@fortawesome/react-fontawesome/index.d.ts",
+        "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/fixtures/functions/constructsourcecode.ts",
+        "../src/fixtures/functions/dataprovider.ts",
+        "../src/fixtures/functions/language.ts",
+        "../src/fixtures/functions/reference.ts",
+        "../src/fixtures/hooks/useclipboard.ts",
+        "../src/fixtures/screen.ts",
+        "../src/pages/index.tsx"
+      ],
+      "../src/contact.tsx": [
+        "../node_modules/@types/react-dom/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../src/pages/contact.tsx"
+      ],
+      "../src/data/flexboxproperties.ts": [
+        "../src/fixtures/theme.ts"
+      ],
+      "../src/fixtures/functions/constructsourcecode.ts": [
+        "../node_modules/clsx/clsx.d.ts",
+        "../src/components/flexboxlistitem.tsx",
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/fixtures/functions/dataprovider.ts": [
+        "../src/data/flexboxproperties.ts",
+        "../src/fixtures/functions/managementid.ts"
+      ],
+      "../src/fixtures/functions/language.ts": [
+        "../src/fixtures/messages.ts"
+      ],
+      "../src/fixtures/functions/reference.ts": [
+        "../src/data/flexboxproperties.ts",
+        "../src/fixtures/functions/language.ts",
+        "../src/fixtures/functions/managementid.ts"
+      ],
+      "../src/fixtures/hooks/useclipboard.ts": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/copy-to-clipboard/index.d.ts"
+      ],
+      "../src/index.tsx": [
+        "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
+        "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts",
+        "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts",
+        "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
+        "../node_modules/@types/react-dom/index.d.ts",
+        "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../src/pages/index.tsx"
+      ],
+      "../src/pages/contact.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/components/filleffectlink.tsx",
+        "../src/components/root/pageroot.tsx"
+      ],
+      "../src/pages/index.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../node_modules/react-intl/index.d.ts",
+        "../src/components/flexboxgroup.tsx",
+        "../src/components/root/pageroot.tsx",
+        "../src/components/sourcecodeviewer.tsx",
+        "../src/data/flexboxproperties.ts",
+        "../src/fixtures/functions/dataprovider.ts",
+        "../src/fixtures/functions/language.ts",
+        "../src/fixtures/messages.ts",
+        "../src/fixtures/screen.ts"
+      ],
+      "../src/pages/privacy.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/components/filleffectlink.tsx",
+        "../src/components/root/pageroot.tsx"
+      ],
+      "../src/pages/terms.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/components/filleffectlink.tsx",
+        "../src/components/root/pageroot.tsx"
+      ],
+      "../src/privacy.tsx": [
+        "../node_modules/@types/react-dom/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../src/pages/privacy.tsx"
+      ],
+      "../src/terms.tsx": [
+        "../node_modules/@types/react-dom/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../src/pages/terms.tsx"
+      ],
+      "../stories/components/filleffectlink.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/filleffectlink.tsx"
+      ],
+      "../stories/components/flexboxgroup.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/flexboxgroup.tsx",
+        "../src/fixtures/functions/dataprovider.ts"
+      ],
+      "../stories/components/flexboxlist.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/flexboxlist.tsx",
+        "../src/fixtures/functions/dataprovider.ts"
+      ],
+      "../stories/components/flexboxlistitem.stories.tsx": [
+        "../node_modules/@storybook/addon-actions/dist/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/flexboxlistitem.tsx",
+        "../src/fixtures/functions/dataprovider.ts"
+      ],
+      "../stories/components/numberblock.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/numberblock.tsx"
+      ],
+      "../stories/components/root/footer.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/root/footer.tsx"
+      ],
+      "../stories/components/root/header.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/root/header.tsx"
+      ],
+      "../stories/components/sourcecodeviewer.stories.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/components/sourcecodeviewer.tsx",
+        "../src/fixtures/functions/constructsourcecode.ts",
+        "../src/fixtures/functions/dataprovider.ts",
+        "../src/fixtures/functions/language.ts",
+        "../src/fixtures/functions/reference.ts",
+        "../src/fixtures/hooks/useclipboard.ts"
+      ],
+      "../types/styled-components.d.ts": [
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/fixtures/theme.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "../node_modules/@formatjs/ecma402-abstract/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/262.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizelocalelist.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizetimezonename.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/displaynames/canonicalcodefordisplaynames.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/getnumberoption.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/getoption.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/issanctionedsimpleunitidentifier.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/isvalidtimezonename.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedcurrencycode.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedunitidentifier.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/currencydigits.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/partitionpattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/resolvelocale.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/supportedlocales.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts"
+      ],
+      "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-displaynames/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-listformat/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/index.d.ts": [
+        "../node_modules/@formatjs/intl/src/create-intl.d.ts",
+        "../node_modules/@formatjs/intl/src/datetime.d.ts",
+        "../node_modules/@formatjs/intl/src/displayname.d.ts",
+        "../node_modules/@formatjs/intl/src/error.d.ts",
+        "../node_modules/@formatjs/intl/src/list.d.ts",
+        "../node_modules/@formatjs/intl/src/message.d.ts",
+        "../node_modules/@formatjs/intl/src/number.d.ts",
+        "../node_modules/@formatjs/intl/src/plural.d.ts",
+        "../node_modules/@formatjs/intl/src/relativetime.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts",
+        "../node_modules/@formatjs/intl/src/utils.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/create-intl.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/datetime.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/displayname.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/error.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/list.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/message.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts",
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/number.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/plural.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/relativetime.d.ts": [
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/types.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+        "../node_modules/@formatjs/intl-listformat/index.d.ts",
+        "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts",
+        "../node_modules/@formatjs/intl/src/error.d.ts",
+        "../node_modules/@formatjs/intl/src/utils.d.ts",
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/@formatjs/intl/src/utils.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/src/types.d.ts"
+      ],
+      "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts"
+      ],
+      "../node_modules/@fortawesome/react-fontawesome/index.d.ts": [
+        "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/constants.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/models/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/decoratorfunction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts"
+      ],
+      "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts": [
+        "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts",
+        "../node_modules/@storybook/addon-actions/dist/preview/withactions.d.ts"
+      ],
+      "../node_modules/@types/hoist-non-react-statics/index.d.ts": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-dom/index.d.ts": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react-syntax-highlighter/index.d.ts": [
+        "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/@types/react/index.d.ts": [
+        "../node_modules/@types/prop-types/index.d.ts",
+        "../node_modules/@types/react/global.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/@types/styled-components/index.d.ts": [
+        "../node_modules/@types/hoist-non-react-statics/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/csstype/index.d.ts"
+      ],
+      "../node_modules/intl-messageformat-parser/index.d.ts": [
+        "../node_modules/intl-messageformat-parser/src/parser.d.ts",
+        "../node_modules/intl-messageformat-parser/src/types.d.ts"
+      ],
+      "../node_modules/intl-messageformat-parser/src/parser.d.ts": [
+        "../node_modules/intl-messageformat-parser/src/types.d.ts"
+      ],
+      "../node_modules/intl-messageformat/index.d.ts": [
+        "../node_modules/intl-messageformat/src/core.d.ts",
+        "../node_modules/intl-messageformat/src/error.d.ts",
+        "../node_modules/intl-messageformat/src/formatters.d.ts"
+      ],
+      "../node_modules/intl-messageformat/src/core.d.ts": [
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        "../node_modules/intl-messageformat/src/formatters.d.ts"
+      ],
+      "../node_modules/intl-messageformat/src/formatters.d.ts": [
+        "../node_modules/intl-messageformat-parser/index.d.ts"
+      ],
+      "../node_modules/react-intl/index.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+        "../node_modules/@formatjs/intl-listformat/index.d.ts",
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/components/createformattedcomponent.d.ts",
+        "../node_modules/react-intl/src/components/injectintl.d.ts",
+        "../node_modules/react-intl/src/components/message.d.ts",
+        "../node_modules/react-intl/src/components/plural.d.ts",
+        "../node_modules/react-intl/src/components/provider.d.ts",
+        "../node_modules/react-intl/src/components/relative.d.ts",
+        "../node_modules/react-intl/src/components/useintl.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/createformattedcomponent.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/injectintl.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/message.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/plural.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/components/injectintl.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/provider.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts",
+        "../node_modules/react-intl/src/utils.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/relative.d.ts": [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/components/useintl.d.ts": [
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/react-intl/src/types.d.ts": [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../node_modules/react-intl/src/utils.d.ts": [
+        "../node_modules/@types/react/index.d.ts",
+        "../node_modules/intl-messageformat/index.d.ts",
+        "../node_modules/react-intl/src/types.d.ts"
+      ],
+      "../node_modules/styled-normalize/index.d.ts": [
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/filleffectlink.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/components/flexboxgroup.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/components/flexboxlist.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/components/flexboxlistitem.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/components/numberblock.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/components/root/footer.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/components/root/globalstyle.tsx": [
+        "../node_modules/@types/styled-components/index.d.ts"
+      ],
+      "../src/components/root/header.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/components/root/pageroot.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/components/sourcecodeviewer.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/fixtures/functions/language.ts"
+      ],
+      "../src/fixtures/functions/constructsourcecode.ts": [
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/fixtures/functions/dataprovider.ts": [
+        "../src/data/flexboxproperties.ts"
+      ],
+      "../src/fixtures/functions/language.ts": [
+        "../src/fixtures/messages.ts"
+      ],
+      "../src/fixtures/functions/reference.ts": [
+        "../src/fixtures/functions/language.ts"
+      ],
+      "../src/pages/contact.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/pages/index.tsx": [
+        "../node_modules/@types/react/index.d.ts",
+        "../src/fixtures/functions/language.ts"
+      ],
+      "../src/pages/privacy.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../src/pages/terms.tsx": [
+        "../node_modules/@types/react/index.d.ts"
+      ],
+      "../types/styled-components.d.ts": [
+        "../node_modules/@types/styled-components/index.d.ts",
+        "../src/fixtures/theme.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "../node_modules/@formatjs/ecma402-abstract/262.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/canonicalizelocalelist.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/canonicalizetimezonename.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/displaynames/canonicalcodefordisplaynames.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/getnumberoption.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/getoption.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/issanctionedsimpleunitidentifier.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/isvalidtimezonename.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/iswellformedcurrencycode.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/iswellformedunitidentifier.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/currencydigits.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/partitionpattern.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/resolvelocale.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/supportedlocales.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts",
+      "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts",
+      "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+      "../node_modules/@formatjs/intl-listformat/index.d.ts",
+      "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts",
+      "../node_modules/@formatjs/intl/index.d.ts",
+      "../node_modules/@formatjs/intl/src/create-intl.d.ts",
+      "../node_modules/@formatjs/intl/src/datetime.d.ts",
+      "../node_modules/@formatjs/intl/src/displayname.d.ts",
+      "../node_modules/@formatjs/intl/src/error.d.ts",
+      "../node_modules/@formatjs/intl/src/list.d.ts",
+      "../node_modules/@formatjs/intl/src/message.d.ts",
+      "../node_modules/@formatjs/intl/src/number.d.ts",
+      "../node_modules/@formatjs/intl/src/plural.d.ts",
+      "../node_modules/@formatjs/intl/src/relativetime.d.ts",
+      "../node_modules/@formatjs/intl/src/types.d.ts",
+      "../node_modules/@formatjs/intl/src/utils.d.ts",
+      "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts",
+      "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
+      "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts",
+      "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts",
+      "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
+      "../node_modules/@fortawesome/react-fontawesome/index.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/constants.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/index.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/decoratorfunction.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/models/index.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts",
+      "../node_modules/@storybook/addon-actions/dist/preview/withactions.d.ts",
+      "../node_modules/@types/hoist-non-react-statics/index.d.ts",
+      "../node_modules/@types/prop-types/index.d.ts",
+      "../node_modules/@types/react-dom/index.d.ts",
+      "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+      "../node_modules/@types/react/global.d.ts",
+      "../node_modules/@types/react/index.d.ts",
+      "../node_modules/@types/styled-components/index.d.ts",
+      "../node_modules/clsx/clsx.d.ts",
+      "../node_modules/copy-to-clipboard/index.d.ts",
+      "../node_modules/csstype/index.d.ts",
+      "../node_modules/intl-messageformat-parser/index.d.ts",
+      "../node_modules/intl-messageformat-parser/src/parser.d.ts",
+      "../node_modules/intl-messageformat-parser/src/types.d.ts",
+      "../node_modules/intl-messageformat/index.d.ts",
+      "../node_modules/intl-messageformat/src/core.d.ts",
+      "../node_modules/intl-messageformat/src/error.d.ts",
+      "../node_modules/intl-messageformat/src/formatters.d.ts",
+      "../node_modules/react-intl/index.d.ts",
+      "../node_modules/react-intl/src/components/createformattedcomponent.d.ts",
+      "../node_modules/react-intl/src/components/injectintl.d.ts",
+      "../node_modules/react-intl/src/components/message.d.ts",
+      "../node_modules/react-intl/src/components/plural.d.ts",
+      "../node_modules/react-intl/src/components/provider.d.ts",
+      "../node_modules/react-intl/src/components/relative.d.ts",
+      "../node_modules/react-intl/src/components/useintl.d.ts",
+      "../node_modules/react-intl/src/types.d.ts",
+      "../node_modules/react-intl/src/utils.d.ts",
+      "../node_modules/styled-normalize/index.d.ts",
+      "../node_modules/typescript/lib/lib.dom.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "../node_modules/typescript/lib/lib.es2016.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.array.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.object.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2019.symbol.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.bigint.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.intl.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.promise.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.string.d.ts",
+      "../node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts",
+      "../node_modules/typescript/lib/lib.es5.d.ts",
+      "../src/components/filleffectlink.tsx",
+      "../src/components/flexboxgroup.tsx",
+      "../src/components/flexboxlist.tsx",
+      "../src/components/flexboxlistitem.tsx",
+      "../src/components/numberblock.tsx",
+      "../src/components/root/footer.tsx",
+      "../src/components/root/globalstyle.tsx",
+      "../src/components/root/header.tsx",
+      "../src/components/root/pageroot.tsx",
+      "../src/components/sourcecodeviewer.tsx",
+      "../src/contact.tsx",
+      "../src/data/flexboxproperties.ts",
+      "../src/fixtures/functions/constructsourcecode.ts",
+      "../src/fixtures/functions/dataprovider.ts",
+      "../src/fixtures/functions/language.ts",
+      "../src/fixtures/functions/managementid.ts",
+      "../src/fixtures/functions/reference.ts",
+      "../src/fixtures/hooks/useclipboard.ts",
+      "../src/fixtures/messages.ts",
+      "../src/fixtures/screen.ts",
+      "../src/fixtures/theme.ts",
+      "../src/index.tsx",
+      "../src/pages/contact.tsx",
+      "../src/pages/index.tsx",
+      "../src/pages/privacy.tsx",
+      "../src/pages/terms.tsx",
+      "../src/privacy.tsx",
+      "../src/terms.tsx",
+      "../stories/components/filleffectlink.stories.tsx",
+      "../stories/components/flexboxgroup.stories.tsx",
+      "../stories/components/flexboxlist.stories.tsx",
+      "../stories/components/flexboxlistitem.stories.tsx",
+      "../stories/components/numberblock.stories.tsx",
+      "../stories/components/root/footer.stories.tsx",
+      "../stories/components/root/header.stories.tsx",
+      "../stories/components/sourcecodeviewer.stories.tsx",
+      "../types/styled-components.d.ts",
+      "../types/styled.d.ts"
+    ],
+    "affectedFilesPendingEmit": [
+      [
+        "../node_modules/@formatjs/ecma402-abstract/262.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizelocalelist.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/canonicalizetimezonename.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/data.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/basicformatmatcher.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/bestfitformatmatcher.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/datetimestyleformat.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetime.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/formatdatetimetoparts.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/initializedatetimeformat.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/partitiondatetimepattern.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/skeleton.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/todatetimeoptions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/datetimeformat/utils.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/displaynames/canonicalcodefordisplaynames.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/getnumberoption.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/getoption.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/issanctionedsimpleunitidentifier.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/isvalidtimezonename.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedcurrencycode.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/iswellformedunitidentifier.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponent.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/computeexponentformagnitude.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/currencydigits.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/format_to_parts.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictoparts.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/formatnumerictostring.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/initializenumberformat.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/partitionnumberpattern.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatdigitoptions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/setnumberformatunitoptions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawfixed.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/numberformat/torawprecision.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/partitionpattern.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/getoperands.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/initializepluralrules.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/pluralrules/resolveplural.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetime.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/formatrelativetimetoparts.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/initializerelativetimeformat.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/makepartslist.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/partitionrelativetimepattern.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/relativetimeformat/singularrelativetimeunit.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/resolvelocale.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/supportedlocales.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/src/utils.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/core.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/date-time.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/displaynames.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/list.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/number.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/plural-rules.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/ecma402-abstract/types/relative-time.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl-displaynames/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl-listformat/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl-relativetimeformat/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/create-intl.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/datetime.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/displayname.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/error.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/list.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/message.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/number.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/plural.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/relativetime.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/types.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@formatjs/intl/src/utils.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/fontawesome-common-types/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/fontawesome-svg-core/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/free-brands-svg-icons/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/free-regular-svg-icons/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/free-solid-svg-icons/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@fortawesome/react-fontawesome/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/constants.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/actiondisplay.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/actionoptions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/actionsfunction.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/actionsmap.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/decoratorfunction.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/handlerfunction.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/models/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/action.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/actions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/configureactions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/decorateaction.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@storybook/addon-actions/dist/preview/withactions.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/hoist-non-react-statics/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/prop-types/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/react-dom/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/react-syntax-highlighter/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/react/global.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/react/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/@types/styled-components/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/clsx/clsx.d.ts",
+        1
+      ],
+      [
+        "../node_modules/copy-to-clipboard/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/csstype/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat-parser/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat-parser/src/parser.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat-parser/src/types.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat/src/core.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat/src/error.d.ts",
+        1
+      ],
+      [
+        "../node_modules/intl-messageformat/src/formatters.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/createformattedcomponent.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/injectintl.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/message.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/plural.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/provider.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/relative.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/components/useintl.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/types.d.ts",
+        1
+      ],
+      [
+        "../node_modules/react-intl/src/utils.d.ts",
+        1
+      ],
+      [
+        "../node_modules/styled-normalize/index.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2015.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2016.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2017.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2018.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2019.d.ts",
+        1
+      ],
+      [
+        "../node_modules/typescript/lib/lib.es2020.d.ts",
+        1
+      ],
+      [
+        "../src/components/filleffectlink.tsx",
+        1
+      ],
+      [
+        "../src/components/flexboxgroup.tsx",
+        1
+      ],
+      [
+        "../src/components/flexboxlist.tsx",
+        1
+      ],
+      [
+        "../src/components/flexboxlistitem.tsx",
+        1
+      ],
+      [
+        "../src/components/numberblock.tsx",
+        1
+      ],
+      [
+        "../src/components/root/footer.tsx",
+        1
+      ],
+      [
+        "../src/components/root/globalstyle.tsx",
+        1
+      ],
+      [
+        "../src/components/root/header.tsx",
+        1
+      ],
+      [
+        "../src/components/root/pageroot.tsx",
+        1
+      ],
+      [
+        "../src/components/sourcecodeviewer.tsx",
+        1
+      ],
+      [
+        "../src/contact.tsx",
+        1
+      ],
+      [
+        "../src/data/flexboxproperties.ts",
+        1
+      ],
+      [
+        "../src/fixtures/functions/constructsourcecode.ts",
+        1
+      ],
+      [
+        "../src/fixtures/functions/dataprovider.ts",
+        1
+      ],
+      [
+        "../src/fixtures/functions/language.ts",
+        1
+      ],
+      [
+        "../src/fixtures/functions/managementid.ts",
+        1
+      ],
+      [
+        "../src/fixtures/functions/reference.ts",
+        1
+      ],
+      [
+        "../src/fixtures/hooks/useclipboard.ts",
+        1
+      ],
+      [
+        "../src/fixtures/messages.ts",
+        1
+      ],
+      [
+        "../src/fixtures/screen.ts",
+        1
+      ],
+      [
+        "../src/fixtures/theme.ts",
+        1
+      ],
+      [
+        "../src/index.tsx",
+        1
+      ],
+      [
+        "../src/pages/contact.tsx",
+        1
+      ],
+      [
+        "../src/pages/index.tsx",
+        1
+      ],
+      [
+        "../src/pages/privacy.tsx",
+        1
+      ],
+      [
+        "../src/pages/terms.tsx",
+        1
+      ],
+      [
+        "../src/privacy.tsx",
+        1
+      ],
+      [
+        "../src/terms.tsx",
+        1
+      ],
+      [
+        "../stories/components/filleffectlink.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/flexboxgroup.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/flexboxlist.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/flexboxlistitem.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/numberblock.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/root/footer.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/root/header.stories.tsx",
+        1
+      ],
+      [
+        "../stories/components/sourcecodeviewer.stories.tsx",
+        1
+      ],
+      [
+        "../types/styled-components.d.ts",
+        1
+      ],
+      [
+        "../types/styled.d.ts",
+        1
+      ]
+    ]
+  },
+  "version": "4.0.3"
+}
