@@ -62,6 +62,7 @@
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true,  /* Disallow inconsistently-cased references to the same file. */
+    "skipLibCheck": true,                      /* Ignore type check in node_modules */
   },
   "include": ["src/**/*", "stories/**/*", "types"],
   "exclude": ["node_modules", "dist"]

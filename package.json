@@ -11,11 +11,12 @@
     "build-storybook": "build-storybook",
     "lint": "eslint ./ --ext js,jsx,ts,tsx --cache",
     "format": "yarn run lint --fix",
+    "type-check": "tsc --noEmit --incremental",
     "deploy": "gh-pages -d dist"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint"
+      "pre-commit": "yarn run lint && yarn run type-check"
     }
   },
   "engines": {
@@ -27,8 +28,6 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.7",
     "clsx": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -49,6 +48,8 @@
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^6.0.21",
     "@types/jest": "^26.0.14",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
     "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
@@ -56,7 +57,6 @@
     "babel-plugin-styled-components": "^1.11.1",
     "copy-webpack-plugin": "^6.0.1",
     "core-js": "^3.6.5",
-    "css-loader": "^4.3.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
@@ -69,7 +69,6 @@
     "prettier": "^2.0.5",
     "react-is": "^16.13.1",
     "react-syntax-highlighter": "^13.5.3",
-    "style-loader": "^1.2.1",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.3",
     "webpack": "^4.43.0",
