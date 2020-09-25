@@ -46,7 +46,6 @@ const StyledComponent: React.FC = styled(Component)`
         color: ${({ theme }) => theme.color.blue900};
         background-color: ${({ theme }) => theme.color.white};
         font-size: 1.5rem;
-        font-weight: 700;
     }
 
     &__linkIcons {

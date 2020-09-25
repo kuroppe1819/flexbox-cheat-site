@@ -46,7 +46,6 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         margin: 0;
         text-align: center;
         font-size: 1.5rem;
-        font-weight: 400;
     }
 
     &__propertyDescription {
@@ -55,7 +54,6 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         padding-top: 0.25rem;
         text-align: center;
         font-size: 0.875rem;
-        font-weight: 400;
         line-height: 2;
     }
 `;
