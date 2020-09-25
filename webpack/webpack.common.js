@@ -33,23 +33,6 @@ module.exports = {
                 use: ['babel-loader'],
                 exclude: /node_modules/,
             },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
-            },
-            // font は CDN から取得してくるのであとで消す
-            {
-                test: /\.ttf$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            fallback: 'file-loader',
-                            name: 'static/fonts/[name].[ext]',
-                        },
-                    },
-                ],
-            },
         ],
     },
     resolve: {
