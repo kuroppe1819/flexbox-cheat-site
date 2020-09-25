@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [14.x]
@@ -23,5 +23,6 @@ jobs:
           yarn install
           yarn lint
           yarn type-check
+          yarn lhci
         env:
           CI: true

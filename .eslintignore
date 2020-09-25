@@ -2,3 +2,4 @@ dist/*
 webpack/*
 static/config/*
 types/*
+lighthouserc.js
