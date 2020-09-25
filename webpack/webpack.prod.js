@@ -4,6 +4,8 @@ const common = require('./webpack.common.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CopyPlugin = require('copy-webpack-plugin');
 
+const path = require('path');
+
 module.exports = (env, argv) => {
     const isAnalyze = argv.analyze === undefined;
     const plugins = [
