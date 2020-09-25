@@ -1,52 +1,15 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import React, { ReactElement } from 'react';
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Index } from './pages/Index';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/esm/languages/hljs/css';
-import '../static/css/style.css';
-import { Footer } from './common/components/Footer';
-import { Header } from './common/components/Header';
-import { TopContainer } from './pages/Top/TopContainer';
-import { Terms } from './pages/Terms/Terms';
-import { PrivacyPolicy } from './pages/PrivacyPolicy/PrivacyPolicy';
-import { Contact } from './pages/Contact/Contact';
-import { ScrollToTop } from './common/util/ScrollToTop';
-import { Normalize } from 'styled-normalize';
+import markdown from 'react-syntax-highlighter/dist/esm/languages/hljs/markdown';
 
-export const Index = (): ReactElement => {
-    return (
-        <Router basename={process.env.PUBLIC_URL}>
-            <Header />
-            <ScrollToTop />
-            <Switch>
-                <Route exact path="/">
-                    <TopContainer />
-                </Route>
-                <Route path="/terms">
-                    <Terms />
-                </Route>
-                <Route path="/privacy">
-                    <PrivacyPolicy />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-            </Switch>
-            <Footer />
-        </Router>
-    );
-};
-
-library.add(fab, fas, far);
+library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faWindowRestore, faCopy);
 SyntaxHighlighter.registerLanguage('css', css);
-ReactDOM.render(
-    <>
-        <Normalize />
-        <Index />
-    </>,
-    document.getElementById('root')
-);
+SyntaxHighlighter.registerLanguage('markdown', markdown);
+ReactDOM.render(<Index />, document.getElementById('root'));

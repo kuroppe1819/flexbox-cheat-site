@@ -1,3 +1,4 @@
 dist/*
 webpack/*
 static/config/*
+types/*

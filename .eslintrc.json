@@ -16,6 +16,11 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -27,6 +32,7 @@
     },
     "plugins": ["react", "@typescript-eslint"],
     "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off",
         "prettier/prettier": "error" //ESLintでPrettierの規則もエラーとして検出する設定
     }
 }
