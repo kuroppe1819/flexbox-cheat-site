@@ -10,10 +10,10 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint ./ --ext js,jsx,ts,tsx --cache",
-    "format": "yarn run lint --fix",
+    "format": "yarn lint --fix",
     "type-check": "tsc --noEmit --incremental",
-    "lhci": "yarn run build --analyze=false && lhci autorun",
-    "deploy": "gh-pages -d dist"
+    "lhci": "yarn build --analyze=false && lhci autorun",
+    "deploy": "yarn build --analyze=false && gh-pages -d dist"
   },
   "husky": {
     "hooks": {
