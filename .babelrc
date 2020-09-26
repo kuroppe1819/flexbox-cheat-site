@@ -1,21 +1,21 @@
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "useBuiltIns": "usage",
-                "corejs": 3
-            }
-        ],
-        ["@babel/preset-typescript"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
     ],
-    "env": {
-        "production": {
-            "presets": ["@babel/preset-react"]
-        },
-        "development": {
-            "presets": [["@babel/preset-react", { "development": true }]],
-            "plugins": ["babel-plugin-styled-components"]
-        }
+    ["@babel/preset-typescript"]
+  ],
+  "env": {
+    "production": {
+      "presets": ["@babel/preset-react"]
+    },
+    "development": {
+      "presets": [["@babel/preset-react", { "development": true }]],
+      "plugins": ["babel-plugin-styled-components"]
     }
+  }
 }

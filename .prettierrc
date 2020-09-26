@@ -1,7 +1,14 @@
 {
-    "printWidth": 120,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "semi": true,
-    "bracketSpacing": true
+  "overrides": [
+    {
+      "files": "*.{js,jsx,ts,tsx}",
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "semi": true,
+        "bracketSpacing": true
+      }
+    }
+  ]
 }
