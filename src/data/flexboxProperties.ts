@@ -555,6 +555,45 @@ export const flexboxProperties: FlexboxProperty[] = [
         ],
     },
     {
+        name: 'gap',
+        hasReference: true,
+        infoList: [
+            {
+                value: '8px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', gap: '8px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: '32px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', 'flex-wrap': 'wrap', gap: '32px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: '4px 80px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', 'flex-wrap': 'wrap', gap: '4px 80px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+        ],
+    },
+    {
         name: 'headers',
         hasReference: false,
         infoList: [
