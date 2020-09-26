@@ -99,8 +99,10 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         width: 8rem;
         height: 6rem;
         margin: 0 auto;
-        padding: 0.5rem;
-        border-width: 1px;
+        padding: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id ? 'calc(0.5rem - 1px)' : '0.5rem'};
+        border-width: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id ? '2px' : '1px'};
         border-style: solid;
         border-color: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
             selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id
