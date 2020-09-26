@@ -161,9 +161,8 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
 
     &__cssViewButton,
     &__htmlViewButton {
-        line-height: 1.375;
+        line-height: 1.65;
         font-size: 1rem;
-        padding-top: 0.25rem;
         outline: none;
         cursor: pointer;
     }
