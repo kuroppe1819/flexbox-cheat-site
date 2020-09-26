@@ -1,11 +1,11 @@
-name: PR Check CI
+name: Push CI
 
 on:
-  pull_request:
+  push:
     branches: [master]
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,11 +20,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup project
         run: yarn install
-      - name: Run test
-        run: |
-          yarn lint
-          yarn type-check
-        env:
-          CI: true
-      - name: Run lighthouse
-        run: yarn lhci
+      - name:
+        run: yarn deploy
