@@ -139,10 +139,12 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         min-height: 7.5rem;
         background-color: ${({ theme }) => theme.color.white};
         border: 1px solid ${({ theme }) => theme.color.gray400};
-        border-top-left-radius: 0.375rem;
+        border-radius: 0.5rem;
         box-shadow: ${({ theme }) => theme.shadow.md};
 
         @media ${deviceMaxWidth.laptop} {
+            border-radius: 0;
+            border-top-left-radius: 0.5rem;
             box-shadow: 0 0 8px ${({ theme }) => theme.color.gray400};
         }
 
@@ -159,9 +161,8 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
 
     &__cssViewButton,
     &__htmlViewButton {
-        line-height: 1.375;
+        line-height: 1.65;
         font-size: 1rem;
-        padding-top: 0.25rem;
         outline: none;
         cursor: pointer;
     }
