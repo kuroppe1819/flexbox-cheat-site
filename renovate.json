@@ -1,0 +1,44 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["npm"],
+  "labels": ["renovate"],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["before 7pm on Friday"],
+  "packageRules": [
+    {
+      "paths": ["+(package.json)"],
+      "packageNames": [
+        "clsx",
+        "styled-components",
+        "styped-normalize",
+        "babel-loader",
+        "gh-pages",
+        "husky",
+        "jest",
+        "ts-jest",
+        "prettier"
+      ],
+      "packagePatterns": [
+        "^@babel",
+        "^@fontawesome",
+        "^@types",
+        "^@storybook",
+        "^@typescript-eslint",
+        "^eslint",
+        "^react"
+      ],
+      "updateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "paths": ["+(package.json)"],
+      "packageNames": [
+        "typescript",
+        "copy-webpack-plugin",
+        "html-webpack-plugin"
+      ],
+      "packagePatterns": ["^webpack"],
+      "enabled": false
+    }
+  ]
+}
