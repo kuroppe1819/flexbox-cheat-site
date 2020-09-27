@@ -632,4 +632,60 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
         ],
     },
+    {
+        name: 'list',
+        hasReference: false,
+        infoList: [
+            {
+                value: 'list1',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex' },
+                    child: { width: '32px', height: '32px' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: { 'flex-grow': '1' },
+                },
+            },
+            {
+                value: 'list2',
+                numberOfNumberBlock: 5,
+                style: {
+                    parent: { display: 'flex', 'justify-content': 'center', 'align-items': 'center', height: '100%' },
+                    child: {
+                        width: '16%',
+                        height: '20%',
+                        'margin-left': '-4px',
+                        'border-radius': '9999px',
+                        'box-shadow': '0 0 0 1px #FFF',
+                    },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: 'list3',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', height: '100%' },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: { width: '32px', height: '32px' },
+                    lastChild: { 'flex-grow': '1' },
+                },
+            },
+            {
+                value: 'list4',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', 'align-items': 'flex-end', height: '100%' },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: { width: '32px', height: '32px' },
+                    lastChild: { 'flex-grow': '1', height: '98%' },
+                },
+            },
+        ],
+    },
 ];

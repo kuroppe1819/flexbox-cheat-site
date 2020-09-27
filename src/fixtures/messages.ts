@@ -13,6 +13,7 @@ export const messages = {
         'flexbox.property.description.flex-basis': '子要素の基本幅の指定',
         'flexbox.property.description.gap': `行や列の間のすき間`,
         'flexbox.property.description.headers': 'ヘッダーの例',
+        'flexbox.property.description.list': 'リストの例',
     },
     en: {},
 };
