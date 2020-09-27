@@ -61,6 +61,11 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        &:after {
+            content: '';
+            width: 194px;
+            height: 0;
+        }
     }
 
     &__flexboxGroup {

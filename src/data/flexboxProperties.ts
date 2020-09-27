@@ -594,7 +594,7 @@ export const flexboxProperties: FlexboxProperty[] = [
         ],
     },
     {
-        name: 'headers',
+        name: 'header',
         hasReference: false,
         infoList: [
             {
