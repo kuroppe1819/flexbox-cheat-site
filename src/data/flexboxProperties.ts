@@ -555,7 +555,46 @@ export const flexboxProperties: FlexboxProperty[] = [
         ],
     },
     {
-        name: 'headers',
+        name: 'gap',
+        hasReference: true,
+        infoList: [
+            {
+                value: '8px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', gap: '8px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: '32px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', 'flex-wrap': 'wrap', gap: '32px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: '4px 80px',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: { display: 'flex', 'flex-wrap': 'wrap', gap: '4px 80px', width: '128px' },
+                    child: { width: '12%', height: '12%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+        ],
+    },
+    {
+        name: 'header',
         hasReference: false,
         infoList: [
             {
@@ -589,6 +628,96 @@ export const flexboxProperties: FlexboxProperty[] = [
                     childFeatured: null,
                     firstChild: null,
                     lastChild: { position: 'absolute', top: '0', right: '0', 'background-color': theme.color.blue700 },
+                },
+            },
+        ],
+    },
+    {
+        name: 'list',
+        hasReference: false,
+        infoList: [
+            {
+                value: 'list1',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex' },
+                    child: { width: '32px', height: '32px' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: { 'flex-grow': '1' },
+                },
+            },
+            {
+                value: 'list2',
+                numberOfNumberBlock: 5,
+                style: {
+                    parent: { display: 'flex', 'justify-content': 'center', 'align-items': 'center', height: '100%' },
+                    child: {
+                        width: '16%',
+                        height: '20%',
+                        'margin-left': '-4px',
+                        'border-radius': '9999px',
+                        'box-shadow': '0 0 0 1px #FFF',
+                    },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+            {
+                value: 'list3',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', height: '100%' },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: { width: '32px', height: '32px' },
+                    lastChild: { 'flex-grow': '1' },
+                },
+            },
+            {
+                value: 'list4',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', 'align-items': 'flex-end', height: '100%' },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: { width: '32px', height: '32px' },
+                    lastChild: { 'flex-grow': '1', height: '98%' },
+                },
+            },
+        ],
+    },
+    {
+        name: 'page',
+        hasReference: false,
+        infoList: [
+            {
+                value: 'page1',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', height: '100%' },
+                    child: { width: '100%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: { 'flex-basis': '30%' },
+                },
+            },
+            {
+                value: 'page2',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: {
+                        display: 'flex',
+                        'flex-direction': 'column',
+                        'justify-content': 'center',
+                        'align-items': 'center',
+                        height: '100%',
+                    },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
                 },
             },
         ],

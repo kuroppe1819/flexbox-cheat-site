@@ -11,7 +11,10 @@ export const messages = {
         'flexbox.property.description.flex-grow': '子要素の伸びる率',
         'flexbox.property.description.flex-shrink': '子要素の縮む比率',
         'flexbox.property.description.flex-basis': '子要素の基本幅の指定',
-        'flexbox.property.description.headers': 'ヘッダーの例',
+        'flexbox.property.description.gap': `行や列の間のすき間`,
+        'flexbox.property.description.header': 'ヘッダーの例',
+        'flexbox.property.description.list': 'リストの例',
+        'flexbox.property.description.page': 'ページレイアウトの例',
     },
     en: {},
 };
