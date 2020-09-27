@@ -688,4 +688,38 @@ export const flexboxProperties: FlexboxProperty[] = [
             },
         ],
     },
+    {
+        name: 'page',
+        hasReference: false,
+        infoList: [
+            {
+                value: 'page1',
+                numberOfNumberBlock: 2,
+                style: {
+                    parent: { display: 'flex', height: '100%' },
+                    child: { width: '100%' },
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: { 'flex-basis': '30%' },
+                },
+            },
+            {
+                value: 'page2',
+                numberOfNumberBlock: 4,
+                style: {
+                    parent: {
+                        display: 'flex',
+                        'flex-direction': 'column',
+                        'justify-content': 'center',
+                        'align-items': 'center',
+                        height: '100%',
+                    },
+                    child: null,
+                    childFeatured: null,
+                    firstChild: null,
+                    lastChild: null,
+                },
+            },
+        ],
+    },
 ];

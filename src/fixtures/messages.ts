@@ -14,6 +14,7 @@ export const messages = {
         'flexbox.property.description.gap': `行や列の間のすき間`,
         'flexbox.property.description.header': 'ヘッダーの例',
         'flexbox.property.description.list': 'リストの例',
+        'flexbox.property.description.page': 'ページレイアウトの例',
     },
     en: {},
 };
