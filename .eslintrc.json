@@ -33,6 +33,7 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "prettier/prettier": "error" //ESLintでPrettierの規則もエラーとして検出する設定
+    "prettier/prettier": "error", //ESLintでPrettierの規則もエラーとして検出する設定
+    "react/prop-types": 0
   }
 }
