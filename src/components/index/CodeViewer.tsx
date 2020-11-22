@@ -5,13 +5,13 @@ import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled from 'styled-components';
-import { constructCss, constructHtml } from '../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../fixtures/functions/dataProvider';
-import { Language } from '../fixtures/functions/language';
-import { createReferenceUrl } from '../fixtures/functions/reference';
-import { useClipboard } from '../fixtures/hooks/useClipboard';
-import { deviceMaxWidth } from '../fixtures/screen';
-import { IndexContext } from '../pages/Index';
+import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
+import { Language } from '../../fixtures/functions/language';
+import { createReferenceUrl } from '../../fixtures/functions/reference';
+import { useClipboard } from '../../fixtures/hooks/useClipboard';
+import { deviceMaxWidth } from '../../data/screen';
+import { IndexContext } from '../../pages/Index';
 
 export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 

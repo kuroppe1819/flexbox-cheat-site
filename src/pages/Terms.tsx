@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FillEffectLink } from '../components/FillEffectLink';
+import { FillEffectLink } from '../components/common/link/FillEffectLink';
 import { PageRoot } from '../components/root/PageRoot';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {

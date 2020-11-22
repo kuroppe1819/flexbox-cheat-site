@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { deviceMaxWidth } from '../../fixtures/screen';
+import { deviceMaxWidth } from '../../../data/screen';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {
     const { className } = props;
