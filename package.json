@@ -11,13 +11,13 @@
     "build-storybook": "build-storybook",
     "lint": "eslint ./ --ext js,jsx,ts,tsx --cache",
     "format": "yarn lint --fix",
-    "type-check": "tsc --noEmit --incremental",
+    "type-check": "tsc --noEmit",
     "lhci": "yarn build --analyze=false && lhci autorun",
     "deploy": "yarn build --analyze=false && gh-pages -d dist"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint && yarn run type-check"
+      "pre-commit": "yarn lint && yarn type-check --incremental"
     }
   },
   "engines": {

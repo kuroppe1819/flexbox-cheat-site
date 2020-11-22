@@ -1,4 +1,4 @@
-import { theme } from '../src/fixtures/theme';
+import { theme } from '../src/data/theme';
 
 type Theme = typeof theme;
 

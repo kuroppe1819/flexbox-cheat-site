@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import {
-    StyledComponent as SourceCodeViewer,
+    StyledComponent as CodeViewer,
     VisibleForTesting,
     FilenameExtension,
-} from '../../src/components/SourceCodeViewer';
-import { constructCss } from '../../src/fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../src/fixtures/functions/dataProvider';
-import { Language } from '../../src/fixtures/functions/language';
-import { createReferenceUrl } from '../../src/fixtures/functions/reference';
-import { useClipboard } from '../../src/fixtures/hooks/useClipboard';
+} from '../../../../src/components/index/CodeViewer';
+import { constructCss } from '../../../../src/fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../../../src/fixtures/functions/dataProvider';
+import { Language } from '../../../../src/fixtures/functions/language';
+import { createReferenceUrl } from '../../../../src/fixtures/functions/reference';
+import { useClipboard } from '../../../../src/fixtures/hooks/useClipboard';
 export default {
-    title: 'components/SourceCodeViewer',
+    title: 'components/pages/index/CodeViewer',
 };
 
-const FilenameExtension = VisibleForTesting.FilenameExtension;
 const getSourceCodeOfDisplay = VisibleForTesting.getSourceCodeOfDisplay;
 
 export const Normal = () => {
     const id = 'display_flex';
     const language: Language = 'ja';
     const [open, setOpen] = useState(false);
-    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
+    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(
+        VisibleForTesting.FilenameExtension.CSS
+    );
     const [copied, setCopy] = useClipboard('');
     const [sourceCode, setSourceCode] = useState(constructCss(getFlexboxPropertyInfoById(id).style));
 
@@ -29,7 +30,7 @@ export const Normal = () => {
     }, [filenameExtension]);
 
     return (
-        <SourceCodeViewer
+        <CodeViewer
             id={id}
             language={language}
             reference={createReferenceUrl(id, language)}
@@ -38,8 +39,8 @@ export const Normal = () => {
             sourceCode={sourceCode}
             copySuccess={copied}
             onClickToggleViewerButton={() => setOpen(!open)}
-            onClickCssViewButton={() => setFilenameExtension(FilenameExtension.CSS)}
-            onClickHtmlViewButton={() => setFilenameExtension(FilenameExtension.MARKDOWN)}
+            onClickCssViewButton={() => setFilenameExtension(VisibleForTesting.FilenameExtension.CSS)}
+            onClickHtmlViewButton={() => setFilenameExtension(VisibleForTesting.FilenameExtension.MARKDOWN)}
             onClickCopyButton={setCopy}
         />
     );

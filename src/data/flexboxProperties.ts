@@ -1,4 +1,4 @@
-import { theme } from '../fixtures/theme';
+import { theme } from './theme';
 
 export type FlexboxPropertyStyle = {
     parent: { [key: string]: string } | null;

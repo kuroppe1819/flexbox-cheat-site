@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { FlexboxPropertyStyle } from '../../data/flexboxProperties';
-import { ChildElementType } from './../../components/FlexboxListItem';
+import { ChildElementType } from '../../components/index/flexbox/FlexboxListItem';
 
 const ClassName = {
     PARENT: 'parent',

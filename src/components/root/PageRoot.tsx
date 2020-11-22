@@ -2,9 +2,9 @@ import React, { ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
-import { theme } from '../../fixtures/theme';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { theme } from '../../data/theme';
+import { Header } from '../common/header/Header';
+import { Footer } from '../common/footer/Footer';
 
 type Props = {
     children: ReactNode;
