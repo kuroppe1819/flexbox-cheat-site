@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FillEffectLink } from '../components/common/link/FillEffectLink';
+import { TextLink, TEXT_LINK_VARIANT } from '../components/common/link/TextLink';
 import { PageRoot } from '../components/root/PageRoot';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {
@@ -145,7 +145,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 </p>
                 <p>（2020年5月24日 制定）</p>
                 <div className={`${className}__fillEffectButton`}>
-                    <FillEffectLink text="トップへ戻る" href={process.env.ROOT_PATH}></FillEffectLink>
+                    <TextLink text={'トップへ戻る'} variant={TEXT_LINK_VARIANT.SQUARE} href={process.env.ROOT_PATH} />
                 </div>
             </main>
         </PageRoot>

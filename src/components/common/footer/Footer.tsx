@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { TextLink } from '../link/TextLink';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {
     const { className } = props;
@@ -8,15 +9,9 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
         <footer className={`${className}`}>
             <nav className={`${className}__navigation`}>
                 {/* TODO 英語文言に切り替えられるような仕組みを入れる */}
-                <a className={`${className}__terms`} href="./terms.html">
-                    利用規約
-                </a>
-                <a className={`${className}__privacy`} href="./privacy.html">
-                    プライバシーポリシー
-                </a>
-                <a className={`${className}__contact`} href="./contact.html">
-                    お問い合わせ
-                </a>
+                <TextLink text={'利用規約'} href="./terms.html" fontSize={'xs'} styled={textLinkStyle} />
+                <TextLink text={'プライバシーポリシー'} href="./privacy.html" fontSize={'xs'} styled={textLinkStyle} />
+                <TextLink text={'お問い合わせ'} href="./contact.html" fontSize={'xs'} styled={textLinkStyle} />
             </nav>
             <p className={`${className}__copyright`}>
                 <small>&copy;2020 Flexbox Cheat Site</small>
@@ -24,6 +19,10 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
         </footer>
     );
 };
+
+const textLinkStyle = css`
+    margin: 0 1rem;
+`;
 
 const StyledComponent: React.FC = styled(Component)`
     &__navigation {
