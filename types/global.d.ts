@@ -6,3 +6,5 @@ declare namespace NodeJS {
         readonly ROOT_PATH: string;
     }
 }
+
+type TypeOfValues<T> = T[keyof T];
