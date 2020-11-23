@@ -1,4 +1,6 @@
 import React, { AriaAttributes } from 'react';
+import styled from 'styled-components';
+import 'focus-visible';
 
 export type ButtonProps = {
     className: string;
@@ -19,4 +21,12 @@ const Component: React.FC<ButtonProps> = ({
     </button>
 );
 
-export const BaseButton = Component;
+const StyledComponent: React.FC<ButtonProps> = styled(Component)`
+    cursor: pointer;
+
+    &:focus:not(.focus-visible) {
+        outline: none;
+    }
+`;
+
+export const BaseButton = StyledComponent;
