@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
 import styled, { FlattenSimpleInterpolation } from 'styled-components';
-import { FontSize } from '../../../data/theme';
+import { FontSize } from '../../../theme/fontSize';
 import { BaseLink, LinkProps } from './BaseLink';
 
 export type TextLinkVariant = TypeOfValues<typeof TEXT_LINK_VARIANT>;

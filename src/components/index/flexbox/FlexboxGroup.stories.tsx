@@ -1,6 +1,6 @@
 import React from 'react';
-import { FlexboxGroup } from '../../../../../src/components/index/flexbox/FlexboxGroup';
-import { getFlexboxProperty } from '../../../../../src/fixtures/functions/dataProvider';
+import { getFlexboxProperty } from '../../../fixtures/functions/dataProvider';
+import { FlexboxGroup } from './FlexboxGroup';
 
 export default {
     title: 'components/pages/index/flexbox/FlexboxGroup',

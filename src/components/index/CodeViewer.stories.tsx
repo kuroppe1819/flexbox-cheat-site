@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import {
-    StyledComponent as CodeViewer,
-    VisibleForTesting,
-    FilenameExtension,
-} from '../../../../src/components/index/CodeViewer';
-import { constructCss } from '../../../../src/fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../../src/fixtures/functions/dataProvider';
-import { Language } from '../../../../src/fixtures/functions/language';
-import { createReferenceUrl } from '../../../../src/fixtures/functions/reference';
-import { useClipboard } from '../../../../src/fixtures/hooks/useClipboard';
+import { StyledComponent as CodeViewer, VisibleForTesting, FilenameExtension } from './CodeViewer';
+import { constructCss } from '../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
+import { Language } from '../../fixtures/functions/language';
+import { createReferenceUrl } from '../../fixtures/functions/reference';
+import { useClipboard } from '../../fixtures/hooks/useClipboard';
 export default {
     title: 'components/pages/index/CodeViewer',
 };

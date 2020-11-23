@@ -1,6 +1,6 @@
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
-import { IconLink, IconLinkProps } from '../../../../src/components/common/link/IconLink';
+import { IconLink, IconLinkProps } from './IconLink';
 
 export default {
     title: 'components/common/link/IconLink',
