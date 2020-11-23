@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { StyledComponent as CodeViewer, VisibleForTesting, FilenameExtension } from './CodeViewer';
 import { constructCss } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
 import { Language } from '../../fixtures/functions/language';
 import { createReferenceUrl } from '../../fixtures/functions/reference';
 import { useClipboard } from '../../fixtures/hooks/useClipboard';
+import {
+    FilenameExtension,
+    FILENAME_EXTENSION,
+    getSourceCodeOfDisplay,
+    StyledComponent as CodeViewer,
+} from './CodeViewer';
 export default {
     title: 'components/pages/index/CodeViewer',
 };
-
-const getSourceCodeOfDisplay = VisibleForTesting.getSourceCodeOfDisplay;
 
 export const Normal = () => {
     const id = 'display_flex';
     const language: Language = 'ja';
     const [open, setOpen] = useState(false);
-    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(
-        VisibleForTesting.FilenameExtension.CSS
-    );
+    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FILENAME_EXTENSION.CSS);
     const [copied, setCopy] = useClipboard('');
     const [sourceCode, setSourceCode] = useState(constructCss(getFlexboxPropertyInfoById(id).style));
 
@@ -35,8 +36,8 @@ export const Normal = () => {
             sourceCode={sourceCode}
             copySuccess={copied}
             onClickToggleViewerButton={() => setOpen(!open)}
-            onClickCssViewButton={() => setFilenameExtension(VisibleForTesting.FilenameExtension.CSS)}
-            onClickHtmlViewButton={() => setFilenameExtension(VisibleForTesting.FilenameExtension.MARKDOWN)}
+            onClickCssViewButton={() => setFilenameExtension(FILENAME_EXTENSION.CSS)}
+            onClickHtmlViewButton={() => setFilenameExtension(FILENAME_EXTENSION.MARKDOWN)}
             onClickCopyButton={setCopy}
         />
     );

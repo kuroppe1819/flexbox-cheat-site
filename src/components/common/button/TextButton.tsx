@@ -16,12 +16,12 @@ export type TextButtonProps = {
     color?: TextButtonColor;
     fontSize?: FontSize;
     styled?: FlattenSimpleInterpolation;
-} & ButtonProps;
+} & Omit<ButtonProps, 'className'>;
 
 const Component: React.FC<TextButtonProps & StyledProps> = ({
     className,
     text,
-    color,
+    color = TEXT_BUTTON_COLOR.PRIMARY,
     type = 'button',
     title,
     disabled,
