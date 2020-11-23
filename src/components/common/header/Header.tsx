@@ -1,7 +1,7 @@
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { deviceMaxWidth } from '../../../data/screen';
+import { deviceMaxWidth } from '../../../data/deviceSize';
 import { IconLink } from '../link/IconLink';
 
 const Component: React.FC<StyledProps> = (props: StyledProps) => {

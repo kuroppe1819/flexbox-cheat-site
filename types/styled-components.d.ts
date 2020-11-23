@@ -1,4 +1,4 @@
-import { theme } from '../src/data/theme';
+import { theme } from '../src/theme/theme';
 
 type Theme = typeof theme;
 

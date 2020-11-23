@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled, { css } from 'styled-components';
-import { deviceMaxWidth } from '../../data/screen';
+import { deviceMaxWidth } from '../../data/deviceSize';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
 import { Language } from '../../fixtures/functions/language';

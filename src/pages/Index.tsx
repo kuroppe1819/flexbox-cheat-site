@@ -8,7 +8,7 @@ import { FlexboxProperty } from '../data/flexboxProperties';
 import { messages } from '../data/messages';
 import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
 import { Language } from '../fixtures/functions/language';
-import { deviceMaxWidth } from '../data/screen';
+import { deviceMaxWidth } from '../data/deviceSize';
 
 type Props = {
     isOpenSourceCodeViewer: boolean;
