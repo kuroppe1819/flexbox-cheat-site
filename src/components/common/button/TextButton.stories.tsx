@@ -2,7 +2,7 @@ import React from 'react';
 import { TextButton, TextButtonProps, TEXT_BUTTON_COLOR } from './TextButton';
 
 export default {
-    title: 'components/common/link/TextButton',
+    title: 'components/common/button/TextButton',
     argTypes: {
         text: { control: 'text' },
         color: { control: { type: 'inline-radio', options: [TEXT_BUTTON_COLOR.PRIMARY, TEXT_BUTTON_COLOR.SECONDARY] } },

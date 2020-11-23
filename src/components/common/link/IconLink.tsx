@@ -10,7 +10,7 @@ export type IconLinkProps = {
     icon: IconProp;
     iconSize: SizeProp;
     styled?: FlattenSimpleInterpolation;
-} & Omit<LinkProps, 'className'>;
+} & Omit<LinkProps, 'className' | 'title'>;
 
 const Component: React.FC<IconLinkProps & StyledProps> = ({
     className,

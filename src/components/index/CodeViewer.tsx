@@ -129,6 +129,7 @@ const iconLinkStyle = css`
 `;
 
 const textButtonStyle = css`
+    width: 3.7rem;
     line-height: 1.65;
 `;
 
