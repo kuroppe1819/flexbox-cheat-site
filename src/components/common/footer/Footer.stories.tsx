@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '../../../src/components/common/footer/Footer';
+import { Footer } from './Footer';
 
 export default {
     title: 'components/common/Footer',

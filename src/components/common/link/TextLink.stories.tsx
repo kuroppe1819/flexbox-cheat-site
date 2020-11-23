@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextLink, TextLinkProps, TEXT_LINK_VARIANT } from '../../../../src/components/common/link/TextLink';
+import { TextLink, TextLinkProps, TEXT_LINK_VARIANT } from './TextLink';
 
 export default {
     title: 'components/common/link/TextLink',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumberBlock } from '../../../../../src/components/index/flexbox/NumberBlock';
+import { NumberBlock } from './NumberBlock';
 
 export default {
     title: 'components/pages/index/flexbox/NumberBlock',
