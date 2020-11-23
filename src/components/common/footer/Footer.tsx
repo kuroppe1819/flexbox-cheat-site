@@ -30,20 +30,6 @@ const StyledComponent: React.FC = styled(Component)`
         justify-content: center;
     }
 
-    &__terms,
-    &__privacy,
-    &__contact {
-        margin: 0 1rem;
-        font-size: 0.75rem;
-        text-decoration: none;
-        color: ${({ theme }) => theme.color.blue900};
-        cursor: pointer;
-
-        &:hover {
-            color: ${({ theme }) => theme.color.blue400};
-        }
-    }
-
     &__copyright {
         text-align: center;
     }

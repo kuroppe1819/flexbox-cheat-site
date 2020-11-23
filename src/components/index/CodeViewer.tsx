@@ -1,17 +1,17 @@
-import { faWindowRestore } from '@fortawesome/free-regular-svg-icons';
-import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleLeft, faAngleDoubleRight, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { deviceMaxWidth } from '../../data/screen';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
 import { Language } from '../../fixtures/functions/language';
 import { createReferenceUrl } from '../../fixtures/functions/reference';
 import { useClipboard } from '../../fixtures/hooks/useClipboard';
-import { deviceMaxWidth } from '../../data/screen';
 import { IndexContext } from '../../pages/Index';
+import { IconLink } from '../common/link/IconLink';
 
 export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
 
@@ -81,14 +81,14 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                         HTML
                     </button>
                     {reference && (
-                        <a
-                            className={`${className}__externalLink`}
-                            href={reference}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <FontAwesomeIcon icon={faWindowRestore} size="lg" />
-                        </a>
+                        <IconLink
+                            assistiveText={'MDNへのリンク'}
+                            url={reference}
+                            icon={faBook}
+                            iconSize="lg"
+                            external
+                            styled={iconLinkStyle}
+                        />
                     )}
                     <button className={`${className}__clipboardCopyButton`} onClick={onClickCopyButton}>
                         <FontAwesomeIcon icon={faCopy} size="lg" />
@@ -108,6 +108,10 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         </div>
     );
 };
+
+const iconLinkStyle = css`
+    margin-left: 0.75rem;
+`;
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
@@ -197,17 +201,6 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
                 props.filenameExtension === FilenameExtension.MARKDOWN
                     ? props.theme.color.blue400
                     : props.theme.color.gray400};
-    }
-
-    &__externalLink {
-        display: inline-block;
-        margin-left: 0.75rem;
-        color: ${({ theme }) => theme.color.gray700};
-        cursor: pointer;
-
-        &:hover {
-            color: ${({ theme }) => theme.color.blue400};
-        }
     }
 
     &__clipboardCopyButton {

@@ -6,7 +6,7 @@ export default {
     argTypes: {
         text: { control: 'text' },
         fontSize: { control: { type: 'inline-radio', options: ['xs', 'sm', 'base', 'lg', 'xl', '2xl'] } },
-        href: { control: 'text' },
+        url: { control: 'text' },
         external: { control: 'boolean' },
     },
 };
@@ -16,7 +16,7 @@ Normal.args = {
     text: 'Normal',
     fontSize: 'base',
     variant: TEXT_LINK_VARIANT.NORMAL,
-    href: 'https://google.com',
+    url: 'https://google.com',
     external: true,
 };
 
@@ -25,6 +25,6 @@ Square.args = {
     text: 'Square',
     fontSize: 'base',
     variant: TEXT_LINK_VARIANT.SQUARE,
-    href: 'https://google.com',
+    url: 'https://google.com',
     external: true,
 };
