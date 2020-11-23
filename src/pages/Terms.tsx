@@ -145,7 +145,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 </p>
                 <p>（2020年5月24日 制定）</p>
                 <div className={`${className}__fillEffectButton`}>
-                    <TextLink text={'トップへ戻る'} variant={TEXT_LINK_VARIANT.SQUARE} href={process.env.ROOT_PATH} />
+                    <TextLink text={'トップへ戻る'} url={process.env.ROOT_PATH} variant={TEXT_LINK_VARIANT.SQUARE} />
                 </div>
             </main>
         </PageRoot>

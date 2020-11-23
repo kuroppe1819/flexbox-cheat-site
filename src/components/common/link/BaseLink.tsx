@@ -2,17 +2,19 @@ import React, { AriaAttributes } from 'react';
 
 export type LinkProps = {
     className: string;
+    url: string;
     external?: boolean;
-} & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'rel' | 'target'> &
+} & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'rel' | 'target' | 'href'> &
     AriaAttributes;
 
-const Component: React.FC<LinkProps> = ({ className, children, href, title, external = false }) => (
+const Component: React.FC<LinkProps> = ({ className, children, url, title, external = false, ...others }) => (
     <a
         className={className}
-        href={href}
+        href={url}
         title={title}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
+        {...others}
     >
         {children}
     </a>

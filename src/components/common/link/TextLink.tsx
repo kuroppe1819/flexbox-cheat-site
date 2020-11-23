@@ -22,8 +22,9 @@ const Component: React.FC<TextLinkProps & StyledProps> = ({
     className,
     text,
     variant = TEXT_LINK_VARIANT.NORMAL,
-    href,
+    url,
     external,
+    ...others
 }) => (
     <BaseLink
         className={clsx(
@@ -31,8 +32,9 @@ const Component: React.FC<TextLinkProps & StyledProps> = ({
             TEXT_LINK_VARIANT.NORMAL === variant && `${className}__${TEXT_LINK_VARIANT.NORMAL}`,
             TEXT_LINK_VARIANT.SQUARE === variant && `${className}__${TEXT_LINK_VARIANT.SQUARE}`
         )}
-        href={href}
+        url={url}
         external={external}
+        {...others}
     >
         {text}
     </BaseLink>
