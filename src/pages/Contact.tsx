@@ -18,7 +18,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                 </p>
                 <p>サービスの改善についてのご意見、ご要望をお聞かせください！</p>
                 <p>応援コメントもお待ちしております！</p>
-                <div className={`${className}__fillEffectButton`}>
+                <div className={`${className}__backToTopLink`}>
                     <TextLink text={'トップへ戻る'} url={process.env.ROOT_PATH} variant={TEXT_LINK_VARIANT.SQUARE} />
                 </div>
             </main>
@@ -31,7 +31,7 @@ const StyledComponent: React.FC = styled(Component)`
     margin: 4rem auto;
     padding: 0 2.5rem;
 
-    &__fillEffectButton {
+    &__backToTopLink {
         margin: 4rem 0;
         text-align: center;
     }
