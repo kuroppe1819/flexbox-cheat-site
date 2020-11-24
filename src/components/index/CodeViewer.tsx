@@ -1,9 +1,8 @@
 import { faAngleDoubleLeft, faAngleDoubleRight, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme, ThemeContext } from 'styled-components';
 import { deviceMaxWidth } from '../../data/deviceSize';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
@@ -11,11 +10,13 @@ import { Language } from '../../fixtures/functions/language';
 import { createReferenceUrl } from '../../fixtures/functions/reference';
 import { useClipboard } from '../../fixtures/hooks/useClipboard';
 import { IndexContext } from '../../pages/Index';
+import { IconButton } from '../common/button/IconButton';
+import { TextButton, TEXT_BUTTON_COLOR } from '../common/button/TextButton';
 import { IconLink } from '../common/link/IconLink';
 
-export type FilenameExtension = typeof FilenameExtension[keyof typeof FilenameExtension];
+export type FilenameExtension = typeof FILENAME_EXTENSION[keyof typeof FILENAME_EXTENSION];
 
-const FilenameExtension = {
+export const FILENAME_EXTENSION = {
     CSS: 'css',
     MARKDOWN: 'markdown',
 } as const;
@@ -34,65 +35,94 @@ type Props = {
     onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenameExtension: FilenameExtension) => {
+export const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenameExtension: FilenameExtension) => {
     if (flexboxPropertyId === null) {
         return '';
     }
 
     const info = getFlexboxPropertyInfoById(flexboxPropertyId);
-    if (filenameExtension === FilenameExtension.CSS) {
+    if (filenameExtension === FILENAME_EXTENSION.CSS) {
         return constructCss(info.style);
-    } else if (filenameExtension === FilenameExtension.MARKDOWN) {
+    } else if (filenameExtension === FILENAME_EXTENSION.MARKDOWN) {
         return constructHtml(info.numberOfNumberBlock, info.style);
     } else {
         throw new Error('You specified filename extension is not supported.');
     }
 };
 
-const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const {
-        className,
-        reference,
-        open,
-        filenameExtension,
-        sourceCode,
-        copySuccess,
-        onClickToggleViewerButton,
-        onClickCssViewButton,
-        onClickHtmlViewButton,
-        onClickCopyButton,
-    } = props;
+const Component: React.FC<Props & StyledProps> = ({
+    className,
+    reference,
+    open,
+    filenameExtension,
+    sourceCode,
+    copySuccess,
+    onClickToggleViewerButton,
+    onClickCssViewButton,
+    onClickHtmlViewButton,
+    onClickCopyButton,
+}) => {
+    const theme = useContext(ThemeContext);
 
     return (
         <div className={`${className}`}>
-            <button className={`${className}__toggleViewerButton`} onClick={onClickToggleViewerButton}>
-                {open ? (
-                    <FontAwesomeIcon className={`${className}__arrowIcon`} icon={faAngleDoubleRight} size="1x" />
-                ) : (
-                    <FontAwesomeIcon className={`${className}__arrowIcon`} icon={faAngleDoubleLeft} size="1x" />
-                )}
-            </button>
+            {open ? (
+                <IconButton
+                    assistiveText={'ソースコードを非表示にする'}
+                    icon={faAngleDoubleRight}
+                    iconSize={'1x'}
+                    styled={makeToggleViewerButtonStyle(theme)}
+                    onClick={onClickToggleViewerButton}
+                />
+            ) : (
+                <IconButton
+                    assistiveText={'ソースコードを表示する'}
+                    icon={faAngleDoubleLeft}
+                    iconSize={'1x'}
+                    styled={makeToggleViewerButtonStyle(theme)}
+                    onClick={onClickToggleViewerButton}
+                />
+            )}
             <div className={`${className}__sourceCodeView`}>
                 <div className={`${className}__header`} role="header">
-                    <button className={`${className}__cssViewButton`} onClick={onClickCssViewButton}>
-                        CSS
-                    </button>
-                    <button className={`${className}__htmlViewButton`} onClick={onClickHtmlViewButton}>
-                        HTML
-                    </button>
+                    <TextButton
+                        text={'CSS'}
+                        color={
+                            filenameExtension === FILENAME_EXTENSION.CSS
+                                ? TEXT_BUTTON_COLOR.PRIMARY
+                                : TEXT_BUTTON_COLOR.SECONDARY
+                        }
+                        styled={cssViewButtonStyle}
+                        onClick={onClickCssViewButton}
+                    />
+                    <TextButton
+                        text={'HTML'}
+                        color={
+                            filenameExtension === FILENAME_EXTENSION.MARKDOWN
+                                ? TEXT_BUTTON_COLOR.PRIMARY
+                                : TEXT_BUTTON_COLOR.SECONDARY
+                        }
+                        styled={htmlViewButtonStyle}
+                        onClick={onClickHtmlViewButton}
+                    />
                     {reference && (
                         <IconLink
-                            assistiveText={'MDNへのリンク'}
+                            assistiveText={'MDNのドキュメントを開く'}
                             url={reference}
                             icon={faBook}
                             iconSize="lg"
                             external
-                            styled={iconLinkStyle}
+                            styled={makeMdnLinkStyle(theme)}
                         />
                     )}
-                    <button className={`${className}__clipboardCopyButton`} onClick={onClickCopyButton}>
-                        <FontAwesomeIcon icon={faCopy} size="lg" />
-                    </button>
+                    <IconButton
+                        assistiveText={'ソースコードをコピーする'}
+                        icon={faCopy}
+                        iconSize={'lg'}
+                        styled={makeCopyButton(theme)}
+                        onClick={onClickCopyButton}
+                    />
+
                     {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                 </div>
                 <div className={`${className}__syntaxHighlighterWrapper`}>
@@ -109,32 +139,62 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const iconLinkStyle = css`
+const makeMdnLinkStyle = (theme: DefaultTheme) => css`
     margin-left: 0.75rem;
+    color: ${theme.color.gray700};
+
+    &:hover {
+        color: ${theme.color.blue400};
+    }
+`;
+
+const textButtonBaseStyle = css`
+    width: 3.7rem;
+    line-height: 1.65;
+`;
+
+const cssViewButtonStyle = css`
+    ${textButtonBaseStyle}
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+`;
+
+const htmlViewButtonStyle = css`
+    ${textButtonBaseStyle}
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+`;
+
+const makeToggleViewerButtonStyle = (theme: DefaultTheme) => css`
+    display: none;
+
+    @media ${deviceMaxWidth.laptop} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background-color: ${theme.color.gray400};
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        box-shadow: 0 0 4px ${theme.color.gray400};
+    }
+`;
+
+const makeCopyButton = (theme: DefaultTheme) => css`
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+    color: ${theme.color.gray700};
+    background-color: ${theme.color.white};
+
+    &:hover {
+        color: ${theme.color.blue400};
+    }
 `;
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
     align-items: flex-end;
-
-    &__toggleViewerButton {
-        display: none;
-
-        @media ${deviceMaxWidth.laptop} {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 3rem;
-            height: 3rem;
-            background-color: ${({ theme }) => theme.color.gray400};
-            border: none;
-            border-top-left-radius: 0.375rem;
-            border-bottom-left-radius: 0.375rem;
-            box-shadow: 0 0 4px ${({ theme }) => theme.color.gray400};
-            outline: none;
-            cursor: pointer;
-        }
-    }
 
     &__sourceCodeView {
         display: inline-block;
@@ -161,60 +221,6 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         display: flex;
         align-items: center;
         margin: 0.75rem;
-    }
-
-    &__cssViewButton,
-    &__htmlViewButton {
-        line-height: 1.65;
-        font-size: 1rem;
-        outline: none;
-        cursor: pointer;
-    }
-
-    &__cssViewButton {
-        border-top-left-radius: 0.375rem;
-        border-bottom-left-radius: 0.375rem;
-        color: ${(props) =>
-            props.filenameExtension === FilenameExtension.CSS ? props.theme.color.blue100 : props.theme.color.blue900};
-        background-color: ${(props) =>
-            props.filenameExtension === FilenameExtension.CSS ? props.theme.color.blue400 : props.theme.color.white};
-        border: 1px solid
-            ${(props) =>
-                props.filenameExtension === FilenameExtension.CSS
-                    ? props.theme.color.blue400
-                    : props.theme.color.gray400};
-    }
-
-    &__htmlViewButton {
-        border-top-right-radius: 0.375rem;
-        border-bottom-right-radius: 0.375rem;
-        color: ${(props) =>
-            props.filenameExtension === FilenameExtension.MARKDOWN
-                ? props.theme.color.blue100
-                : props.theme.color.blue900};
-        background-color: ${(props) =>
-            props.filenameExtension === FilenameExtension.MARKDOWN
-                ? props.theme.color.blue400
-                : props.theme.color.white};
-        border: 1px solid
-            ${(props) =>
-                props.filenameExtension === FilenameExtension.MARKDOWN
-                    ? props.theme.color.blue400
-                    : props.theme.color.gray400};
-    }
-
-    &__clipboardCopyButton {
-        margin-left: 0.5rem;
-        padding: 0.25rem;
-        color: ${({ theme }) => theme.color.gray700};
-        background-color: ${({ theme }) => theme.color.white};
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-            color: ${({ theme }) => theme.color.blue400};
-        }
     }
 
     &__feedbackCopiedText {
@@ -245,13 +251,13 @@ const Container: React.FC = () => {
     const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
         IndexContext
     );
-    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FilenameExtension.CSS);
+    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FILENAME_EXTENSION.CSS);
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
     const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, filenameExtension);
     const [copied, setCopy] = useClipboard(sourceCode);
     const handleClickToggleViewerButton = () => setOpenSourceCodeViewer((open) => !open);
-    const handleClickCssViewButton = () => setFilenameExtension(FilenameExtension.CSS);
-    const handleClickHtmlViewButton = () => setFilenameExtension(FilenameExtension.MARKDOWN);
+    const handleClickCssViewButton = () => setFilenameExtension(FILENAME_EXTENSION.CSS);
+    const handleClickHtmlViewButton = () => setFilenameExtension(FILENAME_EXTENSION.MARKDOWN);
     const handleClickCopyButton = () => setCopy();
 
     return (
@@ -272,8 +278,3 @@ const Container: React.FC = () => {
 };
 
 export const SourceCodeViewer = Container;
-
-export const VisibleForTesting = {
-    FilenameExtension,
-    getSourceCodeOfDisplay,
-};

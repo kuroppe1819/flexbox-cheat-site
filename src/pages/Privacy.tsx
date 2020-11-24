@@ -36,7 +36,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                     本サービスは、個人情報の利用目的に照らしその必要性が失われたときは、個人情報を消去又は廃棄するものとし、当該消去及び廃棄は、外部流失等の危険を防止するために必要かつ適切な方法により、業務の遂行上必要な限りにおいて行います。
                 </p>
             </main>
-            <div className={`${className}__fillEffectButton`}>
+            <div className={`${className}__backToTopLink`}>
                 <TextLink text={'トップへ戻る'} url={process.env.ROOT_PATH} variant={TEXT_LINK_VARIANT.SQUARE} />
             </div>
         </PageRoot>
@@ -48,7 +48,7 @@ const StyledComponent: React.FC = styled(Component)`
     margin: 4rem auto;
     padding: 0 2.5rem;
 
-    &__fillEffectButton {
+    &__backToTopLink {
         margin: 4rem 0;
         text-align: center;
     }

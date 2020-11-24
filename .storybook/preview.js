@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import { ThemeProvider } from 'styled-components';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from '../src/components/root/GlobalStyle';
-import { theme } from '../src/data/theme';
+import { theme } from '../src/themes/theme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleLeft, faAngleDoubleRight, faCopy, faBook } from '@fortawesome/free-solid-svg-icons';
