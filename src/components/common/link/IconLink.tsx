@@ -31,12 +31,6 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
 
 const StyledComponent: React.FC<IconLinkProps> = styled(Component)`
     display: inline-block;
-    color: ${({ theme }) => theme.color.blue900};
-
-    &:hover {
-        color: ${({ theme }) => theme.color.blue400};
-    }
-
     ${({ styled }) => styled};
 `;
 

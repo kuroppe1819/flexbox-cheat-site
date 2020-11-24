@@ -1,11 +1,11 @@
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { css, DefaultTheme, ThemeContext } from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
 import { IconLink } from '../link/IconLink';
 
-const Component: React.FC<StyledProps> = (props: StyledProps) => {
-    const { className } = props;
+const Component: React.FC<StyledProps> = ({ className }) => {
+    const theme = useContext(ThemeContext);
 
     return (
         <header className={`${className}`}>
@@ -17,7 +17,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                     icon={faTwitter}
                     iconSize={'2x'}
                     external
-                    styled={iconLinkStyle}
+                    styled={makeIconLinkBaseStyle(theme)}
                 />
                 <IconLink
                     assistiveText={'GitHubへのリンク'}
@@ -25,24 +25,30 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
                     icon={faGithub}
                     iconSize={'2x'}
                     external
-                    styled={iconLinkStyle}
+                    styled={makeIconLinkBaseStyle(theme)}
                 />
             </div>
         </header>
     );
 };
 
-const iconLinkStyle = css`
-    margin-right: 1.25rem;
+const makeIconLinkBaseStyle = (theme: DefaultTheme) =>
+    css`
+        margin-right: 1.25rem;
+        color: ${theme.color.blue900};
 
-    @media ${deviceMaxWidth.mobileL} {
-        margin-right: 0.75rem;
-    }
+        &:hover {
+            color: ${theme.color.blue400};
+        }
 
-    @media ${deviceMaxWidth.mobileM} {
-        display: none;
-    }
-`;
+        @media ${deviceMaxWidth.mobileL} {
+            margin-right: 0.75rem;
+        }
+
+        @media ${deviceMaxWidth.mobileM} {
+            display: none;
+        }
+    `;
 
 const StyledComponent: React.FC = styled(Component)`
     position: relative;

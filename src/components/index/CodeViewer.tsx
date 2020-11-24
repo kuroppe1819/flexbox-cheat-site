@@ -1,9 +1,8 @@
 import { faAngleDoubleLeft, faAngleDoubleRight, faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme, ThemeContext } from 'styled-components';
 import { deviceMaxWidth } from '../../data/deviceSize';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
@@ -11,6 +10,7 @@ import { Language } from '../../fixtures/functions/language';
 import { createReferenceUrl } from '../../fixtures/functions/reference';
 import { useClipboard } from '../../fixtures/hooks/useClipboard';
 import { IndexContext } from '../../pages/Index';
+import { IconButton } from '../common/button/IconButton';
 import { TextButton, TEXT_BUTTON_COLOR } from '../common/button/TextButton';
 import { IconLink } from '../common/link/IconLink';
 
@@ -50,29 +50,39 @@ export const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, filenam
     }
 };
 
-const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const {
-        className,
-        reference,
-        open,
-        filenameExtension,
-        sourceCode,
-        copySuccess,
-        onClickToggleViewerButton,
-        onClickCssViewButton,
-        onClickHtmlViewButton,
-        onClickCopyButton,
-    } = props;
+const Component: React.FC<Props & StyledProps> = ({
+    className,
+    reference,
+    open,
+    filenameExtension,
+    sourceCode,
+    copySuccess,
+    onClickToggleViewerButton,
+    onClickCssViewButton,
+    onClickHtmlViewButton,
+    onClickCopyButton,
+}) => {
+    const theme = useContext(ThemeContext);
 
     return (
         <div className={`${className}`}>
-            <button className={`${className}__toggleViewerButton`} onClick={onClickToggleViewerButton}>
-                {open ? (
-                    <FontAwesomeIcon className={`${className}__arrowIcon`} icon={faAngleDoubleRight} size="1x" />
-                ) : (
-                    <FontAwesomeIcon className={`${className}__arrowIcon`} icon={faAngleDoubleLeft} size="1x" />
-                )}
-            </button>
+            {open ? (
+                <IconButton
+                    assistiveText={'ソースコードを非表示にする'}
+                    icon={faAngleDoubleRight}
+                    iconSize={'1x'}
+                    styled={makeToggleViewerButtonStyle(theme)}
+                    onClick={onClickToggleViewerButton}
+                />
+            ) : (
+                <IconButton
+                    assistiveText={'ソースコードを表示する'}
+                    icon={faAngleDoubleLeft}
+                    iconSize={'1x'}
+                    styled={makeToggleViewerButtonStyle(theme)}
+                    onClick={onClickToggleViewerButton}
+                />
+            )}
             <div className={`${className}__sourceCodeView`}>
                 <div className={`${className}__header`} role="header">
                     <TextButton
@@ -97,17 +107,22 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     />
                     {reference && (
                         <IconLink
-                            assistiveText={'MDNへのリンク'}
+                            assistiveText={'MDNのドキュメントを開く'}
                             url={reference}
                             icon={faBook}
                             iconSize="lg"
                             external
-                            styled={iconLinkStyle}
+                            styled={makeMdnLinkStyle(theme)}
                         />
                     )}
-                    <button className={`${className}__clipboardCopyButton`} onClick={onClickCopyButton}>
-                        <FontAwesomeIcon icon={faCopy} size="lg" />
-                    </button>
+                    <IconButton
+                        assistiveText={'ソースコードをコピーする'}
+                        icon={faCopy}
+                        iconSize={'lg'}
+                        styled={makeCopyButton(theme)}
+                        onClick={onClickCopyButton}
+                    />
+
                     {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                 </div>
                 <div className={`${className}__syntaxHighlighterWrapper`}>
@@ -124,49 +139,62 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
     );
 };
 
-const iconLinkStyle = css`
+const makeMdnLinkStyle = (theme: DefaultTheme) => css`
     margin-left: 0.75rem;
+    color: ${theme.color.gray700};
+
+    &:hover {
+        color: ${theme.color.blue400};
+    }
 `;
 
-const textButtonStyle = css`
+const textButtonBaseStyle = css`
     width: 3.7rem;
     line-height: 1.65;
 `;
 
 const cssViewButtonStyle = css`
-    ${textButtonStyle}
+    ${textButtonBaseStyle}
     border-top-left-radius: 0.375rem;
     border-bottom-left-radius: 0.375rem;
 `;
 
 const htmlViewButtonStyle = css`
-    ${textButtonStyle}
+    ${textButtonBaseStyle}
     border-top-right-radius: 0.375rem;
     border-bottom-right-radius: 0.375rem;
+`;
+
+const makeToggleViewerButtonStyle = (theme: DefaultTheme) => css`
+    display: none;
+
+    @media ${deviceMaxWidth.laptop} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background-color: ${theme.color.gray400};
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        box-shadow: 0 0 4px ${theme.color.gray400};
+    }
+`;
+
+const makeCopyButton = (theme: DefaultTheme) => css`
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+    color: ${theme.color.gray700};
+    background-color: ${theme.color.white};
+
+    &:hover {
+        color: ${theme.color.blue400};
+    }
 `;
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
     align-items: flex-end;
-
-    &__toggleViewerButton {
-        display: none;
-
-        @media ${deviceMaxWidth.laptop} {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 3rem;
-            height: 3rem;
-            background-color: ${({ theme }) => theme.color.gray400};
-            border: none;
-            border-top-left-radius: 0.375rem;
-            border-bottom-left-radius: 0.375rem;
-            box-shadow: 0 0 4px ${({ theme }) => theme.color.gray400};
-            outline: none;
-            cursor: pointer;
-        }
-    }
 
     &__sourceCodeView {
         display: inline-block;
@@ -193,20 +221,6 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         display: flex;
         align-items: center;
         margin: 0.75rem;
-    }
-
-    &__clipboardCopyButton {
-        margin-left: 0.5rem;
-        padding: 0.25rem;
-        color: ${({ theme }) => theme.color.gray700};
-        background-color: ${({ theme }) => theme.color.white};
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-            color: ${({ theme }) => theme.color.blue400};
-        }
     }
 
     &__feedbackCopiedText {
