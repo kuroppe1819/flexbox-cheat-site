@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 type Props = {
     number: number;
-} & AssignClassNameProps;
+} & AppendClassName;
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, assignClassName, number } = props;
+    const { className, appendClassName, number } = props;
     return (
-        <div className={clsx(className, assignClassName)}>
+        <div className={clsx(className, appendClassName)}>
             <span className={`${className}__number`}>{number}</span>
         </div>
     );

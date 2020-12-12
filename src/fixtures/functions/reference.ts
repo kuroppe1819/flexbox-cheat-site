@@ -1,5 +1,5 @@
+import { Language } from '../../components/providers/CustomIntlProvider';
 import { flexboxProperties, FlexboxProperty } from '../../data/flexboxProperties';
-import { Language } from './language';
 import { parseFlexboxPropertyId } from './managementId';
 
 const createUrlForMDN = (language: string, propertyName: string) =>

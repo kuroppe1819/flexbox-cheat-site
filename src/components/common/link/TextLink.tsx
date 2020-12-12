@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import styled, { FlattenSimpleInterpolation } from 'styled-components';
+import styled from 'styled-components';
 import { FontSize } from '../../../themes/fontSize';
 import { BaseLink, LinkProps } from './BaseLink';
 
@@ -15,11 +15,12 @@ export type TextLinkProps = {
     text: string;
     fontSize?: FontSize;
     variant?: TextLinkVariant;
-    styled?: FlattenSimpleInterpolation;
-} & Omit<LinkProps, 'className' | 'title'>;
+} & Omit<LinkProps, 'className' | 'title'> &
+    AppendClassName;
 
 const Component: React.FC<TextLinkProps & StyledProps> = ({
     className,
+    appendClassName,
     text,
     variant = TEXT_LINK_VARIANT.NORMAL,
     url,
@@ -29,6 +30,7 @@ const Component: React.FC<TextLinkProps & StyledProps> = ({
     <BaseLink
         className={clsx(
             className,
+            appendClassName,
             TEXT_LINK_VARIANT.NORMAL === variant && `${className}__${TEXT_LINK_VARIANT.NORMAL}`,
             TEXT_LINK_VARIANT.SQUARE === variant && `${className}__${TEXT_LINK_VARIANT.SQUARE}`
         )}
@@ -65,8 +67,6 @@ const StyledComponent: React.FC<TextLinkProps> = styled(Component)`
             box-shadow: inset ${({ theme }) => theme.color.blue400} 0 0 0 2em;
         }
     }
-
-    ${({ styled }) => styled};
 `;
 
 export const TextLink = StyledComponent;

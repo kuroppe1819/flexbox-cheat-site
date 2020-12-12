@@ -1,19 +1,20 @@
 import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import React from 'react';
-import styled, { FlattenSimpleInterpolation } from 'styled-components';
-import { AssistiveText } from '../assistiveText/AssistiveText';
+import styled from 'styled-components';
 import { BaseLink, LinkProps } from './BaseLink';
 
 export type IconLinkProps = {
     assistiveText: string;
     icon: IconProp;
     iconSize: SizeProp;
-    styled?: FlattenSimpleInterpolation;
-} & Omit<LinkProps, 'className' | 'title'>;
+} & Omit<LinkProps, 'className' | 'title'> &
+    AppendClassName;
 
 const Component: React.FC<IconLinkProps & StyledProps> = ({
     className,
+    appendClassName,
     assistiveText,
     icon,
     iconSize,
@@ -21,17 +22,20 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
     external,
     ...others
 }) => (
-    <BaseLink className={className} url={url} external={external} title={assistiveText} {...others}>
-        <AssistiveText>
-            <span>{assistiveText}</span>
-        </AssistiveText>
-        <FontAwesomeIcon icon={icon} size={iconSize} />
+    <BaseLink
+        className={clsx(className, appendClassName)}
+        url={url}
+        external={external}
+        title={assistiveText}
+        aria-label={assistiveText}
+        {...others}
+    >
+        <FontAwesomeIcon role="img" icon={icon} size={iconSize} />
     </BaseLink>
 );
 
 const StyledComponent: React.FC<IconLinkProps> = styled(Component)`
     display: inline-block;
-    ${({ styled }) => styled};
 `;
 
 export const IconLink = StyledComponent;

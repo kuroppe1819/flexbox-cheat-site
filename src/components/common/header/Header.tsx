@@ -1,54 +1,32 @@
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import React, { useContext } from 'react';
-import styled, { css, DefaultTheme, ThemeContext } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
 import { IconLink } from '../link/IconLink';
 
-const Component: React.FC<StyledProps> = ({ className }) => {
-    const theme = useContext(ThemeContext);
-
-    return (
-        <header className={`${className}`}>
-            <h1 className={`${className}__title`}>Flexbox Cheat Site</h1>
-            <div className={`${className}__linkIcons`} role="group">
-                <IconLink
-                    assistiveText={'Twitterへのリンク'}
-                    url={'https://twitter.com/mys_x101'}
-                    icon={faTwitter}
-                    iconSize={'2x'}
-                    external
-                    styled={makeIconLinkBaseStyle(theme)}
-                />
-                <IconLink
-                    assistiveText={'GitHubへのリンク'}
-                    url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
-                    icon={faGithub}
-                    iconSize={'2x'}
-                    external
-                    styled={makeIconLinkBaseStyle(theme)}
-                />
-            </div>
-        </header>
-    );
-};
-
-const makeIconLinkBaseStyle = (theme: DefaultTheme) =>
-    css`
-        margin-right: 1.25rem;
-        color: ${theme.color.blue900};
-
-        &:hover {
-            color: ${theme.color.blue400};
-        }
-
-        @media ${deviceMaxWidth.mobileL} {
-            margin-right: 0.75rem;
-        }
-
-        @media ${deviceMaxWidth.mobileM} {
-            display: none;
-        }
-    `;
+const Component: React.FC<StyledProps> = ({ className }) => (
+    <header className={`${className}`}>
+        <h1 className={`${className}__title`}>Flexbox Cheat Site</h1>
+        <div className={`${className}__iconLinks`} role="group">
+            <IconLink
+                appendClassName={`${className}__iconLink`}
+                assistiveText={'Twitterへのリンク'}
+                url={'https://twitter.com/mys_x101'}
+                icon={faTwitter}
+                iconSize={'2x'}
+                external
+            />
+            <IconLink
+                appendClassName={`${className}__iconLink`}
+                assistiveText={'GitHubへのリンク'}
+                url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
+                icon={faGithub}
+                iconSize={'2x'}
+                external
+            />
+        </div>
+    </header>
+);
 
 const StyledComponent: React.FC = styled(Component)`
     position: relative;
@@ -66,11 +44,28 @@ const StyledComponent: React.FC = styled(Component)`
         font-size: 1.5rem;
     }
 
-    &__linkIcons {
+    &__iconLinks {
         position: absolute;
         right: 0;
         display: flex;
         align-items: center;
+    }
+
+    &__iconLink {
+        margin-right: 1.25rem;
+        color: ${({ theme }) => theme.color.blue900};
+
+        &:hover {
+            color: ${({ theme }) => theme.color.blue400};
+        }
+
+        @media ${deviceMaxWidth.mobileL} {
+            margin-right: 0.75rem;
+        }
+
+        @media ${deviceMaxWidth.mobileM} {
+            display: none;
+        }
     }
 `;
 
