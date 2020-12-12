@@ -63,7 +63,6 @@ const Component: React.VFC<Props & StyledProps> = ({
                 iconSize={'lg'}
                 onClick={onClickCopyButton}
             />
-
             {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
         </div>
     );

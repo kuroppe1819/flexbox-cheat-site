@@ -37,4 +37,4 @@ const StyledComponent: React.FC<Props> = styled(Component)`
     }
 `;
 
-export const SourceCodeViewer = StyledComponent;
+export const CodeViewerContent = StyledComponent;

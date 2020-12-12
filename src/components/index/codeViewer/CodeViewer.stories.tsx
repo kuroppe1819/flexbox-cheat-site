@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { constructCss } from '../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
 import { Language } from '../../../fixtures/functions/language';
-import { createReferenceUrl } from '../../../fixtures/functions/reference';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import { FileExtension, FILE_EXTENSION, getSourceCodeOfDisplay, StyledComponent as CodeViewer } from './CodeViewer';
 export default {
@@ -23,9 +22,8 @@ export const Normal = () => {
 
     return (
         <CodeViewer
-            id={id}
+            selectedFlexboxPropertyId={id}
             language={language}
-            reference={createReferenceUrl(id, language)}
             open={open}
             fileExtension={fileExtension}
             sourceCode={sourceCode}

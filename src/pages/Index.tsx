@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/index/flexbox/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
-import { SourceCodeViewer } from '../components/index/codeViewer/CodeViewer';
+import { CodeViewer } from '../components/index/codeViewer/CodeViewer';
 import { FlexboxProperty } from '../data/flexboxProperties';
 import { messages } from '../data/messages';
 import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
@@ -30,7 +30,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     ))}
                 </div>
                 <div className={`${className}__sourceCodeViewerWrapper`}>
-                    <SourceCodeViewer />
+                    <CodeViewer />
                 </div>
             </main>
         </PageRoot>
