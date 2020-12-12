@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React from 'react';
 import styled from 'styled-components';
-import { AssistiveText } from '../assistiveText/AssistiveText';
 import { BaseLink, LinkProps } from './BaseLink';
 
 export type IconLinkProps = {
@@ -28,12 +27,10 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
         url={url}
         external={external}
         title={assistiveText}
+        aria-label={assistiveText}
         {...others}
     >
-        <AssistiveText>
-            <span>{assistiveText}</span>
-        </AssistiveText>
-        <FontAwesomeIcon icon={icon} size={iconSize} />
+        <FontAwesomeIcon role="img" icon={icon} size={iconSize} />
     </BaseLink>
 );
 

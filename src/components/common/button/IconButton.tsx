@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React from 'react';
 import styled from 'styled-components';
-import { AssistiveText } from '../assistiveText/AssistiveText';
 import { BaseButton, ButtonProps } from './BaseButton';
 
 export type IconButtonProps = {
@@ -30,12 +29,10 @@ const Component: React.FC<IconButtonProps & StyledProps> = ({
         title={assistiveText}
         disabled={disabled}
         onClick={onClick}
+        aria-label={assistiveText}
         {...others}
     >
-        <AssistiveText>
-            <span>{assistiveText}</span>
-        </AssistiveText>
-        <FontAwesomeIcon icon={icon} size={iconSize} />
+        <FontAwesomeIcon role="img" icon={icon} size={iconSize} />
     </BaseButton>
 );
 
