@@ -1,6 +1,6 @@
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
-import { IconLink, IconLinkProps } from './IconLink';
+import { FontAwesomeIconLink, FontAwesomeIconLinkProps } from './FontAwesomeIconLink';
 
 export default {
     title: 'components/common/link/IconLink',
@@ -17,7 +17,7 @@ export default {
     },
 };
 
-export const Normal = (args: IconLinkProps) => <IconLink {...args} />;
+export const Normal = (args: FontAwesomeIconLinkProps) => <FontAwesomeIconLink {...args} />;
 Normal.args = {
     assistiveText: 'Twitter',
     icon: faTwitter,

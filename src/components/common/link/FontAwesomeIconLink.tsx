@@ -5,14 +5,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { BaseLink, LinkProps } from './BaseLink';
 
-export type IconLinkProps = {
+export type FontAwesomeIconLinkProps = {
     assistiveText: string;
     icon: IconProp;
     iconSize: SizeProp;
 } & Omit<LinkProps, 'className' | 'title'> &
     AppendClassName;
 
-const Component: React.FC<IconLinkProps & StyledProps> = ({
+const Component: React.FC<FontAwesomeIconLinkProps & StyledProps> = ({
     className,
     appendClassName,
     assistiveText,
@@ -34,8 +34,8 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
     </BaseLink>
 );
 
-const StyledComponent: React.FC<IconLinkProps> = styled(Component)`
+const StyledComponent: React.FC<FontAwesomeIconLinkProps> = styled(Component)`
     display: inline-block;
 `;
 
-export const IconLink = StyledComponent;
+export const FontAwesomeIconLink = StyledComponent;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { createReferenceUrl } from '../../../fixtures/functions/reference';
 import { FontAwesomeIconButton } from '../../common/button/FontAwesomeIconButton';
 import { TextButton, TEXT_BUTTON_THEME } from '../../common/button/TextButton';
-import { IconLink } from '../../common/link/IconLink';
+import { FontAwesomeIconLink } from '../../common/link/FontAwesomeIconLink';
 import { Language } from '../../providers/CustomIntlProvider';
 import { FileExtension, FILE_EXTENSION } from './useCodeViewerState';
 
@@ -47,7 +47,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                 onClick={onClickHtmlViewButton}
             />
             {reference && (
-                <IconLink
+                <FontAwesomeIconLink
                     appendClassName={`${className}__mdnLink`}
                     assistiveText={'MDNのドキュメントを開く'}
                     url={reference}

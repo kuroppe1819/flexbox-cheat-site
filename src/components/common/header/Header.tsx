@@ -2,13 +2,13 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { IconLink } from '../link/IconLink';
+import { FontAwesomeIconLink } from '../link/FontAwesomeIconLink';
 
 const Component: React.FC<StyledProps> = ({ className }) => (
     <header className={`${className}`}>
         <h1 className={`${className}__title`}>Flexbox Cheat Site</h1>
         <div className={`${className}__iconLinks`} role="group">
-            <IconLink
+            <FontAwesomeIconLink
                 appendClassName={`${className}__iconLink`}
                 assistiveText={'Twitterへのリンク'}
                 url={'https://twitter.com/mys_x101'}
@@ -16,7 +16,7 @@ const Component: React.FC<StyledProps> = ({ className }) => (
                 iconSize={'2x'}
                 external
             />
-            <IconLink
+            <FontAwesomeIconLink
                 appendClassName={`${className}__iconLink`}
                 assistiveText={'GitHubへのリンク'}
                 url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
