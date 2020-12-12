@@ -106,11 +106,9 @@ export type IndexContextProps = {
     language: Language;
     isOpenSourceCodeViewer: boolean;
     selectedFlexboxPropertyId: string | null;
-    mouseOverFlexboxListItemId: string | null;
     setLanguage: Dispatch<SetStateAction<Language>>;
     setOpenSourceCodeViewer: Dispatch<SetStateAction<boolean>>;
     setFlexboxPropertyId: Dispatch<SetStateAction<string | null>>;
-    setMouseOverFlexboxListItemId: Dispatch<SetStateAction<string | null>>;
 };
 
 export const IndexContext = React.createContext({} as IndexContextProps);
@@ -119,7 +117,6 @@ const Container: React.FC = () => {
     const [language, setLanguage] = useState<Language>('ja');
     const [isOpenSourceCodeViewer, setOpenSourceCodeViewer] = useState(false);
     const [selectedFlexboxPropertyId, setFlexboxPropertyId] = useState<string | null>(null);
-    const [mouseOverFlexboxListItemId, setMouseOverFlexboxListItemId] = useState<string | null>(null);
 
     return (
         <IntlProvider locale={language} messages={messages[language]}>
@@ -128,11 +125,9 @@ const Container: React.FC = () => {
                     language,
                     isOpenSourceCodeViewer,
                     selectedFlexboxPropertyId,
-                    mouseOverFlexboxListItemId,
                     setLanguage,
                     setOpenSourceCodeViewer,
                     setFlexboxPropertyId,
-                    setMouseOverFlexboxListItemId,
                 }}
             >
                 <StyledComponent isOpenSourceCodeViewer={isOpenSourceCodeViewer} />

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
 import { convertObjectToCssNotation } from '../../../fixtures/functions/constructSourceCode';
@@ -8,7 +8,7 @@ import { NumberBlock } from './NumberBlock';
 
 type Props = {
     selectedFlexboxPropertyId: string | null;
-    mouseOverFlexboxListItemId: string | null;
+    mouseOverItemId: string | null;
     onClickItem: React.MouseEventHandler<HTMLDivElement>;
     onMouseEnter: React.MouseEventHandler<HTMLDivElement>;
     onMouseLeave: React.MouseEventHandler<HTMLDivElement>;
@@ -99,13 +99,13 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         width: 8rem;
         height: 6rem;
         margin: 0 auto;
-        padding: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
-            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id ? 'calc(0.5rem - 1px)' : '0.5rem'};
-        border-width: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
-            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id ? '2px' : '1px'};
+        padding: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id ? 'calc(0.5rem - 1px)' : '0.5rem'};
+        border-width: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id ? '2px' : '1px'};
         border-style: solid;
-        border-color: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
-            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id
+        border-color: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id
                 ? ({ theme }) => theme.color.blue500
                 : ({ theme }) => theme.color.gray400};
         text-align: start;
@@ -121,8 +121,8 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         display: inline-block;
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
-        color: ${({ id, selectedFlexboxPropertyId, mouseOverFlexboxListItemId }) =>
-            selectedFlexboxPropertyId === id || mouseOverFlexboxListItemId === id
+        color: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id
                 ? ({ theme }) => theme.color.blue500
                 : ({ theme }) => theme.color.gray400};
         text-align: center;
@@ -159,24 +159,20 @@ type OuterProps = {
 const Container: React.FC<OuterProps> = (props: OuterProps) => {
     const { setOpenSourceCodeViewer } = useContext(IndexContext);
     const { id } = props;
-    const {
-        selectedFlexboxPropertyId,
-        mouseOverFlexboxListItemId,
-        setFlexboxPropertyId,
-        setMouseOverFlexboxListItemId,
-    } = useContext(IndexContext);
+    const { selectedFlexboxPropertyId, setFlexboxPropertyId } = useContext(IndexContext);
+    const [mouseOverItemId, setMouseOverItemId] = useState<string | null>(null);
 
     const handleClickItem = () => {
         setFlexboxPropertyId(id);
         setOpenSourceCodeViewer(true);
     };
-    const handleMouseEnter = () => setMouseOverFlexboxListItemId(id);
-    const handleMouseLeave = () => setMouseOverFlexboxListItemId(null);
+    const handleMouseEnter = () => setMouseOverItemId(id);
+    const handleMouseLeave = () => setMouseOverItemId(null);
 
     return (
         <StyledComponent
             selectedFlexboxPropertyId={selectedFlexboxPropertyId}
-            mouseOverFlexboxListItemId={mouseOverFlexboxListItemId}
+            mouseOverItemId={mouseOverItemId}
             onClickItem={handleClickItem}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
