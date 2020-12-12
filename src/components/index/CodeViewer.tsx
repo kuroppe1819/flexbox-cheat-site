@@ -61,83 +61,75 @@ const Component: React.FC<Props & StyledProps> = ({
     onClickCssViewButton,
     onClickHtmlViewButton,
     onClickCopyButton,
-}) => {
-    const theme = useContext(ThemeContext);
-
-    return (
-        <div className={`${className}`}>
-            {open ? (
-                <IconButton
-                    assistiveText={'ソースコードを非表示にする'}
-                    icon={faAngleDoubleRight}
-                    iconSize={'1x'}
-                    styled={makeToggleViewerButtonStyle(theme)}
-                    onClick={onClickToggleViewerButton}
+}) => (
+    <div className={`${className}`}>
+        {open ? (
+            <IconButton
+                appendClassName={`${className}__toggleViewerButton`}
+                assistiveText={'ソースコードを非表示にする'}
+                icon={faAngleDoubleRight}
+                iconSize={'1x'}
+                onClick={onClickToggleViewerButton}
+            />
+        ) : (
+            <IconButton
+                appendClassName={`${className}__toggleViewerButton`}
+                assistiveText={'ソースコードを表示する'}
+                icon={faAngleDoubleLeft}
+                iconSize={'1x'}
+                onClick={onClickToggleViewerButton}
+            />
+        )}
+        <div className={`${className}__sourceCodeView`}>
+            <div className={`${className}__header`} role="header">
+                <TextButton
+                    text={'CSS'}
+                    color={
+                        filenameExtension === FILENAME_EXTENSION.CSS
+                            ? TEXT_BUTTON_COLOR.PRIMARY
+                            : TEXT_BUTTON_COLOR.SECONDARY
+                    }
+                    styled={cssViewButtonStyle}
+                    onClick={onClickCssViewButton}
                 />
-            ) : (
-                <IconButton
-                    assistiveText={'ソースコードを表示する'}
-                    icon={faAngleDoubleLeft}
-                    iconSize={'1x'}
-                    styled={makeToggleViewerButtonStyle(theme)}
-                    onClick={onClickToggleViewerButton}
+                <TextButton
+                    text={'HTML'}
+                    color={
+                        filenameExtension === FILENAME_EXTENSION.MARKDOWN
+                            ? TEXT_BUTTON_COLOR.PRIMARY
+                            : TEXT_BUTTON_COLOR.SECONDARY
+                    }
+                    styled={htmlViewButtonStyle}
+                    onClick={onClickHtmlViewButton}
                 />
-            )}
-            <div className={`${className}__sourceCodeView`}>
-                <div className={`${className}__header`} role="header">
-                    <TextButton
-                        text={'CSS'}
-                        color={
-                            filenameExtension === FILENAME_EXTENSION.CSS
-                                ? TEXT_BUTTON_COLOR.PRIMARY
-                                : TEXT_BUTTON_COLOR.SECONDARY
-                        }
-                        styled={cssViewButtonStyle}
-                        onClick={onClickCssViewButton}
+                {reference && (
+                    <IconLink
+                        assistiveText={'MDNのドキュメントを開く'}
+                        url={reference}
+                        icon={faBook}
+                        iconSize="lg"
+                        external
+                        styled={makeMdnLinkStyle(theme)}
                     />
-                    <TextButton
-                        text={'HTML'}
-                        color={
-                            filenameExtension === FILENAME_EXTENSION.MARKDOWN
-                                ? TEXT_BUTTON_COLOR.PRIMARY
-                                : TEXT_BUTTON_COLOR.SECONDARY
-                        }
-                        styled={htmlViewButtonStyle}
-                        onClick={onClickHtmlViewButton}
-                    />
-                    {reference && (
-                        <IconLink
-                            assistiveText={'MDNのドキュメントを開く'}
-                            url={reference}
-                            icon={faBook}
-                            iconSize="lg"
-                            external
-                            styled={makeMdnLinkStyle(theme)}
-                        />
-                    )}
-                    <IconButton
-                        assistiveText={'ソースコードをコピーする'}
-                        icon={faCopy}
-                        iconSize={'lg'}
-                        styled={makeCopyButton(theme)}
-                        onClick={onClickCopyButton}
-                    />
+                )}
+                <IconButton
+                    appendClassName={`${className}__copyButton`}
+                    assistiveText={'ソースコードをコピーする'}
+                    icon={faCopy}
+                    iconSize={'lg'}
+                    onClick={onClickCopyButton}
+                />
 
-                    {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
-                </div>
-                <div className={`${className}__syntaxHighlighterWrapper`}>
-                    <SyntaxHighlighter
-                        className={`${className}__content`}
-                        language={filenameExtension}
-                        style={monoBlue}
-                    >
-                        {sourceCode}
-                    </SyntaxHighlighter>
-                </div>
+                {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
+            </div>
+            <div className={`${className}__syntaxHighlighterWrapper`}>
+                <SyntaxHighlighter className={`${className}__content`} language={filenameExtension} style={monoBlue}>
+                    {sourceCode}
+                </SyntaxHighlighter>
             </div>
         </div>
-    );
-};
+    </div>
+);
 
 const makeMdnLinkStyle = (theme: DefaultTheme) => css`
     margin-left: 0.75rem;
@@ -165,36 +157,25 @@ const htmlViewButtonStyle = css`
     border-bottom-right-radius: 0.375rem;
 `;
 
-const makeToggleViewerButtonStyle = (theme: DefaultTheme) => css`
-    display: none;
-
-    @media ${deviceMaxWidth.laptop} {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        background-color: ${theme.color.gray400};
-        border-top-left-radius: 0.375rem;
-        border-bottom-left-radius: 0.375rem;
-        box-shadow: 0 0 4px ${theme.color.gray400};
-    }
-`;
-
-const makeCopyButton = (theme: DefaultTheme) => css`
-    margin-left: 0.5rem;
-    padding: 0.25rem;
-    color: ${theme.color.gray700};
-    background-color: ${theme.color.white};
-
-    &:hover {
-        color: ${theme.color.blue400};
-    }
-`;
-
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
     align-items: flex-end;
+
+    &__toggleViewerButton {
+        display: none;
+
+        @media ${deviceMaxWidth.laptop} {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: ${({ theme }) => theme.color.gray400};
+            border-top-left-radius: 0.375rem;
+            border-bottom-left-radius: 0.375rem;
+            box-shadow: 0 0 4px ${({ theme }) => theme.color.gray400};
+        }
+    }
 
     &__sourceCodeView {
         display: inline-block;
@@ -221,6 +202,17 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         display: flex;
         align-items: center;
         margin: 0.75rem;
+    }
+
+    &__copyButton {
+        margin-left: 0.5rem;
+        padding: 0.25rem;
+        color: ${({ theme }) => theme.color.gray700};
+        background-color: ${({ theme }) => theme.color.white};
+
+        &:hover {
+            color: ${({ theme }) => theme.color.blue400};
+        }
     }
 
     &__feedbackCopiedText {
