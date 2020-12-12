@@ -2,7 +2,7 @@ import { faAngleDoubleLeft, faAngleDoubleRight, faBook, faCopy } from '@fortawes
 import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
-import styled, { css, DefaultTheme } from 'styled-components';
+import styled from 'styled-components';
 import { deviceMaxWidth } from '../../data/deviceSize';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
@@ -104,12 +104,12 @@ const Component: React.FC<Props & StyledProps> = ({
                 />
                 {reference && (
                     <IconLink
+                        appendClassName={`${className}__mdnLink`}
                         assistiveText={'MDNのドキュメントを開く'}
                         url={reference}
                         icon={faBook}
                         iconSize="lg"
                         external
-                        styled={makeMdnLinkStyle(theme)}
                     />
                 )}
                 <IconButton
@@ -130,15 +130,6 @@ const Component: React.FC<Props & StyledProps> = ({
         </div>
     </div>
 );
-
-const makeMdnLinkStyle = (theme: DefaultTheme) => css`
-    margin-left: 0.75rem;
-    color: ${theme.color.gray700};
-
-    &:hover {
-        color: ${theme.color.blue400};
-    }
-`;
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;
@@ -199,6 +190,15 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         line-height: 1.65;
         border-top-right-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
+    }
+
+    &__mdnLink {
+        margin-left: 0.75rem;
+        color: ${({ theme }) => theme.color.gray700};
+
+        &:hover {
+            color: ${({ theme }) => theme.color.blue400};
+        }
     }
 
     &__copyButton {

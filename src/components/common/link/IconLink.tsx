@@ -1,7 +1,8 @@
 import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import React from 'react';
-import styled, { FlattenSimpleInterpolation } from 'styled-components';
+import styled from 'styled-components';
 import { AssistiveText } from '../assistiveText/AssistiveText';
 import { BaseLink, LinkProps } from './BaseLink';
 
@@ -9,11 +10,12 @@ export type IconLinkProps = {
     assistiveText: string;
     icon: IconProp;
     iconSize: SizeProp;
-    styled?: FlattenSimpleInterpolation;
-} & Omit<LinkProps, 'className' | 'title'>;
+} & Omit<LinkProps, 'className' | 'title'> &
+    AppendClassName;
 
 const Component: React.FC<IconLinkProps & StyledProps> = ({
     className,
+    appendClassName,
     assistiveText,
     icon,
     iconSize,
@@ -21,7 +23,13 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
     external,
     ...others
 }) => (
-    <BaseLink className={className} url={url} external={external} title={assistiveText} {...others}>
+    <BaseLink
+        className={clsx(className, appendClassName)}
+        url={url}
+        external={external}
+        title={assistiveText}
+        {...others}
+    >
         <AssistiveText>
             <span>{assistiveText}</span>
         </AssistiveText>
@@ -31,7 +39,6 @@ const Component: React.FC<IconLinkProps & StyledProps> = ({
 
 const StyledComponent: React.FC<IconLinkProps> = styled(Component)`
     display: inline-block;
-    ${({ styled }) => styled};
 `;
 
 export const IconLink = StyledComponent;
