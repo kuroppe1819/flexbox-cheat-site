@@ -9,7 +9,7 @@ import { SelectedFlexboxPropertyIdProvider } from '../components/providers/Selec
 import { PageRoot } from '../components/root/PageRoot';
 import { deviceMaxWidth } from '../data/deviceSize';
 import { FlexboxProperty } from '../data/flexboxProperties';
-import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
+import { getFlexboxProperties } from '../fixtures/functions/extractData';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const [isOpenedCodeViewer] = useContext(OpenedCodeViewerContext);

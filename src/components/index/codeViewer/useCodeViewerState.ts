@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { constructCss, constructHtml } from '../../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/extractData';
 import { CustomIntlContext, Language } from '../../providers/CustomIntlProvider';
 import { OpenedCodeViewerContext } from '../../providers/OpenedCodeViewer';
 import { SelectedFlexboxPropertyIdContext } from '../../providers/SelectedFlexboxPropertyIdProvider';

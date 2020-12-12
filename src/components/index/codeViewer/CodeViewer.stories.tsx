@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { constructCss } from '../../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/extractData';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import { Language } from '../../providers/CustomIntlProvider';
 import { StyledComponent as CodeViewer } from './CodeViewer';
