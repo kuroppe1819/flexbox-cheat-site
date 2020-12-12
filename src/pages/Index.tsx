@@ -23,7 +23,7 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
                     {getFlexboxProperties().map((property: FlexboxProperty) => (
                         <FlexboxGroup
                             key={property.name}
-                            assignClassName={className}
+                            appendClassName={className}
                             propertyName={property.name}
                             propertyInfoList={property.infoList}
                         />

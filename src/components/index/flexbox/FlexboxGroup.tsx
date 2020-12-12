@@ -8,12 +8,12 @@ import { FlexboxList } from './FlexboxList';
 type Props = {
     propertyName: string;
     propertyInfoList: FlexboxPropertyInfo[];
-} & AssignClassNameProps;
+} & AppendClassName;
 
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, assignClassName, propertyName, propertyInfoList } = props;
+    const { className, appendClassName, propertyName, propertyInfoList } = props;
     return (
-        <div className={clsx(className, assignClassName && `${assignClassName}__flexboxGroup`)} role="group">
+        <div className={clsx(className, appendClassName && `${appendClassName}__flexboxGroup`)} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>{propertyName}</h2>
                 <h3 className={`${className}__propertyDescription`}>
