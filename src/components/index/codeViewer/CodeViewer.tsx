@@ -2,9 +2,9 @@ import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-s
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { Language } from '../../../fixtures/functions/language';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import { IconButton } from '../../common/button/IconButton';
+import { Language } from '../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
 import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';

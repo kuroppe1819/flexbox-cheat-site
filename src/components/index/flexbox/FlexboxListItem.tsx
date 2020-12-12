@@ -3,7 +3,8 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
 import { convertObjectToCssNotation } from '../../../fixtures/functions/constructSourceCode';
-import { IndexContext } from '../../../pages/Index';
+import { OpenedCodeViewerContext } from '../../providers/OpenedCodeViewer';
+import { SelectedFlexboxPropertyIdContext } from '../../providers/SelectedFlexboxPropertyIdProvider';
 import { NumberBlock } from './NumberBlock';
 
 type Props = {
@@ -157,14 +158,14 @@ type OuterProps = {
 } & AppendClassName;
 
 const Container: React.FC<OuterProps> = (props: OuterProps) => {
-    const { setOpenSourceCodeViewer } = useContext(IndexContext);
     const { id } = props;
-    const { selectedFlexboxPropertyId, setFlexboxPropertyId } = useContext(IndexContext);
+    const [, setOpenedCodeViewer] = useContext(OpenedCodeViewerContext);
+    const [selectedFlexboxPropertyId, setFlexboxPropertyId] = useContext(SelectedFlexboxPropertyIdContext);
     const [mouseOverItemId, setMouseOverItemId] = useState<string | null>(null);
 
     const handleClickItem = () => {
         setFlexboxPropertyId(id);
-        setOpenSourceCodeViewer(true);
+        setOpenedCodeViewer(true);
     };
     const handleMouseEnter = () => setMouseOverItemId(id);
     const handleMouseLeave = () => setMouseOverItemId(null);

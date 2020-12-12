@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { constructCss } from '../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
-import { Language } from '../../../fixtures/functions/language';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
+import { Language } from '../../providers/CustomIntlProvider';
 import { StyledComponent as CodeViewer } from './CodeViewer';
-import { FileExtension, FILE_EXTENSION, getSourceCodeOfDisplay } from './useCodeViewerState';
+import { FileExtension, FILE_EXTENSION, getSourceCode } from './useCodeViewerState';
 export default {
     title: 'components/pages/index/codeViewer/CodeViewer',
 };
@@ -18,7 +18,7 @@ export const Normal = () => {
     const [sourceCode, setSourceCode] = useState(constructCss(getFlexboxPropertyInfoById(id).style));
 
     useEffect(() => {
-        setSourceCode(getSourceCodeOfDisplay(id, fileExtension));
+        setSourceCode(getSourceCode(id, fileExtension));
     }, [fileExtension]);
 
     return (

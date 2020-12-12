@@ -1,11 +1,11 @@
 import { faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
-import { Language } from '../../../fixtures/functions/language';
 import { createReferenceUrl } from '../../../fixtures/functions/reference';
 import { IconButton } from '../../common/button/IconButton';
 import { TextButton, TEXT_BUTTON_THEME } from '../../common/button/TextButton';
 import { IconLink } from '../../common/link/IconLink';
+import { Language } from '../../providers/CustomIntlProvider';
 import { FileExtension, FILE_EXTENSION } from './useCodeViewerState';
 
 type Props = {

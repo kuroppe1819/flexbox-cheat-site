@@ -1,8 +1,9 @@
-import { Language } from './../../../fixtures/functions/language';
 import { useContext, useState } from 'react';
 import { constructCss, constructHtml } from '../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
-import { IndexContext } from '../../../pages/Index';
+import { CustomIntlContext, Language } from '../../providers/CustomIntlProvider';
+import { OpenedCodeViewerContext } from '../../providers/OpenedCodeViewer';
+import { SelectedFlexboxPropertyIdContext } from '../../providers/SelectedFlexboxPropertyIdProvider';
 
 export type FileExtension = typeof FILE_EXTENSION[keyof typeof FILE_EXTENSION];
 
@@ -11,7 +12,7 @@ export const FILE_EXTENSION = {
     MARKDOWN: 'markdown',
 } as const;
 
-export const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, fileExtension: FileExtension): string => {
+export const getSourceCode = (flexboxPropertyId: string | null, fileExtension: FileExtension): string => {
     if (flexboxPropertyId === null) {
         return '';
     }
@@ -35,19 +36,19 @@ export const useCodeViewerState = (): [
     React.Dispatch<React.SetStateAction<boolean>>,
     React.Dispatch<React.SetStateAction<FileExtension>>
 ] => {
-    const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
-        IndexContext
-    );
+    const [language] = useContext(CustomIntlContext);
+    const [selectedFlexboxPropertyId] = useContext(SelectedFlexboxPropertyIdContext);
+    const [isOpenedCodeViewer, setOpenedCodeViewer] = useContext(OpenedCodeViewerContext);
     const [fileExtension, setFileExtension] = useState<FileExtension>(FILE_EXTENSION.CSS);
-    const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, fileExtension);
+    const sourceCode = getSourceCode(selectedFlexboxPropertyId, fileExtension);
 
     return [
         language,
         selectedFlexboxPropertyId,
         sourceCode,
-        isOpenSourceCodeViewer,
+        isOpenedCodeViewer,
         fileExtension,
-        setOpenSourceCodeViewer,
+        setOpenedCodeViewer,
         setFileExtension,
     ];
 };

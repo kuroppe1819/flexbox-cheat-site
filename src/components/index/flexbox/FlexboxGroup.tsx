@@ -13,7 +13,7 @@ type Props = {
 const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
     const { className, appendClassName, propertyName, propertyInfoList } = props;
     return (
-        <div className={clsx(className, appendClassName && `${appendClassName}__flexboxGroup`)} role="group">
+        <div className={clsx(className, appendClassName && `${appendClassName}__FlexboxGroup`)} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>{propertyName}</h2>
                 <h3 className={`${className}__propertyDescription`}>
