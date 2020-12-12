@@ -1,18 +1,16 @@
-import clsx from 'clsx';
 import React from 'react';
 import styled from 'styled-components';
 import { TextLink, TEXT_LINK_VARIANT } from '../common/link/TextLink';
 
-type Props = AppendClassName;
-
-const Component: React.FC<Props & StyledProps> = ({ className, appendClassName }) => (
-    <div className={clsx(className, appendClassName)}>
+const Component: React.VFC<StyledProps> = ({ className }) => (
+    <div className={className}>
         <TextLink text={'トップへ戻る'} url={process.env.ROOT_PATH} variant={TEXT_LINK_VARIANT.SQUARE} />
     </div>
 );
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+const StyledComponent: React.VFC = styled(Component)`
     text-align: center;
+    margin: 4rem 0;
 `;
 
 export const BackToTopLink = StyledComponent;
