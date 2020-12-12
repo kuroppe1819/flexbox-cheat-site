@@ -1,37 +1,13 @@
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { constructCss, constructHtml } from '../../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
 import { Language } from '../../../fixtures/functions/language';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import { IndexContext } from '../../../pages/Index';
 import { IconButton } from '../../common/button/IconButton';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
-
-export type FileExtension = typeof FILE_EXTENSION[keyof typeof FILE_EXTENSION];
-
-export const FILE_EXTENSION = {
-    CSS: 'css',
-    MARKDOWN: 'markdown',
-} as const;
-
-export const getSourceCodeOfDisplay = (flexboxPropertyId: string | null, fileExtension: FileExtension) => {
-    if (flexboxPropertyId === null) {
-        return '';
-    }
-
-    const info = getFlexboxPropertyInfoById(flexboxPropertyId);
-    if (fileExtension === FILE_EXTENSION.CSS) {
-        return constructCss(info.style);
-    } else if (fileExtension === FILE_EXTENSION.MARKDOWN) {
-        return constructHtml(info.numberOfNumberBlock, info.style);
-    } else {
-        throw new Error('You specified filename extension is not supported.');
-    }
-};
+import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';
 
 type Props = {
     language: Language;
@@ -135,24 +111,29 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
 `;
 
 const Container: React.FC = () => {
-    const { language, isOpenSourceCodeViewer, selectedFlexboxPropertyId, setOpenSourceCodeViewer } = useContext(
-        IndexContext
-    );
-    const [fileExtension, setFileExtension] = useState<FileExtension>(FILE_EXTENSION.CSS);
-    const sourceCode = getSourceCodeOfDisplay(selectedFlexboxPropertyId, fileExtension);
-    const [copied, setCopy] = useClipboard(sourceCode);
+    const [
+        language,
+        selectedFlexboxPropertyId,
+        sourceCode,
+        open,
+        fileExtension,
+        setOpenSourceCodeViewer,
+        setFileExtension,
+    ] = useCodeViewerState();
+    const [copySuccess, setCopy] = useClipboard(sourceCode);
+
     const handleClickToggleViewerButton = () => setOpenSourceCodeViewer((open) => !open);
     const handleClickCssViewButton = () => setFileExtension(FILE_EXTENSION.CSS);
     const handleClickHtmlViewButton = () => setFileExtension(FILE_EXTENSION.MARKDOWN);
 
     return (
         <StyledComponent
-            selectedFlexboxPropertyId={selectedFlexboxPropertyId}
             language={language}
-            open={isOpenSourceCodeViewer}
+            selectedFlexboxPropertyId={selectedFlexboxPropertyId}
+            open={open}
             fileExtension={fileExtension}
             sourceCode={sourceCode}
-            copySuccess={copied}
+            copySuccess={copySuccess}
             onClickToggleViewerButton={handleClickToggleViewerButton}
             onClickCssViewButton={handleClickCssViewButton}
             onClickHtmlViewButton={handleClickHtmlViewButton}

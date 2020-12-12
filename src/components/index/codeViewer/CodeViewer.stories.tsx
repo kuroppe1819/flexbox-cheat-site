@@ -3,7 +3,8 @@ import { constructCss } from '../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
 import { Language } from '../../../fixtures/functions/language';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import { FileExtension, FILE_EXTENSION, getSourceCodeOfDisplay, StyledComponent as CodeViewer } from './CodeViewer';
+import { StyledComponent as CodeViewer } from './CodeViewer';
+import { FileExtension, FILE_EXTENSION, getSourceCodeOfDisplay } from './useCodeViewerState';
 export default {
     title: 'components/pages/index/codeViewer/CodeViewer',
 };

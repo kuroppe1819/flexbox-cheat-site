@@ -3,7 +3,7 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { FileExtension } from './CodeViewer';
+import { FileExtension } from './useCodeViewerState';
 
 type Props = {
     fileExtension: FileExtension;

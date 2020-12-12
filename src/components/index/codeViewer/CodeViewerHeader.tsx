@@ -6,7 +6,7 @@ import { createReferenceUrl } from '../../../fixtures/functions/reference';
 import { IconButton } from '../../common/button/IconButton';
 import { TextButton, TEXT_BUTTON_THEME } from '../../common/button/TextButton';
 import { IconLink } from '../../common/link/IconLink';
-import { FileExtension, FILE_EXTENSION } from './CodeViewer';
+import { FileExtension, FILE_EXTENSION } from './useCodeViewerState';
 
 type Props = {
     language: Language;
