@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextLink, TextLinkProps, TEXT_LINK_VARIANT } from './TextLink';
+import { TextLink, TextLinkProps } from './TextLink';
 
 export default {
     title: 'components/common/link/TextLink',
@@ -15,16 +15,6 @@ export const Normal = (args: TextLinkProps) => <TextLink {...args} />;
 Normal.args = {
     text: 'Normal',
     fontSize: 'base',
-    variant: TEXT_LINK_VARIANT.NORMAL,
-    url: 'https://google.com',
-    external: true,
-};
-
-export const Square = (args: TextLinkProps) => <TextLink {...args} />;
-Square.args = {
-    text: 'Square',
-    fontSize: 'base',
-    variant: TEXT_LINK_VARIANT.SQUARE,
     url: 'https://google.com',
     external: true,
 };
