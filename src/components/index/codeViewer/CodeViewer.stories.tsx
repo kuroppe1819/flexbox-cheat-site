@@ -4,12 +4,7 @@ import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProv
 import { Language } from '../../../fixtures/functions/language';
 import { createReferenceUrl } from '../../../fixtures/functions/reference';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import {
-    FilenameExtension,
-    FILENAME_EXTENSION,
-    getSourceCodeOfDisplay,
-    StyledComponent as CodeViewer,
-} from './CodeViewer';
+import { FileExtension, FILE_EXTENSION, getSourceCodeOfDisplay, StyledComponent as CodeViewer } from './CodeViewer';
 export default {
     title: 'components/pages/index/codeViewer/CodeViewer',
 };
@@ -18,13 +13,13 @@ export const Normal = () => {
     const id = 'display_flex';
     const language: Language = 'ja';
     const [open, setOpen] = useState(false);
-    const [filenameExtension, setFilenameExtension] = useState<FilenameExtension>(FILENAME_EXTENSION.CSS);
+    const [fileExtension, setFileExtension] = useState<FileExtension>(FILE_EXTENSION.CSS);
     const [copied, setCopy] = useClipboard('');
     const [sourceCode, setSourceCode] = useState(constructCss(getFlexboxPropertyInfoById(id).style));
 
     useEffect(() => {
-        setSourceCode(getSourceCodeOfDisplay(id, filenameExtension));
-    }, [filenameExtension]);
+        setSourceCode(getSourceCodeOfDisplay(id, fileExtension));
+    }, [fileExtension]);
 
     return (
         <CodeViewer
@@ -32,12 +27,12 @@ export const Normal = () => {
             language={language}
             reference={createReferenceUrl(id, language)}
             open={open}
-            filenameExtension={filenameExtension}
+            fileExtension={fileExtension}
             sourceCode={sourceCode}
             copySuccess={copied}
             onClickToggleViewerButton={() => setOpen(!open)}
-            onClickCssViewButton={() => setFilenameExtension(FILENAME_EXTENSION.CSS)}
-            onClickHtmlViewButton={() => setFilenameExtension(FILENAME_EXTENSION.MARKDOWN)}
+            onClickCssViewButton={() => setFileExtension(FILE_EXTENSION.CSS)}
+            onClickHtmlViewButton={() => setFileExtension(FILE_EXTENSION.MARKDOWN)}
             onClickCopyButton={setCopy}
         />
     );
