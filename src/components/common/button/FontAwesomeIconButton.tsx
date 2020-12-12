@@ -5,14 +5,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { BaseButton, ButtonProps } from './BaseButton';
 
-export type IconButtonProps = {
+export type FontAwesomeIconButtonProps = {
     assistiveText: string;
     icon: IconProp;
     iconSize: SizeProp;
 } & Omit<ButtonProps, 'className' | 'title'> &
     AppendClassName;
 
-const Component: React.FC<IconButtonProps & StyledProps> = ({
+const Component: React.FC<FontAwesomeIconButtonProps & StyledProps> = ({
     className,
     appendClassName,
     assistiveText,
@@ -36,8 +36,8 @@ const Component: React.FC<IconButtonProps & StyledProps> = ({
     </BaseButton>
 );
 
-const StyledComponent: React.FC<IconButtonProps> = styled(Component)`
+const StyledComponent: React.FC<FontAwesomeIconButtonProps> = styled(Component)`
     border: none;
 `;
 
-export const IconButton = StyledComponent;
+export const FontAwesomeIconButton = StyledComponent;

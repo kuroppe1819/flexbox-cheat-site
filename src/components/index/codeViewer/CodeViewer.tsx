@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import { IconButton } from '../../common/button/IconButton';
+import { FontAwesomeIconButton } from '../../common/button/FontAwesomeIconButton';
 import { Language } from '../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
@@ -37,7 +37,7 @@ const Component: React.FC<Props & StyledProps> = ({
 }) => (
     <div className={`${className}`}>
         {open ? (
-            <IconButton
+            <FontAwesomeIconButton
                 appendClassName={`${className}__toggleViewerButton`}
                 assistiveText={'ソースコードを非表示にする'}
                 icon={faAngleDoubleRight}
@@ -45,7 +45,7 @@ const Component: React.FC<Props & StyledProps> = ({
                 onClick={onClickToggleViewerButton}
             />
         ) : (
-            <IconButton
+            <FontAwesomeIconButton
                 appendClassName={`${className}__toggleViewerButton`}
                 assistiveText={'ソースコードを表示する'}
                 icon={faAngleDoubleLeft}

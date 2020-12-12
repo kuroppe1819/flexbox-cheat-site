@@ -1,6 +1,6 @@
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 import React from 'react';
-import { IconButton, IconButtonProps } from './IconButton';
+import { FontAwesomeIconButton, FontAwesomeIconButtonProps } from './FontAwesomeIconButton';
 
 export default {
     title: 'components/common/button/IconButton',
@@ -16,14 +16,14 @@ export default {
     },
 };
 
-export const Normal = (args: IconButtonProps) => <IconButton {...args} />;
+export const Normal = (args: FontAwesomeIconButtonProps) => <FontAwesomeIconButton {...args} />;
 Normal.args = {
     assistiveText: 'Normal',
     icon: faCopy,
     iconSize: '2x',
 };
 
-export const Disabled = (args: IconButtonProps) => <IconButton disabled {...args} />;
+export const Disabled = (args: FontAwesomeIconButtonProps) => <FontAwesomeIconButton disabled {...args} />;
 Disabled.args = {
     assistiveText: 'Disabled',
     icon: faCopy,
