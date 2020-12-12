@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
-import { createFlexboxPropertyId } from '../../../fixtures/functions/managementId';
+import { FlexboxPropertyInfo } from '../../../../data/flexboxProperties';
+import { createFlexboxPropertyId } from '../../../../fixtures/functions/managementId';
 import { FlexboxListItem } from './FlexboxListItem';
 
 type Props = {

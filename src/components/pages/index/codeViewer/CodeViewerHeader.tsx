@@ -1,11 +1,11 @@
 import { faBook, faCopy } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
-import { createReferenceUrl } from '../../../fixtures/functions/reference';
-import { IconButton } from '../../common/button/IconButton';
-import { TextButton, TEXT_BUTTON_THEME } from '../../common/button/TextButton';
-import { IconLink } from '../../common/link/IconLink';
-import { Language } from '../../providers/CustomIntlProvider';
+import { createReferenceUrl } from '../../../../fixtures/functions/reference';
+import { FontAwesomeIconButton } from '../../../common/button/FontAwesomeIconButton';
+import { TextButton, TEXT_BUTTON_THEME } from '../../../common/button/TextButton';
+import { FontAwesomeIconLink } from '../../../common/link/FontAwesomeIconLink';
+import { Language } from '../../../providers/CustomIntlProvider';
 import { FileExtension, FILE_EXTENSION } from './useCodeViewerState';
 
 type Props = {
@@ -47,7 +47,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                 onClick={onClickHtmlViewButton}
             />
             {reference && (
-                <IconLink
+                <FontAwesomeIconLink
                     appendClassName={`${className}__mdnLink`}
                     assistiveText={'MDNのドキュメントを開く'}
                     url={reference}
@@ -56,7 +56,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                     external
                 />
             )}
-            <IconButton
+            <FontAwesomeIconButton
                 appendClassName={`${className}__copyButton`}
                 assistiveText={'ソースコードをコピーする'}
                 icon={faCopy}

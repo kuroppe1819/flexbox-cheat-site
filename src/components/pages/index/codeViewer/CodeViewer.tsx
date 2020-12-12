@@ -1,10 +1,10 @@
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
-import { deviceMaxWidth } from '../../../data/deviceSize';
-import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import { IconButton } from '../../common/button/IconButton';
-import { Language } from '../../providers/CustomIntlProvider';
+import { deviceMaxWidth } from '../../../../data/deviceSize';
+import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
+import { FontAwesomeIconButton } from '../../../common/button/FontAwesomeIconButton';
+import { Language } from '../../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
 import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';
@@ -37,7 +37,7 @@ const Component: React.FC<Props & StyledProps> = ({
 }) => (
     <div className={`${className}`}>
         {open ? (
-            <IconButton
+            <FontAwesomeIconButton
                 appendClassName={`${className}__toggleViewerButton`}
                 assistiveText={'ソースコードを非表示にする'}
                 icon={faAngleDoubleRight}
@@ -45,7 +45,7 @@ const Component: React.FC<Props & StyledProps> = ({
                 onClick={onClickToggleViewerButton}
             />
         ) : (
-            <IconButton
+            <FontAwesomeIconButton
                 appendClassName={`${className}__toggleViewerButton`}
                 assistiveText={'ソースコードを表示する'}
                 icon={faAngleDoubleLeft}
