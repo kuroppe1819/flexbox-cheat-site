@@ -1,10 +1,10 @@
 import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import styled from 'styled-components';
-import { deviceMaxWidth } from '../../../data/deviceSize';
-import { useClipboard } from '../../../fixtures/hooks/useClipboard';
-import { FontAwesomeIconButton } from '../../common/button/FontAwesomeIconButton';
-import { Language } from '../../providers/CustomIntlProvider';
+import { deviceMaxWidth } from '../../../../data/deviceSize';
+import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
+import { FontAwesomeIconButton } from '../../../common/button/FontAwesomeIconButton';
+import { Language } from '../../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
 import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';

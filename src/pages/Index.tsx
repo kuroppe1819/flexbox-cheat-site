@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { CodeViewer } from '../components/index/codeViewer/CodeViewer';
-import { FlexboxGroup } from '../components/index/flexbox/FlexboxGroup';
+import { CodeViewer } from '../components/pages/index/codeViewer/CodeViewer';
+import { FlexboxGroup } from '../components/pages/index/flexbox/FlexboxGroup';
 import { CustomIntlProvider } from '../components/providers/CustomIntlProvider';
 import { OpenedCodeViewerContext, OpenedCodeViewerProvider } from '../components/providers/OpenedCodeViewer';
 import { SelectedFlexboxPropertyIdProvider } from '../components/providers/SelectedFlexboxPropertyIdProvider';

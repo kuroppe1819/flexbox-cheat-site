@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
-import { convertObjectToCssNotation } from '../../../fixtures/functions/constructSourceCode';
-import { OpenedCodeViewerContext } from '../../providers/OpenedCodeViewer';
-import { SelectedFlexboxPropertyIdContext } from '../../providers/SelectedFlexboxPropertyIdProvider';
+import { FlexboxPropertyInfo } from '../../../../data/flexboxProperties';
+import { convertObjectToCssNotation } from '../../../../fixtures/functions/constructSourceCode';
+import { OpenedCodeViewerContext } from '../../../providers/OpenedCodeViewer';
+import { SelectedFlexboxPropertyIdContext } from '../../../providers/SelectedFlexboxPropertyIdProvider';
 import { NumberBlock } from './NumberBlock';
 
 type Props = {
