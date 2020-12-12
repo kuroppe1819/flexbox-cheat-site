@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { constructCss } from '../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
-import { Language } from '../../fixtures/functions/language';
-import { createReferenceUrl } from '../../fixtures/functions/reference';
-import { useClipboard } from '../../fixtures/hooks/useClipboard';
+import { constructCss } from '../../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
+import { Language } from '../../../fixtures/functions/language';
+import { createReferenceUrl } from '../../../fixtures/functions/reference';
+import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import {
     FilenameExtension,
     FILENAME_EXTENSION,
@@ -11,7 +11,7 @@ import {
     StyledComponent as CodeViewer,
 } from './CodeViewer';
 export default {
-    title: 'components/pages/index/CodeViewer',
+    title: 'components/pages/index/codeViewer/CodeViewer',
 };
 
 export const Normal = () => {

@@ -3,16 +3,16 @@ import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled from 'styled-components';
-import { deviceMaxWidth } from '../../data/deviceSize';
-import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
-import { Language } from '../../fixtures/functions/language';
-import { createReferenceUrl } from '../../fixtures/functions/reference';
-import { useClipboard } from '../../fixtures/hooks/useClipboard';
-import { IndexContext } from '../../pages/Index';
-import { IconButton } from '../common/button/IconButton';
-import { TextButton, TEXT_BUTTON_THEME } from '../common/button/TextButton';
-import { IconLink } from '../common/link/IconLink';
+import { deviceMaxWidth } from '../../../data/deviceSize';
+import { constructCss, constructHtml } from '../../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/dataProvider';
+import { Language } from '../../../fixtures/functions/language';
+import { createReferenceUrl } from '../../../fixtures/functions/reference';
+import { useClipboard } from '../../../fixtures/hooks/useClipboard';
+import { IndexContext } from '../../../pages/Index';
+import { IconButton } from '../../common/button/IconButton';
+import { TextButton, TEXT_BUTTON_THEME } from '../../common/button/TextButton';
+import { IconLink } from '../../common/link/IconLink';
 
 export type FilenameExtension = typeof FILENAME_EXTENSION[keyof typeof FILENAME_EXTENSION];
 

@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import styled from 'styled-components';
 import { FlexboxGroup } from '../components/index/flexbox/FlexboxGroup';
 import { PageRoot } from '../components/root/PageRoot';
-import { SourceCodeViewer } from '../components/index/CodeViewer';
+import { SourceCodeViewer } from '../components/index/codeViewer/CodeViewer';
 import { FlexboxProperty } from '../data/flexboxProperties';
 import { messages } from '../data/messages';
 import { getFlexboxProperties } from '../fixtures/functions/dataProvider';
