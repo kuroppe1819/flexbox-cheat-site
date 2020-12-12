@@ -83,23 +83,23 @@ const Component: React.FC<Props & StyledProps> = ({
         <div className={`${className}__sourceCodeView`}>
             <div className={`${className}__header`} role="header">
                 <TextButton
+                    appendClassName={`${className}__cssViewButton`}
                     text={'CSS'}
                     color={
                         filenameExtension === FILENAME_EXTENSION.CSS
                             ? TEXT_BUTTON_COLOR.PRIMARY
                             : TEXT_BUTTON_COLOR.SECONDARY
                     }
-                    styled={cssViewButtonStyle}
                     onClick={onClickCssViewButton}
                 />
                 <TextButton
+                    appendClassName={`${className}__htmlViewButton`}
                     text={'HTML'}
                     color={
                         filenameExtension === FILENAME_EXTENSION.MARKDOWN
                             ? TEXT_BUTTON_COLOR.PRIMARY
                             : TEXT_BUTTON_COLOR.SECONDARY
                     }
-                    styled={htmlViewButtonStyle}
                     onClick={onClickHtmlViewButton}
                 />
                 {reference && (
@@ -138,23 +138,6 @@ const makeMdnLinkStyle = (theme: DefaultTheme) => css`
     &:hover {
         color: ${theme.color.blue400};
     }
-`;
-
-const textButtonBaseStyle = css`
-    width: 3.7rem;
-    line-height: 1.65;
-`;
-
-const cssViewButtonStyle = css`
-    ${textButtonBaseStyle}
-    border-top-left-radius: 0.375rem;
-    border-bottom-left-radius: 0.375rem;
-`;
-
-const htmlViewButtonStyle = css`
-    ${textButtonBaseStyle}
-    border-top-right-radius: 0.375rem;
-    border-bottom-right-radius: 0.375rem;
 `;
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
@@ -202,6 +185,20 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         display: flex;
         align-items: center;
         margin: 0.75rem;
+    }
+
+    &__cssViewButton {
+        width: 3.7rem;
+        line-height: 1.65;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+    }
+
+    &__htmlViewButton {
+        width: 3.7rem;
+        line-height: 1.65;
+        border-top-right-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
     }
 
     &__copyButton {
