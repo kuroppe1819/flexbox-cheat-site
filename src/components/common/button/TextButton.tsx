@@ -4,16 +4,16 @@ import styled from 'styled-components';
 import { FontSize } from '../../../themes/fontSize';
 import { BaseButton, ButtonProps } from './BaseButton';
 
-export type TextButtonColor = TypeOfValues<typeof TEXT_BUTTON_COLOR>;
+export type TextButtonTheme = TypeOfValues<typeof TEXT_BUTTON_THEME>;
 
-export const TEXT_BUTTON_COLOR = {
+export const TEXT_BUTTON_THEME = {
     PRIMARY: 'primary',
     SECONDARY: 'secondary',
 } as const;
 
 export type TextButtonProps = {
     text: string;
-    color?: TextButtonColor;
+    color?: TextButtonTheme;
     fontSize?: FontSize;
 } & Omit<ButtonProps, 'className'> &
     AppendClassName;
@@ -22,7 +22,7 @@ const Component: React.FC<TextButtonProps & StyledProps> = ({
     className,
     appendClassName,
     text,
-    color = TEXT_BUTTON_COLOR.PRIMARY,
+    color = TEXT_BUTTON_THEME.PRIMARY,
     type = 'button',
     title,
     disabled,
@@ -33,8 +33,8 @@ const Component: React.FC<TextButtonProps & StyledProps> = ({
         className={clsx(
             className,
             appendClassName,
-            TEXT_BUTTON_COLOR.PRIMARY === color && `${className}__${TEXT_BUTTON_COLOR.PRIMARY}`,
-            TEXT_BUTTON_COLOR.SECONDARY === color && `${className}__${TEXT_BUTTON_COLOR.SECONDARY}`
+            TEXT_BUTTON_THEME.PRIMARY === color && `${className}__${TEXT_BUTTON_THEME.PRIMARY}`,
+            TEXT_BUTTON_THEME.SECONDARY === color && `${className}__${TEXT_BUTTON_THEME.SECONDARY}`
         )}
         type={type}
         title={title}

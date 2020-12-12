@@ -2,7 +2,7 @@ import { faAngleDoubleLeft, faAngleDoubleRight, faBook, faCopy } from '@fortawes
 import React, { useContext, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
-import styled, { css, DefaultTheme, ThemeContext } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../data/deviceSize';
 import { constructCss, constructHtml } from '../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../fixtures/functions/dataProvider';
@@ -11,7 +11,7 @@ import { createReferenceUrl } from '../../fixtures/functions/reference';
 import { useClipboard } from '../../fixtures/hooks/useClipboard';
 import { IndexContext } from '../../pages/Index';
 import { IconButton } from '../common/button/IconButton';
-import { TextButton, TEXT_BUTTON_COLOR } from '../common/button/TextButton';
+import { TextButton, TEXT_BUTTON_THEME } from '../common/button/TextButton';
 import { IconLink } from '../common/link/IconLink';
 
 export type FilenameExtension = typeof FILENAME_EXTENSION[keyof typeof FILENAME_EXTENSION];
@@ -87,8 +87,8 @@ const Component: React.FC<Props & StyledProps> = ({
                     text={'CSS'}
                     color={
                         filenameExtension === FILENAME_EXTENSION.CSS
-                            ? TEXT_BUTTON_COLOR.PRIMARY
-                            : TEXT_BUTTON_COLOR.SECONDARY
+                            ? TEXT_BUTTON_THEME.PRIMARY
+                            : TEXT_BUTTON_THEME.SECONDARY
                     }
                     onClick={onClickCssViewButton}
                 />
@@ -97,8 +97,8 @@ const Component: React.FC<Props & StyledProps> = ({
                     text={'HTML'}
                     color={
                         filenameExtension === FILENAME_EXTENSION.MARKDOWN
-                            ? TEXT_BUTTON_COLOR.PRIMARY
-                            : TEXT_BUTTON_COLOR.SECONDARY
+                            ? TEXT_BUTTON_THEME.PRIMARY
+                            : TEXT_BUTTON_THEME.SECONDARY
                     }
                     onClick={onClickHtmlViewButton}
                 />
