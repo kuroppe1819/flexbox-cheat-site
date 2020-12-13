@@ -1,6 +1,3 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faAngleDoubleLeft, faAngleDoubleRight, faCopy } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { ThemeProvider } from 'styled-components';
@@ -15,7 +12,6 @@ export const parameters = {
 
 export const decorators = [
     (Story) => {
-        library.add(faTwitter, faGithub, faAngleDoubleLeft, faAngleDoubleRight, faCopy);
         const language = 'ja';
         return (
             <IntlProvider locale={language} messages={messages[language]}>
