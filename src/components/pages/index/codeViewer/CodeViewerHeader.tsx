@@ -1,8 +1,6 @@
-import FileCopyOutlined from '@material-ui/icons/FileCopyOutlined';
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import { createReferenceUrl } from '../../../../fixtures/functions/reference';
-import { IconButton } from '../../../common/button/IconButton';
 import { TextButton, TEXT_BUTTON_THEME } from '../../../common/button/TextButton';
 import { TextLink } from '../../../common/link/TextLink';
 import { Language } from '../../../providers/CustomIntlProvider';
@@ -12,10 +10,8 @@ type Props = {
     language: Language;
     selectedFlexboxPropertyId: string | null;
     fileExtension: FileExtension;
-    copySuccess: boolean;
     onClickCssViewButton: React.MouseEventHandler<HTMLButtonElement>;
     onClickHtmlViewButton: React.MouseEventHandler<HTMLButtonElement>;
-    onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const Component: React.VFC<Props & StyledProps> = ({
@@ -23,12 +19,9 @@ const Component: React.VFC<Props & StyledProps> = ({
     language,
     selectedFlexboxPropertyId,
     fileExtension,
-    copySuccess,
     onClickCssViewButton,
     onClickHtmlViewButton,
-    onClickCopyButton,
 }) => {
-    const theme = useTheme();
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
 
     return (
@@ -47,14 +40,6 @@ const Component: React.VFC<Props & StyledProps> = ({
                 }
                 onClick={onClickHtmlViewButton}
             />
-            <IconButton
-                appendClassName={`${className}__copyButton`}
-                assistiveText={'ソースコードをコピーする'}
-                onClick={onClickCopyButton}
-            >
-                <FileCopyOutlined style={{ fontSize: theme.fontSize['2xl'] }} />
-            </IconButton>
-            {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
             {reference && <TextLink appendClassName={`${className}__mdnLink`} text="MDN" url={reference} external />}
         </div>
     );
@@ -89,21 +74,6 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
             color: ${({ theme }) => theme.color.white};
             background-color: ${({ theme }) => theme.color.blue400};
         }
-    }
-
-    &__copyButton {
-        margin-left: 0.5rem;
-        padding: 0.25rem;
-        color: ${({ theme }) => theme.color.gray700};
-        background-color: ${({ theme }) => theme.color.white};
-
-        &:hover {
-            color: ${({ theme }) => theme.color.blue400};
-        }
-    }
-
-    &__feedbackCopiedText {
-        margin-left: 0.25rem;
     }
 `;
 

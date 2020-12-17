@@ -22,7 +22,7 @@ type Props = {
     onClickCopyButton: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-const Component: React.FC<Props & StyledProps> = ({
+const Component: React.VFC<Props & StyledProps> = ({
     className,
     language,
     selectedFlexboxPropertyId,
@@ -63,18 +63,21 @@ const Component: React.FC<Props & StyledProps> = ({
                     selectedFlexboxPropertyId={selectedFlexboxPropertyId}
                     language={language}
                     fileExtension={fileExtension}
-                    copySuccess={copySuccess}
                     onClickCssViewButton={onClickCssViewButton}
                     onClickHtmlViewButton={onClickHtmlViewButton}
+                />
+                <CodeViewerContent
+                    copySuccess={copySuccess}
+                    sourceCode={sourceCode}
+                    fileExtension={fileExtension}
                     onClickCopyButton={onClickCopyButton}
                 />
-                <CodeViewerContent sourceCode={sourceCode} fileExtension={fileExtension} />
             </div>
         </div>
     );
 };
 
-export const StyledComponent: React.FC<Props> = styled(Component)`
+export const StyledComponent: React.VFC<Props> = styled(Component)`
     display: flex;
     align-items: flex-end;
 
@@ -116,7 +119,7 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
     }
 `;
 
-const Container: React.FC = () => {
+const Container: React.VFC = () => {
     const [
         language,
         selectedFlexboxPropertyId,
