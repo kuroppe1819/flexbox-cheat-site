@@ -1,23 +1,19 @@
-import { IconProp, SizeProp } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React from 'react';
 import styled from 'styled-components';
 import { BaseButton, ButtonProps } from './BaseButton';
 
-export type FontAwesomeIconButtonProps = {
+export type IconButtonProps = {
+    children: React.ReactNode;
     assistiveText: string;
-    icon: IconProp;
-    iconSize: SizeProp;
 } & Omit<ButtonProps, 'className' | 'title'> &
     AppendClassName;
 
-const Component: React.FC<FontAwesomeIconButtonProps & StyledProps> = ({
+const Component: React.VFC<IconButtonProps & StyledProps> = ({
     className,
+    children,
     appendClassName,
     assistiveText,
-    icon,
-    iconSize,
     type = 'button',
     disabled,
     onClick,
@@ -32,12 +28,15 @@ const Component: React.FC<FontAwesomeIconButtonProps & StyledProps> = ({
         aria-label={assistiveText}
         {...others}
     >
-        <FontAwesomeIcon role="img" icon={icon} size={iconSize} />
+        {children}
     </BaseButton>
 );
 
-const StyledComponent: React.FC<FontAwesomeIconButtonProps> = styled(Component)`
+const StyledComponent: React.VFC<IconButtonProps> = styled(Component)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
 `;
 
-export const FontAwesomeIconButton = StyledComponent;
+export const IconButton = StyledComponent;

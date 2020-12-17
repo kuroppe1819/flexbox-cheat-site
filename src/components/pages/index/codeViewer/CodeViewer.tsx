@@ -1,9 +1,9 @@
-import { faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import DoubleArrow from '@material-ui/icons/DoubleArrow';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../../data/deviceSize';
 import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
-import { FontAwesomeIconButton } from '../../../common/button/FontAwesomeIconButton';
+import { IconButton } from '../../../common/button/IconButton';
 import { Language } from '../../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
@@ -34,39 +34,45 @@ const Component: React.FC<Props & StyledProps> = ({
     onClickCssViewButton,
     onClickHtmlViewButton,
     onClickCopyButton,
-}) => (
-    <div className={`${className}`}>
-        {open ? (
-            <FontAwesomeIconButton
-                appendClassName={`${className}__toggleViewerButton`}
-                assistiveText={'ソースコードを非表示にする'}
-                icon={faAngleDoubleRight}
-                iconSize={'1x'}
-                onClick={onClickToggleViewerButton}
-            />
-        ) : (
-            <FontAwesomeIconButton
-                appendClassName={`${className}__toggleViewerButton`}
-                assistiveText={'ソースコードを表示する'}
-                icon={faAngleDoubleLeft}
-                iconSize={'1x'}
-                onClick={onClickToggleViewerButton}
-            />
-        )}
-        <div className={`${className}__codeView`}>
-            <CodeViewerHeader
-                selectedFlexboxPropertyId={selectedFlexboxPropertyId}
-                language={language}
-                fileExtension={fileExtension}
-                copySuccess={copySuccess}
-                onClickCssViewButton={onClickCssViewButton}
-                onClickHtmlViewButton={onClickHtmlViewButton}
-                onClickCopyButton={onClickCopyButton}
-            />
-            <CodeViewerContent sourceCode={sourceCode} fileExtension={fileExtension} />
+}) => {
+    const theme = useTheme();
+
+    return (
+        <div className={`${className}`}>
+            {open ? (
+                <IconButton
+                    appendClassName={`${className}__toggleViewerButton`}
+                    assistiveText={'ソースコードを非表示にする'}
+                    onClick={onClickToggleViewerButton}
+                >
+                    <DoubleArrow style={{ color: theme.color.blue900, fontSize: theme.fontSize.lg }} />
+                </IconButton>
+            ) : (
+                <IconButton
+                    appendClassName={`${className}__toggleViewerButton`}
+                    assistiveText={'ソースコードを表示する'}
+                    onClick={onClickToggleViewerButton}
+                >
+                    <DoubleArrow
+                        style={{ color: theme.color.blue900, fontSize: theme.fontSize.lg, transform: 'rotate(180deg)' }}
+                    />
+                </IconButton>
+            )}
+            <div className={`${className}__codeView`}>
+                <CodeViewerHeader
+                    selectedFlexboxPropertyId={selectedFlexboxPropertyId}
+                    language={language}
+                    fileExtension={fileExtension}
+                    copySuccess={copySuccess}
+                    onClickCssViewButton={onClickCssViewButton}
+                    onClickHtmlViewButton={onClickHtmlViewButton}
+                    onClickCopyButton={onClickCopyButton}
+                />
+                <CodeViewerContent sourceCode={sourceCode} fileExtension={fileExtension} />
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export const StyledComponent: React.FC<Props> = styled(Component)`
     display: flex;

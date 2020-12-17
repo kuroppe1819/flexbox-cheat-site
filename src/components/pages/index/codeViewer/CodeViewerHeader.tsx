@@ -1,8 +1,8 @@
-import { faCopy } from '@fortawesome/free-solid-svg-icons';
+import FileCopyOutlined from '@material-ui/icons/FileCopyOutlined';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { createReferenceUrl } from '../../../../fixtures/functions/reference';
-import { FontAwesomeIconButton } from '../../../common/button/FontAwesomeIconButton';
+import { IconButton } from '../../../common/button/IconButton';
 import { TextButton, TEXT_BUTTON_THEME } from '../../../common/button/TextButton';
 import { TextLink } from '../../../common/link/TextLink';
 import { Language } from '../../../providers/CustomIntlProvider';
@@ -28,6 +28,7 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickHtmlViewButton,
     onClickCopyButton,
 }) => {
+    const theme = useTheme();
     const reference = selectedFlexboxPropertyId ? createReferenceUrl(selectedFlexboxPropertyId, language) : null;
 
     return (
@@ -46,13 +47,13 @@ const Component: React.VFC<Props & StyledProps> = ({
                 }
                 onClick={onClickHtmlViewButton}
             />
-            <FontAwesomeIconButton
+            <IconButton
                 appendClassName={`${className}__copyButton`}
                 assistiveText={'ソースコードをコピーする'}
-                icon={faCopy}
-                iconSize={'lg'}
                 onClick={onClickCopyButton}
-            />
+            >
+                <FileCopyOutlined style={{ fontSize: theme.fontSize['2xl'] }} />
+            </IconButton>
             {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
             {reference && <TextLink appendClassName={`${className}__mdnLink`} text="MDN" url={reference} external />}
         </div>

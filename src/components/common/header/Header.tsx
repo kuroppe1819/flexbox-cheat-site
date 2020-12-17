@@ -1,34 +1,39 @@
-import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import GitHub from '@material-ui/icons/GitHub';
+import Twitter from '@material-ui/icons/Twitter';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { FontAwesomeIconLink } from '../link/FontAwesomeIconLink';
+import { IconLink } from '../link/IconLink';
 
-const Component: React.FC<StyledProps> = ({ className }) => (
-    <header className={`${className}`}>
-        <h1 className={`${className}__title`}>Flexbox Cheat Site</h1>
-        <div className={`${className}__iconLinks`} role="group">
-            <FontAwesomeIconLink
-                appendClassName={`${className}__iconLink`}
-                assistiveText={'Twitterへのリンク'}
-                url={'https://twitter.com/mys_x101'}
-                icon={faTwitter}
-                iconSize={'2x'}
-                external
-            />
-            <FontAwesomeIconLink
-                appendClassName={`${className}__iconLink`}
-                assistiveText={'GitHubへのリンク'}
-                url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
-                icon={faGithub}
-                iconSize={'2x'}
-                external
-            />
-        </div>
-    </header>
-);
+const Component: React.VFC<StyledProps> = ({ className }) => {
+    const theme = useTheme();
 
-const StyledComponent: React.FC = styled(Component)`
+    return (
+        <header className={`${className}`}>
+            <h1 className={`${className}__title`}>Flexbox Cheat Site</h1>
+            <div className={`${className}__iconLinks`} role="group">
+                <IconLink
+                    appendClassName={`${className}__iconLink`}
+                    assistiveText={'Twitterへのリンク'}
+                    url={'https://twitter.com/mys_x101'}
+                    external
+                >
+                    <Twitter style={{ fontSize: theme.fontSize['3xl'] }} />
+                </IconLink>
+                <IconLink
+                    appendClassName={`${className}__iconLink`}
+                    assistiveText={'GitHubへのリンク'}
+                    url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
+                    external
+                >
+                    <GitHub style={{ fontSize: theme.fontSize['3xl'] }} />
+                </IconLink>
+            </div>
+        </header>
+    );
+};
+
+const StyledComponent: React.VFC = styled(Component)`
     position: relative;
     display: flex;
     justify-content: center;
@@ -52,7 +57,7 @@ const StyledComponent: React.FC = styled(Component)`
     }
 
     &__iconLink {
-        margin-right: 1.25rem;
+        margin-right: 1.125rem;
         color: ${({ theme }) => theme.color.blue900};
 
         &:hover {
