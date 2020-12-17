@@ -16,7 +16,9 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
             </p>
             <p>サービスの改善についてのご意見、ご要望をお聞かせください！</p>
             <p>応援コメントもお待ちしております！</p>
-            <BackToTopLink />
+            <div className={`${className}__backToTopLink`}>
+                <BackToTopLink />
+            </div>
         </main>
     </PageRoot>
 );
@@ -25,6 +27,10 @@ const StyledComponent: React.VFC = styled(Component)`
     max-width: 37.5rem;
     margin: 4rem auto;
     padding: 0 2.5rem;
+
+    &__backToTopLink {
+        margin: 4rem 0;
+    }
 `;
 
 export const Contact = StyledComponent;

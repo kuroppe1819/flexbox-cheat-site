@@ -142,7 +142,9 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
                 に基づき、これを遵守するものとします。
             </p>
             <p>（2020年5月24日 制定）</p>
-            <BackToTopLink />
+            <div className={`${className}__backToTopLink`}>
+                <BackToTopLink />
+            </div>
         </main>
     </PageRoot>
 );
@@ -151,6 +153,10 @@ const StyledComponent: React.VFC = styled(Component)`
     max-width: 37.5rem;
     margin: 4rem auto;
     padding: 0 2.5rem;
+
+    &__backToTopLink {
+        margin: 4rem 0;
+    }
 `;
 
 export const Terms = StyledComponent;
