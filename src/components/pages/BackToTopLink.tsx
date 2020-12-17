@@ -10,7 +10,6 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
 
 const StyledComponent: React.VFC = styled(Component)`
     text-align: center;
-    margin: 4rem 0;
 
     &__TextLink {
         display: inline-block;

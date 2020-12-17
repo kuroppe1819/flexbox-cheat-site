@@ -34,7 +34,9 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
                 本サービスは、個人情報の利用目的に照らしその必要性が失われたときは、個人情報を消去又は廃棄するものとし、当該消去及び廃棄は、外部流失等の危険を防止するために必要かつ適切な方法により、業務の遂行上必要な限りにおいて行います。
             </p>
         </main>
-        <BackToTopLink />
+        <div className={`${className}__backToTopLink`}>
+            <BackToTopLink />
+        </div>
     </PageRoot>
 );
 
@@ -42,6 +44,10 @@ const StyledComponent: React.VFC = styled(Component)`
     max-width: 37.5rem;
     margin: 4rem auto;
     padding: 0 2.5rem;
+
+    &__backToTopLink {
+        margin: 4rem 0;
+    }
 `;
 
 export const Privacy = StyledComponent;
