@@ -1,4 +1,5 @@
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import clsx from 'clsx';
 import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import { BaseButton, ButtonProps } from '../button/BaseButton';
@@ -7,6 +8,7 @@ export type DropdownButtonProps = {
     text: string;
     assistiveText: string;
     icon?: React.ReactNode;
+    forceHover?: boolean;
 } & Omit<ButtonProps, 'className' | 'title'>;
 
 const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
@@ -14,6 +16,7 @@ const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
     text,
     assistiveText,
     icon,
+    forceHover = false,
     disabled,
     onClick,
     ...others
@@ -22,7 +25,7 @@ const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
 
     return (
         <BaseButton
-            className={className}
+            className={clsx(className, forceHover && `${className}__hover`)}
             title={assistiveText}
             disabled={disabled}
             onClick={onClick}
@@ -44,7 +47,8 @@ const StyledComponent: React.VFC<DropdownButtonProps> = styled(Component)`
     border: none;
     border-radius: 0.5rem;
 
-    &:hover {
+    &:hover,
+    &__hover {
         background-color: ${({ theme }) => theme.color.gray100};
     }
 

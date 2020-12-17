@@ -24,7 +24,13 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickMenuButton,
 }) => (
     <div className={className} ref={dropdownRef}>
-        <DropdownButton icon={icon} text={buttonText} assistiveText={assistiveText} onClick={onClickMenuButton} />
+        <DropdownButton
+            icon={icon}
+            text={buttonText}
+            assistiveText={assistiveText}
+            onClick={onClickMenuButton}
+            forceHover={menuOpen}
+        />
         {menuOpen && <div className={`${className}__menu`}>{menu}</div>}
     </div>
 );
