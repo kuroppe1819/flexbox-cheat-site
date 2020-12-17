@@ -1,16 +1,19 @@
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import Translate from '@material-ui/icons/Translate';
 import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import { BaseButton, ButtonProps } from '../button/BaseButton';
 
 export type DropdownButtonProps = {
+    text: string;
     assistiveText: string;
+    icon?: React.ReactNode;
 } & Omit<ButtonProps, 'className' | 'title'>;
 
 const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
     className,
+    text,
     assistiveText,
+    icon,
     disabled,
     onClick,
     ...others
@@ -26,8 +29,8 @@ const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
             aria-label={assistiveText}
             {...others}
         >
-            <Translate style={{ fontSize: theme.fontSize['2xl'] }} />
-            <div className={`${className}__selectedItemText`}>日本語</div>
+            {icon && icon}
+            <div className={`${className}__selectedItemText`}>{text}</div>
             <KeyboardArrowDown style={{ fontSize: theme.fontSize['lg'] }} />
         </BaseButton>
     );

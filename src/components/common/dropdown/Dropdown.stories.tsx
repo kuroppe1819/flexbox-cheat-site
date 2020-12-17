@@ -1,3 +1,4 @@
+import Translate from '@material-ui/icons/Translate';
 import React from 'react';
 import styled from 'styled-components';
 import { TextLink } from '../link/TextLink';
@@ -48,4 +49,13 @@ const menu = (
     </Menu>
 );
 
-export const Normal = () => <Dropdown menu={menu} />;
+export const Normal = () => <Dropdown buttonText={'日本語'} assistiveText={'言語の選択'} menu={menu} />;
+
+export const WithIcon = () => (
+    <Dropdown
+        buttonText={'日本語'}
+        assistiveText={'言語の選択'}
+        menu={menu}
+        icon={<Translate style={{ fontSize: '1.5rem' }} />}
+    />
+);
