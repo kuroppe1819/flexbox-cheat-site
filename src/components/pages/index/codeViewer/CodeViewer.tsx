@@ -1,5 +1,6 @@
 import DoubleArrow from '@material-ui/icons/DoubleArrow';
 import React from 'react';
+import { useIntl } from 'react-intl';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../../data/deviceSize';
 import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
@@ -36,13 +37,14 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickCopyButton,
 }) => {
     const theme = useTheme();
+    const intl = useIntl();
 
     return (
         <div className={`${className}`}>
             {open ? (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={'ソースコードを非表示にする'}
+                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.toInvisible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow style={{ color: theme.color.blue900, fontSize: theme.fontSize.lg }} />
@@ -50,7 +52,7 @@ const Component: React.VFC<Props & StyledProps> = ({
             ) : (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={'ソースコードを表示する'}
+                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.toVisible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow

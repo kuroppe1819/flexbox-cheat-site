@@ -1,24 +1,29 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 import styled from 'styled-components';
 import { TextLink } from '../link/TextLink';
 
-const Component: React.FC<StyledProps> = (props: StyledProps) => {
-    const { className } = props;
+const Component: React.VFC<StyledProps> = ({ className }) => {
+    const intl = useIntl();
 
     return (
         <footer className={`${className}`}>
             <nav className={`${className}__navigation`}>
-                {/* TODO 英語文言に切り替えられるような仕組みを入れる */}
-                <TextLink appendClassName={`${className}__link`} text={'利用規約'} url="./terms.html" fontSize={'xs'} />
                 <TextLink
                     appendClassName={`${className}__link`}
-                    text={'プライバシーポリシー'}
+                    text={intl.formatMessage({ id: 'footer.terms.link' })}
+                    url="./terms.html"
+                    fontSize={'xs'}
+                />
+                <TextLink
+                    appendClassName={`${className}__link`}
+                    text={intl.formatMessage({ id: 'footer.privacy.link' })}
                     url="./privacy.html"
                     fontSize={'xs'}
                 />
                 <TextLink
                     appendClassName={`${className}__link`}
-                    text={'お問い合わせ'}
+                    text={intl.formatMessage({ id: 'footer.contact.link' })}
                     url="./contact.html"
                     fontSize={'xs'}
                 />
@@ -30,7 +35,7 @@ const Component: React.FC<StyledProps> = (props: StyledProps) => {
     );
 };
 
-const StyledComponent: React.FC = styled(Component)`
+const StyledComponent: React.VFC = styled(Component)`
     &__navigation {
         display: flex;
         justify-content: center;
@@ -42,6 +47,7 @@ const StyledComponent: React.FC = styled(Component)`
 
     &__copyright {
         text-align: center;
+        color: ${({ theme }) => theme.color.blue900};
     }
 `;
 

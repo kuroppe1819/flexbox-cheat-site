@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BackToTopLink } from '../components/pages/BackToTopLink';
+import { CustomIntlProvider, Language } from '../components/providers/CustomIntlProvider';
 import { PageRoot } from '../components/root/PageRoot';
 
 const Component: React.VFC<StyledProps> = ({ className }) => (
@@ -50,4 +51,14 @@ const StyledComponent: React.VFC = styled(Component)`
     }
 `;
 
-export const Privacy = StyledComponent;
+type OuterProps = {
+    language: Language;
+};
+
+const Container: React.VFC<OuterProps> = ({ language }) => (
+    <CustomIntlProvider language={language}>
+        <StyledComponent />
+    </CustomIntlProvider>
+);
+
+export const Privacy = Container;

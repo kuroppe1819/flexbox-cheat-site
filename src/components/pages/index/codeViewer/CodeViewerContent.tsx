@@ -1,5 +1,6 @@
 import FileCopyOutlined from '@material-ui/icons/FileCopyOutlined';
 import React from 'react';
+import { useIntl } from 'react-intl';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled, { useTheme } from 'styled-components';
@@ -24,6 +25,7 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickCopyButton,
 }) => {
     const theme = useTheme();
+    const intl = useIntl();
 
     return (
         <div className={className}>
@@ -36,7 +38,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                         {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                         <IconButton
                             appendClassName={`${className}__copyButton`}
-                            assistiveText={'ソースコードをコピーする'}
+                            assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.copy.button' })}
                             onClick={onClickCopyButton}
                         >
                             <FileCopyOutlined style={{ fontSize: theme.fontSize.xl }} />

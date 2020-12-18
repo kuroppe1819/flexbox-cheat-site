@@ -1,12 +1,14 @@
 import GitHub from '@material-ui/icons/GitHub';
 import Twitter from '@material-ui/icons/Twitter';
 import React from 'react';
+import { useIntl } from 'react-intl';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
 import { IconLink } from '../link/IconLink';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const theme = useTheme();
+    const intl = useIntl();
 
     return (
         <header className={`${className}`}>
@@ -14,7 +16,7 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
             <div className={`${className}__iconLinks`} role="group">
                 <IconLink
                     appendClassName={`${className}__iconLink`}
-                    assistiveText={'Twitterへのリンク'}
+                    assistiveText={intl.formatMessage({ id: 'header.assistive.twitter.link' })}
                     url={'https://twitter.com/mys_x101'}
                     external
                 >
@@ -22,7 +24,7 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                 </IconLink>
                 <IconLink
                     appendClassName={`${className}__iconLink`}
-                    assistiveText={'GitHubへのリンク'}
+                    assistiveText={intl.formatMessage({ id: 'header.assistive.github.link' })}
                     url={'https://github.com/kuroppe1819/flexbox-cheat-site'}
                     external
                 >

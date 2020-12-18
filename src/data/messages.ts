@@ -1,5 +1,8 @@
 export const messages = {
     ja: {
+        'codeviewer.assistive.toVisible': 'ソースコードを表示する',
+        'codeviewer.assistive.toInvisible': 'ソースコードを非表示にする',
+        'codeviewer.assistive.copy.button': 'ソースコードをコピーする',
         'flexbox.property.description.display': '要素の表示形式',
         'flexbox.property.description.flex-direction': '子要素の並ぶ向き',
         'flexbox.property.description.flex-wrap': '子要素の折り返し',
@@ -15,8 +18,16 @@ export const messages = {
         'flexbox.property.description.header': 'ヘッダーの例',
         'flexbox.property.description.list': 'リストの例',
         'flexbox.property.description.page': 'ページレイアウトの例',
+        'footer.terms.link': '利用規約',
+        'footer.privacy.link': 'プライバシーポリシー',
+        'footer.contact.link': 'お問い合わせ',
+        'header.assistive.twitter.link': 'Twitterへのリンク',
+        'header.assistive.github.link': 'GitHubへのリンク',
     },
     en: {
+        'codeviewer.assistive.toVisible': 'Visible source code',
+        'codeviewer.assistive.toInvisible': 'Invisible source code',
+        'codeviewer.assistive.copy.button': 'Copy source code',
         'flexbox.property.description.display': 'Flex container formatting.',
         'flexbox.property.description.flex-direction': 'Establishes the main axis.',
         'flexbox.property.description.flex-wrap': 'The direction new lines are stacked in.',
@@ -32,5 +43,10 @@ export const messages = {
         'flexbox.property.description.header': 'Example header.',
         'flexbox.property.description.list': 'Example list.',
         'flexbox.property.description.page': 'Example page layout.',
+        'footer.terms.link': 'Terms',
+        'footer.privacy.link': 'Privacy Policy',
+        'footer.contact.link': 'Contact',
+        'header.assistive.twitter.link': 'Twitter link',
+        'header.assistive.github.link': 'GitHub link',
     },
 };
