@@ -16,9 +16,11 @@ const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) =>
         <div className={clsx(className, appendClassName && `${appendClassName}__FlexboxGroup`)} role="group">
             <div className={`${className}__title`}>
                 <h2 className={`${className}__propertyName`}>{propertyName}</h2>
-                <h3 className={`${className}__propertyDescription`}>
-                    <FormattedMessage id={`flexbox.property.description.${propertyName}`} />
-                </h3>
+                <div className={`${className}__propertyDescription-align`}>
+                    <h3 className={`${className}__propertyDescription`}>
+                        <FormattedMessage id={`flexbox.property.description.${propertyName}`} />
+                    </h3>
+                </div>
             </div>
             <FlexboxList propertyName={propertyName} propertyInfoList={propertyInfoList} />
         </div>
@@ -36,7 +38,7 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         top: 0;
         background-color: ${({ theme }) => theme.color.white};
         margin-top: 0.5rem;
-        padding-top: 0.75rem;
+        padding: 0.75rem 0;
         z-index: 10;
         box-shadow: 0px 3px 3px -3px #cbd5e0;
     }
@@ -48,13 +50,17 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         font-size: 1.5rem;
     }
 
+    &__propertyDescription-align {
+        display: flex;
+        justify-content: center;
+    }
+
     &__propertyDescription {
+        max-width: 10.5rem;
         color: ${({ theme }) => theme.color.blue900};
-        margin: 0;
-        padding-top: 0.25rem;
-        text-align: center;
+        margin: auto 0;
+        padding-top: 0.5rem;
         font-size: 0.875rem;
-        line-height: 2;
     }
 `;
 

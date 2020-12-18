@@ -30,7 +30,7 @@ const StyledComponent: React.FC<Props> = styled(Component)`
         margin: 0rem 0.75rem 1rem 0.75rem;
 
         &:first-of-type {
-            margin-top: 0.75rem;
+            margin-top: 1rem;
         }
     }
 `;
