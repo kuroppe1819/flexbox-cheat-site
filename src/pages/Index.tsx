@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { CodeViewer } from '../components/pages/index/codeViewer/CodeViewer';
 import { FlexboxGroup } from '../components/pages/index/flexbox/FlexboxGroup';
-import { CustomIntlProvider } from '../components/providers/CustomIntlProvider';
+import { CustomIntlProvider, Language } from '../components/providers/CustomIntlProvider';
 import { OpenedCodeViewerContext, OpenedCodeViewerProvider } from '../components/providers/OpenedCodeViewer';
 import { SelectedFlexboxPropertyIdProvider } from '../components/providers/SelectedFlexboxPropertyIdProvider';
 import { PageRoot } from '../components/root/PageRoot';
@@ -110,8 +110,12 @@ const StyledComponent: React.VFC = styled(Component)`
     }
 `;
 
-const Container: React.FC = () => (
-    <CustomIntlProvider language="ja">
+type OuterProps = {
+    language: Language;
+};
+
+const Container: React.FC<OuterProps> = ({ language }) => (
+    <CustomIntlProvider language={language}>
         <SelectedFlexboxPropertyIdProvider>
             <OpenedCodeViewerProvider>
                 <StyledComponent />

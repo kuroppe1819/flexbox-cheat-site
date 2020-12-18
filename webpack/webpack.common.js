@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        contact: path.resolve(__dirname, `../src/contact.tsx`),
-        index: path.resolve(__dirname, `../src/index.tsx`),
-        privacy: path.resolve(__dirname, `../src/privacy.tsx`),
-        terms: path.resolve(__dirname, `../src/terms.tsx`),
+        contact: path.resolve(__dirname, `../src/entries/contact.tsx`),
+        index: path.resolve(__dirname, `../src/entries/index.tsx`),
+        "en/index": path.resolve(__dirname, `../src/entries/en/index.tsx`),
+        privacy: path.resolve(__dirname, `../src/entries/privacy.tsx`),
+        terms: path.resolve(__dirname, `../src/entries/terms.tsx`),
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -51,6 +52,13 @@ module.exports = {
             filename: 'index.html',
             template: 'static/html/index.html',
             chunks: ['index'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
+            filename: 'en/index.html',
+            template: 'static/html/en/index.html',
+            chunks: ['en/index'],
             scriptLoading: true,
         }),
         new HtmlWebpackPlugin({

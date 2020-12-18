@@ -1,4 +1,4 @@
-import { Language } from '../../components/providers/CustomIntlProvider';
+import { LANGUAGE, Language } from '../../components/providers/CustomIntlProvider';
 import { flexboxProperties, FlexboxProperty } from '../../data/flexboxProperties';
 import { parseFlexboxPropertyId } from './managementId';
 
@@ -10,9 +10,9 @@ export const createReferenceUrl = (flexboxPropertyId: string, language: Language
     const property = flexboxProperties.filter((property: FlexboxProperty) => property.name === propertyName)[0];
 
     if (property.hasReference) {
-        if (language === 'ja') {
+        if (language === LANGUAGE.ja) {
             return createUrlForMDN('ja', propertyName);
-        } else if (language === 'en') {
+        } else if (language === LANGUAGE.en) {
             return createUrlForMDN('en-US', propertyName);
         } else {
             throw new Error('You specified language is not supported.');

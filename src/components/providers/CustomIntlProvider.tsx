@@ -4,6 +4,11 @@ import { messages } from '../../data/messages';
 
 export type Language = keyof typeof messages;
 
+export const LANGUAGE = {
+    ja: 'ja',
+    en: 'en',
+} as const;
+
 export type CustomIntlContext = [Language];
 
 export const CustomIntlContext = React.createContext<CustomIntlContext>({} as CustomIntlContext);
