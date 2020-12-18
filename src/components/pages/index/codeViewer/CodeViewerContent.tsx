@@ -8,6 +8,7 @@ import { IconButton } from '../../../common/button/IconButton';
 import { FileExtension } from './useCodeViewerState';
 
 type Props = {
+    selectedFlexboxPropertyId: string | null;
     fileExtension: FileExtension;
     sourceCode: string;
     copySuccess: boolean;
@@ -16,6 +17,7 @@ type Props = {
 
 const Component: React.VFC<Props & StyledProps> = ({
     className,
+    selectedFlexboxPropertyId,
     fileExtension,
     sourceCode,
     copySuccess,
@@ -28,18 +30,20 @@ const Component: React.VFC<Props & StyledProps> = ({
             <SyntaxHighlighter className={`${className}__syntaxHighlighter`} language={fileExtension} style={monoBlue}>
                 {sourceCode}
             </SyntaxHighlighter>
-            <div className={`${className}__copyButton-wrapper`}>
-                <span className={`${className}__copyButton-wrapper-flex`}>
-                    {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
-                    <IconButton
-                        appendClassName={`${className}__copyButton`}
-                        assistiveText={'ソースコードをコピーする'}
-                        onClick={onClickCopyButton}
-                    >
-                        <FileCopyOutlined style={{ fontSize: theme.fontSize.xl }} />
-                    </IconButton>
-                </span>
-            </div>
+            {selectedFlexboxPropertyId !== null && (
+                <div className={`${className}__copy`}>
+                    <span className={`${className}__copy-align`}>
+                        {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
+                        <IconButton
+                            appendClassName={`${className}__copyButton`}
+                            assistiveText={'ソースコードをコピーする'}
+                            onClick={onClickCopyButton}
+                        >
+                            <FileCopyOutlined style={{ fontSize: theme.fontSize.xl }} />
+                        </IconButton>
+                    </span>
+                </div>
+            )}
         </div>
     );
 };
@@ -63,12 +67,12 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
         }
     }
 
-    &__copyButton-wrapper {
+    &__copy {
         position: absolute;
         top: 4px;
         right: 12px;
 
-        &-flex {
+        &-align {
             display: flex;
             align-items: center;
         }

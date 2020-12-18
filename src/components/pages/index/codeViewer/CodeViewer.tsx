@@ -67,6 +67,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                     onClickHtmlViewButton={onClickHtmlViewButton}
                 />
                 <CodeViewerContent
+                    selectedFlexboxPropertyId={selectedFlexboxPropertyId}
                     copySuccess={copySuccess}
                     sourceCode={sourceCode}
                     fileExtension={fileExtension}
