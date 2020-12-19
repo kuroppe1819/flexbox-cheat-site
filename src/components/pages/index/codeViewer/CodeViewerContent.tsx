@@ -1,10 +1,10 @@
 import FileCopyOutlined from '@material-ui/icons/FileCopyOutlined';
 import React from 'react';
-import { useIntl } from 'react-intl';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../../data/deviceSize';
+import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
 import { IconButton } from '../../../common/button/IconButton';
 import { FileExtension } from './useCodeViewerState';
 
@@ -25,7 +25,7 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickCopyButton,
 }) => {
     const theme = useTheme();
-    const intl = useIntl();
+    const { formatMessage } = useCustomIntl();
 
     return (
         <div className={className}>
@@ -38,7 +38,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                         {copySuccess && <span className={`${className}__feedbackCopiedText`}>Copied!</span>}
                         <IconButton
                             appendClassName={`${className}__copyButton`}
-                            assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.copy.button' })}
+                            assistiveText={formatMessage({ id: 'codeviewer.assistive.copy.button' })}
                             onClick={onClickCopyButton}
                         >
                             <FileCopyOutlined style={{ fontSize: theme.fontSize.xl }} />

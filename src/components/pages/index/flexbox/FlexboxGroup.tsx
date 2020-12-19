@@ -1,9 +1,10 @@
 import clsx from 'clsx';
-import React, { useContext } from 'react';
+import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { FlexboxPropertyInfo } from '../../../../data/flexboxProperties';
-import { CustomIntlContext, LANGUAGE } from '../../../providers/CustomIntlProvider';
+import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
+import { LANGUAGE } from '../../../providers/CustomIntlProvider';
 import { FlexboxList } from './FlexboxList';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 } & AppendClassName;
 
 const Component: React.VFC<Props & StyledProps> = ({ className, appendClassName, propertyName, propertyInfoList }) => {
-    const [language] = useContext(CustomIntlContext);
+    const { language } = useCustomIntl();
 
     return (
         <div className={clsx(className, appendClassName && `${appendClassName}__FlexboxGroup`)} role="group">

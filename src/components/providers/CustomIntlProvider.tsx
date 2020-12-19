@@ -11,8 +11,6 @@ export const LANGUAGE = {
 
 export type CustomIntlContext = [Language];
 
-export const CustomIntlContext = React.createContext<CustomIntlContext>({} as CustomIntlContext);
-
 type Props = {
     children: React.ReactNode;
     language: Language;
@@ -20,6 +18,6 @@ type Props = {
 
 export const CustomIntlProvider: React.VFC<Props> = ({ children, language }) => (
     <IntlProvider locale={language} messages={messages[language]}>
-        <CustomIntlContext.Provider value={[language]}>{children}</CustomIntlContext.Provider>
+        {children}
     </IntlProvider>
 );

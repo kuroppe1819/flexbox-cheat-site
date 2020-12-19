@@ -1,16 +1,16 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
 import styled from 'styled-components';
+import { useCustomIntl } from '../../fixtures/hooks/useCustomIntl';
 import { TextLink } from '../common/link/TextLink';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
-    const intl = useIntl();
+    const { formatMessage } = useCustomIntl();
 
     return (
         <div className={className}>
             <TextLink
                 appendClassName={`${className}__TextLink`}
-                text={intl.formatMessage({ id: 'back.to.main.page.link' })}
+                text={formatMessage({ id: 'back.to.main.page.link' })}
                 url={process.env.ROOT_PATH}
             />
         </div>

@@ -1,29 +1,29 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
 import styled from 'styled-components';
+import { useCustomIntl } from '../../../fixtures/hooks/useCustomIntl';
 import { TextLink } from '../../common/link/TextLink';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
-    const intl = useIntl();
+    const { formatMessage } = useCustomIntl();
 
     return (
         <footer className={`${className}`}>
             <nav className={`${className}__navigation`}>
                 <TextLink
                     appendClassName={`${className}__link`}
-                    text={intl.formatMessage({ id: 'footer.terms.link' })}
+                    text={formatMessage({ id: 'footer.terms.link' })}
                     url="./terms.html"
                     fontSize={'xs'}
                 />
                 <TextLink
                     appendClassName={`${className}__link`}
-                    text={intl.formatMessage({ id: 'footer.privacy.link' })}
+                    text={formatMessage({ id: 'footer.privacy.link' })}
                     url="./privacy.html"
                     fontSize={'xs'}
                 />
                 <TextLink
                     appendClassName={`${className}__link`}
-                    text={intl.formatMessage({ id: 'footer.contact.link' })}
+                    text={formatMessage({ id: 'footer.contact.link' })}
                     url="./contact.html"
                     fontSize={'xs'}
                 />

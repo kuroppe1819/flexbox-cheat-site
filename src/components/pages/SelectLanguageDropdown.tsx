@@ -1,14 +1,14 @@
 import Translate from '@material-ui/icons/Translate';
 import React from 'react';
-import { useIntl } from 'react-intl';
 import styled from 'styled-components';
+import { useCustomIntl } from '../../fixtures/hooks/useCustomIntl';
 import { Dropdown } from '../common/dropdown/Dropdown';
 import { TextLink } from '../common/link/TextLink';
 import { Menu } from '../common/menu/Menu';
 import { MenuItem } from '../common/menu/MenuItem';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
-    const intl = useIntl();
+    const { formatMessage } = useCustomIntl();
 
     const menu = (
         <Menu>
@@ -23,8 +23,8 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
 
     return (
         <Dropdown
-            buttonText={intl.formatMessage({ id: 'dropdown.language.button' })}
-            assistiveText={intl.formatMessage({ id: 'dropdown.assistive.language.button' })}
+            buttonText={formatMessage({ id: 'dropdown.language.button' })}
+            assistiveText={formatMessage({ id: 'dropdown.assistive.language.button' })}
             menu={menu}
             icon={<Translate style={{ fontSize: '1.5rem' }} />}
         />
