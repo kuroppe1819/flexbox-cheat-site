@@ -4,7 +4,7 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
-import { IconLink } from '../link/IconLink';
+import { IconLink } from '../../common/link/IconLink';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const theme = useTheme();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 import styled from 'styled-components';
-import { TextLink } from '../link/TextLink';
+import { TextLink } from '../../common/link/TextLink';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const intl = useIntl();
