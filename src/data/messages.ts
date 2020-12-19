@@ -1,8 +1,8 @@
 export const messages = {
     ja: {
-        'back.main.page.link': 'トップへ戻る',
         'codeviewer.assistive.toVisible': 'ソースコードを表示する',
         'codeviewer.assistive.toInvisible': 'ソースコードを非表示にする',
+        'back.to.main.page.link': 'トップへ戻る',
         'codeviewer.assistive.copy.button': 'ソースコードをコピーする',
         'flexbox.property.description.display': '要素の表示形式',
         'flexbox.property.description.flex-direction': '子要素の並ぶ向き',
@@ -26,9 +26,9 @@ export const messages = {
         'header.assistive.github.link': 'GitHubへのリンク',
     },
     en: {
-        'back.main.page.link': 'Go back to top page',
         'codeviewer.assistive.toVisible': 'Visible source code',
         'codeviewer.assistive.toInvisible': 'Invisible source code',
+        'back.to.main.page.link': 'Back to main page',
         'codeviewer.assistive.copy.button': 'Copy source code',
         'flexbox.property.description.display': 'Flex container formatting.',
         'flexbox.property.description.flex-direction': 'Establishes the main axis.',
