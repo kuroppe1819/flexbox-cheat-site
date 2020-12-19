@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BackToTopLink } from '../components/pages/BackToTopLink';
+import { BackToMainPageLink } from '../components/pages/BackToMainPageLink';
 import { CustomIntlProvider, Language } from '../components/providers/CustomIntlProvider';
 import { PageRoot } from '../components/root/PageRoot';
 
@@ -35,8 +35,8 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
                 本サービスは、個人情報の利用目的に照らしその必要性が失われたときは、個人情報を消去又は廃棄するものとし、当該消去及び廃棄は、外部流失等の危険を防止するために必要かつ適切な方法により、業務の遂行上必要な限りにおいて行います。
             </p>
         </main>
-        <div className={`${className}__backToTopLink`}>
-            <BackToTopLink />
+        <div className={`${className}__backToMainPageLink`}>
+            <BackToMainPageLink />
         </div>
     </PageRoot>
 );
@@ -46,7 +46,7 @@ const StyledComponent: React.VFC = styled(Component)`
     margin: 4rem auto;
     padding: 0 2.5rem;
 
-    &__backToTopLink {
+    &__backToMainPageLink {
         margin: 4rem 0;
     }
 `;

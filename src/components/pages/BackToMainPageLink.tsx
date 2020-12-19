@@ -26,4 +26,4 @@ const StyledComponent: React.VFC = styled(Component)`
     }
 `;
 
-export const BackToTopLink = StyledComponent;
+export const BackToMainPageLink = StyledComponent;

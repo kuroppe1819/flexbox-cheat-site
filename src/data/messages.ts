@@ -1,5 +1,6 @@
 export const messages = {
     ja: {
+        'back.main.page.link': 'トップへ戻る',
         'codeviewer.assistive.toVisible': 'ソースコードを表示する',
         'codeviewer.assistive.toInvisible': 'ソースコードを非表示にする',
         'codeviewer.assistive.copy.button': 'ソースコードをコピーする',
@@ -25,6 +26,7 @@ export const messages = {
         'header.assistive.github.link': 'GitHubへのリンク',
     },
     en: {
+        'back.main.page.link': 'Go back to top page',
         'codeviewer.assistive.toVisible': 'Visible source code',
         'codeviewer.assistive.toInvisible': 'Invisible source code',
         'codeviewer.assistive.copy.button': 'Copy source code',

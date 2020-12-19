@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BackToTopLink } from '../components/pages/BackToTopLink';
+import { BackToMainPageLink } from '../components/pages/BackToMainPageLink';
 import { CustomIntlProvider, Language } from '../components/providers/CustomIntlProvider';
 import { PageRoot } from '../components/root/PageRoot';
 
@@ -143,8 +143,8 @@ const Component: React.VFC<StyledProps> = ({ className }) => (
                 に基づき、これを遵守するものとします。
             </p>
             <p>（2020年5月24日 制定）</p>
-            <div className={`${className}__backToTopLink`}>
-                <BackToTopLink />
+            <div className={`${className}__backToMainPageLink`}>
+                <BackToMainPageLink />
             </div>
         </main>
     </PageRoot>
@@ -155,7 +155,7 @@ const StyledComponent: React.VFC = styled(Component)`
     margin: 4rem auto;
     padding: 0 2.5rem;
 
-    &__backToTopLink {
+    &__backToMainPageLink {
         margin: 4rem 0;
     }
 `;
