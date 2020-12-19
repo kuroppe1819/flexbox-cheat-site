@@ -44,7 +44,7 @@ const Component: React.VFC<Props & StyledProps> = ({
             {open ? (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.toInvisible' })}
+                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.to.invisible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow style={{ color: theme.color.blue900, fontSize: theme.fontSize.lg }} />
@@ -52,7 +52,7 @@ const Component: React.VFC<Props & StyledProps> = ({
             ) : (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.toVisible' })}
+                    assistiveText={intl.formatMessage({ id: 'codeviewer.assistive.to.visible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow
