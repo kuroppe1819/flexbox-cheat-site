@@ -5,9 +5,12 @@ module.exports = {
     entry: {
         contact: path.resolve(__dirname, `../src/entries/contact.tsx`),
         index: path.resolve(__dirname, `../src/entries/index.tsx`),
-        "en/index": path.resolve(__dirname, `../src/entries/en/index.tsx`),
         privacy: path.resolve(__dirname, `../src/entries/privacy.tsx`),
         terms: path.resolve(__dirname, `../src/entries/terms.tsx`),
+        "en/contact": path.resolve(__dirname, `../src/entries/en/contact.tsx`),
+        "en/index": path.resolve(__dirname, `../src/entries/en/index.tsx`),
+        "en/privacy": path.resolve(__dirname, `../src/entries/en/privacy.tsx`),
+        "en/terms": path.resolve(__dirname, `../src/entries/en/terms.tsx`),
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -49,6 +52,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             publicPath: 'dist',
+            filename: 'en/contact.html',
+            template: 'static/html/en/contact.html',
+            chunks: ['en/contact'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
             filename: 'index.html',
             template: 'static/html/index.html',
             chunks: ['index'],
@@ -70,9 +80,23 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             publicPath: 'dist',
+            filename: 'en/privacy.html',
+            template: 'static/html/en/privacy.html',
+            chunks: ['en/privacy'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
             filename: 'terms.html',
             template: 'static/html/terms.html',
             chunks: ['terms'],
+            scriptLoading: true,
+        }),
+        new HtmlWebpackPlugin({
+            publicPath: 'dist',
+            filename: 'en/terms.html',
+            template: 'static/html/en/terms.html',
+            chunks: ['en/terms'],
             scriptLoading: true,
         }),
     ],
