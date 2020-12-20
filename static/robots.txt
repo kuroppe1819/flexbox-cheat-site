@@ -1,0 +1,7 @@
+User-Agent:*
+Disallow: /*/terms.html
+Disallow: /*/privacy.html
+Disallow: /*/contact.html
+Disallow: /*/*/terms.html
+Disallow: /*/*/privacy.html
+Disallow: /*/*/contact.html
