@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { constructCss } from '../../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../../fixtures/functions/extractData';
 import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
-import { Language } from '../../../providers/CustomIntlProvider';
 import { StyledComponent as CodeViewer } from './CodeViewer';
 import { FileExtension, FILE_EXTENSION, getSourceCode } from './useCodeViewerState';
 export default {
@@ -11,7 +10,6 @@ export default {
 
 export const Normal = () => {
     const id = 'display_flex';
-    const language: Language = 'ja';
     const [open, setOpen] = useState(false);
     const [fileExtension, setFileExtension] = useState<FileExtension>(FILE_EXTENSION.CSS);
     const [copied, setCopy] = useClipboard('');
@@ -24,7 +22,6 @@ export const Normal = () => {
     return (
         <CodeViewer
             selectedFlexboxPropertyId={id}
-            language={language}
             open={open}
             fileExtension={fileExtension}
             sourceCode={sourceCode}

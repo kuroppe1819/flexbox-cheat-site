@@ -4,9 +4,12 @@ import { messages } from '../../data/messages';
 
 export type Language = keyof typeof messages;
 
-export type CustomIntlContext = [Language];
+export const LANGUAGE = {
+    ja: 'ja',
+    en: 'en',
+} as const;
 
-export const CustomIntlContext = React.createContext<CustomIntlContext>({} as CustomIntlContext);
+export type CustomIntlContext = [Language];
 
 type Props = {
     children: React.ReactNode;
@@ -15,6 +18,6 @@ type Props = {
 
 export const CustomIntlProvider: React.VFC<Props> = ({ children, language }) => (
     <IntlProvider locale={language} messages={messages[language]}>
-        <CustomIntlContext.Provider value={[language]}>{children}</CustomIntlContext.Provider>
+        {children}
     </IntlProvider>
 );

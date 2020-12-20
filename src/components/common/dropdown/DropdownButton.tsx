@@ -34,7 +34,7 @@ const Component: React.VFC<DropdownButtonProps & StyledProps> = ({
         >
             {icon && icon}
             <div className={`${className}__selectedItemText`}>{text}</div>
-            <KeyboardArrowDown style={{ fontSize: theme.fontSize['lg'] }} />
+            <KeyboardArrowDown style={{ fontSize: theme.fontSize['xl'] }} />
         </BaseButton>
     );
 };
@@ -53,6 +53,7 @@ const StyledComponent: React.VFC<DropdownButtonProps> = styled(Component)`
     }
 
     &__selectedItemText {
+        font-size: ${({ theme }) => theme.fontSize.base};
         margin-right: 0.25rem;
         margin-left: 0.5rem;
     }

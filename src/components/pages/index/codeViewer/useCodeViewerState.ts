@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import { constructCss, constructHtml } from '../../../../fixtures/functions/constructSourceCode';
 import { getFlexboxPropertyInfoById } from '../../../../fixtures/functions/extractData';
-import { CustomIntlContext, Language } from '../../../providers/CustomIntlProvider';
 import { OpenedCodeViewerContext } from '../../../providers/OpenedCodeViewer';
 import { SelectedFlexboxPropertyIdContext } from '../../../providers/SelectedFlexboxPropertyIdProvider';
 
@@ -28,7 +27,6 @@ export const getSourceCode = (flexboxPropertyId: string | null, fileExtension: F
 };
 
 export const useCodeViewerState = (): [
-    Language,
     string | null,
     string,
     boolean,
@@ -36,14 +34,12 @@ export const useCodeViewerState = (): [
     React.Dispatch<React.SetStateAction<boolean>>,
     React.Dispatch<React.SetStateAction<FileExtension>>
 ] => {
-    const [language] = useContext(CustomIntlContext);
     const [selectedFlexboxPropertyId] = useContext(SelectedFlexboxPropertyIdContext);
     const [isOpenedCodeViewer, setOpenedCodeViewer] = useContext(OpenedCodeViewerContext);
     const [fileExtension, setFileExtension] = useState<FileExtension>(FILE_EXTENSION.CSS);
     const sourceCode = getSourceCode(selectedFlexboxPropertyId, fileExtension);
 
     return [
-        language,
         selectedFlexboxPropertyId,
         sourceCode,
         isOpenedCodeViewer,

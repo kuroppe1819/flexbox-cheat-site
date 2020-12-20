@@ -3,14 +3,13 @@ import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../../data/deviceSize';
 import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
+import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
 import { IconButton } from '../../../common/button/IconButton';
-import { Language } from '../../../providers/CustomIntlProvider';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
 import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';
 
 type Props = {
-    language: Language;
     selectedFlexboxPropertyId: string | null;
     open: boolean;
     fileExtension: FileExtension;
@@ -24,7 +23,6 @@ type Props = {
 
 const Component: React.VFC<Props & StyledProps> = ({
     className,
-    language,
     selectedFlexboxPropertyId,
     open,
     fileExtension,
@@ -36,13 +34,14 @@ const Component: React.VFC<Props & StyledProps> = ({
     onClickCopyButton,
 }) => {
     const theme = useTheme();
+    const { language, formatMessage } = useCustomIntl();
 
     return (
         <div className={`${className}`}>
             {open ? (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={'ソースコードを非表示にする'}
+                    assistiveText={formatMessage({ id: 'codeviewer.assistive.to.invisible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow style={{ color: theme.color.blue900, fontSize: theme.fontSize.lg }} />
@@ -50,7 +49,7 @@ const Component: React.VFC<Props & StyledProps> = ({
             ) : (
                 <IconButton
                     appendClassName={`${className}__toggleViewerButton`}
-                    assistiveText={'ソースコードを表示する'}
+                    assistiveText={formatMessage({ id: 'codeviewer.assistive.to.visible' })}
                     onClick={onClickToggleViewerButton}
                 >
                     <DoubleArrow
@@ -67,6 +66,7 @@ const Component: React.VFC<Props & StyledProps> = ({
                     onClickHtmlViewButton={onClickHtmlViewButton}
                 />
                 <CodeViewerContent
+                    selectedFlexboxPropertyId={selectedFlexboxPropertyId}
                     copySuccess={copySuccess}
                     sourceCode={sourceCode}
                     fileExtension={fileExtension}
@@ -121,7 +121,6 @@ export const StyledComponent: React.VFC<Props> = styled(Component)`
 
 const Container: React.VFC = () => {
     const [
-        language,
         selectedFlexboxPropertyId,
         sourceCode,
         open,
@@ -137,7 +136,6 @@ const Container: React.VFC = () => {
 
     return (
         <StyledComponent
-            language={language}
             selectedFlexboxPropertyId={selectedFlexboxPropertyId}
             open={open}
             fileExtension={fileExtension}

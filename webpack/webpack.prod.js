@@ -14,7 +14,10 @@ module.exports = (env, argv) => {
             BABEL_ENV: JSON.stringify('production'),
         }),
         new CopyPlugin({
-            patterns: [{ from: 'static/image', to: 'image' }],
+            patterns: [
+                { from: 'static/image', to: 'image' },
+                { from: "static/robots.txt", to: "" }
+            ]
         }),
     ];
 
