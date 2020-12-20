@@ -51,6 +51,10 @@ const StyledComponent: React.VFC = styled(Component)`
         color: ${({ theme }) => theme.color.blue900};
         background-color: ${({ theme }) => theme.color.white};
         font-size: ${({ theme }) => theme.fontSize['2xl']};
+
+        @media ${deviceMaxWidth.tablet} {
+            display: none;
+        }
     }
 
     &__iconLinks {
@@ -67,14 +71,6 @@ const StyledComponent: React.VFC = styled(Component)`
 
         &:hover {
             color: ${({ theme }) => theme.color.blue400};
-        }
-
-        @media ${deviceMaxWidth.mobileL} {
-            margin-right: 0.75rem;
-        }
-
-        @media ${deviceMaxWidth.mobileM} {
-            display: none;
         }
     }
 `;
