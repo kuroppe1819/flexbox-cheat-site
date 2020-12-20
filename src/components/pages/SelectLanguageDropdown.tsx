@@ -1,13 +1,16 @@
 import Translate from '@material-ui/icons/Translate';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { useCustomIntl } from '../../fixtures/hooks/useCustomIntl';
 import { Dropdown } from '../common/dropdown/Dropdown';
 import { TextLink } from '../common/link/TextLink';
 import { Menu } from '../common/menu/Menu';
 import { MenuItem } from '../common/menu/MenuItem';
 
-const Component: React.VFC<StyledProps> = ({ className }) => {
+type Props = AppendClassName;
+
+const Component: React.VFC<Props & StyledProps> = ({ className, appendClassName }) => {
+    const theme = useTheme();
     const { formatMessage } = useCustomIntl();
 
     const menu = (
@@ -23,17 +26,19 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
 
     return (
         <Dropdown
+            appendClassName={appendClassName}
             buttonText={formatMessage({ id: 'dropdown.language.button' })}
             assistiveText={formatMessage({ id: 'dropdown.assistive.language.button' })}
             menu={menu}
-            icon={<Translate style={{ fontSize: '1.5rem' }} />}
+            icon={<Translate style={{ fontSize: theme.fontSize['2xl'] }} />}
         />
     );
 };
 
-const StyledComponent: React.VFC = styled(Component)`
+const StyledComponent: React.VFC<Props> = styled(Component)`
     &__menu {
         &-item {
+            background-color: ${({ theme }) => theme.color.white};
             cursor: pointer;
 
             &:hover {

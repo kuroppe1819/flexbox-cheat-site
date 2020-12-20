@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useOnClickOutsideRef } from '../../../fixtures/hooks/useOnClickOutsideRef';
@@ -11,10 +12,11 @@ type Props = {
     dropdownRef: React.MutableRefObject<HTMLDivElement | null>;
     icon?: React.ReactNode;
     onClickMenuButton: React.ReactEventHandler<HTMLButtonElement>;
-};
+} & AppendClassName;
 
 const Component: React.VFC<Props & StyledProps> = ({
     className,
+    appendClassName,
     buttonText,
     assistiveText,
     menu,
@@ -23,7 +25,7 @@ const Component: React.VFC<Props & StyledProps> = ({
     icon,
     onClickMenuButton,
 }) => (
-    <div className={className} ref={dropdownRef}>
+    <div className={clsx(className, appendClassName)} ref={dropdownRef}>
         <DropdownButton
             icon={icon}
             text={buttonText}
@@ -37,9 +39,14 @@ const Component: React.VFC<Props & StyledProps> = ({
 
 const StyledComponent: React.VFC<Props> = styled(Component)`
     display: inline-block;
+    position: relative;
+    z-index: ${({ theme }) => theme.zIndex.dropdown};
 
     &__menu {
         width: 9rem;
+        position: absolute;
+        top: 100%;
+        background-color: ${({ theme }) => theme.color.white};
         border: 1px solid ${({ theme }) => theme.color.gray400};
         border-radius: 0.5rem;
         box-shadow: ${({ theme }) => theme.shadow.md};
@@ -51,9 +58,9 @@ type OuterProps = {
     assistiveText: string;
     menu: React.ReactNode;
     icon?: React.ReactNode;
-};
+} & AppendClassName;
 
-const Container: React.VFC<OuterProps> = ({ buttonText, assistiveText, menu, icon }) => {
+const Container: React.VFC<OuterProps> = ({ appendClassName, buttonText, assistiveText, menu, icon }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const closeMenu = () => setMenuOpen(false);
 
@@ -63,6 +70,7 @@ const Container: React.VFC<OuterProps> = ({ buttonText, assistiveText, menu, ico
 
     return (
         <StyledComponent
+            appendClassName={appendClassName}
             buttonText={buttonText}
             assistiveText={assistiveText}
             menu={menu}
