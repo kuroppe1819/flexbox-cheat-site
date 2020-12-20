@@ -12,14 +12,15 @@ type Props = AppendClassName;
 const Component: React.VFC<Props & StyledProps> = ({ className, appendClassName }) => {
     const theme = useTheme();
     const { formatMessage } = useCustomIntl();
+    const rootUrl = `${location.origin}${process.env.ROOT_PATH}`;
 
     const menu = (
         <Menu>
             <MenuItem appendClassName={`${className}__menu-item`}>
-                <TextLink appendClassName={`${className}__menu-item-link`} text={'English'} url={'./en'} />
+                <TextLink appendClassName={`${className}__menu-item-link`} text={'English'} url={`${rootUrl}/en`} />
             </MenuItem>
             <MenuItem appendClassName={`${className}__menu-item`}>
-                <TextLink appendClassName={`${className}__menu-item-link`} text={'日本語'} url={'./'} />
+                <TextLink appendClassName={`${className}__menu-item-link`} text={'日本語'} url={rootUrl} />
             </MenuItem>
         </Menu>
     );

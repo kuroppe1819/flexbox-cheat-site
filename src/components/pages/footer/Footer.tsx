@@ -2,9 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { useCustomIntl } from '../../../fixtures/hooks/useCustomIntl';
 import { TextLink } from '../../common/link/TextLink';
+import { LANGUAGE } from '../../providers/CustomIntlProvider';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
-    const { formatMessage } = useCustomIntl();
+    const { language, formatMessage } = useCustomIntl();
+    const isSelectedJa = language === LANGUAGE.ja;
+    const rootUrl = `${location.origin}${process.env.ROOT_PATH}`;
+    const termsPageUrl = isSelectedJa ? `${rootUrl}/terms.html` : `${rootUrl}/en/terms.html`;
+    const privacyPageUrl = isSelectedJa ? `${rootUrl}/privacy.html` : `${rootUrl}/en/privacy.html`;
+    const contactPageUrl = isSelectedJa ? `${rootUrl}/contact.html` : `${rootUrl}/en/contact.html`;
 
     return (
         <footer className={`${className}`}>
@@ -12,19 +18,19 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                 <TextLink
                     appendClassName={`${className}__link`}
                     text={formatMessage({ id: 'footer.terms.link' })}
-                    url="./terms.html"
+                    url={termsPageUrl}
                     fontSize={'xs'}
                 />
                 <TextLink
                     appendClassName={`${className}__link`}
                     text={formatMessage({ id: 'footer.privacy.link' })}
-                    url="./privacy.html"
+                    url={privacyPageUrl}
                     fontSize={'xs'}
                 />
                 <TextLink
                     appendClassName={`${className}__link`}
                     text={formatMessage({ id: 'footer.contact.link' })}
-                    url="./contact.html"
+                    url={contactPageUrl}
                     fontSize={'xs'}
                 />
             </nav>
