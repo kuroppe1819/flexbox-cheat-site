@@ -71,7 +71,7 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
         }
 
         &-description {
-            max-width: 10.5rem;
+            max-width: 11.5rem;
             margin: 0;
             color: ${({ theme }) => theme.color.blue900};
             padding-top: 0.5rem;
