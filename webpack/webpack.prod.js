@@ -10,7 +10,8 @@ module.exports = (env, argv) => {
         new CopyPlugin({
             patterns: [
                 { from: 'static/image', to: 'image' },
-                { from: "static/robots.txt", to: "" }
+                { from: "static/robots.txt", to: "" },
+                { from: "static/CNAME", to: "" }
             ]
         }),
     ];
