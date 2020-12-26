@@ -7,10 +7,10 @@ import { LANGUAGE } from '../../providers/CustomIntlProvider';
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const { language, formatMessage } = useCustomIntl();
     const isSelectedJa = language === LANGUAGE.ja;
-    const rootUrl = `${location.origin}${process.env.ROOT_PATH}`;
-    const termsPageUrl = isSelectedJa ? `${rootUrl}/terms.html` : `${rootUrl}/en/terms.html`;
-    const privacyPageUrl = isSelectedJa ? `${rootUrl}/privacy.html` : `${rootUrl}/en/privacy.html`;
-    const contactPageUrl = isSelectedJa ? `${rootUrl}/contact.html` : `${rootUrl}/en/contact.html`;
+    const origin = location.origin;
+    const termsPageUrl = isSelectedJa ? `${origin}/terms.html` : `${origin}/en/terms.html`;
+    const privacyPageUrl = isSelectedJa ? `${origin}/privacy.html` : `${origin}/en/privacy.html`;
+    const contactPageUrl = isSelectedJa ? `${origin}/contact.html` : `${origin}/en/contact.html`;
 
     return (
         <footer className={`${className}`}>

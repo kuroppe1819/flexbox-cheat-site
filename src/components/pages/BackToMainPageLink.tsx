@@ -6,8 +6,8 @@ import { LANGUAGE } from '../providers/CustomIntlProvider';
 
 const Component: React.VFC<StyledProps> = ({ className }) => {
     const { language, formatMessage } = useCustomIntl();
-    const rootUrl = `${location.origin}${process.env.ROOT_PATH}`;
-    const mainPageUrl = language === LANGUAGE.ja ? rootUrl : `${rootUrl}/en`;
+    const origin = location.origin;
+    const mainPageUrl = language === LANGUAGE.ja ? origin : `${origin}/en`;
 
     return (
         <div className={className}>
