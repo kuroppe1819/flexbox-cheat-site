@@ -54,6 +54,7 @@ const StyledComponent: React.VFC<DropdownButtonProps> = styled(Component)`
 
     &__selectedItemText {
         font-size: ${({ theme }) => theme.fontSize.base};
+        font-weight: 400;
         margin-right: 0.25rem;
         margin-left: 0.5rem;
     }

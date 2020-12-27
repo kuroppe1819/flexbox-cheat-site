@@ -92,6 +92,7 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
 
     &__feedbackCopiedText {
         font-size: 1rem;
+        font-weight: 400;
         color: ${({ theme }) => theme.color.gray700};
     }
 `;

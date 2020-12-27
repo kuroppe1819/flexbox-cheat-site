@@ -53,6 +53,7 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
                 display: inline-block;
                 width: 100%;
                 padding: 0.5rem 0.75rem;
+                font-weight: 400;
 
                 &:hover {
                     color: ${({ theme }) => theme.color.white};

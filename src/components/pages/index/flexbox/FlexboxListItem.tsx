@@ -127,7 +127,9 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
                 ? ({ theme }) => theme.color.blue500
                 : ({ theme }) => theme.color.gray400};
         text-align: center;
-        font-size: 1.125rem;
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        font-weight: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id ? 400 : 300};
         cursor: pointer;
     }
 
