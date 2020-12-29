@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ChildElementType } from '../../components/pages/index/flexbox/FlexboxListItem';
+import { ChildElementType } from '../../pages/index/flexbox/FlexboxListItem';
 import { FlexboxPropertyStyle } from '../../data/flexboxProperties';
 
 const ClassName = {

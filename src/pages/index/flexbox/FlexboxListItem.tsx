@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
-import { FlexboxPropertyInfo } from '../../../../data/flexboxProperties';
-import { convertObjectToCssNotation } from '../../../../fixtures/functions/constructSourceCode';
-import { OpenedCodeViewerContext } from '../../../providers/OpenedCodeViewer';
-import { SelectedFlexboxPropertyIdContext } from '../../../providers/SelectedFlexboxPropertyIdProvider';
+import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
+import { convertObjectToCssNotation } from '../../../fixtures/functions/constructSourceCode';
+import { OpenedCodeViewerContext } from '../../../components/providers/OpenedCodeViewer';
+import { SelectedFlexboxPropertyIdContext } from '../../../components/providers/SelectedFlexboxPropertyIdProvider';
 import { NumberBlock } from './NumberBlock';
 
 type Props = {
@@ -125,9 +125,11 @@ export const StyledComponent: React.FC<Props> = styled(Component)`
         color: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
             selectedFlexboxPropertyId === id || mouseOverItemId === id
                 ? ({ theme }) => theme.color.blue500
-                : ({ theme }) => theme.color.gray400};
+                : ({ theme }) => theme.color.gray500};
         text-align: center;
-        font-size: 1.125rem;
+        font-size: ${({ theme }) => theme.fontSize.lg};
+        font-weight: ${({ id, selectedFlexboxPropertyId, mouseOverItemId }) =>
+            selectedFlexboxPropertyId === id || mouseOverItemId === id ? 400 : 300};
         cursor: pointer;
     }
 

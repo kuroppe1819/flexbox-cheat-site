@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { LANGUAGE } from '../components/providers/CustomIntlProvider';
-import { Terms } from '../pages/Terms';
+import { Page } from '../pages/terms/Page';
 
-ReactDOM.render(<Terms language={LANGUAGE.ja} />, document.getElementById('root'));
+ReactDOM.render(<Page language={LANGUAGE.ja} />, document.getElementById('root'));

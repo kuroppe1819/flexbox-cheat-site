@@ -6,16 +6,13 @@ type Props = {
     number: number;
 } & AppendClassName;
 
-const Component: React.FC<Props & StyledProps> = (props: Props & StyledProps) => {
-    const { className, appendClassName, number } = props;
-    return (
-        <div className={clsx(className, appendClassName)}>
-            <span className={`${className}__number`}>{number}</span>
-        </div>
-    );
-};
+const Component: React.VFC<Props & StyledProps> = ({ className, appendClassName, number }) => (
+    <div className={clsx(className, appendClassName)}>
+        <span className={`${className}__number`}>{number}</span>
+    </div>
+);
 
-const StyledComponent: React.FC<Props> = styled(Component)`
+const StyledComponent: React.VFC<Props> = styled(React.memo(Component))`
     min-width: 1rem;
     display: flex;
     justify-content: center;

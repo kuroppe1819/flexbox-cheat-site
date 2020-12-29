@@ -1,9 +1,9 @@
 import React from 'react';
-import { getFlexboxProperty } from '../../../../fixtures/functions/extractData';
+import { getFlexboxProperty } from '../../../fixtures/functions/extractData';
 import { FlexboxGroup } from './FlexboxGroup';
 
 export default {
-    title: 'components/pages/index/flexbox/FlexboxGroup',
+    title: 'pages/index/flexbox/FlexboxGroup',
 };
 
 export const Normal = () => (

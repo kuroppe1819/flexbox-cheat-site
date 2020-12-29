@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { createReferenceUrl } from '../../../../fixtures/functions/reference';
-import { TextButton, TEXT_BUTTON_THEME } from '../../../common/button/TextButton';
-import { TextLink } from '../../../common/link/TextLink';
-import { Language } from '../../../providers/CustomIntlProvider';
+import { createReferenceUrl } from '../../../fixtures/functions/reference';
+import { TextButton, TEXT_BUTTON_THEME } from '../../../components/common/button/TextButton';
+import { TextLink } from '../../../components/common/link/TextLink';
+import { Language } from '../../../components/providers/CustomIntlProvider';
 import { FileExtension, FILE_EXTENSION } from './useCodeViewerState';
 
 type Props = {

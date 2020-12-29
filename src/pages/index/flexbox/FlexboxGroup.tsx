@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
-import { FlexboxPropertyInfo } from '../../../../data/flexboxProperties';
-import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
-import { LANGUAGE } from '../../../providers/CustomIntlProvider';
+import { FlexboxPropertyInfo } from '../../../data/flexboxProperties';
+import { useCustomIntl } from '../../../fixtures/hooks/useCustomIntl';
+import { LANGUAGE } from '../../../components/providers/CustomIntlProvider';
 import { FlexboxList } from './FlexboxList';
 
 type Props = {

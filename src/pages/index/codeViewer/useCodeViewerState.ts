@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
-import { constructCss, constructHtml } from '../../../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../../fixtures/functions/extractData';
-import { OpenedCodeViewerContext } from '../../../providers/OpenedCodeViewer';
-import { SelectedFlexboxPropertyIdContext } from '../../../providers/SelectedFlexboxPropertyIdProvider';
+import { constructCss, constructHtml } from '../../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/extractData';
+import { OpenedCodeViewerContext } from '../../../components/providers/OpenedCodeViewer';
+import { SelectedFlexboxPropertyIdContext } from '../../../components/providers/SelectedFlexboxPropertyIdProvider';
 
 export type FileExtension = typeof FILE_EXTENSION[keyof typeof FILE_EXTENSION];
 

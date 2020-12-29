@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { LANGUAGE } from '../../components/providers/CustomIntlProvider';
-import { Privacy } from '../../pages/Privacy';
+import { Page } from '../../pages/privacy/Page';
 
-ReactDOM.render(<Privacy language={LANGUAGE.en} />, document.getElementById('root'));
+ReactDOM.render(<Page language={LANGUAGE.en} />, document.getElementById('root'));

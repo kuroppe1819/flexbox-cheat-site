@@ -3,6 +3,11 @@
     [
       "@babel/preset-env",
       {
+        "targets": [
+          "defaults",
+          "not IE 11",
+          "maintained node versions"
+        ],
         "useBuiltIns": "usage",
         "corejs": 3
       }

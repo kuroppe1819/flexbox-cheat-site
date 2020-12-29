@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { useOnClickOutsideRef } from '../../../fixtures/hooks/useOnClickOutsideRef';
 import { DropdownButton } from './DropdownButton';
@@ -62,11 +62,9 @@ type OuterProps = {
 
 const Container: React.VFC<OuterProps> = ({ appendClassName, buttonText, assistiveText, menu, icon }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const closeMenu = () => setMenuOpen(false);
-
+    const closeMenu = useCallback(() => setMenuOpen(false), []);
     const targetRef = useOnClickOutsideRef<HTMLDivElement>(closeMenu);
-
-    const handleClickButton = () => setMenuOpen(!menuOpen);
+    const handleClickButton = useCallback(() => setMenuOpen((open) => !open), []);
 
     return (
         <StyledComponent
