@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { EmptyPageBody } from '../../components/pages/EmptyPageBody';
 import { CustomIntlProvider, Language } from '../../components/providers/CustomIntlProvider';
 import { OpenedCodeViewerProvider } from '../../components/providers/OpenedCodeViewer';
 import { SelectedFlexboxPropertyIdProvider } from '../../components/providers/SelectedFlexboxPropertyIdProvider';
 import { PageRoot } from '../../components/root/PageRoot';
-import { PageBody } from './PageBody';
+
+const PageBody = React.lazy(() => import('./PageBody').then(({ PageBody }) => ({ default: PageBody })));
 
 type Props = {
     language: Language;
@@ -14,7 +16,9 @@ const Component: React.VFC<Props> = ({ language }) => (
         <SelectedFlexboxPropertyIdProvider>
             <OpenedCodeViewerProvider>
                 <PageRoot>
-                    <PageBody />
+                    <Suspense fallback={<EmptyPageBody />}>
+                        <PageBody />
+                    </Suspense>
                 </PageRoot>
             </OpenedCodeViewerProvider>
         </SelectedFlexboxPropertyIdProvider>
