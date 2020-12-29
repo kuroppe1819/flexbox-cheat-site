@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { constructCss } from '../../../../fixtures/functions/constructSourceCode';
-import { getFlexboxPropertyInfoById } from '../../../../fixtures/functions/extractData';
-import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
+import { constructCss } from '../../../fixtures/functions/constructSourceCode';
+import { getFlexboxPropertyInfoById } from '../../../fixtures/functions/extractData';
+import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import { StyledComponent as CodeViewer } from './CodeViewer';
 import { FileExtension, FILE_EXTENSION, getSourceCode } from './useCodeViewerState';
 export default {

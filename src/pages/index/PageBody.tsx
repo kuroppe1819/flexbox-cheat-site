@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { CodeViewer } from '../../components/pages/index/codeViewer/CodeViewer';
-import { FlexboxGroup } from '../../components/pages/index/flexbox/FlexboxGroup';
+import { CodeViewer } from './codeViewer/CodeViewer';
+import { FlexboxGroup } from './flexbox/FlexboxGroup';
 import { OpenedCodeViewerContext } from '../../components/providers/OpenedCodeViewer';
 import { deviceMaxWidth } from '../../data/deviceSize';
 import { FlexboxProperty } from '../../data/flexboxProperties';

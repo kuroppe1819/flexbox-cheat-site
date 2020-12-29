@@ -3,9 +3,9 @@ import React from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import monoBlue from 'react-syntax-highlighter/dist/esm/styles/hljs/mono-blue';
 import styled, { useTheme } from 'styled-components';
-import { deviceMaxWidth } from '../../../../data/deviceSize';
-import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
-import { IconButton } from '../../../common/button/IconButton';
+import { deviceMaxWidth } from '../../../data/deviceSize';
+import { useCustomIntl } from '../../../fixtures/hooks/useCustomIntl';
+import { IconButton } from '../../../components/common/button/IconButton';
 import { FileExtension } from './useCodeViewerState';
 
 type Props = {

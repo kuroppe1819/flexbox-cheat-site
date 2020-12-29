@@ -1,10 +1,10 @@
 import DoubleArrow from '@material-ui/icons/DoubleArrow';
 import React from 'react';
 import styled, { useTheme } from 'styled-components';
-import { deviceMaxWidth } from '../../../../data/deviceSize';
-import { useClipboard } from '../../../../fixtures/hooks/useClipboard';
-import { useCustomIntl } from '../../../../fixtures/hooks/useCustomIntl';
-import { IconButton } from '../../../common/button/IconButton';
+import { deviceMaxWidth } from '../../../data/deviceSize';
+import { useClipboard } from '../../../fixtures/hooks/useClipboard';
+import { useCustomIntl } from '../../../fixtures/hooks/useCustomIntl';
+import { IconButton } from '../../../components/common/button/IconButton';
 import { CodeViewerContent } from './CodeViewerContent';
 import { CodeViewerHeader } from './CodeViewerHeader';
 import { FileExtension, FILE_EXTENSION, useCodeViewerState } from './useCodeViewerState';
