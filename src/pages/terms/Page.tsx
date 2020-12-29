@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { EmptyPageBody } from '../../components/pages/EmptyPageBody';
 import { CustomIntlProvider, Language } from '../../components/providers/CustomIntlProvider';
 import { PageRoot } from '../../components/root/PageRoot';
-import { PageBody } from './PageBody';
+
+const PageBody = React.lazy(() => import('./PageBody').then(({ PageBody }) => ({ default: PageBody })));
 
 type Props = {
     language: Language;
@@ -10,7 +12,9 @@ type Props = {
 const Component: React.VFC<Props> = ({ language }) => (
     <CustomIntlProvider language={language}>
         <PageRoot>
-            <PageBody />
+            <Suspense fallback={<EmptyPageBody />}>
+                <PageBody />
+            </Suspense>
         </PageRoot>
     </CustomIntlProvider>
 );
