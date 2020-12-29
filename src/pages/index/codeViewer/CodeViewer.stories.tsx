@@ -5,7 +5,7 @@ import { useClipboard } from '../../../fixtures/hooks/useClipboard';
 import { StyledComponent as CodeViewer } from './CodeViewer';
 import { FileExtension, FILE_EXTENSION, getSourceCode } from './useCodeViewerState';
 export default {
-    title: 'components/pages/index/codeViewer/CodeViewer',
+    title: 'pages/index/codeViewer/CodeViewer',
 };
 
 export const Normal = () => {

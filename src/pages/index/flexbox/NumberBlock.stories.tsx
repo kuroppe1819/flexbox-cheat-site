@@ -2,7 +2,7 @@ import React from 'react';
 import { NumberBlock } from './NumberBlock';
 
 export default {
-    title: 'components/pages/index/flexbox/NumberBlock',
+    title: 'pages/index/flexbox/NumberBlock',
 };
 
 // TODO: 横幅が長い時と短いときの見た目を表示する
