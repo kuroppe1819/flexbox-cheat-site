@@ -4,8 +4,8 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/esm/languages/hljs/css';
 import markdown from 'react-syntax-highlighter/dist/esm/languages/hljs/markdown';
 import { LANGUAGE } from '../components/providers/CustomIntlProvider';
-import { Index } from '../pages/Index';
+import { Page } from '../pages/index/Page';
 
 SyntaxHighlighter.registerLanguage('css', css);
 SyntaxHighlighter.registerLanguage('markdown', markdown);
-ReactDOM.render(<Index language={LANGUAGE.ja} />, document.getElementById('root'));
+ReactDOM.render(<Page language={LANGUAGE.ja} />, document.getElementById('root'));
