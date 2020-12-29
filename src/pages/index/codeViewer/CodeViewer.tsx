@@ -1,5 +1,5 @@
 import DoubleArrow from '@material-ui/icons/DoubleArrow';
-import React from 'react';
+import React, { useCallback } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { deviceMaxWidth } from '../../../data/deviceSize';
 import { useClipboard } from '../../../fixtures/hooks/useClipboard';
@@ -130,9 +130,11 @@ const Container: React.VFC = () => {
     ] = useCodeViewerState();
     const [copySuccess, setCopy] = useClipboard(sourceCode);
 
-    const handleClickToggleViewerButton = () => setOpenSourceCodeViewer((open) => !open);
-    const handleClickCssViewButton = () => setFileExtension(FILE_EXTENSION.CSS);
-    const handleClickHtmlViewButton = () => setFileExtension(FILE_EXTENSION.MARKDOWN);
+    const handleClickToggleViewerButton = useCallback(() => setOpenSourceCodeViewer((open) => !open), [
+        setOpenSourceCodeViewer,
+    ]);
+    const handleClickCssViewButton = useCallback(() => setFileExtension(FILE_EXTENSION.CSS), [setFileExtension]);
+    const handleClickHtmlViewButton = useCallback(() => setFileExtension(FILE_EXTENSION.MARKDOWN), [setFileExtension]);
 
     return (
         <StyledComponent
