@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { LANGUAGE } from '../components/providers/CustomIntlProvider';
-import { Contact } from '../pages/Contact';
+import { Page } from '../pages/contact/Page';
 
-ReactDOM.render(<Contact language={LANGUAGE.ja} />, document.getElementById('root'));
+ReactDOM.render(<Page language={LANGUAGE.ja} />, document.getElementById('root'));
