@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
             short_name: "Flexbox Cheat Site",
             name: "Flexbox Cheat Site",
             description: "A simple web site for flexbox cheatsheet.",
-            start_url: "/",
+            start_url: "/en",
             display: "standalone",
             theme_color: "#2a4365",
             background_color: "#ffffff",
