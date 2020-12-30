@@ -3,8 +3,10 @@ const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CopyPlugin = require('copy-webpack-plugin');
-const { InjectManifest } = require('workbox-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+
+const cacheId = "flex";
 
 module.exports = (env, argv) => {
     const isAnalyze = argv.analyze === undefined;
@@ -16,10 +18,35 @@ module.exports = (env, argv) => {
                 { from: "static/CNAME", to: "" }
             ]
         }),
-        new InjectManifest({
-            swSrc: path.resolve(__dirname, `../src/sw.js`),
-            swDest: 'sw.js',
-            mode: 'production'
+        new WorkboxPlugin.GenerateSW({
+            cacheId: cacheId,
+            cleanupOutdatedCaches: true,
+            mode: 'production',
+            clientsClaim: true,
+            skipWaiting: true,
+            swDest: path.resolve(__dirname, '../dist/sw.js'),
+            runtimeCaching: [
+                {
+                    urlPattern: /.+(\/|.html)$/,
+                    handler: "NetworkFirst",
+                    options: {
+                        cacheName: cacheId + "-html",
+                        expiration: {
+                            maxAgeSeconds: 60 * 60 * 24 * 7,
+                        },
+                    },
+                },
+                {
+                    urlPattern: /.+\.(js|css|png|jpg|jpeg|svg)$/,
+                    handler: "CacheFirst",
+                    options: {
+                        cacheName: cacheId + "-dependent",
+                        expiration: {
+                            maxAgeSeconds: 60 * 60 * 24 * 30,
+                        },
+                    },
+                },
+            ]
         }),
         new WebpackPwaManifest({
             filename: "manifest.webmanifest",
