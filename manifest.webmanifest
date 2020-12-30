@@ -1,0 +1,52 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.51ff61529b9917950bca165e460ef5d7.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.9d95a6d57083900f1a88cf685ba04ff9.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_144x144.a2fb0798da372ea5dbdbcac5fbf802a5.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.77aef2748a4284543bec8e10081c29bb.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_48x48.0b4f1f19fc84bf188ec0e762143b20f3.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_32x32.fa78e20f62155e4384e9b652bbe9ddb6.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_24x24.d0ec42cc5f480dcf227672bf855fc49c.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_16x16.d9ab966d7c73723b9fc03664f1f8ab45.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "name": "Flexbox Cheat Site",
+  "short_name": "Flexbox Cheat Site",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "A simple web site for flexbox cheatsheet.",
+  "theme_color": "#2a4365",
+  "background_color": "#ffffff"
+}
