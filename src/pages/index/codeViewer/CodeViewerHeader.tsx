@@ -53,6 +53,7 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
     &__cssViewButton {
         width: 3.7rem;
         line-height: 1.65;
+        padding: 1px;
         border-top-left-radius: 0.375rem;
         border-bottom-left-radius: 0.375rem;
     }
@@ -60,6 +61,7 @@ const StyledComponent: React.VFC<Props> = styled(Component)`
     &__htmlViewButton {
         width: 3.7rem;
         line-height: 1.65;
+        padding: 1px;
         border-top-right-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
     }

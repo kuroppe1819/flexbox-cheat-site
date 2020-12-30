@@ -48,6 +48,7 @@ const Component: React.FC<TextButtonProps & StyledProps> = ({
 
 const StyledComponent: React.FC<TextButtonProps> = styled(Component)`
     font-size: ${({ theme, fontSize }) => (fontSize ? theme.fontSize[fontSize] : theme.fontSize.base)};
+    padding: 0;
 
     &__primary {
         color: ${({ theme }) => theme.color.blue100};
