@@ -2,6 +2,7 @@ User-Agent:*
 Disallow: /terms.html
 Disallow: /privacy.html
 Disallow: /contact.html
-Disallow: /*/terms.html
-Disallow: /*/privacy.html
-Disallow: /*/contact.html
+Disallow: /en/terms.html
+Disallow: /en/privacy.html
+Disallow: /en/contact.html
+Allow: /en/index.html
