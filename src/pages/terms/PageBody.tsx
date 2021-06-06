@@ -132,13 +132,13 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                 </li>
             </ol>
 
-            <h3>第12条 GNU General Public License (GNU) 3.0に遵守すること</h3>
+            <h3>第12条 GNU Affero General Public License v3.0 に遵守すること</h3>
             <p>
                 本サービスは
                 <TextLink
                     appendClassName={`${className}__className`}
                     url="https://github.com/kuroppe1819/flexbox-cheat-site/blob/master/LICENSE"
-                    text="GNU General Public License (GNU) 3.0"
+                    text="GNU Affero General Public License v3.0"
                     external
                 />
                 に基づき、これを遵守するものとします。
