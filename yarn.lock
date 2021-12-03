@@ -3504,7 +3504,7 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
-"@lhci/cli@^0.6.1":
+"@lhci/cli@0.6.1":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@lhci/cli/-/cli-0.6.1.tgz#12ff48c50ce3e4d5728305196952b3ca9353ce75"
   integrity sha512-+hEXpABlbTq3ovgYrH+NRwYs0F9409NWafLc3xQU0r89qOGFjqUw2hr+KALIssECHukmCQcaZ776/oz1dMoIqQ==
@@ -4514,7 +4514,7 @@
   dependencies:
     core-js "^3.8.2"
 
-"@storybook/preset-typescript@^3.0.0":
+"@storybook/preset-typescript@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@storybook/preset-typescript/-/preset-typescript-3.0.0.tgz#e157baf6f2c4982c3da3328f5e1a640b3d7db9e4"
   integrity sha512-tEbFWg5h/8SPfSCNXPxyqY418704K14q5H/xb9t0ARMXK3kZPTkKqKvdTvYg3UEKBBYbc+GA57UWaL+9b+DbDg==
@@ -8264,7 +8264,7 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.15.0:
+eslint-config-prettier@6.15.0:
   version "6.15.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz#7f93f6cb7d45a92f1537a70ecc06366e1ac6fed9"
   integrity sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==
@@ -8283,7 +8283,7 @@ eslint-plugin-react-hooks@4.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
   integrity sha512-XslZy0LnMn+84NEG9jSGR6eGqaZB3133L8xewQo3fQagbQuGt7a63gf+P1NGKZavEYEC3UXaWEAA/AqDkuN6xA==
 
-eslint-plugin-react@^7.21.5:
+eslint-plugin-react@7.21.5:
   version "7.21.5"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.21.5.tgz#50b21a412b9574bfe05b21db176e8b7b3b15bff3"
   integrity sha512-8MaEggC2et0wSF6bUeywF7qQ46ER81irOdWS4QWxnnlAEsnzeBevk1sWh7fhpCghPpXb+8Ks7hvaft6L/xsR6g==
@@ -8952,7 +8952,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-focus-visible@^5.2.0:
+focus-visible@5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/focus-visible/-/focus-visible-5.2.0.tgz#3a9e41fccf587bd25dcc2ef045508284f0a4d6b3"
   integrity sha512-Rwix9pBtC1Nuy5wysTmKy+UjbDJpIfg8eHjw0rjZ1mX4GNLz1Bmd16uDpI3Gk1i70Fgcs8Csg2lPm8HULFg9DQ==
@@ -11212,7 +11212,7 @@ jest-worker@^26.5.0, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest@^26.6.3:
+jest@26.6.3:
   version "26.6.3"
   resolved "https://registry.yarnpkg.com/jest/-/jest-26.6.3.tgz#40e8fdbe48f00dfa1f0ce8121ca74b88ac9148ef"
   integrity sha512-lGS5PXGAzR4RF7V5+XObhqz2KZIDUA1yD0DG6pBVmy10eh0ZIXQImRuzocsI/N2XZ1GrLFwTS27In2i2jlpq1Q==
@@ -13433,7 +13433,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.2.0:
+prettier@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
   integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
@@ -17034,12 +17034,12 @@ workbox-streams@^6.0.2:
     workbox-core "^6.0.2"
     workbox-routing "^6.0.2"
 
-workbox-sw@^6.0.2:
+workbox-sw@6.0.2, workbox-sw@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/workbox-sw/-/workbox-sw-6.0.2.tgz#cd1b8b02ceaaf1abe5804936158a87ec605d271e"
   integrity sha512-EoOjbyy5bpoBoSqt2PIeDOZ/JJ41f+WJjb979PkfIUWw4F+F/w2uKJJrMA5fk+nWnVge83Fwy8nF3dWNsqOrdg==
 
-workbox-webpack-plugin@^6.0.2:
+workbox-webpack-plugin@6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/workbox-webpack-plugin/-/workbox-webpack-plugin-6.0.2.tgz#a7fc0499bc6b5cfa7ebf8d71d8da00be93c9a112"
   integrity sha512-HvzXLyaOD+6pEfNNKZYheRvHk9fVkIL9Rp6CHCd2LowF7M9YMEj8zh2Uuf5IEav6NZ02FR53zWnznO8Imv+fVQ==
