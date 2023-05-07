@@ -141,7 +141,14 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                     text="GNU Affero General Public License v3.0"
                     external
                 />
-                に基づき、これを遵守するものとします。
+                に基づき、これを遵守するものとします。その他、使用しているライブラリのライセンスは
+                <TextLink
+                    appendClassName={`${className}__className`}
+                    url="/licenses.txt"
+                    text="licenses.txt"
+                    external
+                />
+                に記載しています。
             </p>
             <p>（2020年5月24日 制定）</p>
             <div className={`${className}__backToMainPageLink`}>

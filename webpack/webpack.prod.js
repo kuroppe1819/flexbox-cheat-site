@@ -5,6 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const LicenseCheckerWebpackPlugin = require('license-checker-webpack-plugin');
 
 const cacheId = 'flex';
 
@@ -101,6 +102,7 @@ module.exports = (env, argv) => {
                 },
             ],
         }),
+        new LicenseCheckerWebpackPlugin({ outputFilename: 'licenses.txt' }),
     ];
 
     if (isAnalyze) {
