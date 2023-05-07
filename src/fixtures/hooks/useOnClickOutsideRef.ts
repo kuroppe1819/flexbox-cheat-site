@@ -7,7 +7,7 @@ export const useOnClickOutsideRef = <T extends HTMLElement>(callback: () => void
         const handleClick = (e: MouseEvent) => {
             const clickedNode = e.target as Node;
             const isInBody = document.body.contains(clickedNode);
-            const isInTarget = targetRef.current?.contains(clickedNode);
+            const isInTarget = targetRef.current && targetRef.current.contains(clickedNode);
             if (isInBody && !isInTarget) {
                 callback();
             }
