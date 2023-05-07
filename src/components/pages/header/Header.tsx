@@ -19,7 +19,7 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                 <IconLink
                     appendClassName={`${className}__iconLink`}
                     assistiveText={formatMessage({ id: 'header.assistive.twitter.link' })}
-                    url={'https://twitter.com/mys_x101'}
+                    url={'https://twitter.com/kuroppe1819'}
                     external
                 >
                     <Twitter style={{ fontSize: theme.fontSize['2xl'] }} />

@@ -14,7 +14,7 @@ const Component: React.VFC<StyledProps> = ({ className }) => {
                 お問い合わせは{' '}
                 <TextLink
                     appendClassName={`${className}__twitterLink`}
-                    url="https://twitter.com/mys_x101"
+                    url="https://twitter.com/kuroppe1819"
                     text="Twitter"
                     external
                 />{' '}
