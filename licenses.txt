@@ -3,7 +3,7 @@ Do Not Translate or Localize
 
 
 --------------------------------------------------------------------------------
-@babel/runtime v7.12.5 - Sebastian McKenzie <sebmck@gmail.com>
+@babel/runtime v7.22.10 - The Babel Team (https://babel.dev/team)
 https://github.com/babel/babel.git
 --------------------------------------------------------------------------------
 
@@ -584,7 +584,7 @@ git://github.com/samsonjs/format.git
 MIT
 
 --------------------------------------------------------------------------------
-hast-util-parse-selector v2.2.4 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
+hast-util-parse-selector v2.2.5 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
 syntax-tree/hast-util-parse-selector
 --------------------------------------------------------------------------------
 
@@ -642,7 +642,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-highlight.js v10.1.2 - Ivan Sagalaev
+highlight.js v10.7.3 - Ivan Sagalaev
 git://github.com/highlightjs/highlight.js.git
 --------------------------------------------------------------------------------
 
@@ -1160,7 +1160,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-lowlight v1.14.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
+lowlight v1.20.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
 wooorm/lowlight
 --------------------------------------------------------------------------------
 
@@ -1246,7 +1246,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-prismjs v1.22.0 - Lea Verou
+prismjs v1.27.0 - Lea Verou
 https://github.com/PrismJS/prism.git
 --------------------------------------------------------------------------------
 
@@ -1331,7 +1331,7 @@ SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-property-information v5.5.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
+property-information v5.6.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
 wooorm/property-information
 --------------------------------------------------------------------------------
 
@@ -1478,7 +1478,7 @@ SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-react-syntax-highlighter v15.3.0 - Conor Hastings
+react-syntax-highlighter v15.5.0 - Conor Hastings
 git+https://github.com/react-syntax-highlighter/react-syntax-highlighter.git
 --------------------------------------------------------------------------------
 
@@ -1506,7 +1506,7 @@ SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-refractor v3.2.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
+refractor v3.6.0 - Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)
 wooorm/refractor
 --------------------------------------------------------------------------------
 
@@ -1532,34 +1532,6 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
---------------------------------------------------------------------------------
-regenerator-runtime v0.13.11 - Ben Newman <bn@cs.stanford.edu>
-https://github.com/facebook/regenerator/tree/main/packages/runtime
---------------------------------------------------------------------------------
-
-MIT License
-
-Copyright (c) 2014-present, Facebook, Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 
 --------------------------------------------------------------------------------
