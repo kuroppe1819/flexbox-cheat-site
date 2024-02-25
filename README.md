@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-  <a href="https://kuroppe1819.github.io/flexbox-cheat-site/">https://flexbox-cheat.site/</a>
+  <a href="https://kuroppe1819.github.io/flexbox-cheat-site/">https://flexbox.kuroppe1819.com	</a>
 </p>
 
 <div align="center">
