@@ -3,7 +3,7 @@ Do Not Translate or Localize
 
 
 --------------------------------------------------------------------------------
-@babel/runtime v7.22.10 - The Babel Team (https://babel.dev/team)
+@babel/runtime v7.26.0 - The Babel Team (https://babel.dev/team)
 https://github.com/babel/babel.git
 --------------------------------------------------------------------------------
 
@@ -1478,7 +1478,7 @@ SOFTWARE.
 
 
 --------------------------------------------------------------------------------
-react-syntax-highlighter v15.5.0 - Conor Hastings
+react-syntax-highlighter v15.6.1 - Conor Hastings
 git+https://github.com/react-syntax-highlighter/react-syntax-highlighter.git
 --------------------------------------------------------------------------------
 
